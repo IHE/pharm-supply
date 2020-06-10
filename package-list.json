@@ -1,0 +1,13 @@
+{
+ "package-id" : "ihe_pharm_supply",
+ "title" : "IHE - Supply of Products for Healthcare", 
+ "canonical" : "http://ihe.net/fhir/pharm/supply", 
+ "introduction" : "Cross-domain profiles and workflows for Supply of Products in Healthcare - orders and deliveries, inventory management, returns and recalls.",
+ "list" : [{
+  "version" : "current",
+  "desc" : "Continuous Integration Build (latest in version control)",
+  "path" : "http://build.fhir.org/ig/IHE/ihe-pharm-supply",
+  "status" : "ci-build",
+  "current" : true
+ }]
+}

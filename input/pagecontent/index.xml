@@ -1,0 +1,29 @@
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> <head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> </head>
+
+
+<div  style="text-align:center">
+<p><strong>­Integrating the Healthcare Enterprise</strong></p>
+<p></p>
+<div style="width:50%;display: block;margin-left: auto;margin-right: auto">
+<img src="ihe_front.jpg" alt="IHE_LOGO_for_tf-docs" style="width:1.78681in;height:0.92014in"/>
+</div>
+<br clear="all" />
+<p><strong>IHE PHARMACY</strong></p>
+<p><strong>Technical Framework Supplement</strong></p>
+<p></p>
+<p></p>
+<p style="text-align:center"><strong>{{site.data.fhir.ig.title}}</strong></p>
+<p style="text-align:center"><strong>({{ site.data.fhir.igId | split: "." | last  | upcase}})</strong></p>
+<p></p>
+</div>
+<p></p>
+<p><strong>FHIR ® {{site.data.fhir.version}}</strong></p>
+<p></p>
+<p><strong>Draft in preparation for Public Comment</strong></p>
+<p></p>
+<p>Date: June, 2017</p>
+<p>Author: IHE Pharmacy Technical Committee</p>
+<p>Email: <a href="mailto:pharmacy@ihe.net">pharmacy@ihe.net</a></p>
+<p></p>
+<p></p>
+</div>

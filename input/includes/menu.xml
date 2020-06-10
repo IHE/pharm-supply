@@ -1,0 +1,66 @@
+<ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">{{ site.data.fhir.igId | split: "." | last  | upcase}} Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">IHE Intro<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a href="#">IHE Technical Frameworks General Introduction<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a href="#">IHE Profiles Overview<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a href="#">Actor Descriptions<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a href="#">Transaction Descriptions<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a href="#">IHE Glossary<img src="external.png" style="text-align: baseline"/></a></li>
+		</ul>
+	</li>
+
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">{{ site.data.fhir.igId | split: "." | last  | upcase}} Profile<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="#">{{ site.data.fhir.igId | split: "." | last  | upcase}} Overview</a>
+			</li>
+			<li>
+				<a href="#">{{ site.data.fhir.igId | split: "." | last  | upcase}} Actors, Transactions and Content modules</a>
+			</li>
+			<li>
+				<a href="#">{{ site.data.fhir.igId | split: "." | last  | upcase}} Security and Privacy considerations</a>
+			</li>
+		</ul>
+	</li>
+
+
+
+	<li>
+		<a href="#">{{ site.data.fhir.igId | split: "." | last  | upcase}} Models</a>
+	</li>
+	<li>
+		<a href="#">{{ site.data.fhir.igId | split: "." | last  | upcase}} Transactions</a>
+	</li>
+	<li>
+		<a href="#">{{ site.data.fhir.igId | split: "." | last  | upcase}} Profiles</a>
+	</li>
+	<li>
+		<a href="#">Vocabulary</a>
+	</li>
+	
+	
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a href="#">Test Data<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a target="_blank" href="#">OpenAPI</a></li>
+			<li><a href="#">Testing (Gazelle)<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a href="#">Downloads</a></li>
+			<li><a href="#">FHIR Specification</a></li>
+		</ul>
+	</li>
+</ul>      
