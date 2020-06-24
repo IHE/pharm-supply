@@ -1,0 +1,140 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <!--trial-->
+  <id value="model-supply-request" />
+  <url value="https://www.ihe.net/fhir/StructureDefinition/model-supplyrequest" />
+  <version value="0.1.0" />
+  <name value="SupplyRequest" />
+  <status value="draft" />
+  <description value="This is the logical model for the SupplyRequest" />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="SupplyRequest" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="SupplyRequest">
+      <short value="A request for supply of one or more healthcare products" />
+      <path value="SupplyRequest" />
+      <min value="0" />
+      <max value="*" />
+    </element>
+
+    <element id="SupplyRequest.identifier">
+      <path value="SupplyRequest.identifier" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.status">
+      <path value="SupplyRequest.status" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.dateTime">
+      <path value="SupplyRequest.dateTime" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="DateTime" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.requester">
+      <path value="SupplyRequest.requester" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.filler">
+      <path value="SupplyRequest.filler" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.item">
+      <path value="SupplyRequest.item" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.item.item">
+      <path value="SupplyRequest.item.item" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="CodeableReference" />
+      </type>
+    </element>
+    <element id="SupplyRequest.item.quantity">
+      <path value="SupplyRequest.item.quantity" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+
+    <element id="SupplyRequest.item.originLocation">
+      <path value="SupplyRequest.item.originLocation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="SupplyRequest.destinationLocation">
+      <path value="SupplyRequest.destinationLocation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+
+
+    <element id="SupplyRequest.additionalInfo">
+      <path value="SupplyRequest.additionalInfo" />
+      <short value="The prescription identification" />
+      <definition value="." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+        <code value="Annotation" />
+      </type>
+    </element>
+
+
+
+
+    <element id="SupplyRequest.note">
+      <path value="SupplyRequest.note" />
+      <short value="Additional information about the request" />
+      <definition value="Additional information about the request - this can be relevant history, any remarks by the patient or professional, etc." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Annotation" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/Annotation" />
+      </type>
+    </element>
+
+  </differential>
+</StructureDefinition>

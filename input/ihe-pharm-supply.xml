@@ -37,13 +37,32 @@
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
-<!--    <resource>
+
+    <resource>
       <reference>
-        <reference value="Library/example"/>
+        <reference value="StructureDefinition/model-supply-request"/>
       </reference>
-      <name value="Simple library example"/>
-      <description value="A simple example showing how library is pre-loaded"/>
-    </resource> -->
+      <name value="Logical Model - Supply Request"/>
+      <description value="The logical model for Supply Requests"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-supply-request-status"/>
+      </reference>
+      <name value="Logical Model - Supply Request"/>
+      <description value="The logical model for Supply Requests"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-shipment-notice"/>
+      </reference>
+      <name value="Logical Model - Shipment notice"/>
+      <description value="The logical model for Shipment Notice"/>
+    </resource>
+
+
+
+
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
@@ -56,6 +75,11 @@
       </page>
 
     </page>
+
+
+
+
+
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
@@ -74,6 +98,10 @@
       <code value="path-binary"/>
       <value value="input\cql"/>
     </parameter>
+    <parameter>
+      <code value="excludettl"/>
+      <value value="true"/>
+    </parameter>
 <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
     <parameter>
       <code value="excludexml"/>
@@ -81,10 +109,6 @@
     </parameter>
     <parameter>
       <code value="excludejson"/>
-      <value value="true"/>
-    </parameter>
-    <parameter>
-      <code value="excludettl"/>
       <value value="true"/>
     </parameter>
     <parameter>

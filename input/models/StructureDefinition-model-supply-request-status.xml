@@ -1,0 +1,89 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <!--trial-->
+  <id value="model-supply-request-status" />
+  <url value="https://www.ihe.net/fhir/StructureDefinition/model-supply-request-status" />
+  <version value="0.1.0" />
+  <name value="SupplyRequestStatus" />
+  <status value="draft" />
+  <description value="This is the logical model for the Supply Request Status" />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="SupplyRequestStatus" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="SupplyRequestStatus">
+      <short value="A request for supply of one or more healthcare products" />
+      <path value="SupplyRequestStatus" />
+      <min value="0" />
+      <max value="*" />
+    </element>
+
+    <element id="SupplyRequestStatus.identifier">
+      <path value="SupplyRequestStatus.identifier" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+
+    <element id="SupplyRequestStatus.dateTime">
+      <path value="SupplyRequestStatus.dateTime" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="DateTime" />
+      </type>
+    </element>
+
+    <element id="SupplyRequestStatus.performer">
+      <path value="SupplyRequestStatus.performer" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+
+
+    <element id="SupplyRequestStatus.requester">
+      <path value="SupplyRequestStatus.requester" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+
+    <element id="SupplyRequestStatus.status">
+      <path value="SupplyRequestStatus.status" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+
+    <element id="SupplyRequestStatus.item">
+      <path value="SupplyRequestStatus.item" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+
+    <element id="SupplyRequestStatus.item.item">
+      <path value="SupplyRequestStatus.item.item" />
+      <min value="1" />
+      <max value="*" />
+      <type>
+        <code value="CodeableReference" />
+      </type>
+    </element>
+
+
+  </differential>
+</StructureDefinition>
