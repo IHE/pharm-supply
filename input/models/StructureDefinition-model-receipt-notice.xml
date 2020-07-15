@@ -1,27 +1,27 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <!--trial-->
-  <id value="model-shipment-notice" />
-  <url value="https://www.ihe.net/fhir/StructureDefinition/model-shipment-notice" />
+  <id value="model-receipt-notice" />
+  <url value="https://www.ihe.net/fhir/StructureDefinition/model-receipt-notice" />
   <version value="0.1.0" />
-  <name value="ShipmentNotice" />
+  <name value="ReceiptNotice" />
   <status value="draft" />
-  <description value="This is the logical model for the ShipmentNotice" />
+  <description value="This is the logical model for the ReceiptNotice" />
   <fhirVersion value="4.0.1" />
   <kind value="logical" />
   <abstract value="false" />
-  <type value="ShipmentNotice" />
+  <type value="ReceiptNotice" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base" />
   <derivation value="specialization" />
   <differential>
-    <element id="ShipmentNotice">
+    <element id="ReceiptNotice">
       <short value="A request for supply of one or more healthcare products" />
-      <path value="ShipmentNotice" />
+      <path value="ReceiptNotice" />
       <min value="0" />
       <max value="*" />
     </element>
 
-    <element id="ShipmentNotice.identifier">
-      <path value="ShipmentNotice.identifier" />
+    <element id="ReceiptNotice.identifier">
+      <path value="ReceiptNotice.identifier" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -29,8 +29,8 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.dateTime">
-      <path value="ShipmentNotice.dateTime" />
+    <element id="ReceiptNotice.dateTime">
+      <path value="ReceiptNotice.dateTime" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -38,8 +38,8 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.requestIdentifier">
-      <path value="ShipmentNotice.requestIdentifier" />
+    <element id="ReceiptNotice.requestIdentifier">
+      <path value="ReceiptNotice.requestIdentifier" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -47,8 +47,17 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.status">
-      <path value="ShipmentNotice.status" />
+    <element id="ReceiptNotice.shipmentIdentifier">
+      <path value="ReceiptNotice.shipmentIdentifier" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+
+    <element id="ReceiptNotice.status">
+      <path value="ReceiptNotice.status" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -56,16 +65,34 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.sender">
-      <path value="ShipmentNotice.sender" />
+    <element id="ReceiptNotice.sender">
+      <path value="ReceiptNotice.sender" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
       </type>
     </element>
-    <element id="ShipmentNotice.senderLocation">
-      <path value="ShipmentNotice.senderLocation" />
+<!--
+    <element id="ReceiptNotice.senderLocation">
+      <path value="ReceiptNotice.senderLocation" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Location" />
+      </type>
+    </element>
+-->
+    <element id="ReceiptNotice.receiver">
+      <path value="ReceiptNotice.receiver" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="ReceiptNotice.receiverLocation">
+      <path value="ReceiptNotice.receiverLocation" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -73,25 +100,8 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.receiver">
-      <path value="ShipmentNotice.receiver" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-      </type>
-    </element>
-    <element id="ShipmentNotice.receiverLocation">
-      <path value="ShipmentNotice.receiverLocation" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Location" />
-      </type>
-    </element>
-
-    <element id="ShipmentNotice.item">
-      <path value="ShipmentNotice.item" />
+    <element id="ReceiptNotice.item">
+      <path value="ReceiptNotice.item" />
       <min value="1" />
       <max value="*" />
       <type>
@@ -99,16 +109,17 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.item.item">
-      <path value="ShipmentNotice.item.item" />
+    <element id="ReceiptNotice.item.item">
+      <path value="ReceiptNotice.item.item" />
       <min value="1" />
       <max value="*" />
       <type>
         <code value="CodeableReference" />
       </type>
     </element>
-    <element id="ShipmentNotice.item.quantity">
-      <path value="ShipmentNotice.item.quantity" />
+    <element id="ReceiptNotice.item.quantity">
+      <path value="ReceiptNotice.item.quantity" />
+      <comment value="This is the count of items that have been received. This does not mean a pack quantity. For example if one box containing 20 devices has been received, and the code is for the box, then quantity is 1. If however, the code used to identify the product is the code of the device, then the quantity is 20." />
       <min value="1" />
       <max value="1" />
       <type>
@@ -116,8 +127,8 @@
       </type>
     </element>
 
-    <element id="ShipmentNotice.additionalInfo">
-      <path value="ShipmentNotice.additionalInfo" />
+    <element id="ReceiptNotice.additionalInfo">
+      <path value="ReceiptNotice.additionalInfo" />
       <short value="The prescription identification" />
       <definition value="." />
       <min value="0" />
@@ -130,8 +141,8 @@
 
 
 
-    <element id="ShipmentNotice.note">
-      <path value="ShipmentNotice.note" />
+    <element id="ReceiptNotice.note">
+      <path value="ReceiptNotice.note" />
       <short value="Additional information about the shipment" />
       <definition value="Additional information about the shipment" />
       <min value="0" />

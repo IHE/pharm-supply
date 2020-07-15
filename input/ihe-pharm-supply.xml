@@ -43,26 +43,38 @@
         <reference value="StructureDefinition/model-supply-request"/>
       </reference>
       <name value="Logical Model - Supply Request"/>
-      <description value="The logical model for Supply Requests"/>
+      <description value="The data logical model for Supply Requests"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/model-supply-request-status"/>
       </reference>
-      <name value="Logical Model - Supply Request"/>
-      <description value="The logical model for Supply Requests"/>
+      <name value="Logical Model - Supply Request Status"/>
+      <description value="The logical data model for Supply Request status updates"/>
     </resource>
     <resource>
       <reference>
         <reference value="StructureDefinition/model-shipment-notice"/>
       </reference>
       <name value="Logical Model - Shipment notice"/>
-      <description value="The logical model for Shipment Notice"/>
+      <description value="The logical data model for Shipment Notice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-receipt-notice"/>
+      </reference>
+      <name value="Logical Model - Shipment notice"/>
+      <description value="The logical data model for Receipt Notice"/>
     </resource>
 
-
-
-
+<!--
+    <resource>
+      <reference>
+        <reference value="Bundle/history"/>
+      </reference>
+      <name value="History"/>
+    </resource>
+-->
     <page>
       <!-- The root will always be toc.html - the template will force it if you don't do it -->
       <nameUrl value="toc.html"/>
@@ -97,6 +109,10 @@
     <parameter>
       <code value="path-binary"/>
       <value value="input\cql"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input\history"/>
     </parameter>
     <parameter>
       <code value="excludettl"/>
