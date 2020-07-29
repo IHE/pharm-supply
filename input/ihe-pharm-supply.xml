@@ -63,8 +63,15 @@
       <reference>
         <reference value="StructureDefinition/model-receipt-notice"/>
       </reference>
-      <name value="Logical Model - Shipment notice"/>
+      <name value="Logical Model - Receipt notice"/>
       <description value="The logical data model for Receipt Notice"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-inventory-status"/>
+      </reference>
+      <name value="Logical Model - Inventory Status"/>
+      <description value="The logical data model for Inventory Status"/>
     </resource>
 
 <!--
