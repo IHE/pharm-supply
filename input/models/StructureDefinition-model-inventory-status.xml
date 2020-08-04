@@ -7,6 +7,11 @@
   <status value="draft" />
   <description value="This is the logical model for the InventoryStatus" />
   <fhirVersion value="4.0.1" />
+  <mapping>
+    <uri value="https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LIP/a1.htm" />
+    <name value="GS1 XML EDI Logistics Inventory Report" />
+    <comment value="Also see IHE Pharmacy Supply White paper" />
+  </mapping>
   <kind value="logical" />
   <abstract value="false" />
   <type value="InventoryStatus" />
@@ -22,6 +27,34 @@
 
     <element id="InventoryStatus.identifier">
       <path value="InventoryStatus.identifier" />
+      <short value="Unique identification of the inventory report" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="InventoryStatus.countType">
+      <path value="InventoryStatus.countType" />
+      <short value="The type of counting - whether it is a manual counting, automated data capture, estimate.." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="InventoryStatus.operationType">
+      <path value="InventoryStatus.operationType" />
+      <short value="The type of operation - status or activity = update or differential (add/substract)" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+    <element id="InventoryStatus.requestIdentifier">
+      <path value="InventoryStatus.requestIdentifier" />
+      <short value="The logistics inventory report request, if applicable" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -31,6 +64,16 @@
 
     <element id="InventoryStatus.reportDateTime">
       <path value="InventoryStatus.reportDateTime" />
+      <short value="Date and time of creation of the report" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="DateTime" />
+      </type>
+    </element>
+    <element id="InventoryStatus.reporter">
+      <path value="InventoryStatus.reporter" />
+      <short value="Person or entity that creates the report" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -48,24 +91,84 @@
       </type>
     </element>
 
-    <element id="InventoryStatus.requestIdentifier">
-      <path value="InventoryStatus.requestIdentifier" />
-      <min value="0" />
-      <max value="1" />
-      <type>
-        <code value="Identifier" />
-      </type>
-    </element>
-
     <element id="InventoryStatus.reportingPeriod">
       <path value="InventoryStatus.reportingPeriod" />
-      <short value="The period in which the inventory was physically checked - during which the inventory may have changed" />
+      <short value="The period to which the inventory status refers, or to the inventory changes report to" />
       <min value="0" />
       <max value="1" />
       <type>
         <code value="Period" />
       </type>
     </element>
+
+
+    <element id="InventoryStatus.inventoryListing">
+      <path value="InventoryStatus.inventoryListing" />
+      <short value="Contains the inventory information entries" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+
+    <element id="InventoryStatus.inventoryListing.location">
+      <path value="InventoryStatus.inventoryListing.location" />
+      <short value="Identification of the site where the items are located" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="InventoryStatus.inventoryListing.status">
+      <path value="InventoryStatus.inventoryListing.status" />
+      <short value="The inventory status of a set of items (of the same type) at a specific sub-location at a specific point in time" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Period" />
+      </type>
+    </element>
+    <element id="InventoryStatus.inventoryListing.items">
+      <path value="InventoryStatus.inventoryListing.items" />
+      <short value="The inventory items" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="InventoryStatus.inventoryListing.items.category">
+      <path value="InventoryStatus.inventoryListing.items.category" />
+      <short value="The category of the inventory items" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+
+    <element id="InventoryStatus.inventoryListing.items.quantity">
+      <path value="InventoryStatus.inventoryListing.items.quantity" />
+      <short value="Quantity of items" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+    </element>
+
+    <element id="InventoryStatus.inventoryListing.items.item">
+      <path value="InventoryStatus.inventoryListing.items.item" />
+      <short value="An item or set of items (of the same type and status)" />
+      <min value="0" />
+      <max value="1" />
+    </element>
+
+
+
+
 
 <!--
 
