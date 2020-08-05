@@ -70,8 +70,15 @@
       <reference>
         <reference value="StructureDefinition/model-inventory-status"/>
       </reference>
-      <name value="Logical Model - Inventory Status"/>
+      <name value="Logical Model - Inventory Status Report"/>
       <description value="The logical data model for Inventory Status"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-inventory-change"/>
+      </reference>
+      <name value="Logical Model - Inventory Change Report"/>
+      <description value="The logical data model for Inventory Changes"/>
     </resource>
 
 <!--
