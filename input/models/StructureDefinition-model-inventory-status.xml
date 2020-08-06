@@ -5,7 +5,7 @@
   <version value="0.1.0" />
   <name value="InventoryStatus" />
   <status value="draft" />
-  <description value="This is the logical model for the InventoryStatus" />
+  <description value="This is the logical model for the Inventory Status report - an information about the current status of a given inventory position. This is to be typically used in inventory counts - physical counts or estimates. It supports a report per status, per location, or a combination of both (which is how typically items are counted and reported)." />
   <fhirVersion value="4.0.1" />
   <mapping>
     <uri value="https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LIP/a1.htm" />
