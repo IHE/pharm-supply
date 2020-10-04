@@ -80,6 +80,13 @@
       <name value="Logical Model - Inventory Change Report"/>
       <description value="The logical data model for Inventory Changes"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-product"/>
+      </reference>
+      <name value="Logical Model - Product"/>
+      <description value="The logical data model for Products"/>
+    </resource>
 
 <!--
     <resource>

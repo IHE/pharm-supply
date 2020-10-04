@@ -1,0 +1,79 @@
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <!--trial-->
+  <id value="model-product" />
+  <url value="https://www.ihe.net/fhir/StructureDefinition/model-product" />
+  <version value="0.1.0" />
+  <name value="Product" />
+  <status value="draft" />
+  <description value="This is the logical model for a Product" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <uri value="https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LIP/a1.htm" />
+    <name value="GS1 XML EDI Logistics Inventory Report" />
+    <comment value="Also see IHE Pharmacy Supply White paper" />
+  </mapping>
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="Product" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Product">
+      <short value="Enables a party to provide information on inventory levels and inventory changes." />
+      <path value="Product" />
+      <min value="0" />
+      <max value="*" />
+    </element>
+
+    <element id="Product.identifier">
+      <path value="Product.identifier" />
+      <short value="Business identifier for the product" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Identifier" />
+      </type>
+    </element>
+    <element id="Product.baseUnitOfMeasure">
+      <path value="Product.baseUnitOfMeasure" />
+      <short value="The base unit of measure - the unit in which the product is used or counted." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Product.description">
+      <path value="Product.description" />
+      <short value="The type of counting - whether it is a manual counting, automated data capture, estimate.." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Product.description.attributeType">
+      <path value="Product.description.attributeType" />
+      <short value="The type of operation - add/subtract" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Product.description.attributeValue[x]">
+      <path value="Product.description.attributeType[x]" />
+      <short value="The value of the attribute" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="integer" />
+      </type>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+
+  </differential>
+
+</StructureDefinition>

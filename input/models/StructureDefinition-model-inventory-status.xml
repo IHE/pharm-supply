@@ -15,7 +15,7 @@
   <kind value="logical" />
   <abstract value="false" />
   <type value="InventoryStatus" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Base" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
   <derivation value="specialization" />
   <differential>
     <element id="InventoryStatus">
@@ -100,7 +100,7 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Period" />
+        <code value="Reference" />
       </type>
     </element>
     <element id="InventoryStatus.inventoryListing.status">
@@ -109,7 +109,7 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Period" />
+        <code value="CodeableConcept" />
       </type>
     </element>
     <element id="InventoryStatus.inventoryListing.items">
