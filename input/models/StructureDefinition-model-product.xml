@@ -19,7 +19,7 @@
   <derivation value="specialization" />
   <differential>
     <element id="Product">
-      <short value="Enables a party to provide information on inventory levels and inventory changes." />
+      <short value="A functional description of a product’s functionality, used for counting" />
       <path value="Product" />
       <min value="0" />
       <max value="*" />
@@ -72,7 +72,52 @@
       <type>
         <code value="string" />
       </type>
+      <type>
+        <code value="boolean" />
+      </type>
     </element>
+    <element id="Product.association">
+      <path value="Product.association" />
+      <short value="" />
+      <definition value="For example, Product A (powder) should be mixed with product B '(saline)', or 'product A should be applied with device B' , or 'Product X applies to parent device Y" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Product.description.associationType">
+      <path value="Product.description.associationType" />
+      <short value="The type of association" />
+      <definition value="e.g. 'applied with' or 'used with' or 'to be mixed with" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Product.description.associatedProduct">
+      <path value="Product.description.associatedProduct" />
+      <short value="The value of the attribute" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableReference" />
+      </type>
+    </element>
+    <element id="Product.description.classification">
+      <path value="Product.description.classification" />
+      <short value="The classification(s) of the product, e.g. ATC code, schedule, device class, ..." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="codeableConcept" />
+      </type>
+    </element>
+
+
+
+
 
   </differential>
 

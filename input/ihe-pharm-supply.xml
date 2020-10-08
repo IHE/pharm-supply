@@ -87,6 +87,13 @@
       <name value="Logical Model - Product"/>
       <description value="The logical data model for Products"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/model-item"/>
+      </reference>
+      <name value="Logical Model - Item"/>
+      <description value="The logical data model for Trade Items"/>
+    </resource>
 
 <!--
     <resource>
@@ -106,10 +113,7 @@
         <title value="Supply Home Page"/>
         <generation value="html"/>
       </page>
-
     </page>
-
-
 
 
 
