@@ -38,11 +38,26 @@
       <path value="Item.quantity" />
       <short value="The Quantity of Base Unit of Measure (how many Base UoM are in this item)." />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <type>
-        <code value="quantity" />
+        <code value="SimpleQuantity" />
       </type>
     </element>
+
+
+    <element id="Item.containedItem">
+      <path value="Item.containedItem" />
+      <short value="The contained item" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="CodeableReference" />
+        <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-item" />
+      </type>
+    </element>
+
+
+
     <element id="Item.tradeItemUnitDescriptorCode">
       <path value="Item.tradeItemUnitDescriptorCode" />
       <short value="'box', 'unit', 'pallet'" />
@@ -192,7 +207,7 @@
     </element>
 
 
-
+<!-- is netContent necessary?-->
     <element id="Item.netContent">
       <path value="Item.netContent" />
       <short value="Net content of the item" />
@@ -291,7 +306,6 @@
         <code value="codeableConcept" />
       </type>
     </element>
-
 
 
 
@@ -409,7 +423,6 @@
         <code value="Range" />
       </type>
     </element>
-
 
 
 

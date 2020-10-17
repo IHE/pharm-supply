@@ -86,8 +86,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Product.description.associationType">
-      <path value="Product.description.associationType" />
+    <element id="Product.association.associationType">
+      <path value="Product.association.associationType" />
       <short value="The type of association" />
       <definition value="e.g. 'applied with' or 'used with' or 'to be mixed with" />
       <min value="1" />
@@ -96,13 +96,14 @@
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Product.description.associatedProduct">
-      <path value="Product.description.associatedProduct" />
-      <short value="The value of the attribute" />
+    <element id="Product.association.associatedProduct">
+      <path value="Product.association.associatedProduct" />
+      <short value="The actual related product" />
       <min value="1" />
       <max value="1" />
       <type>
         <code value="CodeableReference" />
+        <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-product" />
       </type>
     </element>
     <element id="Product.description.classification">
@@ -117,6 +118,16 @@
 
 
 
+    <element id="Product.quantity">
+      <path value="Product.quantity" />
+      <short value="" />
+      <definition value="For example, 1 box, 30 tablets, 3 blisters..." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="SimpleQuantity" />
+      </type>
+    </element>
 
 
   </differential>
