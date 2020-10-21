@@ -108,7 +108,7 @@
       <path value="Item.marketingAuthorization" />
       <short value="Marketing authorization" />
       <min value="0" />
-      <max value="1" />
+      <max value="*" />
       <type>
         <code value="BackboneElement" />
       </type>
@@ -122,6 +122,7 @@
       <type>
         <code value="CodeableReference" />
       </type>
+        <targetProfile value="CodeableReference" />
     </element>
 
     <element id="Item.marketingAuthorization.number">
@@ -156,7 +157,7 @@
 
     <element id="Item.marketingAuthorization.type">
       <path value="Item.marketingAuthorization.type" />
-      <short value=" Type of marketing authorization" />
+      <short value=" Type of marketing authorization, e.g. 'emergency use authorization' or 'regular'" />
       <min value="0" />
       <max value="1" />
       <type>
@@ -231,7 +232,7 @@
       <min value="1" />
       <max value="1" />
       <type>
-        <code value="Quantity" />
+        <code value="SimpleQuantity" />
       </type>
     </element>
 
@@ -243,7 +244,7 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="Quantity" />
+        <code value="SimpleQuantity" />
       </type>
     </element>
 
@@ -340,8 +341,8 @@
 
 
 
-    <element id="Item.dosageFormTypeCodeReference">
-      <path value="Item.dosageFormTypeCodeReference" />
+    <element id="Item.dosageForm">
+      <path value="Item.dosageForm" />
       <short value="The code for the dose form of the pharmaceutical item" />
       <min value="0" />
       <max value="1" />
@@ -368,7 +369,7 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
     </element>
 
@@ -380,7 +381,7 @@
       <min value="0" />
       <max value="1" />
       <type>
-        <code value="string" />
+        <code value="BackboneElement" />
       </type>
     </element>
 
