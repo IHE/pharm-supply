@@ -85,6 +85,15 @@
         <code value="code" />
       </type>
     </element>
+    <element id="Item.itemName.language">
+      <path value="Item.itemName.language" />
+      <short value="The language of the item " />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
     <element id="Item.itemName.name">
       <path value="Item.itemName.name" />
       <short value="The name of the item " />
@@ -168,6 +177,26 @@
 
     <element id="Item.description">
       <path value="Item.description" />
+      <short value="The description of the item" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+
+    <element id="Item.description.language">
+      <path value="Item.description.language" />
+      <short value="The language of the item description" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="code" />
+      </type>
+    </element>
+
+    <element id="Item.description.description">
+      <path value="Item.description.description" />
       <short value="Textual description of the item" />
       <min value="0" />
       <max value="1" />
@@ -218,7 +247,7 @@
       </type>
     </element>
 
-
+<!-- 
     <element id="Item.totalQuantityOfNextLowerLevelTradeItem">
       <path value="Item.totalQuantityOfNextLowerLevelTradeItem" />
       <short value="For items that contain items, this is the quantity of items contained" />
@@ -229,7 +258,7 @@
       </type>
     </element>
 
-
+-->
 
 
 

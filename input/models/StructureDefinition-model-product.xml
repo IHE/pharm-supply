@@ -130,6 +130,21 @@
     </element>
 
 
+<!-- I don't know if this belongs here or in the catalog...-->
+    <element id="Product.tradeItem">
+      <path value="Product.tradeItem" />
+      <short value="The trade item corresponding to the product" />
+      <definition value="" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Reference" />
+      </type>
+      <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-inventory-change" />
+
+    </element>
+
+
   </differential>
 
 </StructureDefinition>
