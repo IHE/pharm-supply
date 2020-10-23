@@ -426,17 +426,17 @@
 
 
 
-    <element id="Item.storageHandling">
-      <path value="Item.storageHandling" />
+    <element id="Item.storageandHandling">
+      <path value="Item.storageandHandling" />
       <short value="The Storage and Handling conditions for the item" />
-      <min value="1" />
+      <min value="0" />
       <max value="*" />
       <type>
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Item.storageHandling.attributeType">
-      <path value="Item.storageHandling.attributeType" />
+    <element id="Item.storageandHandling.attributeType">
+      <path value="Item.storageandHandling.attributeType" />
       <short value="The type of attribute, e.g. 'transport humidity', 'transport temperature', 'sunlight'" />
       <min value="1" />
       <max value="1" />
@@ -444,9 +444,9 @@
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Item.storageHandling.value">
-      <path value="Item.storageHandling.value" />
-      <short value="The name of the item " />
+    <element id="Item.storageandHandling.value">
+      <path value="Item.storageandHandling.value" />
+      <short value="The value of the storage / handling parameter" />
       <min value="0" /> <!-- can be zero to support removal of an attribute-->
       <max value="1" />
       <type>
