@@ -327,6 +327,16 @@
         <code value="CodeableReference" />
       </type>
     </element>
+    <element id="Item.association.quantity">
+      <path value="Item.association.quantity" />
+      <short value="The quantity of the associated item in this item" />
+      <short value="The quantity of the associated item in this item - Numerator is the quantity of the related item. Denominator is the quantity of the present item. for example a value of 20 means 'this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product.' " />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Ratio" />
+      </type>
+    </element>
     <element id="Item.classification">
       <path value="Item.classification" />
       <short value="The classification(s) of the product, e.g. ATC code, schedule, device class, ..." />

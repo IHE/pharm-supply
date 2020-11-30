@@ -106,6 +106,16 @@
         <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-product" />
       </type>
     </element>
+    <element id="Product.association.quantity">
+      <path value="Product.association.quantity" />
+      <short value="The quantity of the associated product in this product" />
+      <short value="The quantity of the associated product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. for example a value of 20 means 'this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product.' " />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Ratio" />
+      </type>
+    </element>
     <element id="Product.classification">
       <path value="Product.classification" />
       <short value="The classification(s) of the product, e.g. ATC code, schedule, device class, ..." />
