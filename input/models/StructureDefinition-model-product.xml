@@ -106,6 +106,10 @@
         <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-product" />
         <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-item" />
       </type>
+      <binding>
+          <strength value="preferred"/>
+          <valueSet value= "https://www.ihe.net/fhir/ValueSet/pharm-product-association-type"/>
+      </binding>
     </element>
     <element id="Product.association.quantity">
       <path value="Product.association.quantity" />

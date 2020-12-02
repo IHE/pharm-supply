@@ -1,7 +1,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <!--trial-->
   <id value="model-item" />
-  <url value="https://www.ihe.net/fhir/StructureDefinition/model-inventory-change" />
+  <url value="https://www.ihe.net/fhir/StructureDefinition/model-item" />
   <version value="0.1.0" />
   <name value="Item" />
   <status value="draft" />
@@ -328,6 +328,11 @@
         <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-product" />
         <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-item" />
       </type>
+      <binding>
+          <strength value="preferred"/>
+          <valueSet value= "https://www.ihe.net/fhir/ValueSet/pharm-product-association-type"/>
+      </binding>
+
     </element>
     <element id="Item.association.quantity">
       <path value="Item.association.quantity" />
@@ -348,8 +353,6 @@
         <code value="codeableConcept" />
       </type>
     </element>
-
-
 
 
 
@@ -465,9 +468,6 @@
         <code value="Range" />
       </type>
     </element>
-
-
-
 
 
 
