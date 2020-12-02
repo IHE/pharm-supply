@@ -113,6 +113,17 @@
         <title value="Supply Home Page"/>
         <generation value="html"/>
       </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases covered by this Implementation Guide"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="usecase1.html"/>
+          <title value="Use Case 1"/>
+          <generation value="html"/>
+        </page>
+      </page>
+
     </page>
 
 
