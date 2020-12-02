@@ -104,12 +104,13 @@
       <type>
         <code value="CodeableReference" />
         <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-product" />
+        <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-item" />
       </type>
     </element>
     <element id="Product.association.quantity">
       <path value="Product.association.quantity" />
       <short value="The quantity of the associated product in this product" />
-      <short value="The quantity of the associated product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. for example a value of 20 means 'this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product.' " />
+      <short value="The quantity of the associated product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. for example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product." />
       <min value="1" />
       <max value="1" />
       <type>
@@ -128,31 +129,6 @@
 
 
 
-    <element id="Product.quantity">
-      <path value="Product.quantity" />
-      <short value="" />
-      <definition value="For example, 1 box, 30 tablets, 3 blisters..." />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="SimpleQuantity" />
-      </type>
-    </element>
-
-
-<!-- I don't know if this belongs here or in the catalog...-->
-    <element id="Product.tradeItem">
-      <path value="Product.tradeItem" />
-      <short value="The trade item corresponding to the product" />
-      <definition value="" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="Reference" />
-      </type>
-      <targetProfile value="https://www.ihe.net/fhir/StructureDefinition/model-inventory-change" />
-
-    </element>
 
 
   </differential>
