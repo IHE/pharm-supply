@@ -7,7 +7,7 @@ hide footbox
 
 
 actor Customer as C
-actor "Community\nPharmacist" as CPh
+actor "Pharmacy" as CPh
 Participant "Pharmacy\nSystem" as CP
 Participant "Vendor 1\n(Purchase agreement)" as V1
 Participant "Vendor 2\n(Consignment agreement)" as V2
