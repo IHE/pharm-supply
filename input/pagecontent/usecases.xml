@@ -2,7 +2,7 @@
 
 <p>These are the use cases supported by this Implementation Guide:</p>
 <ol>
-  <li>Use Case 1</li>
+  <li><a href="https://build.fhir.org/ig/IHE/pharm-supply/usecase1.html">Use Case 1 - Dispensing and Resupply - Stock and consignment items</a> </li>
   <li>Use Case 2</li>
   <li>Use Case 3</li>
 </ol>
