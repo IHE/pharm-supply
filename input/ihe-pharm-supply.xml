@@ -122,6 +122,11 @@
           <title value="Use Case 1"/>
           <generation value="html"/>
         </page>
+        <page>
+          <nameUrl value="usecase2.html"/>
+          <title value="Use Case 2"/>
+          <generation value="markdown"/>
+        </page>
       </page>
 
     </page>
