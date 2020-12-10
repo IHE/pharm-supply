@@ -7,5 +7,5 @@
 ~~It doesn't work~~
 
 <div>
-{% include test.svg %}
+{% include usecase1.svg %}
 </div>
