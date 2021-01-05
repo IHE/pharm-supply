@@ -114,7 +114,7 @@
     <element id="Product.association.quantity">
       <path value="Product.association.quantity" />
       <short value="The quantity of the associated product in this product" />
-      <short value="The quantity of the associated product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. for example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product." />
+      <definition value="The quantity of the associated product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. for example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product." />
       <min value="1" />
       <max value="1" />
       <type>

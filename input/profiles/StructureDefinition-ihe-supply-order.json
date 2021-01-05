@@ -4,7 +4,7 @@
   "url": "https://ihe.net/fhir/ihe-pharm-supply/StructureDefinition/ihe-supply-order",
   "version": "0.1.0",
   "name": "IHESupplyOrder",
-  "title": "Supply Order",
+  "title": "Profile -Supply Order",
   "status": "active",
   "description": "Defines the profile for Supply / Resupply Order.",
   "fhirVersion": "4.0.1",

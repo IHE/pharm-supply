@@ -1,0 +1,30 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ihe-consumption-notice",
+  "url": "http://ihe.net/fhir/pharmacy/supply/StructureDefinition/ihe-consumption-notice",
+  "version": "0.2.0",
+  "name": "IHEConsumptionNotice",
+  "title": "Profile - Consumption Notice",
+  "status": "active",
+  "description": "A notification of consumption of items, due to usage, administration, wastage...",
+  "fhirVersion": "4.5.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "InventoryReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/InventoryReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "InventoryReport.identifier",
+        "path": "InventoryReport.identifier",
+        "mustSupport": true
+      },
+      {
+        "id": "InventoryReport.countType",
+        "path": "InventoryReport.countType",
+        "fixedCode": "difference"
+      }
+    ]
+  }
+}

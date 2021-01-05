@@ -337,7 +337,7 @@
     <element id="Item.association.quantity">
       <path value="Item.association.quantity" />
       <short value="The quantity of the associated item in this item" />
-      <short value="The quantity of the associated item in this item - Numerator is the quantity of the related item. Denominator is the quantity of the present item. For example a value of 20 means that this item contains 20 units of the related item; a value of 1:20 means the inverse - that the contained item contains 20 units of this item." />
+      <definition value="The quantity of the associated item in this item - Numerator is the quantity of the related item. Denominator is the quantity of the present item. For example a value of 20 means that this item contains 20 units of the related item; a value of 1:20 means the inverse - that the contained item contains 20 units of this item." />
       <min value="1" />
       <max value="1" />
       <type>

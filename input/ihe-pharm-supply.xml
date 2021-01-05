@@ -33,7 +33,7 @@
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
-  <fhirVersion value="4.0.1"/>
+  <fhirVersion value="4.5.0"/>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
@@ -128,7 +128,46 @@
           <generation value="markdown"/>
         </page>
       </page>
-
+      <page>
+        <nameUrl value="transactions.html"/>
+        <title value="Transactions"/>
+        <generation value="markdown"/>
+          <page>
+            <nameUrl value="resupply_order.html"/>
+            <title value="Resupply Order"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="resupply_response.html"/>
+            <title value="Resupply Response"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="shipment_notice.html"/>
+            <title value="Shipment Notice"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="receipt_notice.html"/>
+            <title value="Receipt"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="inventory_query.html"/>
+            <title value="Inventory Query"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="inventory_status_report.html"/>
+            <title value="Inventory Status Report"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="consumption_report.html"/>
+            <title value="Consumption Report"/>
+            <generation value="markdown"/>
+          </page>
+      </page>
     </page>
 
 

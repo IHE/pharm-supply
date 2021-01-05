@@ -117,6 +117,8 @@
       <max value="*" />
       <type>
         <code value="Reference" />
+      </type>
+      <type>
         <code value="Annotation" />
       </type>
     </element>
