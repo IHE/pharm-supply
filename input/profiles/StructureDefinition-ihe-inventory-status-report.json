@@ -6,7 +6,7 @@
   "name": "IHEInventoryStatusReport",
   "title": "Profile - Inventory Status Report",
   "status": "active",
-  "description": "Defines a suply request...",
+  "description": "Inventory status report - the availability of products or items in an inventory position.",
   "fhirVersion": "4.5.0",
   "kind": "resource",
   "abstract": false,

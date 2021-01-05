@@ -6,7 +6,7 @@
   "name": "IHESupplyShipmentNotice",
   "title": "Profile - Supply Shipment Notice",
   "status": "active",
-  "description": "A notification of shipment or beginning of transport of supply items...",
+  "description": "A notification of shipment or beginning of transport of supply items.",
   "fhirVersion": "4.5.0",
   "kind": "resource",
   "abstract": false,

@@ -11,7 +11,7 @@ Participant "Supply\nRequest Filler" as RF
 activate SR
 activate RF
 
-SR -> RF: \tRequest resupply \t [[structuredefinition-ihe-supply-order.html{Profile}  ~[S1~]]]
+SR -> RF: \tRequest resupply \t [[StructureDefinition-ihe-supply-order.html{Profile}  ~[S1~]]]
 SR <-- RF: \t(http response)\t
 
 deactivate SR

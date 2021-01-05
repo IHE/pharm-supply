@@ -6,7 +6,7 @@
   "name": "IHESupplyReceptionNotice",
   "title": "Profile - Supply Reception Notice",
   "status": "active",
-  "description": "A notification of reception of supply items...",
+  "description": "A notification of reception of supply items.",
   "fhirVersion": "4.5.0",
   "kind": "resource",
   "abstract": false,
