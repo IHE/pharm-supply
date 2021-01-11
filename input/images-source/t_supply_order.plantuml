@@ -5,8 +5,8 @@ hide footbox
 !include ./style.iuml
 
 
-Participant "Supply\nRequester" as SR
-Participant "Supply\nRequest Filler" as RF
+Participant "[[#{Profile} Supply\nRequester]]" as SR
+Participant "[[#{Profile} Supply\nRequest Filler]]" as RF
 
 activate SR
 activate RF
