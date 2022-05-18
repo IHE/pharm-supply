@@ -7,7 +7,7 @@
   "title": "Profile - Inventory Status Report",
   "status": "active",
   "description": "Inventory status report - the availability of products or items in an inventory position.",
-  "fhirVersion": "4.3.0",
+  "fhirVersion": "4.1.0",
   "kind": "resource",
   "abstract": false,
   "type": "InventoryReport",

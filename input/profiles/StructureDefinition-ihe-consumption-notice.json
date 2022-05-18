@@ -7,7 +7,7 @@
   "title": "Profile - Consumption Notice",
   "status": "active",
   "description": "A notification of consumption of items, due to usage, administration, wastage...",
-  "fhirVersion": "4.3.0",
+  "fhirVersion": "4.1.0",
   "kind": "resource",
   "abstract": false,
   "type": "InventoryReport",

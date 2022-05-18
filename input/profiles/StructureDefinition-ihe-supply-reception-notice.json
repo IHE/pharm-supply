@@ -7,7 +7,7 @@
   "title": "Profile - Supply Reception Notice",
   "status": "active",
   "description": "A notification of reception of supply items.",
-  "fhirVersion": "4.3.0",
+  "fhirVersion": "4.1.0",
   "kind": "resource",
   "abstract": false,
   "type": "SupplyDelivery",
