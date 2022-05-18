@@ -4,7 +4,7 @@ This is an Implementation Guide for the IHE Supply Chain profiles
 <br> </br>
 ###
 ### Publication
-This ImplementationGuide is published in the following locations:
+This ImplementationGuide is published in the following locations: 
 
 Continuous Build: __http://build.fhir.org/ig/IHE/pharm-supply/index.html__  
 Canonical / permanent URL: 
