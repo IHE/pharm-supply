@@ -1,10 +1,16 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas/R5/fhir-single.xsd">
 
-<p>These are the use cases supported by this Implementation Guide:</p>
+<p>This section contains the reference use cases that show the interoperability needs. From these reference use cases, we derive the requirements and explain the model (actors, data exchange, etc.). More detailed use cases can be added as examples.</p>
 <ol>
-  <li><a href="https://build.fhir.org/ig/IHE/pharm-supply/usecase1.html">Use Case 1 - Dispensing and Resupply - Stock and consignment items</a> </li>
-  <li>Use Case 2</li>
-  <li>Use Case 3</li>
+  <li><a href="usecase1.html">Use Case 1 - Medication order, global distribution and administration (floor stock)</a> </li>
+  <li><a href="usecase2.html">Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory</a> </li>
+  <li><a href="usecase3.html">Use Case 3 - Inventory Count and Resupply, Product Distribution</a> </li>
+  <li><a href="usecase4.html">Use Case 4 - Community Pharmacy, Stock and Consignment Items</a> </li>
+  <li><a href="usecase5.html">Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock</a> </li>
+  <li><a href="usecase6.html">Use Case 6 - Cold-stored medication, resupply and return</a> </li>
+  <li><a href="usecase7.html">Use Case 7 - Falsified Medication Check</a> </li>
+  <li><a href="usecase8.html">Use Case 8 - Operating Theater - UDI lookup</a> </li>
+  <li><a href="usecase9.html">Use Case 9 - Recall of UDI Devices</a> </li>
 </ol>
 
 
