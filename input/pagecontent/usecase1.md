@@ -81,7 +81,7 @@ The product is available in <u>ward G1</u> and in the central pharmacy.
 The product is labeled as shown below:
 
 <div style="text-align:center">
-<img src="image_UC1_markingBuscopan.png" style="width:3.45255in;height:1.95313in" />
+<img src="image_UC1_MarkingBuscopan.png" style="width:3.45255in;height:1.95313in" />
 </div>
 <br>
 
