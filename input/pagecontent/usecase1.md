@@ -20,6 +20,32 @@
     border-bottom-width: 3px;
     border-bottom-color: #cccccc;
   }
+
+  a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+}
+
 </style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
@@ -70,7 +96,7 @@ butylbromide 10 mg** " (pharmaceutical product).
 Due to a previous bulk purchase, all of the initially available units of
 BUSCOPAN at the hospital have the same lot number: ABC0001. This lot has
 an expiry date of 12-2016.The available inventory for **hyoscine
-butylbromide10 mg** (BUSCOPAN IBS RELIEF) is as follows[^26]:
+butylbromide10 mg** (BUSCOPAN IBS RELIEF) is as follows[^1]:
 
 
 <table class="table-bordered table-usecase">
@@ -210,7 +236,7 @@ The nurse consults the Medication Administration System which contains
 the patients' Medication Administration Records (MARs) with the planned
 medications. At the scheduled time, the system may notify the nurse, who
 then identifies the patient (by manual entry in the system, or with a
-barcode) (e.g., by scanning the patient's wrist barcode[^27]), and sees
+barcode) (e.g., by scanning the patient's wrist barcode[^2]), and sees
 that the medication "**hyoscine butylbromide 10 mg** " is required.
 Since the ward contains some products in their commercial package, the
 system displays to the nurse the name that can be recognized in the
@@ -289,3 +315,13 @@ lot-traceability or unique item traceability by using AIDC technologies
 <div style="text-align:center">
 <img src="image_UC1_SequenceDiagram.png" style="width:6.32344in;height:6.49193in" />
 </div>
+<br>
+<p>
+<div>
+  <a href="usecase2.html" style="float:right" class="next round" title="Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory">&#8250;</a>
+</div>
+</p>
+
+
+[^1]: This table is a simplified view that shows the relevant data for this scope; it is not intended to be used as guidance
+[^2]: The use of barcodes for identifying patients is also enabled by standardized identifiers such as GS1’s GSRN.

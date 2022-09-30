@@ -1,3 +1,52 @@
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+
+  a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+</style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
 <i>This use case shows that supply involves not only the information flow
@@ -75,3 +124,8 @@ The return of items is similar to the delivery of items: One party
 informs the other about the sending of items. This exchange is also
 supported by standards for content and for item identification.
 
+<br>
+<div>
+  <a href="usecase5.html" style="float:left" class="previous round" title="Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock">&#8249;</a>
+  <a href="usecase7.html" style="float:right" class="next round" title="Use Case 7 - Falsified Medication Check">&#8250;</a>
+</div>
