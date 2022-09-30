@@ -1,8 +1,31 @@
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+</style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
 <i>This simple use case articulates with the previous to describe the
 resupply of medication from the vendor to the ward.</i>
-
+<br>
 <i>It describes the situation of supplier-managed inventory: the
 consumption of items is registered in a system that is not responsible
 for maintaining its own stock: it reports to the supplier (Pharmacy)
@@ -13,8 +36,7 @@ of the inventory, and decide to order any resupplies to the ward.</i>
 ### Preconditions
 
 In the beginning of the year, the hospital made a contract with a
-supplier for BUSCOPAN IBS RELIEF, where the conditions (e.g., prices and
-quantities) are defined for the whole year.
+supplier for BUSCOPAN IBS RELIEF, where the conditions (e.g., prices and quantities) are defined for the whole year.
 
 As described in Section 7.1., for inventory of the ward, only the full
 boxes are taken into account. In this use case, a box that contains 19
@@ -51,23 +73,87 @@ The WMS system at the pharmacy considers that transfer of inventory, by
 reassigning those 10 units from the central pharmacy to ward G1. As a
 consequence, the inventory levels are as follows:
 
-| Pharmacy          |                                   |            |             |                 |               |                   |
-|-------------------|-----------------------------------|------------|-------------|-----------------|---------------|-------------------|
-| Item Code         | Item name                         | Lot        | Expiry Date | Available qty   | Reorder level | Default order qty |
-| **. . .**         |                                   |            |             |                 |               |                   |
-| **5012917021912** | BUSCOPAN IBS RELIEF bx 20 tablets | ABC0001    | 12-2016     | **18** (was:28) |               |                   |
-|                   |                                   | **Total:** |             | **18**          | 20            | 50                |
-| **. . .**         |                                   |            |             |                 |               |                   |
-{: .table-bordered}
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Pharmacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>5012917021912</strong></td>
+      <td rowspan="2">BUSCOPAN IBS RELIEF <br> bx 20 tablets</td>
+      <td>ABC0001</td>
+      <td>12-2016</td>
+      <td style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>18</strong> (was:28)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>14</strong></td>
+      <td>20</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
 
-| Ward G1           |                                   |            |             |                |               |                   |
-|-------------------|-----------------------------------|------------|-------------|----------------|---------------|-------------------|
-| Item Code         | Item name                         | Lot        | Expiry Date | Available qty  | Reorder level | Default order qty |
-| **. . .**         |                                   |            |             |                |               |                   |
-| **5012917021912** | BUSCOPAN IBS RELIEF bx 20 tablets | ABC0001    | 12-2016     | **14** (was:4) |               |                   |
-|                   |                                   | **Total:** |             | **14**         | 5             | 10                |
-| **. . .**         |                                   |            |             |                |               |                   |
-{: .table-bordered}
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Ward G1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>5012917021912</strong></td>
+      <td rowspan="2">BUSCOPAN IBS RELIEF <br> bx 20 tablets</td>
+      <td>ABC0001</td>
+      <td>12-2016</td>
+      <td style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>14</strong> (was:4)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>14</strong></td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Resupply Request
 
@@ -95,17 +181,46 @@ which includes all traceability information (item identification,
 lot/batch number, expiry date) as well the identification of the
 shipment. The information about the shipment is as follows:
 
-| Shipment ID: 773500538500000018     |
-|-------------------------------------|
-| Item                                |
-|     Customer Order Number: MD00015  |
-|     GTIN: 5012917021912             |
-|     National Code: xyz123           |
-|     Name: BUSCOPAN IBS RELIEF       |
-|     Lot number: XYZ0009             |
-|     Expiry date: 03-2017            |
-|     Quantity: 50                    |
-{: .table-bordered}
+<table class="table-bordered table-striped">
+  <thead>
+    <tr>
+      <th colspan="3">Shipment ID: 773500538500000018</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan ="2">Item</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Customer Order Number:</td>
+      <td>MD00015</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">GTIN:</td>
+      <td>5012917021912</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">National Code:</td>
+      <td>xyz123</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Name:</td>
+      <td>BUSCOPAN IBS RELIEF</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Lot number:</td>
+      <td>XYZ0009</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Expiry date:</td>
+      <td>03-2017</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Quantity:</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Item Reception
 
@@ -149,15 +264,53 @@ the reception area.
 
 The detailed inventory status at the pharmacy is finally as follows:
 
-| Pharmacy          |                                   |             |             |               |               |                   |
-|-------------------|-----------------------------------|-------------|-------------|---------------|---------------|-------------------|
-| Item Code         | Item name                         | Lot         | Expiry Date | Available qty | Reorder level | Default order qty |
-| **. . .**         |                                   |             |             |               |               |                   |
-| **5012917021912** | BUSCOPAN IBS RELIEF bx 20 tablets | ABC0001     | 12-2016     | 18            |               |                   |
-|                   |                                   | **XYZ0009** | **03-2017** | **50**        |               |                   |
-|                   |                                   | **Total:**  |             | **68**        | 20            | 50                |
-| **. . .**         |                                   |             |             |               |               |                   |
-{: .table-bordered}
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Pharmacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>5012917021912</strong></td>
+      <td rowspan="3">BUSCOPAN IBS RELIEF <br> bx 20 tablets</td>
+      <td>ABC0001</td>
+      <td>12-2016</td>
+      <td>18</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="cell-shaded"><strong>XYZ0009</strong></td>
+      <td class="cell-shaded"><strong>03-2017</strong></td>
+      <td class="cell-shaded" style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>50</strong></td>
+      <td class="cell-shaded">&nbsp;</td>
+      <td class="cell-shaded">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>68</strong></td>
+      <td>20</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Sequence Diagram
 

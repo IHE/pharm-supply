@@ -1,3 +1,26 @@
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+</style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
 <i>This use case describes a situation where the pharmacy has, besides
@@ -12,18 +35,76 @@ the vendor until sold.</i>
 <u>The Pharmacy stock has recently been recounted and is considered
 accurate. The following items are available in the pharmacy:</u>
 
-| Pharmacy Stock     |            |            |             |               |               |                   |
-|--------------------|------------|------------|-------------|---------------|---------------|-------------------|
-| Item Code          | Item name  | Lot        | Expiry Date | Available qty | Reorder level | Default order qty |
-| **. . .**          |            |            |             |               |               |                   |
-| **05725361962471** | XXXXXXXXXX | LLABC01    | 12-2017     | 10            |               |                   |
-|                    |            | LLABC03    | 01-2018     | 8             |               |                   |
-|                    |            | **Total:** |             | **18**        | 5             | 10                |
-| **03582938641053** | XXXXXXXXXX | 383035     | 07-2018     | 3             |               |                   |
-|                    |            | 383037     | 03-2019     | 7             |               |                   |
-|                    |            | **Total:** |             | **10**        |               |                   |
-| **. . .**          |            |            |             |               |               |                   |
-{: .table-bordered}
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Pharmacy Stock</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>05725361962471</strong></td>
+      <td rowspan="3">XXXXXXXXXX</td>
+      <td>LLABC01</td>
+      <td>12-2017</td>
+      <td>10</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="cell-shaded"><strong>LLABC03</strong></td>
+      <td class="cell-shaded"><strong>01-2018</strong></td>
+      <td class="cell-shaded" style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>8</strong></td>
+      <td class="cell-shaded">&nbsp;</td>
+      <td class="cell-shaded">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>18</strong></td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>03582938641053</strong></td>
+      <td rowspan="3">XXXXXXXXXX</td>
+      <td>383035</td>
+      <td>07-2018</td>
+      <td>3</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>383037</strong></td>
+      <td><strong>03-2019</strong></td>
+      <td style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>7</strong></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>10</strong></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 The second item is in consignment, and as such. the inventory is managed
 by the vendor.

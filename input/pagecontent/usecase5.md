@@ -1,3 +1,26 @@
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+</style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
 <i>This use case describes a situation where an institution must provide
@@ -47,7 +70,7 @@ patient, for two types of reasons:
 | Amoxicillin 500 mg capsules | AMOXIL caps 500 mg    | C. Pharmacy     | 40 boxes = 1120 capsules |                  |
 | Sertraline 100 mg           | ZOLOFT 100 mg tablets | Satellite (Man) | 24 boxes = 672 tablets   | 7 tablets        |
 | …                           | …                     | …               | …                        | …                |
-{: .table-bordered}
+{: .table-bordered .table-striped}
 
 ### Dispensing
 

@@ -1,9 +1,32 @@
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+</style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
 <i>This use case shows the checking of inventory at a specific inventory
 location - in this example, the satellite pharmacy must count the
 inventory and report to the central pharmacy.</i>
-
+<br>
 <i>Since the inventory must be manually checked before reporting, the
 initiator of this process is the satellite pharmacy.</i>
 </div>
@@ -13,7 +36,7 @@ initiator of this process is the satellite pharmacy.</i>
 broader functional scope, for example the Inventory application is a
 remote/mobile app without any previous knowledge of the current
 inventory.</i>
-
+<br>
 <i>This use case is limited to only one medication, although in practice,
 several items are of course expected to be at a given location.</i>
 </div>
@@ -45,10 +68,10 @@ style="width:1.06265in;height:1.06265in" />
 <br>
 <br>
 
-**(01)07612345678900**
+<b>(01)07612345678900</b>
 <br>
 
-**(17)141231(10)LX02374834**
+<b>(17)141231(10)LX02374834</b>
 </div>
 <br>
 
@@ -56,15 +79,53 @@ style="width:1.06265in;height:1.06265in" />
 the inventory at the hospital, the inventory of the satellite pharmacy
 is as follows:
 
-| Ward G1            |            |            |             |               |               |                   |
-|--------------------|------------|------------|-------------|---------------|---------------|-------------------|
-| Item Code          | Item name  | Lot        | Expiry Date | Available qty | Reorder level | Default order qty |
-| **. . .**          |            |            |             |               |               |                   |
-| **07612345678900** | XXXXXXXXXX | LL1233223  | 12-2016     | 5             |               |                   |
-|                    |            | LX02374834 | 03-2017     | 8             |               |                   |
-|                    |            | **Total:** |             | **13**        | 5             | 10                |
-| **. . .**          |            |            |             |               |               |                   |
-{: .table-bordered}
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Ward G1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>07612345678900</strong></td>
+      <td rowspan="3">XXXXXXXXXX</td>
+      <td>LL1233223</td>
+      <td>12-2016</td>
+      <td>5</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="cell-shaded"><strong>LX02374834</strong></td>
+      <td class="cell-shaded"><strong>03-2017</strong></td>
+      <td class="cell-shaded" style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>8</strong></td>
+      <td class="cell-shaded">&nbsp;</td>
+      <td class="cell-shaded">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>13</strong></td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Scan Location Inventory
 
@@ -107,16 +168,60 @@ system updates this information in its database.
 <u>At the end, the Pharmacy System contains the information that</u> the
 inventory of the satellite pharmacy is as follows:
 
-| Ward G1            |            |            |             |               |               |                   |
-|--------------------|------------|------------|-------------|---------------|---------------|-------------------|
-| Item Code          | Item name  | Lot        | Expiry Date | Available qty | Reorder level | Default order qty |
-| **. . .**          |            |            |             |               |               |                   |
-| **07612345678900** | XXXXXXXXXX | LL1233223  | 12-2016     | 4             |               |                   |
-|                    |            | LX02374834 | 03-2017     | 8             |               |                   |
-|                    |            | LA00012224 | 02-2015     | 1             |               |                   |
-|                    |            | **Total:** |             | **13**        | 5             | 10                |
-| **. . .**          |            |            |             |               |               |                   |
-{: .table-bordered}
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Ward G1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="4"><strong>07612345678900</strong></td>
+      <td rowspan="4">XXXXXXXXXX</td>
+      <td>LL1233223</td>
+      <td>12-2016</td>
+      <td>4</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="cell-shaded"><strong>LX02374834</strong></td>
+      <td class="cell-shaded"><strong>03-2017</strong></td>
+      <td class="cell-shaded" style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>8</strong></td>
+      <td class="cell-shaded">&nbsp;</td>
+      <td class="cell-shaded">&nbsp;</td>
+    </tr>
+    <tr>
+      <td>LA00012224</td>
+      <td>02-2015</td>
+      <td>1</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>13</strong></td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 This information can then be used for any of the purposes in this
 document, e.g., resupply, recall, etc.
