@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="ihe.fhir.pharm.supply"/>
-  <url value="http://ihe.net/fhir/pharmacy/supply"/>
+  <url value="http://ihe.net/fhir/PHARM/supply"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.2.0"/>
   <name value="Supply"/>
@@ -119,12 +119,47 @@
         <generation value="html"/>
         <page>
           <nameUrl value="usecase1.html"/>
-          <title value="Use Case 1"/>
-          <generation value="html"/>
+          <title value="Use Case 1 - Medication order, global distribution and administration (floor stock)"/>
+          <generation value="markdown"/>
         </page>
         <page>
           <nameUrl value="usecase2.html"/>
-          <title value="Use Case 2"/>
+          <title value="Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase3.html"/>
+          <title value="Use Case 3 - Inventory Count and Resupply, Product Distribution"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase4.html"/>
+          <title value="Use Case 4 - Community Pharmacy, Stock and Consignment Items"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase5.html"/>
+          <title value="Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase6.html"/>
+          <title value="Use Case 6 - Cold-stored medication, resupply and return"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase7.html"/>
+          <title value="Use Case 7 - Falsified Medication Check"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase8.html"/>
+          <title value="Use Case 8 - Operating Theater - UDI lookup"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="usecase9.html"/>
+          <title value="Use Case 9 - Recall of UDI Devices"/>
           <generation value="markdown"/>
         </page>
       </page>
