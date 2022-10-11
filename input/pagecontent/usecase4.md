@@ -20,32 +20,6 @@
     border-bottom-width: 3px;
     border-bottom-color: #cccccc;
   }
-
-  a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-}
-
-a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.previous {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.round {
-  border-radius: 50%;
-}
-
 </style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
@@ -186,8 +160,4 @@ The consumption report must be able to convey information on:
 
 - (any additional data deemed necessary for the concrete use)
 
-<br>
-<div>
-  <a href="usecase3.html" style="float:left" class="previous round" title="Use Case 3 - Inventory Count and Resupply, Product Distribution">&#8249;</a>
-  <a href="usecase5.html" style="float:right" class="next round" title="Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock">&#8250;</a>
-</div>
+

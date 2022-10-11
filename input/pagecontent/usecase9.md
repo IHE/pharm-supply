@@ -20,32 +20,6 @@
     border-bottom-width: 3px;
     border-bottom-color: #cccccc;
   }
-
-  a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-}
-
-a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.previous {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.round {
-  border-radius: 50%;
-}
-
 </style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
@@ -77,7 +51,3 @@ be the Purchasing department.
 <img src="image_UC9_SequenceDiagram.png" style="width:6.76672in;height:6.98471in"/>
 </div>
 
-<br>
-<div>
-  <a href="usecase8.html" style="float:left" class="previous round" title="Use Case 8 - Operating Theater - UDI lookup">&#8249;</a>
-</div>

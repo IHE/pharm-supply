@@ -246,5 +246,10 @@
       <code value="excludemap"/>
       <value value="true"/>
     </parameter>-->
+<!-- Additional parameters-->
+    <parameter>
+      <code value="shownav"/>
+      <value value="true"/>
+    </parameter>
   </definition>
 </ImplementationGuide>

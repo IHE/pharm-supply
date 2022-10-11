@@ -20,32 +20,6 @@
     border-bottom-width: 3px;
     border-bottom-color: #cccccc;
   }
-
-  a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-}
-
-a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.previous {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.round {
-  border-radius: 50%;
-}
-
 </style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
@@ -129,8 +103,4 @@ characteristics, from which the receiver can select those appropriate.
 These are “catalog” characteristics, so they are defined for the product
 type.
 
-<br>
-<div>
-  <a href="usecase7.html" style="float:left" class="previous round" title="Use Case 7 - Falsified Medication Check">&#8249;</a>
-  <a href="usecase9.html" style="float:right" class="next round" title="Use Case 9 - Recall of UDI Devices">&#8250;</a>
-</div>
+
