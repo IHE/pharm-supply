@@ -20,32 +20,6 @@
     border-bottom-width: 3px;
     border-bottom-color: #cccccc;
   }
-
-  a {
-  text-decoration: none;
-  display: inline-block;
-  padding: 8px 16px;
-}
-
-a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.previous {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.next {
-  background-color: #f1f1f1;
-  color: black;
-}
-
-.round {
-  border-radius: 50%;
-}
-
 </style>
 
 <div style="  border: 1px solid; padding: 5px; margin: 5px;">
@@ -349,10 +323,6 @@ The detailed inventory status at the pharmacy is finally as follows:
 </div>
 <br>
 <p>
-<div>
-  <a href="usecase1.html" style="float:let" class="previous round" title="Use Case 1 - Medication order, global distribution and administration (floor stock)">&#8249;</a>
-  <a href="usecase3.html" style="float:right" class="next round" title="Use Case 3 - Inventory Count and Resupply, Product Distribution">&#8250;</a>
-</div>
 </p>
 
 
