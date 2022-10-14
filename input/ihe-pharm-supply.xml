@@ -114,59 +114,104 @@
         <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="usecases.html"/>
-        <title value="Use Cases covered by this Implementation Guide"/>
-        <generation value="html"/>
+        <title value="Volume 1: Use-Case analysis"/>
         <page>
-          <nameUrl value="usecase1.html"/>
-          <title value="Use Case 1 - Medication order, global distribution and administration (floor stock)"/>
+          <nameUrl value="introduction.html"/>
+          <title value="Introduction"/>
           <generation value="markdown"/>
         </page>
         <page>
-          <nameUrl value="usecase2.html"/>
-          <title value="Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory"/>
+          <nameUrl value="usecases.html"/>
+          <title value="Use Cases covered by this Implementation Guide"/>
+          <generation value="html"/>
+          <page>
+            <nameUrl value="usecase1.html"/>
+            <title value="Use Case 1 - Medication order, global distribution and administration (floor stock)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase2.html"/>
+            <title value="Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase3.html"/>
+            <title value="Use Case 3 - Inventory Count and Resupply, Product Distribution"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase4.html"/>
+            <title value="Use Case 4 - Community Pharmacy, Stock and Consignment Items"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase5.html"/>
+            <title value="Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase6.html"/>
+            <title value="Use Case 6 - Cold-stored medication, resupply and return"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase7.html"/>
+            <title value="Use Case 7 - Falsified Medication Check"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase8.html"/>
+            <title value="Use Case 8 - Operating Theater - UDI lookup"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="usecase9.html"/>
+            <title value="Use Case 9 - Recall of UDI Devices"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <nameUrl value="overview.html"/>
+          <title value="Overview: Requirements analysis and architecture"/>
           <generation value="markdown"/>
         </page>
         <page>
-          <nameUrl value="usecase3.html"/>
-          <title value="Use Case 3 - Inventory Count and Resupply, Product Distribution"/>
+          <nameUrl value="actors_and_transactions.html"/>
+          <title value="Actors and Transactions overview"/>
           <generation value="markdown"/>
         </page>
         <page>
-          <nameUrl value="usecase4.html"/>
-          <title value="Use Case 4 - Community Pharmacy, Stock and Consignment Items"/>
+          <nameUrl value="actor_options.html"/>
+          <title value="Actor Options"/>
           <generation value="markdown"/>
         </page>
         <page>
-          <nameUrl value="usecase5.html"/>
-          <title value="Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock"/>
+          <nameUrl value="actor_required_grouping.html"/>
+          <title value="Actor Required Grouping"/>
           <generation value="markdown"/>
         </page>
         <page>
-          <nameUrl value="usecase6.html"/>
-          <title value="Use Case 6 - Cold-stored medication, resupply and return"/>
+          <nameUrl value="security_considerations.html"/>
+          <title value="Security Considerations"/>
           <generation value="markdown"/>
         </page>
         <page>
-          <nameUrl value="usecase7.html"/>
-          <title value="Use Case 7 - Falsified Medication Check"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="usecase8.html"/>
-          <title value="Use Case 8 - Operating Theater - UDI lookup"/>
-          <generation value="markdown"/>
-        </page>
-        <page>
-          <nameUrl value="usecase9.html"/>
-          <title value="Use Case 9 - Recall of UDI Devices"/>
+          <nameUrl value="cross_profile_considerations.html"/>
+          <title value="Cross Profile Considerations"/>
           <generation value="markdown"/>
         </page>
       </page>
       <page>
-        <nameUrl value="transactions.html"/>
-        <title value="Transactions"/>
-        <generation value="markdown"/>
+        <title value="Volume 2: Transaction Detail"/>
+        <page>
+          <nameUrl value="actor_definitions.html"/>
+          <title value="Actors Definitions"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="transactions.html"/>
+          <title value="Transaction Definitions"/>
+          <generation value="markdown"/>
           <page>
             <nameUrl value="resupply_order.html"/>
             <title value="Resupply Order"/>
@@ -202,6 +247,7 @@
             <title value="Consumption Report"/>
             <generation value="markdown"/>
           </page>
+        </page>
       </page>
     </page>
 

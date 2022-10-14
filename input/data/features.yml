@@ -1,5 +1,6 @@
 ---
-#disable_autonumbering: true
+disable_autonumbering: true
+
 feedback:
   - active: true
     dashboard:
