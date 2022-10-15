@@ -75,6 +75,12 @@ responds with the result of the matching.
 
 ###  Sequence Diagram
 
+  <figure>
+    {% include usecase-8-diagram.svg %}
+    <figcaption>Use Case 8</figcaption>
+  </figure>
+
+
 <div style="text-align:center">
 <img src="image_UC8_SequenceDiagram.png" style="width:4.90557in;height:8.06589in"/>
 </div>

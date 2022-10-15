@@ -1,0 +1,67 @@
+@startuml
+title Cold-stored medication, resupply and return
+skin BlueModern
+hide footbox
+
+Participant "Drug\nVendor" as SUP
+actor "Pharmacist" as PD
+Participant "Pharmacy System\n/ ERP" as ERP
+'participant "Medication\nAdministration\nSystem" as AI
+'actor "Nurse" as N
+
+
+group Resupply
+Activate ERP
+ERP -> ERP: Recalculate stock; subtract consumption
+ERP -> ERP: Prepare suggested order
+note right: Hey, here's a note [[http://www.google.com]]
+
+'Activate ERP
+ERP -> PD: Propose order (10 units)
+Activate PD
+PD -> ERP: Approve order
+deactivate PD
+ERP -> SUP: Send order
+Activate SUP
+SUP -> ERP: Confirm order reception
+Deactivate ERP
+end
+...
+
+group Supplier order processing
+SUP -> SUP: Check order
+SUP -> SUP: Prepare shipment
+SUP -> ERP: Send Shipment notice
+Activate ERP
+SUP --> ERP: Send Medication
+Deactivate SUP
+End
+...
+
+Group Reception at Pharmacy
+PD -> PD: Notice Damaged Medication
+Activate PD
+PD -> ERP: Confer reception of 8 items\nand 2 defective items
+ERP -> ERP: Add 8 accepted items to stock
+'Deactivate ERP
+PD -> SUP: Discuss return or\nrecall (via phone call)
+Deactivate PD
+Activate SUP
+SUP -> SUP: Prepare RMA
+SUP -> ERP: Send RMA
+Deactivate ERP
+...
+ERP -> SUP: Send Return Notice
+Activate ERP
+ERP --> SUP: Return items
+Deactivate ERP
+SUP -> SUP: Confer reception of 2 items
+SUP -> SUP: Update Billing info
+
+
+
+
+Deactivate ERP
+End
+
+@enduml

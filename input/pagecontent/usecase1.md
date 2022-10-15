@@ -286,6 +286,12 @@ lot-traceability or unique item traceability by using AIDC technologies
 
 ### Sequence Diagram
 
+
+  <figure>
+    {% include usecase-1-diagram.svg %}
+    <figcaption>Use Case 1</figcaption>
+  </figure>
+
 <div style="text-align:center">
 <img src="image_UC1_SequenceDiagram.png" style="width:6.32344in;height:6.49193in" />
 </div>

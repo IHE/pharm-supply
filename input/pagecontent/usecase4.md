@@ -132,9 +132,10 @@ that will be delivered during a next delivery round to the pharmacy.
 
 ### Sequence Diagram
 
-<div style="text-align:center">
-<img src="image_UC4_SequenceDiagram.png" style="width:5.55851in;height:8.11688in"/>
-</div>
+  <figure>
+    {% include usecase-4-diagram4.svg %}
+    <figcaption>Use Case 4</figcaption>
+  </figure>
 
 ### Requirements
 

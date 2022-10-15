@@ -127,7 +127,7 @@
       <min value="0" />
       <max value="*" />
       <type>
-        <code value="codeableConcept" />
+        <code value="CodeableConcept" />
       </type>
     </element>
 

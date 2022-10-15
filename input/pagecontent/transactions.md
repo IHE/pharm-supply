@@ -4,10 +4,8 @@ This profile provides the technical specifications for those mechanisms.
 
 
 ### Supply
-One of the conclusions of the IHE Supply white paper is the separation of "supply" in key areas: **supply ordering** and **supply delivery**.
-This means that the interactions concerning a supply order may be completely independent of the deliveries.
-This is expectable in many scenarios. The ordering process may follows a chain of approvers and suppliers, whereas the actual delivery
-follows a different chain. 
+The IHE Supply white paper separates "supply" in **supply ordering** and **supply delivery**. The interactions concerning a supply order may be completely independent of the deliveries.
+This is expectable in many scenarios: The ordering process may follows a chain of approvers and suppliers, whereas the actual delivery follows a different chain. 
 For example, a hospital location may send an order to a central pharmacy, which then follows to the purchasing department, and then to the selected supplier who may have a set of retailers available.
 The delivery information, however, will be shared from the selected supplier, to the actual distributor, to the transport company, and to the purchasing department directly.
 This means that the requests and respective response may follow a path that differs from the path followed by the delivery information.
