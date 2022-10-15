@@ -289,7 +289,7 @@ lot-traceability or unique item traceability by using AIDC technologies
 
   <figure>
     {% include usecase-1-diagram.svg %}
-    <figcaption>Use Case 1</figcaption>
+
   </figure>
 
 <div style="text-align:center">

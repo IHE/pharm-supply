@@ -73,13 +73,13 @@ only one dispensed.
 
   <figure>
     {% include usecase-7-diagram.svg %}
-    <figcaption>Use Case 7</figcaption>
+    <!-- <figcaption>Use Case 7</figcaption> -->
   </figure>
 
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <img src="image_UC7_SequenceDiagram.png" style="width:5.88757in;height:8.14593in"/>
-</div>
+</div> -->
 
 ### Requirements
 

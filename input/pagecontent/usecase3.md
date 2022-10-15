@@ -231,20 +231,20 @@ document, e.g., resupply, recall, etc.
 
   <figure>
     {% include usecase-3-diagram1.svg %}
-    <figcaption>Use Case 1</figcaption>
+    <!-- <figcaption>Use Case 1</figcaption> -->
   </figure>
 
   <figure>
     {% include usecase-3-diagram2.svg %}
-    <figcaption>Use Case 1</figcaption>
+    <!-- <figcaption>Use Case 1</figcaption> -->
   </figure>
 
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <img src="image_UC3_SequenceDiagram1.png" style="width:6.26875in;height:7.55037in"/>
 </div>
 
 <div style="text-align:center">
 <img src="image_UC3_SequenceDiagram2.png" style="width:6.26875in;height:6.1946in"/>
-</div>
+</div> -->
 

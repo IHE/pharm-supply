@@ -1,4 +1,5 @@
 @startuml
+!include style.iuml
 title Cold-stored medication, resupply and return
 skin BlueModern
 hide footbox

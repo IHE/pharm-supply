@@ -47,12 +47,14 @@ be the Purchasing department.
 
 ###  Sequence Diagram
 
-  <figure>
+  <div style="width:100%">
+  <figure style="width:100%">
     {% include usecase-9-diagram.svg %}
-    <figcaption>Use Case 9</figcaption>
+    <!-- <figcaption>Use Case 9</figcaption> -->
   </figure>
+  </div>
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <img src="image_UC9_SequenceDiagram.png" style="width:6.76672in;height:6.98471in"/>
-</div>
+</div> -->
 

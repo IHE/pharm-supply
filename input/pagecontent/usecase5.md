@@ -141,9 +141,9 @@ more units will be expected to be dispensed in the week after.
     <figcaption>Use Case 1</figcaption>
   </figure>
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <img src="image_UC5_SequenceDiagram1.png" style="width:5.76895in;height:7.82642in"/>
-</div>
+</div> -->
 
 
 #### Part 2: Updates to dispense
@@ -151,12 +151,12 @@ more units will be expected to be dispensed in the week after.
 
   <figure>
     {% include usecase-5-diagram2.svg %}
-    <figcaption>Use Case 1</figcaption>
+    <!-- <figcaption>Use Case 1</figcaption> -->
   </figure>
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <img src="image_UC5_SequenceDiagram2.png" style="width:6.26875in;height:7.89841in"/>
-</div>
+</div> -->
 
 
 

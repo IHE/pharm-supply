@@ -1,4 +1,5 @@
 @startuml
+!include style.iuml
 title Ward Supply Management - Pharmacy-managed inventory
 skin BlueModern
 hide footbox
