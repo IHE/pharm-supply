@@ -1,5 +1,6 @@
 @startuml
 !include style.iuml
+skinparam svgDimensionStyle false
 title Operating Theater - Recall products with UDI
 skin BlueModern
 hide footbox
