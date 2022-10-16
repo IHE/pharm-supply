@@ -1,0 +1,198 @@
+# ╭────────────────────────────────────────────sushi-config.yaml───────────────────────────────────────────────╮
+# | documentation of this sushi-config.yaml file https://fshschool.org/docs/sushi/configuration/               |
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: ihe.pharm.supply
+canonical: https://profiles.ihe.net/PHARM/SUPPLY
+name: IHE_PHARM_SUPPLY
+version: 0.3.0
+fhirVersion: 4.0.1
+status: active
+title: "Supply of Products for Healthcare (SUPPLY)"
+description: ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)
+copyright: IHE http://www.ihe.net/Governance/#Intellectual_Property
+copyrightYear: 2020+
+releaseLabel: ci-build
+#releaseLabel: Trial-Implementation
+#date: 2022-03-01
+publisher:
+  - name: IHE Pharmacy Technical Committee
+  - url: https://www.ihe.net/ihe_domains/pharmacy/
+  - email: pharmacy@ihe.net
+contact:
+  - name: IHE Pharmacy Technical Committee
+    telecom:
+      - system: email
+        value: pharmacy@ihe.net
+license: CC-BY-4.0
+jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
+#dependencies:
+#  https://profiles.ihe.net/fhir/ihe.formatcode.fhir: 0.2.4
+ 
+parameters:  # see http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/index.html
+  path-resource:
+    - input/history
+#  path-pages:
+#    - input/pagecontent
+#    - fsh-generated/includes
+  active-tables: 'false'
+  apply-contact: 'true'
+  apply-jurisdiction: 'true'
+  apply-publisher: 'true'
+  apply-version: 'true'
+  show-inherited-invariants: 'false'
+  usage-stats-opt-out: 'false'
+  autoload-resources: 'true'
+  shownav: 'true'
+
+# additional examples that need descriptions
+resources:
+  StructureDefinition/model-supply-request:
+    name: Logical Model - Supply Request
+    description: The logical data model for Supply Requests
+  StructureDefinition/model-supply-request-status:
+    name: Logical Model - Supply Request Status
+    description: The logical data model for Supply Request status
+  StructureDefinition/model-shipment-notice:
+    name: Logical Model - Shipment notice
+    description: The logical data model for Shipment Notice
+  StructureDefinition/model-receipt-notice:
+    name: Logical Model - Receipt notice
+    description: The logical data model for Receipt Notice
+  StructureDefinition/model-inventory-status:
+    name: Logical Model - Inventory Status Report
+    description: The logical data model for Inventory Status
+  StructureDefinition/model-inventory-change:
+    name: Logical Model - Inventory Change Report
+    description: The logical data model for Inventory Changes
+  StructureDefinition/model-product:
+    name: Logical Model - Product
+    description: The logical data model for Products
+  StructureDefinition/model-item:
+    name: Logical Model - Item
+    description: The logical data model for trade items
+
+
+
+
+pages:
+  index.md:
+    title: "Supply Home"
+  
+  volume1.md:
+    title: "Volume 1: Use cases"
+    introduction.md:
+      title: Introduction
+
+    usecases.xml:
+      title: "Use Case overview"
+      usecase1.md:
+        title: "Use Case 1 - Medication order, global distribution and administration (floor stock)"
+      usecase2.md:
+        title: "Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory"
+      usecase3.md:
+        title: "Use Case 3 - Inventory Count and Resupply, Product Distribution"
+      usecase4.md:
+        title: "Use Case 4 - Community Pharmacy, Stock and Consignment Items"
+      usecase5.md:
+        title: "Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock"
+      usecase6.md:
+        title: "Use Case 6 - Cold-stored medication, resupply and return"
+      usecase7.md:
+        title: "Use Case 7 - Falsified Medication Check"
+      usecase8.md:
+        title: "Use Case 8 - Operating Theater - UDI lookup"
+      usecase9.md:
+        title: "Use Case 9 - Recall of UDI Devices"
+    overview.md:
+      title: "Overview: data exchange for supply"
+    actors_and_transactions.md:
+      title: "Actors and Transactions overview"
+    actor_options.md:
+      title: "Actor Options"
+    actor_required_grouping.md:
+      title: "Actor Required Grouping"
+    security_considerations.md:
+      title: "Security Considerations"
+    cross_profile_considerations.md:
+      title: "Cross Profile Considerations"
+  volume2.md:
+    title:"Volume 2: Transaction Detail"
+    actor_definitions.md:
+      title: "Actors Definitions"
+    transactions.md:
+      title: "Transaction Definitions"
+      resupply_order.md:
+        title: "Supply Request [PHARM-11]"
+      resupply_response.md:
+        title: "Supply Response [PHARM-12]"
+      shipment_notice.md:
+        title: "Shipment Notice [PHARM-13]"
+      receipt_notice.md:
+        title: "Delivery Receipt [PHARM-42]"
+      inventory_query.md:
+        title: "Inventory Query [PHARM-15]"
+      inventory_status_report.md:
+        title: "Inventory Report [PHARM-16]"
+      consumption_report.md:
+        title: "Consumption Report [PHARM-17]"
+
+
+
+  # 1331_actors_and_transactions.md:
+  #   title: "1:33.1 Actors and Transactions"
+  # 1332_actor_options.md:
+  #   title: "1:33.2 Actor Options"
+  # 1333_required_grouping.md:
+  #   title: "1:33.3 Required Grouping"
+  # 1334_overview.md:
+  #   title: "1:33.4 Overview"
+  # 1335_security_considerations.md:
+  #   title: "1:33.5 Security Considerations"
+  # 1336_cross_profile_considerations.md:
+  #   title: "1:33.6 Cross Profile Considerations"
+  # ITI-65.md:
+  #   title: "2:3.65 Provide Document Bundle [ITI-65]"
+  # ITI-66.md:
+  #   title: "2:3.66 Find Document Lists [ITI-66]"
+  # ITI-67.md:
+  #   title: "2:3.67 Find Document References [ITI-67]"
+  # ITI-68.md:
+  #   title: "2:3.68 Retrieve Document [ITI-68]"
+  # 31_xds.md:
+  #   title: "3:4.2.4.1 Error Codes"
+  # 32_fhir_maps.md:
+  #   title: "3:4.5 FHIR Maps"
+  # testplan.md:
+  #   title: "Test Plan"
+  #   extension: 
+  #     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+  #       valueCode: informative
+  # a_issues.md:
+  #   title: "Issues"
+  #   extension: 
+  #     - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+      
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# menu:
+#   MHD Home: index.html
+#   Volume 1: 
+#     Introduction: index.html
+#     "Actors and Transactions": 1331_actors_and_transactions.html
+#     "Actor Options": 1332_actor_options.html
+#     "Actor Required Grouping": 1333_required_grouping.html
+#     "Overview": 1334_overview.html
+#     "Security Considerations": 1335_security_considerations.html
+#     "Cross Profile Considerations": 1336_cross_profile_considerations.html
+#   Volume 2:
+#     "Provide Document Bundle [ITI-65]": ITI-65.html
+#     "Find Document Lists [ITI-66]": ITI-66.html
+#     "Find Document References [ITI-67]": ITI-67.html
+#     "Retrieve Document [ITI-68]": ITI-68.html
+#   Volume 3:
+#     "Error Codes": 31_xds.html
+#     "FHIR Maps": 32_fhir_maps.html
+#   Test Plan: testplan.html
+#   Artifact Index: artifacts.html
