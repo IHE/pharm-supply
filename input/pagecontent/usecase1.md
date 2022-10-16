@@ -292,9 +292,9 @@ lot-traceability or unique item traceability by using AIDC technologies
 
   </figure>
 
-<div style="text-align:center">
+<!-- <div style="text-align:center">
 <img src="image_UC1_SequenceDiagram.png" style="width:6.32344in;height:6.49193in" />
-</div>
+</div> -->
 <br>
 <p>
 </p>
