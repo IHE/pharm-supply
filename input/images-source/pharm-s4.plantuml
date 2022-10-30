@@ -1,0 +1,20 @@
+@startuml
+
+hide footbox
+
+!include ./style.iuml
+
+
+Participant "[[actor_definitions.html#supplier Supplier]]" as S
+Participant "[[actor_definitions.html#receiver Receiver]]" as R
+
+activate S
+activate R
+
+S -> R: \tInform Reception \t [[PHARM-S3.html{Receipt Notice}  ~[PHARM-S4~]]]
+S <-- R: \t(response)\t
+
+deactivate S
+deactivate R
+
+@enduml

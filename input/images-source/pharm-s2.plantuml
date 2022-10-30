@@ -1,0 +1,20 @@
+@startuml
+
+hide footbox
+
+!include ./style.iuml
+
+
+Participant "[[actor_definitions.html#supply-requester Supply\nRequester]]" as SR
+Participant "[[actor_definitions.html#supply-request-filler Supply\nRequest Filler]]" as RF
+
+activate SR
+activate RF
+
+SR -> RF: \tRequest supply \t [[PHARM-S1.html{Supply Request}  ~[PHARM-S1~]]]
+SR <-- RF: \t(response)\t
+
+deactivate SR
+deactivate RF
+
+@enduml

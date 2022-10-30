@@ -121,20 +121,20 @@ pages:
       title: "Actors Definitions"
     transactions.md:
       title: "Transaction Definitions"
-      resupply_order.md:
-        title: "Supply Request [PHARM-11]"
-      resupply_response.md:
-        title: "Supply Response [PHARM-12]"
-      shipment_notice.md:
-        title: "Shipment Notice [PHARM-13]"
-      receipt_notice.md:
-        title: "Delivery Receipt [PHARM-42]"
+      PHARM-S1.md:
+        title: "Supply Request [PHARM-S1]"
+      PHARM-S2.md:
+        title: "Supply Response [PHARM-S2]"
+      PHARM-S3.md:
+        title: "Shipment Notice [PHARM-S3]"
+      PHARM-S4.md:
+        title: "Delivery Receipt [PHARM-S4]"
       inventory_query.md:
         title: "Inventory Query [PHARM-15]"
-      inventory_status_report.md:
-        title: "Inventory Report [PHARM-16]"
-      consumption_report.md:
-        title: "Consumption Report [PHARM-17]"
+      PHARM-S5.md:
+        title: "Inventory Report [PHARM-S5]"
+      PHARM-S6.md:
+        title: "Consumption Report [PHARM-S6]"
 
 
 

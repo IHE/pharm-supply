@@ -1,0 +1,42 @@
+@startuml
+'skinparam linetype polyline
+'skinparam linetype ortho
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+
+    class "**Supply Request**"<<MD>> {
+        |_ identifier 0..1
+        |_ status 1..1
+        |_ dateTime 0..1
+        |_ requester 0..1
+        |_ filler 0..1
+        |_ item 1..*
+          |_ item 1..1
+          |_ quantity 1..1
+          |_ originLocation 0..*
+        |_ destinationLocation 0..*    
+        |_ additionalInfo 0..*  
+          |_ reference 0..*  
+          |_ notes 0..*  
+        |_ notes 0..* 
+        --
+    }
+
+
+
+@enduml

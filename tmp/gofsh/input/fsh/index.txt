@@ -1,0 +1,13 @@
+Name                           Type     File
+InventoryChange                Logical  logicals\InventoryChange.fsh
+InventoryStatus                Logical  logicals\InventoryStatus.fsh
+Item                           Logical  logicals\Item.fsh
+Product                        Logical  logicals\Product.fsh
+ReceiptNotice                  Logical  logicals\ReceiptNotice.fsh
+ShipmentNotice                 Logical  logicals\ShipmentNotice.fsh
+SupplyRequest                  Logical  logicals\SupplyRequest.fsh
+SupplyRequestStatus            Logical  logicals\SupplyRequestStatus.fsh
+undefined-for-InventoryChange  Mapping  mappings\undefined-for-InventoryChange.fsh
+undefined-for-InventoryStatus  Mapping  mappings\undefined-for-InventoryStatus.fsh
+undefined-for-Item             Mapping  mappings\undefined-for-Item.fsh
+undefined-for-Product          Mapping  mappings\undefined-for-Product.fsh

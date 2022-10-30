@@ -1,0 +1,150 @@
+@startuml
+'skinparam linetype polyline
+'skinparam linetype ortho
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+
+    class "**Supply Request**" as SR<<MD>> {
+        |_ identifier 0..1
+        |_ status 1..1
+        |_ dateTime 0..1
+        |_ requester 0..1
+        |_ originalRequest 0..1
+        |_ filler 0..1
+        |_ item 1..*
+          |_ item 1..1
+          |_ quantity 1..1
+          |_ originLocation 0..*
+        |_ destinationLocation 0..*    
+        |_ additionalInfo 0..*  
+          |_ reference 0..*  
+          |_ notes 0..*  
+        |_ notes 0..* 
+        --
+    }
+
+    class "**Supply Request Status**" as SRS<<MD>> {
+        |_ identifier 0..1
+        |_ status 1..1
+        |_ dateTime 0..1
+        |_ requester 0..1
+        |_ filler 0..1
+        |_ item 1..*
+          |_ item 1..1
+          |_ quantity 1..1
+          |_ originLocation 0..*
+        |_ destinationLocation 0..*  
+        |_ additionalInfo 0..*  
+          |_ reference 0..*  
+          |_ notes 0..*  
+        |_ notes 0..* 
+        --
+    }
+    class "**Shipment Notice**" as SN<<MD>> {
+        |_ identifier 0..*
+        |_ status 1..1
+        |_ dateTime 0..1
+        |_ request 0..1
+        |_ requester 0..1
+        |_ receiver 0..1
+        |_ receiverLocation 0..1
+        |_ item 1..*
+          |_ item 1..1
+          |_ quantity 1..1
+          |_ origin 0..1
+          |_ originLocation 0..1
+        |_ destinationLocation 0..*  
+        |_ additionalInfo 0..*  
+          |_ reference 0..*  
+          |_ notes 0..*  
+        |_ notes 0..* 
+        --
+    }
+
+    class "**Receipt Notice**" as RN<<MD>> {
+        |_ identifier 0..*
+        |_ status 1..1
+        |_ dateTime 0..1
+        |_ shipment 0..*   
+        |_ request 0..*
+        |_ sender 0..1
+        |_ receiver 0..1
+        |_ receiverLocation 0..1
+        |_ item 1..*
+          |_ item 1..1
+          |_ quantity 1..1
+        |_ additionalInfo 0..*  
+          |_ reference 0..*  
+          |_ notes 0..*  
+        |_ notes 0..* 
+        --
+    }
+
+    
+    class "**Inventory Status**" as IS<<MD>> {
+        |_ identifier  0..1
+        |_ countType  0..1
+        |_ operationType  1..1
+        |_ operationTypeReason  0..1  
+        |_ reportDateTime  0..1
+        |_ reporter  0..1
+        |_ reportingPeriod  0..1
+        |_ inventoryListing  1..*
+          |_ location  0..1
+          |_ status  0..1
+          |_ items  1..1
+            |_ category  0..*
+            |_ quantity  0..*
+            |_ item  0..*
+        |_ countingDateTime  0..*  
+        --
+    }
+
+
+    class "**Inventory Consumption**" as IC<<MD>> {
+        |_ identifier  0..1
+        |_ countType  0..1
+        |_ operationType  1..1
+        |_ operationTypeReason  0..1  
+        |_ reportDateTime  0..1
+        |_ reporter  0..1
+        |_ reportingPeriod  0..1
+        |_ inventoryListing  1..*
+          |_ location  0..1
+          |_ status  0..1
+          |_ items  1..1
+            |_ category  0..*
+            |_ quantity  0..*
+            |_ item  0..*
+        |_ countingDateTime  0..*  
+        --
+    }
+
+
+'SR -- SR
+
+IC -up-|> IS
+
+SRS -up-|> SR
+
+SN -left-> SR: request
+
+RN -up-> SN : shipment
+RN -left-> SR : request
+
+@enduml

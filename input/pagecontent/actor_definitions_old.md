@@ -1,16 +1,16 @@
 
-### Ordering
-For the ordering aspects of supply request, two actors are considered: 
+#### Ordering
+For the supply request, two actors are considered: 
 
 <img src="actors_ordering.png" width="60%"/>
 <br clear="all"/>
 
 
-#### <a name="supply-requester"></a>**Supply Requester** 
-Submits a request for supply. The request can be triggered by any of several events - periodic reordering, minimum reached, etc.
-
-#### <a name="supply-request-filler"></a>**Supply Request filler**
-Receives and handles the supply request. The handling can be to respond (e.g. with approval) and/or to forward the request (e.g. to the actual supplier).
+|Actor|Role description|
+|----|----|
+|**Supply Requester**|Submits a request for supply. The request can be triggered by any of several events - periodic reordering, minimum reached, etc.|
+|**Supply Request filler**|Receives and handles the supply request. The handling can be to respond (e.g. with approval) and/or to forward the request (e.g. to the actual supplier).
+{:.table-bordered}
 
 
 <br/>
@@ -18,7 +18,7 @@ Receives and handles the supply request. The handling can be to respond (e.g. wi
 **These actors are expected to be chained - in a specific implementation, a system can be both a Requester and a Request Filler.** For example a local pharmacy requesting products from a local pharmacy who then contacts the local supplier who then contacts the national distributor. In this case the central pharmacy receives requests from wards or remote pharmacies, and sends approved/updated requests to the supplier or distributor (thus acting as a Request Filler and Requester in the same process).
 
 
-### Delivery
+#### Delivery
 
 
 The delivery considers two actors: 
@@ -26,12 +26,11 @@ The delivery considers two actors:
 <img src="actors_delivery.png" width="60%"/>
 <br clear="all"/>
 
-#### <a name="supplier"></a>**Supplier**
-Sends or forwards the items to a receiver and updates the information about such sending
-
-#### <a name="receiver"></a>**Receiver**
-the actor that represents the intended or actual receiver of the products
-
+|Actor|Role description|
+|---|---|
+|**Supplier**| Sends or forwards the items to a receiver and updates the information about such sending|
+|**Receiver**|the actor that represents the intended or actual receiver of the products|
+{:.table-bordered}
 
 
 <br/>
@@ -45,15 +44,19 @@ the actor that represents the intended or actual receiver of the products
 ### Inventory
 The inventory management module supports the tracking and counting of inventory items and status (i.e. inventory counts). It is consists of two essential mechanisms: Inventory status updates, and inventory consumption.
 
+
 <img src="actors_inventory.png" width="60%"/>
 <br clear="all"/>
 
+
+#### Inventory status updates
 Inventory status updates concerns the monitoring and reporting of inventory locations - i.e. the availability (or not) of inventory items. The actors are:
 
-#### <a name="inventory-reporter"></a>__Inventory reporter__ 
-Provides information about the inventory in a location <br/>This actor is typically implemented by systems associated with one or several inventory location - e.g a storage area, or an automated distribution system...  <br/> An __Inventory reporter__ can inform the present item count (snapshot mode, used for reporting stock counts), or may inform about differential updates (differential mode, used for reporting stock increase or decrease). 
-#### <a name="inventory-manager"></a>__Inventory Manager__ 
-Receives inventory information (for the purpose of forwarding or taking further action e.g. deciding on reordering)
+|Actor|Role description|
+|---|---|
+|__Inventory reporter__ |Provides information about the inventory in a location <br/>This actor is typically implemented by systems associated with one or several inventory location - e.g a storage area, or an automated distribution system...  <br/> An __Inventory reporter__ can inform the present item count (snapshot mode, used for reporting stock counts), or may inform about differential updates (differential mode, used for reporting stock increase or decrease). |
+|__Inventory Manager__ |Receives inventory information (for the purpose of forwarding or taking further action e.g. deciding on reordering)|
+{:.table-bordered}
 
 
 
@@ -62,12 +65,14 @@ For example, an automated distribution system (like a *smart cart*) may keep tra
 
 <br/>
 
+
+#### Consumption
 Consumption is a specialized case of inventory reporting, to inform of usage of inventory:
 
-
-#### <a name="inventory-reporter"></a>__Inventory Reporter__ <br/>(__Item Consumer__) 
-reports a consumption of an item (to an __Inventory Manager__).  
-
+|Actor|Role description|
+|---|---|
+|__Inventory Reporter__ <br/>(__Item Consumer__) |reports a consumption of an item (to an __Inventory Manager__).  |
+{:.table-bordered}
 
 
 

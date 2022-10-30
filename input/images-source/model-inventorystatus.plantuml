@@ -1,0 +1,41 @@
+@startuml
+'skinparam linetype polyline
+'skinparam linetype ortho
+hide circle
+hide stereotype
+
+'!pragma layout smetana
+
+skinparam class<<MD>> {
+ BorderColor DarkSlateGray
+ BackgroundColor WhiteSmoke
+ HeaderBackgroundColor #909090
+}
+
+skinparam class<<TM>> {
+ BorderColor #505090
+ BackgroundColor APPLICATION
+ HeaderBackgroundColor SkyBlue
+}
+
+    class "**Inventory Status**"<<MD>> {
+        |_ identifier  0..1
+        |_ countType  0..1
+        |_ operationType  1..1
+        |_ operationTypeReason  0..1  
+        |_ reportDateTime  0..1
+        |_ reporter  0..1
+        |_ reportingPeriod  0..1
+        |_ inventoryListing  1..*
+          |_ location  0..1
+          |_ status  0..1
+          |_ items  1..1
+            |_ category  0..*
+            |_ quantity  0..*
+            |_ item  0..*
+        |_ countingDateTime  0..*  
+        --
+    }
+
+
+@enduml
