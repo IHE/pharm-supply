@@ -4,7 +4,7 @@ temp
 template
 output
 input-cache
-
+fsh-generated
 # Don't commit this because it's so large #
 ###########################################
 /input-cache/org.hl7.fhir.publisher.jar
