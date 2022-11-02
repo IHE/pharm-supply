@@ -1,4 +1,4 @@
-This section corresponds to transaction [PHARM-S4] of the IHE Technical Framework. Transaction [PHARM-S4] is used by the ... and the ... actors. The Supply Request [PHARM-S4] transaction is used to ....
+This section corresponds to transaction [PHARM-S6] of the IHE Technical Framework. Transaction [PHARM-S6] is used by the ... and the ... actors. The Supply Request [PHARM-S6] transaction is used to ....
 
 ### X:Y.Z.1 Scope
 
@@ -21,7 +21,7 @@ The xxxxxxxxx [PHARM-S3] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 ### X:Y.Z.4 Messages
 
 <figure>
-{% include pharm-s4.svg %}
+{% include pharm-s6.svg %}
 </figure>
 
 
