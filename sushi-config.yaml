@@ -82,6 +82,8 @@ pages:
     title: "Volume 1: Use cases"
     introduction.md:
       title: Introduction
+    howtoread.md:
+      title: How to read this publication
 
     usecases.xml:
       title: "Use Case overview"
