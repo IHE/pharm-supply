@@ -1,0 +1,44 @@
+@startuml
+!include style.iuml
+title Supply Management - Pharmacy-managed inventory,\nReplenish stock
+skin BlueModern
+hide footbox
+
+'box "Ward and satellite Pharmacy" #A9DCDF
+'actor "Local\nPharmacist" as P
+'Participant "Inventory App" as IA
+'end box
+
+actor "Central\nPharmacist" as P2
+Participant "Pharmacy System\n/ ERP" as PS
+Participant "Department\nPharmacy" as DP
+PS -> PS: Determine resupply of location is needed\nCalculate resupply quantity
+Activate PS
+
+group "Trigger eventual resupply from vendor"
+PS ->
+end
+
+PS -> P2: Suggest resupply of location
+Activate P2
+P2 -> PS: Approve resupply
+Deactivate P2
+Deactivate PS 
+
+PS -> DP: Send item shipment notice
+Activate PS
+Activate DP
+PS --> DP: Send items to satellite Pharmacy
+DP -> PS: Receipt
+Deactivate PS
+Deactivate DP
+...
+DP --> Ward: Send items to ward
+Activate DP
+Ward -> DP: Confirm receipt
+DP -> DP: Track stock decrease in\nsatellite pharmacy and\nincrease in ward
+Deactivate DP
+
+
+
+@enduml 

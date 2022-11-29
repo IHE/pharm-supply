@@ -1,0 +1,72 @@
+@startuml
+!include style.iuml
+title Continued care institutions - Updates to dispense
+skin BlueModern
+hide footbox
+
+'actor Physician
+participant "Prescription\nPlacer" as PP
+'participant "Pharmaceutical\nAdvisor" as PA
+participant "Pharmacy\nSystem" as PD
+participant "Automated\nDispenser" as AD
+participant "Remote\nPharmacy" as AI
+actor "Nurse" as N
+'Actor Patient as P
+
+Group Retrieve medication
+N -> N: Retrieve medication\nParacetamol,\nAmoxicillin\nand Sertraline
+Activate N
+N -> N: Drop amoxicillin
+N -> N: Retrieve amoxicillin
+end
+
+group Treatment (1 week)
+...
+end
+
+group Report medication use
+N -> PD: Report discarded amoxicillin
+activate PD
+activate PP
+N -> PD: Report non-taken sertraline
+N -> PD: Report non-taken paracetamol
+deactivate N
+PD -> PP: Report non-taken sertraline
+deactivate PD
+end
+
+...
+
+
+
+group Order update
+PP -> PD: Update Sertraline Order
+deactivate PP
+activate PD
+PD -> N: Update Order
+Activate N
+'Deactivate AI
+end
+
+
+group Dispensing
+PD -> AD: Dispense request\nfor 6 Paracetamol
+Activate AD
+PD -> AI: Dispense request\nfor 7 sertraline
+Activate AI
+Deactivate PD
+AD -> AD: Dispense 6 Paracetamol
+deactivate AD
+Deactivate AI
+end
+
+'Group Delivery of medication
+'N --> AD: Pick Paracetamol
+'DeActivate PD
+'Deactivate N
+'end
+
+...
+
+@enduml
+

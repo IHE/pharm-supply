@@ -25,6 +25,7 @@ skinparam {
     ' This field left intentionally blank.
 }
 
+skinparam actorStyle awesome
 ' Choose the style you want by applying them here.
 
 !define STYLE_ACCENT STYLE_MIDNIGHT_ACCENT

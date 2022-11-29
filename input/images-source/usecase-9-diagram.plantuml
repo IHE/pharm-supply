@@ -1,0 +1,83 @@
+@startuml
+!include style.iuml
+skinparam svgDimensionStyle false
+title Operating Theater - Recall products with UDI
+skin BlueModern
+hide footbox
+
+Participant "Device\nVendor" as V
+actor "Vendor Rep" as VR
+Participant "Hospital 1\nOperating\nDepartment" as H1
+Participant "Hospital 1\nEHR" as EHR
+Participant "Hospital 2\nPharmacy" as H2
+actor "Responsible" as DP
+Participant "Hospital 2\nEHR" as EHR2
+Participant "Inventory\nManager" as IM2
+
+group Investigation
+V -> V: Investigation outcome:\nLot XXX has been affected
+activate V
+end
+
+group Tracking
+V --> V: Find where impacted devices are sold to.\n3 devices at Hospital1 (consignment);\n   Responsible=Vendor Rep\n2 devices at Hospital B
+V -> VR: Notify Vendor Rep of defect;\n request recall of batch
+activate VR
+V -> H1: Notify Hospital 1 of defect;\n request recall of batch
+activate H1
+V -> H2: Notify Hospital 2 of defect;\n request recall of batch
+activate H2
+deactivate V
+end
+
+group Recall Stock at Hospital 1
+VR -> VR: Retrieve impacted items\nfrom stock consignment
+VR -> VR: Scan item 1
+VR -> VR: Scan item 2
+VR -> VR: Confirm items are recalled
+VR -> V: Notify Stock Recall complete
+deactivate VR
+end
+
+group Recall Patients at Hospital 1
+H1 -> EHR: Find patient implanted \n with devices of batch XXX
+activate EHR
+EHR -> H1: List of patient implanted \n with devices of batch XXX
+deactivate EHR
+deactivate H1
+
+group Undertake appropriate action.
+...
+end
+end
+
+
+group Recall Stock at Hospital 2
+H2 -> IM2: Query inventory system for all devices of batch XXX and their location
+activate IM2
+IM2 -> H2: List of devices and inventory locations
+deactivate IM2
+deactivate H1
+H2 -> DP: Request withdrawal\nof devices
+activate DP
+DP -> DP: Retrieve impacted items\n from stock
+DP -> DP: Scan item 1
+DP -> DP: Marks as recalled
+DP -> H2: Notify Recall complete
+deactivate DP
+end
+
+group Recall Patients at Hospital 2
+H2 -> EHR2: Find patient implanted with devices of batch X
+activate EHR2
+EHR2 -> H2: List of patient implanted with devices of batch X
+deactivate EHR2
+deactivate H2
+group Undertake appropriate action.
+...
+end
+end
+
+
+
+@enduml

@@ -68,9 +68,16 @@ discussed in this document.
 
 ### Sequence Diagram
 
-<div style="text-align:center">
+
+  <figure>
+    {% include usecase-6-diagram.svg %}
+    <!-- <figcaption>Use Case 6</figcaption> -->
+  </figure>
+
+
+<!-- <div style="text-align:center">
 <img src="image_UC6_SequenceDiagram.png" style="width:4.57156in;height:8.1833in"/>
-</div>
+</div> -->
 
 ### Requirements
 

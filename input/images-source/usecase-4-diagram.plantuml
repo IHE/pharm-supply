@@ -1,0 +1,78 @@
+@startuml
+!include style.iuml
+title Community Pharmacy - Dispensing and resupply;\nStock and consignment items
+skin BlueModern
+hide footbox
+
+actor Customer as C
+actor "Community\nPharmacist" as CPh
+Participant "Pharmacy\nSystem" as CP
+Participant "Vendor 1\n(Purchase agreement)" as V1
+Participant "Vendor 2\n(Consignment agreement)" as V2
+
+group Dispense
+C -> CPh: Present prescription
+Activate C
+Activate CPh
+CPh -> CPh: Verify prescription and\nitems to be dispensed
+CPh -> CP: Scan barcodes to register dispense
+deactivate CPh
+Activate CP
+CPh -> C: Give items to patient
+CP -> C: Produce dispense\nnotice / invoice
+Deactivate C
+CP -> : Notify Dispense
+Deactivate CP
+Activate C
+C -> C: Pick up items
+Deactivate C
+...
+
+CP -> CP: Register consumed items
+Activate CP
+
+'CP -> CP: Check resupply rules
+'CP -> CP: Product 1 is in stock\nand must be reordered
+'CP -> CP: Product 2 is in consignment
+
+Note left: Product 1 in stock,\nmust be reordered;\nProduct 2 is in consignment
+
+end
+
+group Product 1 - Reorder stock
+CP -> V1: Order Medication 1
+activate V1
+V1 -> V1: Prepare shipment
+V1 -> CP: Send shipment notice
+V1 --> CP: Send Medication 1
+CP -> V1: Receipt
+V1 -> CP: Send invoice
+CP -> CP: Update stock levels
+deactivate V1
+deactivate CP
+...
+end
+
+group Product 2 - Consignment
+group Invoicing
+CP -> V2: Report consumption of Medical Device 1
+activate CP
+activate V2
+V2 -> V2: Update stock level info\nprepare invoice
+V2 -> CP: Send invoice for consumed item
+deactivate CP
+end
+...
+group Consignment replenishment
+V2 --> CP: Send Medical Device 1
+activate CP
+V2 -> CP: Send shipment notice
+CP -> V2: Confirm reception
+deactivate CP
+V2 -> V2: Update stock level info
+deactivate V1
+end
+end
+
+
+@enduml

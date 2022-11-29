@@ -1,0 +1,20 @@
+@startuml
+
+hide footbox
+
+!include ./style.iuml
+
+
+Participant "[[actor_definitions.html#inventory-report Inventory\nReporter]]" as IR
+Participant "[[actor_definitions.html#inventory-manager Inventory\nManager]]" as IM
+
+activate IR
+activate IM
+
+IR -> IM: \tReport Inventory Status [[PHARM-S5.html{Inventory Status report}  ~[PHARM-S5~]]]
+IR <-- IM: \t(response)\t
+
+deactivate IR
+deactivate IM
+
+@enduml

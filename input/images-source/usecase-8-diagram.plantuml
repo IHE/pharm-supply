@@ -1,0 +1,75 @@
+@startuml
+!include style.iuml
+title Operating Theater - Catalog UDI lookup
+skin BlueModern
+hide footbox
+
+actor "OR Nurse" as DP
+Participant "Operating Theater\nSystem" as PDS
+Participant "Device Catalog" as HUB
+Participant "EHR" as EHR
+
+'group Picking
+'end
+'group Tracking
+'end
+
+'activate PDS
+DP -> DP: Retrieve first item from inventory
+activate DP
+group Check First item
+DP -> PDS: Scan barcode of first item
+activate PDS
+PDS -> HUB: Query product characteristics
+deactivate PDS
+activate HUB
+HUB -> PDS: Response: Product Characteristics
+deactivate HUB
+activate PDS
+PDS -> PDS: Check characteristics against patient record
+PDS -> DP: Display product characteristics
+PDS -> DP: Display message:\n"Product contains latex"
+deactivate PDS
+end
+
+DP -> DP: Retrieve second item\nfrom inventory
+group Check Second item
+DP -> PDS: Scan barcode of second item
+activate PDS
+PDS -> HUB: Query product characteristics
+deactivate PDS
+activate HUB
+HUB -> PDS: Response: Product Characteristics
+deactivate HUB
+activate PDS
+PDS -> DP: Display product characteristics
+deactivate PDS
+end
+
+
+group Confirm item against ordered item
+PDS -> EHR: Check product\nagainst what was ordered
+deactivate PDS
+activate EHR
+EHR -> PDS: Response: Product Type is OK
+deactivate EHR
+activate PDS
+PDS -> DP: Display product characteristics
+deactivate PDS
+end
+
+group Surgery
+...
+end
+
+group Report
+DP -> PDS: Confirm use of device 
+PDS -> EHR : Associate physical device with patient 
+activate EHR
+PDS ->  : Register consumption (for inventory and billing)
+end
+deactivate DP
+
+
+
+@enduml

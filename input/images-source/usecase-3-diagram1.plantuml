@@ -1,0 +1,41 @@
+@startuml
+!include style.iuml
+title Supply Management - Pharmacy-managed inventory,\ninventory count, barcode-assisted
+skin BlueModern
+hide footbox
+
+actor "Pharmacist" as P
+Participant "Inventory App" as IA
+Participant "Pharmacy System\n/ ERP" as PS
+
+group Scan one location
+P -> IA: Identify location: "Stock"\ne.g. scan barcode on shelf
+Activate P
+Activate IA
+IA -> PS: Request expected inventory levels
+Activate PS
+PS -> IA: Return expected inventory levels
+Deactivate PS
+IA -> P: Display "Ready"
+P -> IA: Scan first item
+...
+P -> IA: Scan last item
+IA -> P: Display discrepancies\n& Ask for confirmation
+P -> IA: Confirm
+deactivate P
+
+IA -> PS: Send updated inventory levels
+Activate PS
+PS -> PS: Recalculate stock levels
+deactivate IA
+end
+Deactivate PS
+...
+
+group Scan other location
+P -> IA: Identify new location
+...
+end
+
+
+@enduml

@@ -1,0 +1,74 @@
+@startuml
+!include style.iuml
+title Continued care institutions - preparation, dispense and pick up
+skin BlueModern
+hide footbox
+
+actor Physician
+participant "Prescription\nPlacer" as PP
+participant "Pharmaceutical\nAdvisor" as PA
+participant "Pharmacy\nSystem" as PD
+participant "Automated\nDispenser" as AD
+participant "Remote\nPharmacy" as AI
+actor "Nurse" as N
+'Actor Patient as P
+
+group Ordering
+activate PP
+Physician -> PP: Enter Order
+PP -> PA: Medication Order
+deactivate PP
+activate PA
+
+PA -> PD: Validated order
+activate PD
+PA -> AI: Validated order
+Activate AI
+deactivate PA
+Deactivate AI
+end
+
+...
+
+group Dispensing 
+
+PD -> AD: Dispense request\nfor 21 Paracetamol
+Activate AD
+PD -> PD: Dispense 14 amoxicillin
+PD -> AI: Dispense request\nfor 7 sertraline
+ACtivate AI
+deactivate PD
+deactivate AI
+Group Resupply
+...
+end
+end
+
+Group automated dispensing
+AD -> AD: Dispense 21 \nParacetamol
+AD -> PD: Dispense report
+Activate PD
+Deactivate AD
+Group Resupply
+...
+end
+end
+
+Group Delivery of medication
+N --> PD: Pick Paracetamol \nand amoxicilin
+Activate N
+N --> AI: Pick 7 tabs\nSertraline
+Activate AI
+AI -> PD: Picking report \nsertraline
+DeActivate PD
+Deactivate AI
+Deactivate N
+Group Resupply
+...
+end
+end
+
+
+
+@enduml
+

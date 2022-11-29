@@ -1,0 +1,8 @@
+canonical: https://www.ihe.net/fhir
+fhirVersion: 4.0.1
+FSHOnly: true
+applyExtensionMetadataToRoot: false
+id: ihe.fhir
+name: IheFhir
+status: draft
+version: 0.3.0

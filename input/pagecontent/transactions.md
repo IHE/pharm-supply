@@ -1,80 +1,154 @@
-The [IHE Supply white paper](https://www.ihe.net/uploadedFiles/Documents/Pharmacy/IHE_PHARM_WP_Supply_Rev1-0_PC_2019-11-18.pdf#page=97) described 
-the data exchange mechanisms needed to suport the variety of use cases - floor stock, consignment items, etc.
-This profile provides the technical specifications for those mechanisms.
 
 
-### Supply
-One of the conclusions of the IHE Supply white paper is the separation of "supply" in key areas: **supply ordering** and **supply delivery**.
-This means that the interactions concerning a supply order may be completely independent of the deliveries.
-This is expectable in many scenarios. The ordering process may follows a chain of approvers and suppliers, whereas the actual delivery
-follows a different chain. 
-For example, a hospital location may send an order to a central pharmacy, which then follows to the purchasing department, and then to the selected supplier who may have a set of retailers available.
-The delivery information, however, will be shared from the selected supplier, to the actual distributor, to the transport company, and to the purchasing department directly.
-This means that the requests and respective response may follow a path that differs from the path followed by the delivery information.
+### Dispense Request
+For triggering the supply associated (or not) with a prescription, there may be a dispense request. This is not the original prescription - it can differ in terms of quantity, contain additional details, or handle requesting products from different locations. The Dispense Request is therefore a transaction that focuses exclusively on the logistic supply of products for a patient, and may be triggered from a clinical prescription but is not a clinical prescription. 
+This mechanism of Dispense Request is not detailed here separately. Technically, it is very similar to the Supply Request and can be an instance of that.
+
+### Supply Request
+
+The Supply request handles a request to the party that will process, authorize and otherwise handle the request. This may be or not the supplier: In some cases the request may be to an authorizing party, or another management system, which plays no part in the actual delivery.
+
+The resupply request typically may contain information about:
+
+|Actor|Role description|
+|----|----|
+|Request ID| identification of the request| 
+|Status | status of the request | 
+|DateTime | date/time of the request | 
+|Requester ID | identification of the requester | 
+|Original request | the original request that this request is based on | 
+|Intended Request Filler ID| identification of the intended request filler, i.e. who the request is addressed to| 
+|Requested item(s)|  the actual items being requested| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example requesting a specific lot.| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin | Location where the item should be delivered or placed|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin location | Location or source of the item|
+|Destination | the destination of the items to be supploied | 
+|Fulfilled request ID | when a request is a response to other requests, e.g. compilation of different requests to buy in bigger quantities|
+|Reason | Rationale and reference for resupply, e.g., upstream requests or events, like the prescription that has to be fulfilled, or the stock depleted|
+|Notes | Data needed for distribution – e.g., billing modes, etc.|
+{:.table-bordered .table-sm}
 
 
-#### Supply Orders
-For the supply request, two actors are considered: 
-* Requester
-* Request Filler, an actor that has will participate in fulfilling the request
+Also see the [data model overview below](#overall-data-requirements)
 
-**These actors are expected to be chained - in a specific implementation, a system can be both a Requester and a Request Filler.** For example a Central Pharmacy 
-receives requests from wards or remote pharmacies, and sends approved/updated requests to the supplier or distributor (thus acting as a Request Filler and Requester in the same process).
+___
 
 
-The Supply Ordering process requires the following interfaces:
-* A __Requester__ issues a request for resupply of items. This request is sent to a __Request Filler__.  
-The request can be triggered by one of several events - periodic reordering, minimum reached, etc.
-* The __Request Filler__ sends an update to a __Requester__ about the status of a request.  
-This update can also happen upon several triggers: immediately after the reception of a request, or upon a query from a requester, or after any internal trigger. 
+### Supply Request Status
 
-<img src="supply_request.png" width="60%"/>
-<br clear="all"/>
+The Supply Request is used to inform a party about the request of items and the status of such request and its handling. This can be in response to a request, or as an immediate response to the order, or unsolicited.
 
-#### Delivery
-
-The delivery considers two actors: 
-* Item Supplier, an actor that sends or forwards the items to a receiver 
-* Receiver, the destination of the items.
-
-**These actors are also expected to be chained in any implementation**. For example, a warehouse (as a __Supplier__) sends items to a retailer (__Receiver__) who then send them (now as a _Supplier__) to the Central Pharmacy (__the new __Receiver_).
+The data that is normally present is the same as the [supply request](#supply-request):
 
 
-<img src="supply_delivery.png" width="60%"/>
-<br clear="all"/>
+___
 
-<br/>
-
-
-### Inventory
-
-The Inventory Management is achieved with two essential mechanisms: Inventory status updates, and inventory consumption.
-
-#### Inventory status updates
-Inventory status updates concerns the monitoring and reporting of inventory locations - i.e. the availability (or not) of inventory items. The actors are:
-* The __Inventory Reporter__ contains and information about the inventory in a location  
-This actor is typically implemented by systems associated with one or several inventory location - e.g a storage area, or an automated distribution system... 
-An __Inventory Reporter__ can inform the present item count (snapshot mode); in some applications, it may inform about differential updates. 
-* The __Inventory Manager__ receives inventory information (for the purpose of forwarding or taking further action e.g. deciding on reordering)
-
-**These actors are expected to be combined, depending of the system configurations and inventory management policies**. 
-For example, an automated distribution system (like a *smart cart*) may keep track of the items it contain on, to decide about reordering; it may also send such information (acting as as an __Inventory Reporter__) to another system (__Inventory Manager__) so that 
-the other system can decide whether / when to reorder.
-
-<br/>
+### Shipment notice
+The shipment notice informs other parties that the actual shipment is initiated. This typically means that the items are now in transport. 
 
 
-#### Consumption
-Consumption reports the usage or depletion of stock :
-* The __Item Consumer__ reports a consumption of an item (to an __Inventory Manager__).  
-A consumption can correspond with an administration of a product (removing it from available inventory) or a disposal. 
-In this sense, the consumption report is just a differential update of inventory and is therefore very similar to the previous interaction.
-Since the consumption is a differential update of inventory, it can also be used for stock increases when necessary, e.g. returning products to inventory.
+This data is normally used:
 
-<img src="inventory_report.png" width="60%"/>
-<br clear="all"/>
+* Supplier ID
+* Receiver ID
+* Shipment ID
+* Sending party location
+* Receiving party location
+* Sent items
+  * Identification of the item
+  * Physical item characteristics e.g., lot number etc.
+  * Quantity
+* Other info e.g. original request identification
 
-<img src="consumption.png" width="60%"/>
-<br clear="all"/>
+___
 
-<br/>
+### Delivery/Receipt notice
+The delivery or receipt notice is used to inform the parties about the reception of items. This can be used to confer quantities, inform of delivery issues, and is commonly used to activate the billing, since the reception of items signals that the items are now in the custody of the receiver, so if all is ok, the order can be billed when it is finally received at its destination.
+
+The following data is commonly present in the delivery notice:
+
+* Supplier ID
+* Receiver ID
+* Shipment ID
+* Sending party location
+* Receiving party location
+* Sent items
+  * Identification of the item
+  * Physical item characteristics e.g., lot number etc.
+  * Quantity items received (can be detailed by status e.g. items received, items damaged…)
+* Other info e.g. original request identification 
+
+
+___
+
+### Inventory Status report
+The inventory status report updates the parties about the status of inventory - quantities available etc.
+This can be divided in different dimensions: Snapshot vs Differential - the former is an information about the current product count in a position, while the latter informs about differences to a previous count (e.g. additions, subtractions). 
+
+The data involved is usually this:
+
+* Identification of the Request
+* Date and time
+* Inventory entries
+  * Location
+  * Content
+  * Items
+    * Physical attributes (lot, machine-readable content, etc.)
+    * Quantity
+* Identification of the reporter
+
+
+### Inventory Consumption
+One of the key aspects of the materials handling is that sometimes products are consumed but not used or reported clinically. For example items that are dropped or damaged, and/or need to be wasted - will not be reported in the clinical information exchange, but are important to be notified for proper inventory control. This consumption report can contain information such as:
+* Stock Location
+* Reporter ID
+* Patient ID, if applicable
+* Consumed items
+  * Identification of the item
+  * Physical item characteristics e.g., lot number etc.
+  * Quantity
+* Other information that may be relevant for the adequate processing of the consumption information
+
+___
+
+### Overall data requirements
+The data needs for the different transactions are represented in the following diagram.
+  <figure>
+    {% include models.svg %}
+  </figure>
+
+The **Supply Request** provides the data necessary to initiate an order. The status of a **Supply Request** may be inquired and the result is represented by a **Supply Request Status** which represents the updates of a **SupplyRequest** and is therefore a specialization fo the **Supply Request** data needs.  
+The fulfillment of a **Supply Request** may result in a shipment, which is represented as a **Shipment Notice** which references the request that originated it. The **Receipt Notice** can be used to track what is actually received at the destination or in transit. The data it contains is quite similar to a shipment notice and in fact the **Receipt Notice** can be seen as a specialization of the **Shipment Notice**.
+For Inventory, the **Inventory Status** provides the partial or complete inventory in a position, and can be used to represent absolute status, or differential status to a revious report, for example to inform that some units have been deducted from stock since last count.
+This latter possibility is the same as an **Inventory Consumption** report, which is thus a specialization of the **Inventory Status**.
+
+
+
+___
+
+### Delivery authorization request
+The delivery authorization request is used for a party to request the issuance of a delivery authorization. This is mostly necessary in the case of returns, where the initiator (the consumer) requests the delivery authorization from the supplier, so that the supplier authorizes the return of the products. This is equivalent to a Return Material Authorization form - not the authorization itself, but the form to request it.
+The following data is considered most relevant in the delivery authorization request:
+* Requester ID
+* Receiver ID
+* Items requested to be sent
+  * Identification of the item
+  * Physical item characteristics e.g., lot number etc.
+  * Quantity
+  
+___
+
+### Delivery authorization
+The delivery authorization informs parties that a given delivery is authorized (typically a return). This is commonly referred to as a Return Material Authorization. 
+It normally contains the following information:
+
+* Requester ID
+* Receiver ID
+* Authorization ID
+* Items allowed to be sent
+  * Identification of the item
+  * Physical item characteristics e.g., lot number etc.
+  * Quantity
+

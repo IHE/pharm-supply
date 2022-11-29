@@ -1,0 +1,55 @@
+@startuml
+!include style.iuml
+title Medication order, global dispense and administration
+skin BlueModern
+hide footbox
+
+actor Physician
+participant "Prescription\nPlacer" as PP
+participant "Pharmaceutical\nAdvisor" as PA
+participant "Pharmacy\nDispenser" as PD
+participant "Medication\nAdministration\nSystem" as AI
+actor "Nurse" as N
+Actor Patient as P
+
+group Ordering
+activate PP
+Physician -> PP: Enter Order
+PP -> PA: Medication Order
+deactivate PP
+activate PA
+
+PA -> PD: Validated order
+activate PD
+PA -> AI: Validated order
+Activate AI
+deactivate PA
+deactivate PD
+Deactivate AI
+end
+
+...
+
+group Dispensing and Administration
+AI -> N: Notify nurse at\nadministration time
+activate AI 
+activate N
+N -> N: Scan Patient barcode
+AI -> N: Display\npatient's medication
+N --> N: Take medication\nfrom shelf
+N -> AI: Scan barcode
+AI -> AI: Verify match\n(right product for right patient)
+AI -> N: Display confirmation\nright product for right patient
+N --> P: Administer medication
+N -> AI: Register administration
+deactivate N
+AI-> PP : Administration report
+Activate PP
+Deactivate PP
+AI-> PD : Administration report
+Deactivate AI
+Activate PD
+Deactivate PD
+end
+
+@enduml 

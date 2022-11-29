@@ -1,0 +1,41 @@
+@startuml
+!include style.iuml
+title Ward Supply Management - Pharmacy-managed inventory
+skin BlueModern
+hide footbox
+
+Participant "Drug\nVendor" as SUP
+actor "Pharmacist" as PD
+Participant "Pharmacy System\n/ ERP" as ERP
+participant "Medication\nAdministration\nSystem" as AI
+actor "Nurse" as N
+
+group Supplier order processing
+SUP -> SUP: Check order
+SUP -> SUP: Prepare shipment
+end
+
+group Order status query
+ERP -> SUP: Inquire order status
+activate ERP
+SUP -> ERP: Inform order status
+deactivate ERP
+end
+
+group Order Shipment
+SUP -> ERP: Send Shipment notice
+Activate ERP
+SUP --> ERP: Send Medication
+deactivate ERP
+Deactivate SUP
+End
+...
+
+Group Reception at Pharmacy
+PD -> ERP: Confer reception
+Activate ERP
+ERP -> ERP: Update Pharmacy Stock levels
+Deactivate ERP
+End
+
+@enduml

@@ -314,13 +314,24 @@ The detailed inventory status at the pharmacy is finally as follows:
 
 ### Sequence Diagram
 
-<div style="text-align:center">
+  <figure>
+    {% include usecase-2-diagram1.svg %}
+    <!-- <figcaption>Use Case 1</figcaption> -->
+  </figure>
+
+  <figure>
+    {% include usecase-2-diagram2.svg %}
+    <!-- <figcaption>Use Case 1</figcaption> -->
+  </figure>
+
+
+<!-- <div style="text-align:center">
 <img src="image_UC2_SequenceDiagram1.png" style="width:5.89233in;height:8.11774in"/>
 </div>
 
 <div style="text-align:center">
 <img src="image_UC2_SequenceDiagram2.png" style="width:6.26875in;height:5.4742in"/>
-</div>
+</div> -->
 <br>
 <p>
 </p>

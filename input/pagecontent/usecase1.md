@@ -286,13 +286,16 @@ lot-traceability or unique item traceability by using AIDC technologies
 
 ### Sequence Diagram
 
-<div style="text-align:center">
-<img src="image_UC1_SequenceDiagram.png" style="width:6.32344in;height:6.49193in" />
-</div>
+
+  <figure>
+    {% include usecase-1-diagram.svg %}
+
+  </figure>
+
 <br>
 <p>
 </p>
 
 
-[^1]: This table is a simplified view that shows the relevant data for this scope; it is not intended to be used as guidance
+[^1]: This table is a simplified view that shows the relevant data for this scope; it is not intended to be used as guidance  
 [^2]: The use of barcodes for identifying patients is also enabled by standardized identifiers such as GS1’s GSRN.
