@@ -42,6 +42,10 @@ The Supply Requester shall assure the request is consistent and actionable befor
 
 ###### X:Y.Z.4.1.2.1 Resource content
 
+* The supply request is a SupplyDelivery resource.
+The semantics of the request and data elements are captured in the [Supply Request Data Model](StructureDefinition-model-supply-request.html) constraints in the [Supply Order](StructureDefinition-ihe-supply-order.html) profile.
+
+Notes
 * RequestID
 * The items to be ordered are expressed as the product code. When details about the product need to be expressed in a structured manner, the `parameter` element should be used. A reference to a resource can also be used (Medication, Device, etc.). In that case, the resource can be contained in the request. See [References](https://hl7.org/fhir/R4/references.html#contained) about contained resources.
 
