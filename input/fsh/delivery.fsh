@@ -16,9 +16,9 @@ Description: "A notification of shipment or beginning of transport of supply ite
 Profile: SupplyReceiptNotice
 Parent: SupplyDelivery
 Id: ihe-supply-receipt-notice
-Title: "Profile - Supply Shipment Notice"
-Description: "A notification of shipment or beginning of transport of supply items."
-* ^url = "http://ihe.net/fhir/PHARM/supply/StructureDefinition/ihe-supply-shipment-notice"
+Title: "Profile - Supply Receipt Notice"
+Description: "A notification of reception of supply items."
+* ^url = "http://ihe.net/fhir/PHARM/supply/StructureDefinition/ihe-supply-receipt-notice"
 * ^version = "0.2.0"
 * ^status = #active
 * identifier MS
