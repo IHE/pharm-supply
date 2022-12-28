@@ -25,8 +25,10 @@ contact:
         value: pharmacy@ihe.net
 license: CC-BY-4.0
 jurisdiction: 'http://unstats.un.org/unsd/methods/m49/m49.htm#001'
+
+
 #dependencies:
-#  https://profiles.ihe.net/fhir/ihe.formatcode.fhir: 0.2.4
+#  hl7.fhir.r5.core: 5.0.0-snapshot2
  
 parameters:  # see http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/index.html
   path-resource:
@@ -59,10 +61,10 @@ resources:
     name: Logical Model - Receipt notice
     description: The logical data model for Receipt Notice
   StructureDefinition/model-inventory-status:
-    name: Logical Model - Inventory Status Report
+    name: Logical Model - Inventory Status
     description: The logical data model for Inventory Status
   StructureDefinition/model-inventory-change:
-    name: Logical Model - Inventory Change Report
+    name: Logical Model - Inventory Change
     description: The logical data model for Inventory Changes
   StructureDefinition/model-product:
     name: Logical Model - Product
@@ -126,7 +128,7 @@ pages:
       PHARM-S1.md:
         title: "Supply Request [PHARM-S1]"
       PHARM-S2.md:
-        title: "Supply Response [PHARM-S2]"
+        title: "Supply Request Status [PHARM-S2]"
       PHARM-S3.md:
         title: "Shipment Notice [PHARM-S3]"
       PHARM-S4.md:
@@ -138,6 +140,41 @@ pages:
       PHARM-S6.md:
         title: "Consumption Report [PHARM-S6]"
 
+
+
+groups:
+  SupplyRequest:
+    name: Supply Requests
+    description: Artifacts related to supply requests - ordering supplies and checking status of orders.
+    resources:
+      - StructureDefinition/model-supply-request
+      - StructureDefinition/model-supply-request-status
+      - StructureDefinition/ihe-supply-request
+#      - StructureDefinition/ihe-supply-request-status
+      - SearchParameter/sp-requested-item
+
+  SupplyDelivery:
+    name: Supply Delivery
+    description: Artifacts related to supply deliveries - shipment notices and receipt notices. 
+    resources:
+      - StructureDefinition/model-shipment-notice
+      - StructureDefinition/model-receipt-notice
+      - StructureDefinition/ihe-supply-shipment-notice
+      - StructureDefinition/ihe-supply-receipt-notice
+      - StructureDefinition/ihe-ext-delivery-stage
+      - ValueSet/delivery-stage-vs
+      - CodeSystem/delivery-stage-cs
+
+  Inventory:
+    name: Inventory
+    description: Artifacts related to inventory - inventory status, consumption, inventory items.
+    resources:
+      - StructureDefinition/model-inventory-status
+      - StructureDefinition/model-inventory-change
+      - StructureDefinition/model-item
+      - StructureDefinition/model-product
+      - ValueSet/vs-ihe-pharm-product-association-type
+      - CodeSystem/cs-ihe-pharm-product-association-type
 
 
   # 1331_actors_and_transactions.md:

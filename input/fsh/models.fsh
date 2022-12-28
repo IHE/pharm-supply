@@ -258,11 +258,11 @@ Description: "This is the logical model for the Inventory Change notification - 
 * inventoryListing.items.item 0..1 BackboneElement "An item or set of items (of the same type and status)" "An item or set of items (of the same type and status)"
 * inventoryListing.countingDateTime 0..1 dateTime "The time that the changes in this listing actually occurred" "The time that the changes in this listing actually occurred"
 
-Mapping: InventoryChangeGS1
-Id: inventory-change-GS1
-Title: "GS1 XML EDI Logistics Inventory Report"
-Description: "Link to GS1 standard EDI message. Also see IHE Pharmacy Supply White paper"
-Source: InventoryChange
-Target: "https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LIP/a1.htm"
+// Mapping: InventoryChangeGS1
+// Id: inventory-change-GS1
+// Title: "GS1 XML EDI Logistics Inventory Report"
+// Description: "Link to GS1 standard EDI message. Also see IHE Pharmacy Supply White paper"
+// Source: InventoryChange
+// Target: "https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LIP/a1.htm"
 
 

@@ -1,12 +1,12 @@
-Profile: SupplyOrder
+
+Profile: IHESupplyRequest
 Parent: SupplyRequest
-Id: ihe-supply-order
+Id: ihe-supply-request
 Title: "Supply Order"
-Description: "Profile for a Supply / Resupply Order"
+Description: "Profile for a Supply / Resupply Request"
 * ^version = "0.1.0"
 * ^status = #active
 * status MS
-
 
 
 Instance: sp-requested-item

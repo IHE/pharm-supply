@@ -43,7 +43,7 @@ The Supply Requester shall assure the request is consistent and actionable befor
 ###### X:Y.Z.4.1.2.1 Resource content
 
 * The supply request is a SupplyDelivery resource.
-The semantics of the request and data elements are captured in the [Supply Request Data Model](StructureDefinition-model-supply-request.html) constraints in the [Supply Order](StructureDefinition-ihe-supply-order.html) profile.
+The semantics of the request and data elements are captured in the [Supply Request Data Model](StructureDefinition-model-supply-request.html) constraints in the [Supply Order](StructureDefinition-ihe-supply-request.html) profile.
 
 Notes
 * RequestID

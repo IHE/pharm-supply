@@ -1,6 +1,5 @@
 
-
-Profile: SupplyShipmentNotice
+Profile: IHESupplyShipmentNotice
 Parent: SupplyDelivery
 Id: ihe-supply-shipment-notice
 Title: "Profile - Supply Shipment Notice"
@@ -9,11 +8,11 @@ Description: "A notification of shipment or beginning of transport of supply ite
 * ^version = "0.2.0"
 * ^status = #active
 * identifier MS
-* extension contains DeliveryStage named deliveryStage 1..1
+* extension contains IHEDeliveryStage named deliveryStage 1..1
 * extension[deliveryStage].valueCodeableConcept = #shipment (exactly) // why is this not showing in the instance?
 
 
-Profile: SupplyReceiptNotice
+Profile: IHESupplyReceiptNotice
 Parent: SupplyDelivery
 Id: ihe-supply-receipt-notice
 Title: "Profile - Supply Receipt Notice"
@@ -22,25 +21,24 @@ Description: "A notification of reception of supply items."
 * ^version = "0.2.0"
 * ^status = #active
 * identifier MS
-* extension contains DeliveryStage named deliveryStage 1..1
+* extension contains IHEDeliveryStage named deliveryStage 1..1
 * extension[deliveryStage].valueCodeableConcept = #reception (exactly) // why is this not showing in the instance?
 
 
-Extension: DeliveryStage
+Extension: IHEDeliveryStage
+Id: ihe-ext-delivery-stage
 Description: "Body side of a body location."
 * value[x] only CodeableConcept
-* value[x] from DeliveryStageVS (required)
+* value[x] from IHEDeliveryStageVS (required)
 
 
-ValueSet: DeliveryStageVS
+ValueSet: IHEDeliveryStageVS
 Id: delivery-stage-vs
 Title: "Supply delivery stage value set"
 Description: "Supply delivery stage value set."
 * ^copyright = "© 2022+ IHE International"
-* include codes from system DeliveryStageCS
-
-
-CodeSystem: DeliveryStageCS
+* include codes from system IHEDeliveryStageCS
+CodeSystem: IHEDeliveryStageCS
 Id:         delivery-stage-cs
 Title: "Supply delivery stage code system"
 Description: "Supply delivery code system."

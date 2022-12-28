@@ -45,7 +45,7 @@ Description: "This is the logical model for the Inventory Change notification - 
 * association 0..* BackboneElement "For example, Product A (powder) should be mixed with product B '(saline)', or 'product A should be applied with device B' , or 'Product X applies to parent device Y"
 * association.associationType 1..1 CodeableConcept "The type of association" "e.g. 'applied with' or 'used with' or 'to be mixed with"
 * association.associatedProduct[x] 1..1 CodeableConcept or Reference(model-product or model-item) "The associated product - by code or reference" "The associated product - by code or reference"
-* association.associatedProductCodeableConcept from vs-pharm-product-association-type (preferred)
+* association.associatedProductCodeableConcept from vs-ihe-pharm-product-association-type (preferred)
 * association.quantity 1..1 Ratio "The quantity of the associated item in this item" "The quantity of the associated item in this item - Numerator is the quantity of the related item. Denominator is the quantity of the present item. For example a value of 20 means that this item contains 20 units of the related item; a value of 1:20 means the inverse - that the contained item contains 20 units of this item."
 * classification 0..* CodeableConcept "The classification(s) of the product, e.g. ATC code, schedule, device class, ..." "The classification(s) of the product, e.g. ATC code, schedule, device class, ..."
 * dosageForm 0..1 CodeableConcept "The code for the dose form of the pharmaceutical item" "The code for the dose form of the pharmaceutical item"
@@ -89,6 +89,6 @@ Description: "This is the logical model for a Product"
 * association 0..* BackboneElement "For example, Product A (powder) should be mixed with product B '(saline)', or 'product A should be applied with device B' , or 'Product X applies to parent device Y"
 * association.associationType 1..1 CodeableConcept "The type of association" "e.g. 'applied with' or 'used with' or 'to be mixed with"
 * association.associatedProduct[x] 1..1 CodeableConcept or Reference(model-product or model-item) "The actual related product" "The actual related product"
-* association.associatedProductCodeableConcept from vs-pharm-product-association-type (preferred)
+* association.associatedProductCodeableConcept from vs-ihe-pharm-product-association-type (preferred)
 * association.quantity 1..1 Ratio "The quantity of the associated product in this product" "The quantity of the associated product in this product - Numerator is the quantity of the related product. Denominator is the quantity of the present product. for example a value of 20 means that this product contains 20 units of the related product; a value of 1:20 means the inverse - that the contained product contains 20 units of this product."
 * classification 0..* CodeableConcept "The classification(s) of the product, e.g. ATC code, schedule, device class, ..." "The classification(s) of the product, e.g. ATC code, schedule, device class, ..."

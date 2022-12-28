@@ -219,7 +219,7 @@
           </page>
           <page>
             <nameUrl value="supply_response.html"/>
-            <title value="Supply Response"/>
+            <title value="Supply Request Status"/>
             <generation value="markdown"/>
           </page>
           <page>
