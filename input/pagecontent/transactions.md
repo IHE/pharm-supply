@@ -4,7 +4,7 @@
 For triggering the supply associated (or not) with a prescription, there may be a dispense request. This is not the original prescription - it can differ in terms of quantity, contain additional details, or handle requesting products from different locations. The Dispense Request is therefore a transaction that focuses exclusively on the logistic supply of products for a patient, and may be triggered from a clinical prescription but is not a clinical prescription. 
 This mechanism of Dispense Request is not detailed here separately. Technically, it is very similar to the Supply Request and can be an instance of that.
 
-### Supply Request
+### S1. Supply Request
 
 The Supply request handles a request to the party that will process, authorize and otherwise handle the request. This may be or not the supplier: In some cases the request may be to an authorizing party, or another management system, which plays no part in the actual delivery.
 
@@ -36,7 +36,7 @@ Also see the [data model overview below](#overall-data-requirements)
 ___
 
 
-### Supply Request Status
+### S2. Supply Request Status
 
 The Supply Request is used to inform a party about the request of items and the status of such request and its handling. This can be in response to a request, or as an immediate response to the order, or unsolicited.
 
@@ -45,7 +45,7 @@ The data that is normally present is the same as the [supply request](#supply-re
 
 ___
 
-### Shipment notice
+### S3. Shipment notice
 The shipment notice informs other parties that the actual shipment is initiated. This typically means that the items are now in transport. 
 
 
