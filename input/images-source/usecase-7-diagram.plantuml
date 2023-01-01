@@ -1,13 +1,13 @@
 @startuml
 !include style.iuml
-title Check Dispensed product according to Falsified Medicines Directive
-skin BlueModern
-hide footbox
-actor Physician
 
+title Check Dispensed product according to Falsified Medicines Directive
+hide footbox
+
+actor Physician
 actor "Dispensing\nPharmacist " as DP
 Participant "Pharmacy\nDispensing\nSystem" as PDS
-Participant "FMD HUB" as HUB
+Participant "FMD Verifier" as HUB
 
 'group Picking
 'end
