@@ -60,22 +60,21 @@ The ... always returns a HTTP Status code appropriate to the processing outcome.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 
-This response is always expected and provides the ..... with the ackowledgement of the ....including any technical issues.
-The response shall immediately follow the .....
-In case any delayed validation of the .... is expected, such validation shall not impede the immediate response to a ....... 
+This response is always expected and provides the Supplier with the ackowledgement of the Shipment Notice including any technical issues.
+The response shall immediately follow the Shipment Notice.
 
 ##### X:Y.Z.4.1.2 Message Semantics
 
-The response to a Supply Request shall consist of:
-* In case the request is accepted, the response shall have the response code `201 (Created)`
+The response to a shipment notice shall consist of:
+* In case the shipment notice is accepted, the response shall have the response code `201 (Created)`
 * In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R4B/http.html) for information on error handling)
 
 
 ###### X:Y.Z.4.1.2.1 Resource content
 
-* When the request is accepted (regardless of whether it may be acted upon), the response shall contain the resource that has been created from the request, including the id, version, etc. as assigned by the server. This allows the ..... to confirm what has been accepted and track the request on that server by its internal `id`.
+* The response to a shipment notice shall contain the resource that has been created, including the id, version, identifiers, etc. as assigned by the server. This allows the Receiver to confirm what has been accepted and track the shipment notice on that server by its internal `id` or other identifiers.
 * In case of error, the response should contain an OperationOutcome providing more information about the issue.
 
 ##### X:Y.Z.4.1.3 Expected Actions
-Upon receiving the response to the ...., the ... can persist the information provided by the ..... (status, id, etc.) for future tracking, and can trigger a response to any issues, if they exist.
+Upon receiving the response to the Shipment Notice, the Receiver can persist the information provided by the Shipment Notice (status, id, etc.) for future tracking, and can trigger a response to any issues, if they exist.
 

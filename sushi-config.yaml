@@ -72,6 +72,10 @@ resources:
   StructureDefinition/model-item:
     name: Logical Model - Item
     description: The logical data model for trade items
+#  SearchParameter/sp-requested-item:
+#    name: Search Parameter - item requested
+#    description: Additional search parameter to search requests of specific items
+
 
 
 

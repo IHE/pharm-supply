@@ -14,20 +14,18 @@ The resupply request typically may contain information about:
 |----|----|
 |Request ID| identification of the request| 
 |Status | status of the request | 
+|Request Type | Type of request (for distribution purposes) | 
 |DateTime | date/time of the request | 
 |Requester ID | identification of the requester | 
-|Original request | the original request that this request is based on | 
+|Original request | when a request is a response to other requests, e.g. compilation of different requests to buy in bigger quantities| 
 |Intended Request Filler ID| identification of the intended request filler, i.e. who the request is addressed to| 
 |Requested item(s)|  the actual items being requested| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example requesting a specific lot.| 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin | Location where the item should be delivered or placed|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Characteristics of the requested product – for example requesting a specific lot.| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin location | Location or source of the item|
-|Destination | the destination of the items to be supploied | 
-|Fulfilled request ID | when a request is a response to other requests, e.g. compilation of different requests to buy in bigger quantities|
-|Reason | Rationale and reference for resupply, e.g., upstream requests or events, like the prescription that has to be fulfilled, or the stock depleted|
-|Notes | Data needed for distribution – e.g., billing modes, etc.|
+|Destination | the destination of the items to be supplied | 
+|Notes | Comments and additional info – e.g., billing modes, etc.|
 {:.table-bordered .table-sm}
 
 
@@ -77,7 +75,7 @@ The following data is commonly present in the delivery notice:
 * Sent items
   * Identification of the item
   * Physical item characteristics e.g., lot number etc.
-  * Quantity items received (can be detailed by status e.g. items received, items damaged…)
+  * Quantity items received (can be detailed by status e.g. items received, items damaged...)
 * Other info e.g. original request identification 
 
 

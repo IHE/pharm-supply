@@ -2,7 +2,7 @@
 Profile: IHESupplyRequest
 Parent: SupplyRequest
 Id: ihe-supply-request
-Title: "Supply Order"
+Title: "Supply Request profile"
 Description: "Profile for a Supply / Resupply Request"
 * ^version = "0.1.0"
 * ^status = #active
@@ -12,6 +12,8 @@ Description: "Profile for a Supply / Resupply Request"
 Instance: sp-requested-item
 InstanceOf: SearchParameter
 Usage: #definition
+Title: "Search Parameter - item requested"
+Description: "Additional search parameter to search requests of specific items"
 * url = "https://profiles.ihe.net/PHARM/supply/SearchParameter/sp-request-item"
 * name = "RequestedItem"
 * status = #active

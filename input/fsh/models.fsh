@@ -1,20 +1,5 @@
 
-/*
-        |_ identifier 0..1
-        |_ status 1..1
-        |_ dateTime 0..1
-        |_ requester 0..1
-        |_ filler 0..1
-        |_ item 1..*
-          |_ item 1..1
-          |_ quantity 1..1
-          |_ originLocation 0..*
-        |_ destinationLocation 0..*    
-        |_ additionalInfo 0..*  
-          |_ reference 0..*  
-          |_ notes 0..*  
-        |_ note 0..* 
-*/
+
 
 Logical: SupplyRequest
 Parent: Element
@@ -39,8 +24,10 @@ Description: "This is the logical model for the SupplyRequest"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "Identifier"
 * status 1..1 code "code"
+* type 0..1 CodeableConcept "type of request - e.g. type of distribution, priority, etc."
 * dateTime 0..1 dateTime "date time"
 * requester 0..1 Reference "requester"
+* originalRequest 0..1 Reference "Original request"
 * filler 0..1 Reference "filler"
 * item 1..* BackboneElement "item"
 * item
@@ -48,10 +35,7 @@ Description: "This is the logical model for the SupplyRequest"
   * quantity 1..* Quantity "quantity"
   * originLocation 0..* Reference "origin location"
 * destinationLocation 0..* Reference "destination location"
-* additionalInfo[x] 0..* Reference or Annotation "The prescription identification" "."
-* note 0..* http://hl7.org/fhir/StructureDefinition/Annotation "Additional information about the request" "Additional information about the request - this can be relevant history, any remarks by the patient or professional, etc."
-
-
+* additionalInfo[x] 0..* Reference or Annotation "Additional information about the request" "Additional information about the request - this can be relevant history, any remarks by the patient or professional, etc."
 
 
 
@@ -79,12 +63,19 @@ Description: "This is the logical model for the Supply Request Status"
 * ^type = "SupplyRequestStatus"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "identifier"
-* dateTime 0..1 dateTime "date time"
-* performer 1..1 Reference "performer"
-* requester 1..1 Reference "requester"
 * status 1..1 code "code"
+* type 0..1 CodeableConcept "type of request - e.g. type of distribution, priority, etc."
+* dateTime 0..1 dateTime "date time"
+* requester 0..1 Reference "requester"
+* filler 0..1 Reference "performer"
 * item 1..* BackboneElement "item"
   * itemreference[x] 1..1 Reference or CodeableConcept "item reference"
+  * quantity 1..* Quantity "quantity"
+  * originLocation 0..* Reference "origin location"
+* destinationLocation 0..* Reference "destination location"
+* additionalInfo[x] 0..* Reference or Annotation "Additional information about the request" "Additional information about the request - this can be relevant history, any remarks by the patient or professional, etc."
+//* note 0..* http://hl7.org/fhir/StructureDefinition/Annotation "Additional information about the request" "Additional information about the request - this can be relevant history, any remarks by the patient or professional, etc."
+
 
 
 
@@ -112,22 +103,17 @@ Description: "This is the logical model for the ShipmentNotice"
 * ^type = "ShipmentNotice"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "identifier"
+* status 1..1 code "status"
 * dateTime 0..1 dateTime "date time"
 * requestIdentifier 0..1 Identifier "request identifier"
-* status 1..1 code "status"
-* sender 0..1 Reference "sender"
-* senderLocation 0..1 Location "sender location"
+* supplier 0..1 Reference "sender"
+* supplierLocation 0..1 Location "sender location"
 * receiver 0..1 Reference "receiver"
 * receiverLocation 0..1 Location "receiver location"
 * item 1..* BackboneElement "item"
   * itemreference[x] 1..1 Reference or CodeableConcept "item reference"
   * quantity 1..1 Quantity "quantity"
-* additionalInfo[x] 0..* Reference or Annotation "The prescription identification" "."
-* note 0..* http://hl7.org/fhir/StructureDefinition/Annotation "Additional information about the shipment" "Additional information about the shipment"
-
-
-
-/////////////////////////////////////////////////////////////
+* additionalInfo[x] 0..* Reference or Annotation "Additional information about the delivery" "Additional information about the delivery - this can be relevant history, any remarks by the patient or professional, etc."
 
 
 
@@ -151,20 +137,19 @@ Description: "This is the logical model for the ReceiptNotice"
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
 * ^type = "ReceiptNotice"
 * . ^short = "A request for supply of one or more healthcare products"
-* identifier 0..1 Identifier "identifier"
-* dateTime 0..1 dateTime "date time"
-* requestIdentifier 0..1 Identifier "request identifier"
-* shipmentIdentifier 0..1 Identifier "shipment identifier"
+* identifier 0..1 Identifier "Shipment identifier"
 * status 1..1 code "status"
-* sender 0..1 Reference "sender"
-* receiver 0..1 Reference "receiver"
+* dateTime 0..1 dateTime "date time"
+* requestIdentifier 0..1 Identifier "Request identifier"
+* supplier 0..1 Reference "Supplier"
+* supplierLocation 0..1 Location "Supplier location"
+* receiver 0..1 Reference "Receiver"
 * receiverLocation 0..1 Location "receiver location"
 * item 1..* BackboneElement "item"
   * itemreference[x] 1..1 Reference or CodeableConcept "item reference"
   * quantity 1..1 Quantity "quantity"
   * quantity ^comment = "This is the count of items that have been received. This does not mean a pack quantity. For example if one box containing 20 devices has been received, and the code is for the box, then quantity is 1. If however, the code used to identify the product is the code of the device, then the quantity is 20."
-* additionalInfo[x] 0..* Reference or Annotation "The prescription identification" "."
-* note 0..* http://hl7.org/fhir/StructureDefinition/Annotation "Additional information about the shipment" "Additional information about the shipment"
+* additionalInfo[x] 0..* Reference or Annotation "Additional information about the delivery" "Additional information about the delivery - this can be relevant history, any remarks by the patient or professional, etc."
 
 
 

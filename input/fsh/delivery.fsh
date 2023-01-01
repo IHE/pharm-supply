@@ -27,7 +27,7 @@ Description: "A notification of reception of supply items."
 
 Extension: IHEDeliveryStage
 Id: ihe-ext-delivery-stage
-Description: "Body side of a body location."
+Description: "Stage of delivery reported in a SupplyDelivery."
 * value[x] only CodeableConcept
 * value[x] from IHEDeliveryStageVS (required)
 
