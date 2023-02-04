@@ -27,7 +27,7 @@
 		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-			<li><a href="actor_definitions.html">Actors Definitions<style="text-align: baseline"/></a></li>
+			<li><a href="actors_and_transactions.html">Actors Definitions<style="text-align: baseline"/></a></li>
 			<li><a href="transactions.html">Transaction Definitions<style="text-align: baseline"/></a></li>
 		</ul>
 	</li>

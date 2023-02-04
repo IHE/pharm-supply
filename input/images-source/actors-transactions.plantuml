@@ -1,0 +1,11 @@
+@startuml
+title Supply Actor Diagram
+skinparam linetype polyline
+agent "  Supply Requester  " as supplyrequester [[actor_definitions.html#supply-requester]]
+agent " Supply Request Filler " as supplyrequestfiller [[actor_definitions.html#supply-request-filler]]
+agent "Supplier" as supplier [[actor_definitions.html#supplier]]
+agent "Receiver" as receiver [[actor_definitions.html#receiver]]
+supplyrequester -- supplyrequestfiller : "\n[[PHARM-S1.html PHARM-S1 Supply Request]] ↓\n  [[PHARM-S2.html PHARM-S2 Supply Response/status]] ↑"
+supplier -d- receiver : "\n[[PHARM-S3.html PHARM-S3 Shipment notice]] ↓\n[[PHARM-S4.html PHARM-S4 Receipt notice]] ↑"
+'supplier -[hidden]- receiver : "\n \n \n \n \n  \n"
+@enduml

@@ -119,8 +119,6 @@ pages:
       title: "Cross Profile Considerations"
   volume2.md:
     title:"Volume 2: Transaction Detail"
-    actor_definitions.md:
-      title: "Actors Definitions"
     transactions.md:
       title: "Transaction Definitions"
       PHARM-S1.md:

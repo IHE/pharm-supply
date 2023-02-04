@@ -10,7 +10,7 @@ The Supply request handles a request to the party that will process, authorize a
 
 The resupply request typically may contain information about:
 
-|Actor|Role description|
+|Data element|Description|
 |----|----|
 |Request ID| identification of the request| 
 |Status | status of the request | 
@@ -18,7 +18,7 @@ The resupply request typically may contain information about:
 |Requester ID | identification of the requester | 
 |Original request | the original request that this request is based on | 
 |Intended Request Filler ID| identification of the intended request filler, i.e. who the request is addressed to| 
-|Requested item(s)|  the actual items being requested| 
+|Requested item(s)| the actual items being requested| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example requesting a specific lot.| 
@@ -40,7 +40,7 @@ ___
 
 The Supply Request is used to inform a party about the request of items and the status of such request and its handling. This can be in response to a request, or as an immediate response to the order, or unsolicited.
 
-The data that is normally present is the same as the [supply request](#supply-request):
+The data that is normally present is the same as the [supply request](#supply-request).
 
 
 ___
@@ -51,16 +51,23 @@ The shipment notice informs other parties that the actual shipment is initiated.
 
 This data is normally used:
 
-* Supplier ID
-* Receiver ID
-* Shipment ID
-* Sending party location
-* Receiving party location
-* Sent items
-  * Identification of the item
-  * Physical item characteristics e.g., lot number etc.
-  * Quantity
-* Other info e.g. original request identification
+|Data element|Description|
+|----|----|
+| Shipment ID ||
+| Status | status of the shipment | 
+| DateTime | date/time of the shipment | 
+| Request | the request that this shipment is responding to | 
+| Requester ID | identification of the requester | 
+| Receiver ID | the intended receiver of the shipment|
+| Destination location| the intended location for the shipment|
+| Sent items| the actual items being shipped| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example a specific lot.| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin | Location where the item should be delivered or placed|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin location | Location or source of the item|
+|Notes | Other data needed about distribution – e.g., billing info, etc.|
+{:.table-bordered .table-sm}
 
 ___
 
@@ -69,17 +76,22 @@ The delivery or receipt notice is used to inform the parties about the reception
 
 The following data is commonly present in the delivery notice:
 
-* Supplier ID
-* Receiver ID
-* Shipment ID
-* Sending party location
-* Receiving party location
-* Sent items
-  * Identification of the item
-  * Physical item characteristics e.g., lot number etc.
-  * Quantity items received (can be detailed by status e.g. items received, items damaged…)
-* Other info e.g. original request identification 
-
+|Data element|Description|
+|----|----|
+| Receipt ID | identification of the receipt | 
+| Shipment ID |identification of the shipment |
+| Receiver ID | the receiver of the items|
+| Status | status of the receipt notive | 
+| DateTime | date/time of the receipt | 
+| Request | the request that this receipt is related to | 
+| Location| the location of reception of the shipment|
+| Received items| the actual items received| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example a specific lot.| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item status | information of the status - arrived, missing, defective..| 
+|Notes | Other data needed about distribution – e.g., billing info, etc.|
+{:.table-bordered .table-sm}
 
 ___
 
@@ -93,12 +105,23 @@ The data involved is usually this:
 * Date and time
 * Inventory entries
   * Location
-  * Content
   * Items
     * Physical attributes (lot, machine-readable content, etc.)
     * Quantity
 * Identification of the reporter
 
+|Data element|Description|
+|----|----|
+| Request ID | identification of the inventory request | 
+| DateTime | date/time of the request | 
+| Inventory entries | the entries or positions for which the inventory is being requested | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Location| the inventory location|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Items| the items for which inventory is being requested | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attributes| Attributes of the items (code, lot, etc.) | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example a specific lot.| 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item status | information of the status - arrived, missing, defective..| 
+|Notes | Other data needed about distribution – e.g., billing info, etc.|
+{:.table-bordered .table-sm}
 
 ### Inventory Consumption
 One of the key aspects of the materials handling is that sometimes products are consumed but not used or reported clinically. For example items that are dropped or damaged, and/or need to be wasted - will not be reported in the clinical information exchange, but are important to be notified for proper inventory control. This consumption report can contain information such as:
