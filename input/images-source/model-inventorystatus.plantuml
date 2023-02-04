@@ -24,8 +24,9 @@ skinparam class<<TM>> {
         |_ operationType  1..1
         |_ operationTypeReason  0..1  
         |_ reportDateTime  0..1
-        |_ reporter  0..1
         |_ reportingPeriod  0..1
+        |_ countingDateTime  0..*  
+        |_ reporter  0..1
         |_ inventoryListing  1..*
           |_ location  0..1
           |_ status  0..1
@@ -33,7 +34,8 @@ skinparam class<<TM>> {
             |_ category  0..*
             |_ quantity  0..*
             |_ item  0..*
-        |_ countingDateTime  0..*  
+              |_ itemReference  0..*
+              |_ itemCharacteristic  0..*
         --
     }
 

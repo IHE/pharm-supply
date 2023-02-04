@@ -23,16 +23,18 @@ skinparam class<<TM>> {
         |_ status 1..1
         |_ dateTime 0..1
         |_ requester 0..1
+        |_ originalRequest 0..1
         |_ filler 0..1
         |_ item 1..*
-          |_ item 1..1
+          |_ itemReference 1..1
+          |_ itemCharacteristics 0..*
           |_ quantity 1..1
           |_ originLocation 0..*
-        |_ destinationLocation 0..*  
+        |_ destinationLocation 0..*    
         |_ additionalInfo 0..*  
           |_ reference 0..*  
           |_ notes 0..*  
-        |_ notes 0..* 
+        |_ note 0..* 
         --
     }
 

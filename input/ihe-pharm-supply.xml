@@ -213,13 +213,13 @@
           <title value="Transaction Definitions"/>
           <generation value="markdown"/>
           <page>
-            <nameUrl value="resupply_order.html"/>
-            <title value="Resupply Order"/>
+            <nameUrl value="supply_order.html"/>
+            <title value="Supply Order"/>
             <generation value="markdown"/>
           </page>
           <page>
-            <nameUrl value="resupply_response.html"/>
-            <title value="Resupply Response"/>
+            <nameUrl value="supply_response.html"/>
+            <title value="Supply Request Status"/>
             <generation value="markdown"/>
           </page>
           <page>

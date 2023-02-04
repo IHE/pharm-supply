@@ -19,7 +19,8 @@ skinparam class<<TM>> {
 }
 
 
-    class "**Supply Request**" as SR<<MD>> {
+
+    class "**[[StructureDefinition-model-supply-request.html Supply Request]]**" as SR<<MD>> {
         |_ identifier 0..1
         |_ status 1..1
         |_ dateTime 0..1
@@ -27,76 +28,102 @@ skinparam class<<TM>> {
         |_ originalRequest 0..1
         |_ filler 0..1
         |_ item 1..*
-          |_ item 1..1
+          |_ itemReference 1..1
+          |_ itemCharacteristics 0..*
           |_ quantity 1..1
           |_ originLocation 0..*
         |_ destinationLocation 0..*    
         |_ additionalInfo 0..*  
           |_ reference 0..*  
           |_ notes 0..*  
-        |_ notes 0..* 
+        |_ note 0..* 
         --
     }
 
-    class "**Supply Request Status**" as SRS<<MD>> {
+    class "**[[StructureDefinition-model-supply-request-status.htmlSupply Request Status]]**" as SRS<<MD>> {
         |_ identifier 0..1
         |_ status 1..1
         |_ dateTime 0..1
         |_ requester 0..1
+        |_ originalRequest 0..1
         |_ filler 0..1
         |_ item 1..*
-          |_ item 1..1
+          |_ itemReference 1..1
+          |_ itemCharacteristics 0..*  
           |_ quantity 1..1
           |_ originLocation 0..*
-        |_ destinationLocation 0..*  
+        |_ destinationLocation 0..*    
         |_ additionalInfo 0..*  
           |_ reference 0..*  
           |_ notes 0..*  
-        |_ notes 0..* 
+        |_ note 0..* 
         --
     }
-    class "**Shipment Notice**" as SN<<MD>> {
+    class "**[[StructureDefinition-model-shipment-notice.html Shipment Notice]]**" as SN<<MD>> {
         |_ identifier 0..*
         |_ status 1..1
         |_ dateTime 0..1
-        |_ request 0..1
-        |_ requester 0..1
+        |_ requestIdentifier 0..1
+        |_ supplier 0..1
+        |_ supplierLocation 0..1
         |_ receiver 0..1
         |_ receiverLocation 0..1
         |_ item 1..*
           |_ item 1..1
+          |_ itemCharacteristics 0..*  
           |_ quantity 1..1
           |_ origin 0..1
-          |_ originLocation 0..1
-        |_ destinationLocation 0..*  
         |_ additionalInfo 0..*  
           |_ reference 0..*  
           |_ notes 0..*  
-        |_ notes 0..* 
         --
     }
 
-    class "**Receipt Notice**" as RN<<MD>> {
+    class "**[[StructureDefinition-model-receipt-notice.html Receipt Notice]]**" as RN<<MD>> {
         |_ identifier 0..*
         |_ status 1..1
         |_ dateTime 0..1
-        |_ shipment 0..*   
-        |_ request 0..*
-        |_ sender 0..1
+        |_ shipmentIdentifier 0..1
+        |_ requestIdentifier 0..1
+        |_ supplier 0..1
+        |_ supplierLocation 0..1
         |_ receiver 0..1
         |_ receiverLocation 0..1
         |_ item 1..*
           |_ item 1..1
+          |_ itemCharacteristics 0..*  
           |_ quantity 1..1
+          |_ origin 0..1
         |_ additionalInfo 0..*  
           |_ reference 0..*  
           |_ notes 0..*  
-        |_ notes 0..* 
         --
     }
 
     
-    class "**Inventory Status**" as IS<<MD>> {
+    class "**[[StructureDefinition-model-inventory-status.html Inventory Status]]**" as IS<<MD>> {
+        |_ identifier  0..1
+        |_ countType  0..1
+        |_ operationType  1..1
+        |_ operationTypeReason  0..1  
+        |_ reportDateTime  0..1
+        |_ countingDateTime  0..*  
+        |_ reportingPeriod  0..1
+        |_ reporter  0..1
+        |_ inventoryListing  1..*
+          |_ location  0..1
+          |_ status  0..1
+          |_ items  1..1
+            |_ category  0..*
+            |_ quantity  0..*
+            |_ item  0..*
+              |_ itemReference  0..*
+              |_ itemCharacteristic  0..*
+        --
+    }
+
+
+    class "**[[StructureDefinition-model-inventory-consumption.html Inventory Consumption]]**" as IC<<MD>> {
         |_ identifier  0..1
         |_ countType  0..1
         |_ operationType  1..1
@@ -114,37 +141,15 @@ skinparam class<<TM>> {
         |_ countingDateTime  0..*  
         --
     }
+IC -up-|> IS: (specialization)
 
 
-    class "**Inventory Consumption**" as IC<<MD>> {
-        |_ identifier  0..1
-        |_ countType  0..1
-        |_ operationType  1..1
-        |_ operationTypeReason  0..1  
-        |_ reportDateTime  0..1
-        |_ reporter  0..1
-        |_ reportingPeriod  0..1
-        |_ inventoryListing  1..*
-          |_ location  0..1
-          |_ status  0..1
-          |_ items  1..1
-            |_ category  0..*
-            |_ quantity  0..*
-            |_ item  0..*
-        |_ countingDateTime  0..*  
-        --
-    }
 
+SRS -up-|> SR: (specialization)
 
-'SR -- SR
+SN -left-> SR: (link via request)
 
-IC -up-|> IS
-
-SRS -up-|> SR
-
-SN -left-> SR: request
-
-RN -up-> SN : shipment
-RN -left-> SR : request
+RN -up-> SN : (link via shipment)
+RN -left-> SR : (link via request)
 
 @enduml

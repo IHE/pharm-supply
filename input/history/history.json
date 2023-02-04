@@ -8,7 +8,7 @@
 		"resource" : {
 		  "resourceType" : "Provenance",
 		  "id" : "history-1",
-		  "target" : [ { "reference" : "StructureDefinition/ihe-supply-order" }],
+		  "target" : [ { "reference" : "StructureDefinition/ihe-supply-request" }],
 		  "occurredDateTime" : "2015-11-30",
 		  "reason" : [
 			{

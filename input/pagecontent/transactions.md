@@ -4,7 +4,7 @@
 For triggering the supply associated (or not) with a prescription, there may be a dispense request. This is not the original prescription - it can differ in terms of quantity, contain additional details, or handle requesting products from different locations. The Dispense Request is therefore a transaction that focuses exclusively on the logistic supply of products for a patient, and may be triggered from a clinical prescription but is not a clinical prescription. 
 This mechanism of Dispense Request is not detailed here separately. Technically, it is very similar to the Supply Request and can be an instance of that.
 
-### Supply Request
+### S1. Supply Request
 
 The Supply request handles a request to the party that will process, authorize and otherwise handle the request. This may be or not the supplier: In some cases the request may be to an authorizing party, or another management system, which plays no part in the actual delivery.
 
@@ -14,20 +14,18 @@ The resupply request typically may contain information about:
 |----|----|
 |Request ID| identification of the request| 
 |Status | status of the request | 
+|Request Type | Type of request (for distribution purposes) | 
 |DateTime | date/time of the request | 
 |Requester ID | identification of the requester | 
-|Original request | the original request that this request is based on | 
+|Original request | when a request is a response to other requests, e.g. compilation of different requests to buy in bigger quantities| 
 |Intended Request Filler ID| identification of the intended request filler, i.e. who the request is addressed to| 
 |Requested item(s)| the actual items being requested| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example requesting a specific lot.| 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin | Location where the item should be delivered or placed|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Characteristics of the requested product – for example requesting a specific lot.| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin location | Location or source of the item|
-|Destination | the destination of the items to be supploied | 
-|Fulfilled request ID | when a request is a response to other requests, e.g. compilation of different requests to buy in bigger quantities|
-|Reason | Rationale and reference for resupply, e.g., upstream requests or events, like the prescription that has to be fulfilled, or the stock depleted|
-|Notes | Data needed for distribution – e.g., billing modes, etc.|
+|Destination | the destination of the items to be supplied | 
+|Notes | Comments and additional info – e.g., billing modes, etc.|
 {:.table-bordered .table-sm}
 
 
@@ -36,7 +34,7 @@ Also see the [data model overview below](#overall-data-requirements)
 ___
 
 
-### Supply Request Status
+### S2. Supply Request Status
 
 The Supply Request is used to inform a party about the request of items and the status of such request and its handling. This can be in response to a request, or as an immediate response to the order, or unsolicited.
 
@@ -45,7 +43,7 @@ The data that is normally present is the same as the [supply request](#supply-re
 
 ___
 
-### Shipment notice
+### S3. Shipment notice
 The shipment notice informs other parties that the actual shipment is initiated. This typically means that the items are now in transport. 
 
 

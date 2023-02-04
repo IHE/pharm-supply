@@ -1,0 +1,25 @@
+Profile: IHEActor
+Parent: ActorDefinition
+
+
+Instance: Actor1
+InstanceOf: IHEActor
+* identifier.value = "A1"
+* version = "0.1.1-draft"
+* name = Actor1
+* title = "Actor 1"
+* status = #draft
+* experimental = false
+* date = 2022-09-11
+* publisher = "IHE Pharmacy"
+* contact.name = "pharmacy@ihe.net"
+* description = "Actor description text here\nand here\n* option 1\n* option 2"
+* jurisdiction.coding = http://unstats.un.org/unsd/methods/m49/m49.htm#001
+* purpose = "For demonstrating the use of actor definitions.  \nThis actor participates in the following use cases:\n* use case 2\n* use case 5"
+* copyright = "You may copy this anytime."
+* copyrightLabel = "Myself 2022"
+* type = #system
+* documentation = "This actor has\n* url\n* identifier.value\n* version\n* name\n* title\n* status\n* experimental\n* date\n* publisher\n* contact.name\n* description\n* jurisdiction\n* purpose\n* copyright\n* copyrightLabel\n* type\n* documentation\n* reference\n* capabilities\n"
+* reference = "http://example.com"
+* capabilities = "http://example.org/fhirCapStatementActor1"
+

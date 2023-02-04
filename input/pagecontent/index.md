@@ -47,7 +47,7 @@ This guide is organized into four main sections:
 
 2. Volume 2: Transaction Detail
     1. Supply Request [PHARM-11]
-    2. Supply Response [PHARM-12]
+    2. Supply Request Status [PHARM-12]
     3. Shipment Notice [PHARM-13]
     4. Delivery Receipt [PHARM-42]
     5. Inventory Query [PHARM-15]

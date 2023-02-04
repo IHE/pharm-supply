@@ -1,8 +1,9 @@
-This section corresponds to transaction [PHARM-S4] of the IHE Technical Framework. Transaction [PHARM-S4] is used by the ... and the ... actors. The Supply Request [PHARM-S4] transaction is used to ....
+This section corresponds to transaction [PHARM-S4] of the IHE Technical Framework - Receipt notice. Transaction [PHARM-S4] is used by the Supply Supplier and the Supply Receiver actors. The Receipt notice [PHARM-S4] transaction is used to inform that items have been received at a given location.
 
 ### X:Y.Z.1 Scope
 
-The xxxxxxxxx [PHARM-S3] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
+With the Receipt notice [PHARM-S4] transaction, the Receiver informs the Supplier (any receiver of information, not necessarily the materials supplier) about the Receipt of items, including updates.
+The Receipt (and respective notice) can be related to a Shipment Notive and a Supply Request, or can be unrelated in case of unexpected reception of items, or items for which an order was not made and the Shipment notice is not digitally available. 
 
 ### X:Y.Z.2 Actors Roles
 
@@ -10,8 +11,8 @@ The xxxxxxxxx [PHARM-S3] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supply Requester](actor_definitions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
-| [Supply Request Filler](actor_definitions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
+| [Receiver](actor_definitions.html#receiver) | Sends Receipt notice to the Supplier |
+| [Supplier](actor_definitions.html#supplier) | Receives the Receipt notice|
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards
@@ -29,42 +30,36 @@ The xxxxxxxxx [PHARM-S3] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 **Figure X:Y.Z.4-1: Supply Request Interactions**
 
 #### X:Y.Z.4.1 Supply Request Request Message
-The ..... submits a ...... resource using the ..... method to the /..... endpoint.
+The Receiver sends a SupplyDelivery resource (conformant to the [Supply Receipt Profile](StructureDefinition-ihe-supply-receipt-notice.html)) using the POST method to the Supplier endpoint.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 
-This method is invoked when the .... needs to submit one or more ..... to a .... - to inform, to request ..... 
+This method is invoked when the Receiver wishes to notify another entity of the reception of items. 
 
 ##### X:Y.Z.4.1.2 Message Semantics
 
 The content type of the HTTP body shall be either `application/fhir+json` or `application/fhir+xml`.
 
-The ..... shall assure the request is consistent and actionable before sending, i.e. all authorizations and approvals are present. 
+The Receiver shall assure the request is consistent and actionable before sending, i.e. all required authorizations and approvals are present.
 
 ###### X:Y.Z.4.1.2.1 Resource content
 
-* 
 
 ##### X:Y.Z.4.1.3 Expected Actions
-Upon receiving the 
-
-
-
-
-
-
-
-
+Upon receiving the Receipt notice, the Supplier will act and distribute the information accordingly. Some examples of possible actions:
+* Distribute / forward the Receipt notice to any other parties e.g. for delivery tracking purposes
+* Update expected/planned inventory
+* Trigger or prepare or update the billing
 
 
 #### X:Y.Z.4.2 Supply Request Response
-The ... always returns a HTTP Status code appropriate to the processing outcome.
+The Supplier always returns a HTTP Status code appropriate to the processing outcome.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 
-This response is always expected and provides the ..... with the ackowledgement of the ....including any technical issues.
-The response shall immediately follow the .....
-In case any delayed validation of the .... is expected, such validation shall not impede the immediate response to a ....... 
+This response is always expected and provides the Receiver with the ackowledgement of the Receipt notice, including any technical issues.
+The response shall immediately follow the Receipt note reception.
+In case any delayed updates and confirmation is triggered expected, such actions shall not impede the immediate response to a Receipt notice.
 
 ##### X:Y.Z.4.1.2 Message Semantics
 
@@ -75,9 +70,9 @@ The response to a Supply Request shall consist of:
 
 ###### X:Y.Z.4.1.2.1 Resource content
 
-* When the request is accepted (regardless of whether it may be acted upon), the response shall contain the resource that has been created from the request, including the id, version, etc. as assigned by the server. This allows the ..... to confirm what has been accepted and track the request on that server by its internal `id`.
+* When the receipt notice is accepted, the response shall contain the resource that has been created from the reception of the notice, including the id, version, etc. as assigned by the server. This allows the Receiver to confirm the the receipt notice has been accepted and track any subsequent actions if needed.
 * In case of error, the response should contain an OperationOutcome providing more information about the issue.
 
 ##### X:Y.Z.4.1.3 Expected Actions
-Upon receiving the response to the ...., the ... can persist the information provided by the ..... (status, id, etc.) for future tracking, and can trigger a response to any issues, if they exist.
+Upon receiving the response to the Receipt notice, the Supplier can persist the information provided by the Receiver (status, id, etc.) for future tracking, and can trigger a response to any issues, if they exist.
 
