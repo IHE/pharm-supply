@@ -23,7 +23,7 @@ MHD is part of [IHE](https://profiles.ihe.net) -- [Pharmacy](https://profiles.ih
 
 <div markdown="1" class="stu-note">
 
-| [Significant Changes, Open, and Closed Issues](a_issues.html) |
+| [Significant Changes, Open, and Closed Issues](issues.html) |
 {: .grid}
 
 **[Search this IG]()**

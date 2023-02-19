@@ -141,7 +141,8 @@ pages:
         title: "Inventory Report [PHARM-S5]"
       PHARM-S6.md:
         title: "Consumption Report [PHARM-S6]"
-
+  issues.md:
+    title: "Present issues" 
 
 
 groups:

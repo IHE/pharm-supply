@@ -15,7 +15,6 @@ group Resupply
 Activate ERP
 ERP -> ERP: Recalculate stock; subtract consumption
 ERP -> ERP: Prepare suggested order
-note right: Hey, here's a note [[http://www.google.com]]
 
 'Activate ERP
 ERP -> PD: Propose order (10 units)
