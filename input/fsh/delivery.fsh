@@ -42,7 +42,7 @@ CodeSystem: IHEDeliveryStageCS
 Id:         delivery-stage-cs
 Title: "Supply delivery stage code system"
 Description: "Supply delivery code system."
-* ^url = https://profiles.ihe.net/PHARM/Supply/CodeSystem/DeliveryStageCS
+* ^url = "https://profiles.ihe.net/PHARM/Supply/CodeSystem/DeliveryStageCS"
 * #shipped
     "Shipment"
     "Information is about the shipment of the item."

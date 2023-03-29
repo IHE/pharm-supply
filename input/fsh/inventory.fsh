@@ -22,6 +22,6 @@ CodeSystem: CSProductAssociationType
 Id:         cs-ihe-pharm-product-association-type
 Title: "Product association type code system"
 Description: "product association type code system."
-* ^url = https://profiles.ihe.net/PHARM/Supply/CodeSystem/cs-ihe-pharm-product-association-type
+* ^url = "https://profiles.ihe.net/PHARM/Supply/CodeSystem/cs-ihe-pharm-product-association-type"
 * #contains "contains" "the product contains the related product"
 
