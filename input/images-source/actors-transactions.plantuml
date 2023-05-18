@@ -1,11 +1,20 @@
 @startuml
+'!include ./style.iuml
+
 title Supply Actor Diagram
 skinparam linetype polyline
-agent "  Supply Requester  " as supplyrequester [[actor_definitions.html#supply-requester]]
-agent " Supply Request Filler " as supplyrequestfiller [[actor_definitions.html#supply-request-filler]]
-agent "Supplier" as supplier [[actor_definitions.html#supplier]]
-agent "Receiver" as receiver [[actor_definitions.html#receiver]]
-supplyrequester -- supplyrequestfiller : "\n[[PHARM-S1.html PHARM-S1 Supply Request]] ↓\n  [[PHARM-S2.html PHARM-S2 Supply Response/status]] ↑"
-supplier -d- receiver : "\n[[PHARM-S3.html PHARM-S3 Shipment notice]] ↓\n[[PHARM-S4.html PHARM-S4 Receipt notice]] ↑"
-'supplier -[hidden]- receiver : "\n \n \n \n \n  \n"
+agent "  [[actor_definitions.html#supply-requester Supply Requester ]]" as supplyrequester 
+agent " [[actor_definitions.html#supply-request-filler Supply Request Filler ]]" as supplyrequestfiller 
+agent "[[actor_definitions.html#supplier Supplier]]" as supplier 
+agent "[[actor_definitions.html#receiver Receiver]]" as receiver 
+
+agent "[[actor_definitions.html#supplier Inventory Reporter]]" as invreporter
+agent "[[actor_definitions.html#receiver Inventory Manager]]" as invmanager 
+
+
+supplyrequester -- supplyrequestfiller : "[[PHARM-S1.html PHARM-S1 Supply Request]] ↓         \n\n   [[PHARM-S2.html PHARM-S2 Supply Response/status]] ↑"
+supplyrequester -[hidden]r- supplier : "\t\t\t\t"
+supplier -d- receiver : "   [[PHARM-S3.html PHARM-S3 Shipment notice]] ↓\n\n[[PHARM-S4.html PHARM-S4 Receipt notice]] ↑"
+supplier -[hidden]r- invreporter : "\t\t\t\t "
+invreporter -d- invmanager : " [[PHARM-S5.html PHARM-S5 Inventory Query]] ↑                  \n\n[[PHARM-S6.html PHARM-S6 Inventory Report]] ↓                 \n\n[[PHARM-S7.html PHARM-S7 Consumption / usage notice]] ↓"
 @enduml

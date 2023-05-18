@@ -17,7 +17,7 @@ The Resupply Status [PHARM-S2] transaction queries the status of one or more sup
 
 ### X:Y.Z.3 Referenced Standards
 
-**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
+**FHIR-R5** [HL7 FHIR Release 5.0](http://www.hl7.org/FHIR/R5)
 
 ### X:Y.Z.4 Messages
 

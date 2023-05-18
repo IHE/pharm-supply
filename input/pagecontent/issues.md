@@ -3,13 +3,12 @@
 
 ### Known issues
 
-The Pharmacy Supply profile is based on FHIR R4. As such, there are a few gaps that are expected to be resolved in a future edition of these profiles. 
-Those gaps are not overlapping with the current profile, except in a few attention points:
+The Pharmacy Supply profile is based on FHIR R5. As such, there are a few new resources and capabilities that are being trialed and for which developer feedback or confirmation is highly appreciated.
 
- > [No support for Inventory](https://github.com/IHE/pharm-supply/issues). FHIR R4 does not have the Inventory resources in. To avoid making a temporary solution, IHE has preferred to exclude this scope until the release of FHIR R5, which will contain the Inventory resources.
+ > [InventoryReport](https://hl7.org/FHIR/R5/inventoryreport.html)
 
- > [InventoryItem ony uses "clinical" resources](https://github.com/IHE/pharm-supply/issues). FHIR R4 does not have an instantiable notion of a "product" which, for supply and inventory purposes, forces the choice of one of the clinical products. Implementers coming from the Supply chain side may note the absence of a "product" or "item" resource. This is expected for the FHIR R5 release.
-
+ > [InventoryItem](https://hl7.org/FHIR/R5/inventoryitem.html).
+ 
 
 
 ## Issue handling

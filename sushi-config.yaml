@@ -5,7 +5,7 @@ id: ihe.pharm.supply
 canonical: https://profiles.ihe.net/PHARM/SUPPLY
 name: IHE_PHARM_SUPPLY
 version: 0.3.0
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0
 status: active
 title: "Supply of Products for Healthcare (SUPPLY)"
 description: ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)

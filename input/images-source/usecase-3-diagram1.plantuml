@@ -1,12 +1,14 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Supply Management - Pharmacy-managed inventory,\ninventory count, barcode-assisted
-skin BlueModern
+'skin BlueModern
 hide footbox
 
 actor "Pharmacist" as P
 Participant "Inventory App" as IA
 Participant "Pharmacy System\n/ ERP" as PS
+|||
 
 group Scan one location
 P -> IA: Identify location: "Stock"\ne.g. scan barcode on shelf

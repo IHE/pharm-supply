@@ -16,7 +16,7 @@ The Supply Request [PHARM-S1] transaction passes a Supply Request from a Supply 
 
 ### X:Y.Z.3 Referenced Standards
 
-**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
+**FHIR-R5** [HL7 FHIR Release 5.0](http://www.hl7.org/FHIR/R5)
 
 ### X:Y.Z.4 Messages
 
@@ -47,7 +47,7 @@ The semantics of the request and data elements are captured in the [Supply Reque
 
 Notes
 * RequestID
-* The items to be ordered are expressed as the product code. When details about the product need to be expressed in a structured manner, the `parameter` element should be used. A reference to a resource can also be used (Medication, Device, etc.). In that case, the resource can be contained in the request. See [References](https://hl7.org/fhir/R4/references.html#contained) about contained resources.
+* The items to be ordered are expressed as the product code. When details about the product need to be expressed in a structured manner, the `parameter` element should be used. A reference to a resource can also be used (Medication, Device, etc.). In that case, the resource can be contained in the request. See [References](https://hl7.org/fhir/R5/references.html#contained) about contained resources.
 
 
 ##### X:Y.Z.4.1.3 Expected Actions
@@ -76,7 +76,7 @@ In case any delayed validation of the order is expected, such validation shall n
 
 The response to a Supply Request shall consist of:
 * In case the request is accepted, the response shall have the response code `201 (Created)`
-* In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R4B/http.html) for information on error handling)
+* In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R5/http.html) for information on error handling)
 
 
 ###### X:Y.Z.4.1.2.1 Resource content

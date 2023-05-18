@@ -1,14 +1,16 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Ward Supply Management - Pharmacy-managed inventory
-skin BlueModern
+'skin BlueModern
 hide footbox
 
-Participant "Drug\nVendor" as SUP
+Participant "Medication\nVendor" as SUP
 actor "Pharmacist" as PD
 Participant "Pharmacy System\n/ ERP" as ERP
 participant "Medication\nAdministration\nSystem" as AI
 actor "Nurse" as N
+|||
 
 group Supplier order processing
 SUP -> SUP: Check order

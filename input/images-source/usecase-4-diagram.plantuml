@@ -1,7 +1,8 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Community Pharmacy - Dispensing and resupply;\nStock and consignment items
-skin BlueModern
+'skin BlueModern
 hide footbox
 
 actor Customer as C
@@ -9,6 +10,7 @@ actor "Community\nPharmacist" as CPh
 Participant "Pharmacy\nSystem" as CP
 Participant "Vendor 1\n(Purchase agreement)" as V1
 Participant "Vendor 2\n(Consignment agreement)" as V2
+|||
 
 group Dispense
 C -> CPh: Present prescription

@@ -1,8 +1,8 @@
-This section corresponds to transaction [PHARM-S1] of the IHE Technical Framework. Transaction [PHARM-S1] is used by the Supply Requester and the Supply Request Filler actors. The Supply Request [PHARM-S1] transaction is used to transmit an order for supply of products.
+This section corresponds to transaction [PHARM-S6] of the IHE Technical Framework. Transaction [PHARM-S6] is used by the ... and the ... actors. The Supply Request [PHARM-S6] transaction is used to ....
 
 ### X:Y.Z.1 Scope
 
-The xxxxxxxxx [PHARM-S2] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
+The xxxxxxxxx [PHARM-S3] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 
 ### X:Y.Z.2 Actors Roles
 
@@ -21,7 +21,7 @@ The xxxxxxxxx [PHARM-S2] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 ### X:Y.Z.4 Messages
 
 <figure>
-{% include pharm-s2.svg %}
+{% include pharm-s6.svg %}
 </figure>
 
 
