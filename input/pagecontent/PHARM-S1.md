@@ -10,8 +10,8 @@ The Supply Request [PHARM-S1] transaction passes a Supply Request from a Supply 
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supply Requester](actor_definitions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
-| [Supply Request Filler](actor_definitions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
+| [Supply Requester](actors_and_transactions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
+| [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards
@@ -43,7 +43,7 @@ The Supply Requester shall assure the request is consistent and actionable befor
 ###### X:Y.Z.4.1.2.1 Resource content
 
 * The supply request is a SupplyDelivery resource.
-The semantics of the request and data elements are captured in the [Supply Request Data Model](StructureDefinition-model-supply-request.html) constraints in the [Supply Order](StructureDefinition-ihe-supply-request.html) profile.
+The semantics of the request and data elements are captured in the [Supply Request Data Model](StructureDefinition-SupplyRequestModel.html) and the technical constraints in the [Supply Request](StructureDefinition-ihe-supply-request.html) profile.
 
 Notes
 * RequestID

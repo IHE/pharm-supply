@@ -20,7 +20,7 @@ skinparam class<<TM>> {
 
 
 
-    class "**[[StructureDefinition-model-supply-request.html Supply Request]]**" as SR<<MD>> {
+    class "**[[StructureDefinition-SupplyRequestModel.html Supply Request]]**" as SR<<MD>> {
         |_ identifier 0..1
         |_ status 1..1
         |_ dateTime 0..1
@@ -40,7 +40,7 @@ skinparam class<<TM>> {
         --
     }
 
-    class "**[[StructureDefinition-model-supply-request-status.htmlSupply Request Status]]**" as SRS<<MD>> {
+    class "**[[StructureDefinition-SupplyRequestStatusModel.html Supply Request Status]]**" as SRS<<MD>> {
         |_ identifier 0..1
         |_ status 1..1
         |_ dateTime 0..1
@@ -59,7 +59,7 @@ skinparam class<<TM>> {
         |_ note 0..* 
         --
     }
-    class "**[[StructureDefinition-model-shipment-notice.html Shipment Notice]]**" as SN<<MD>> {
+    class "**[[StructureDefinition-ShipmentNoticeModel.html Shipment Notice]]**" as SN<<MD>> {
         |_ identifier 0..*
         |_ status 1..1
         |_ dateTime 0..1
@@ -79,7 +79,7 @@ skinparam class<<TM>> {
         --
     }
 
-    class "**[[StructureDefinition-model-receipt-notice.html Receipt Notice]]**" as RN<<MD>> {
+    class "**[[StructureDefinition-ReceiptNoticeModel.html Receipt Notice]]**" as RN<<MD>> {
         |_ identifier 0..*
         |_ status 1..1
         |_ dateTime 0..1
@@ -101,7 +101,7 @@ skinparam class<<TM>> {
     }
 
     
-    class "**[[StructureDefinition-model-inventory-status.html Inventory Status]]**" as IS<<MD>> {
+    class "**[[StructureDefinition-InventoryStatusModel.html Inventory Status]]**" as IS<<MD>> {
         |_ identifier  0..1
         |_ countType  0..1
         |_ operationType  1..1
@@ -123,7 +123,7 @@ skinparam class<<TM>> {
     }
 
 
-    class "**[[StructureDefinition-model-inventory-consumption.html Inventory Consumption]]**" as IC<<MD>> {
+    class "**[[StructureDefinition-InventoryChangeModel.html Inventory Change]]**" as IC<<MD>> {
         |_ identifier  0..1
         |_ countType  0..1
         |_ operationType  1..1

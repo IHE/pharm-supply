@@ -4,7 +4,7 @@
 For triggering the supply associated (or not) with a prescription, there may be a dispense request. This is not the original prescription - it can differ in terms of quantity, contain additional details, or handle requesting products from different locations. The Dispense Request is therefore a transaction that focuses exclusively on the logistic supply of products for a patient, and may be triggered from a clinical prescription but is not a clinical prescription. 
 This mechanism of Dispense Request is not detailed here separately. Technically, it is very similar to the Supply Request and can be an instance of that.
 
-### S1. Supply Request
+###  <a name="supply-request"> S1. Supply Request
 
 The Supply request handles a request to the party that will process, authorize and otherwise handle the request. This may be or not the supplier: In some cases the request may be to an authorizing party, or another management system, which plays no part in the actual delivery.
 
@@ -93,7 +93,7 @@ The following data is commonly present in the delivery notice:
 
 ___
 
-### Inventory Status report
+###  <a name="inventory-report"> Inventory Status report
 The inventory status report updates the parties about the status of inventory - quantities available etc.
 This can be divided in different dimensions: Snapshot vs Differential - the former is an information about the current product count in a position, while the latter informs about differences to a previous count (e.g. additions, subtractions). 
 

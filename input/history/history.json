@@ -4,7 +4,7 @@
 	"type" : "collection",
 	"entry" : [
 	  {
-		"fullUrl" : "http://ihe.net/fhir/ihe-pharm-supply/Provenance/history-1",
+		"fullUrl" : "http://profiles.ihe.net/ihe-pharm-supply/Provenance/history-1",
 		"resource" : {
 		  "resourceType" : "Provenance",
 		  "id" : "history-1",

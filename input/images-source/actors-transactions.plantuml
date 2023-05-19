@@ -3,13 +3,13 @@
 
 title Supply Actor Diagram
 skinparam linetype polyline
-agent "  [[actor_definitions.html#supply-requester Supply Requester ]]" as supplyrequester 
-agent " [[actor_definitions.html#supply-request-filler Supply Request Filler ]]" as supplyrequestfiller 
-agent "[[actor_definitions.html#supplier Supplier]]" as supplier 
-agent "[[actor_definitions.html#receiver Receiver]]" as receiver 
+agent "  [[actors_and_transactions.html#supply-requester Supply Requester ]]" as supplyrequester 
+agent " [[actors_and_transactions.html#supply-request-filler Supply Request Filler ]]" as supplyrequestfiller 
+agent "[[actors_and_transactions.html#supplier Supplier]]" as supplier 
+agent "[[actors_and_transactions.html#receiver Receiver]]" as receiver 
 
-agent "[[actor_definitions.html#supplier Inventory Reporter]]" as invreporter
-agent "[[actor_definitions.html#receiver Inventory Manager]]" as invmanager 
+agent "[[actors_and_transactions.html#supplier Inventory Reporter]]" as invreporter
+agent "[[actors_and_transactions.html#receiver Inventory Manager]]" as invmanager 
 
 
 supplyrequester -- supplyrequestfiller : "[[PHARM-S1.html PHARM-S1 Supply Request]] ↓         \n\n   [[PHARM-S2.html PHARM-S2 Supply Response/status]] ↑"

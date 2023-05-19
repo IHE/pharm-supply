@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
   <id value="ihe.fhir.pharm.supply"/>
-  <url value="http://ihe.net/fhir/PHARM/supply"/>
+  <url value="http://profiles.ihe.net/PHARM/supply"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.2.0"/>
   <name value="Supply"/>
@@ -40,14 +40,14 @@
 
     <resource>
       <reference>
-        <reference value="StructureDefinition/model-supply-request"/>
+        <reference value="StructureDefinition/SupplyRequest"/>
       </reference>
       <name value="Logical Model - Supply Request"/>
       <description value="The data logical model for Supply Requests"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/model-supply-request-status"/>
+        <reference value="StructureDefinition/SupplyRequest-status"/>
       </reference>
       <name value="Logical Model - Supply Request Status"/>
       <description value="The logical data model for Supply Request status updates"/>
@@ -75,7 +75,7 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/model-inventory-change"/>
+        <reference value="StructureDefinition/InventoryChange"/>
       </reference>
       <name value="Logical Model - Inventory Change Report"/>
       <description value="The logical data model for Inventory Changes"/>

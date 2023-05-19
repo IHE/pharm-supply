@@ -33,7 +33,7 @@ Table : Supply - Actors and Transactions
         <td align='center'>O</td>
     </tr>
     <tr>
-        <td rowspan="2"><a href="#supply-request-receiver">Supply Request Receiver</a></td>
+        <td rowspan="2"><a href="#supply-request-filler">Supply Request Filler</a></td>
         <td><a href='PHARM-S1.html'>Supply Request [PHARM-S1]</a></td>
         <td align='center'>O</td>
     </tr>
@@ -52,7 +52,7 @@ Table : Supply - Actors and Transactions
     </tr>
     <tr>
         <td rowspan="2"><a href="#receiver">Supply Request Receiver</a></td>
-        <td><a href='PHARM-S3'>Supply Notice [PHARM-S3]</a></td>
+        <td><a href='PHARM-S3.html'>Supply Notice [PHARM-S3]</a></td>
         <td align='center'>O</td>
     </tr>
     <tr>

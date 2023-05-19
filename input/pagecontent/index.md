@@ -19,7 +19,7 @@ The supply aspects are articulated with other aspects – for example, payment m
 
 
 
-MHD is part of [IHE](https://profiles.ihe.net) -- [Pharmacy](https://profiles.ihe.net/PHARM) Domain .
+MHD is part of [IHE](http://profiles.ihe.net) -- [Pharmacy](http://profiles.ihe.net/PHARM) Domain .
 
 <div markdown="1" class="stu-note">
 

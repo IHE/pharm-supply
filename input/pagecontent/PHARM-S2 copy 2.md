@@ -10,8 +10,8 @@ The xxxxxxxxx [PHARM-S2] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supply Requester](actor_definitions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
-| [Supply Request Filler](actor_definitions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
+| [Supply Requester](actors_and_transactions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
+| [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards

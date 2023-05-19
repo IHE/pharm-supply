@@ -10,8 +10,8 @@ The Resupply Status [PHARM-S2] transaction queries the status of one or more sup
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supply Requester](actor_definitions.html#supply-requester)    | Query status of SupplyRequests from a Supply Request Filler |
-| [Supply Request Filler](actor_definitions.html#supply-request-filler) | Provides the status of SupplyRequests to the Supply Requester |
+| [Supply Requester](actors_and_transactions.html#supply-requester)    | Query status of SupplyRequests from a Supply Request Filler |
+| [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Provides the status of SupplyRequests to the Supply Requester |
 {:.table-bordered .table-sm}
 
 

@@ -2,17 +2,19 @@
 
 hide footbox
 
-!include ./style.iuml
+'!include ./style.iuml
 
 
-Participant "[[actor_definitions.html#supplier Supplier]]" as S
-Participant "[[actor_definitions.html#receiver Receiver]]" as R
+Participant "[[actors_and_transactions.html#supplier Supplier]]" as S
+Participant "[[actors_and_transactions.html#receiver Receiver]]" as R
 
 activate S
 activate R
 
-S -> R: \tInform Shipment \t [[PHARM-S3.html{Shipment Notice}  ~[PHARM-S3~]]]
+S -[hidden]> R
+S -> R: \tInform Shipment \n\t [[PHARM-S3.html{Shipment Notice} ~[PHARM-S3~]]]
 S <-- R: \t(response)\t
+S -[hidden]> R
 
 deactivate S
 deactivate R

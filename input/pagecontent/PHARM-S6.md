@@ -11,8 +11,8 @@ The Inventory Status Report [PHARM-S6] transaction is used to inform about the c
 
 |Actor | Role |  
 |------|------|
-| [Supply Requester](actor_definitions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
-| [Supply Request Filler](actor_definitions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
+| [Supply Requester](actors_and_transactions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
+| [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
 {:.table-bordered}
 
 

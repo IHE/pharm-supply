@@ -14,7 +14,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 Title: "Search Parameter - item requested"
 Description: "Additional search parameter to search requests of specific items"
-* url = "https://profiles.ihe.net/PHARM/supply/SearchParameter/sp-request-item"
+* url = "http://profiles.ihe.net/PHARM/supply/SearchParameter/sp-requested-item"
 * name = "RequestedItem"
 * status = #active
 * experimental = false
@@ -26,5 +26,6 @@ Description: "Additional search parameter to search requests of specific items"
 * base[+] = #SupplyRequest
 * type = #token
 * expression = "SupplyDelivery.suppliedItem.itemCodeableConcept"
+* processingMode = #normal
 //* xpath = "f:SupplyDelivery/f:suppliedItem/f:itemCodeableConcept"
 //* xpathUsage = #normal

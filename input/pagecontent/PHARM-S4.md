@@ -11,8 +11,8 @@ The Receipt (and respective notice) can be related to a Shipment Notive and a Su
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Receiver](actor_definitions.html#receiver) | Sends Receipt notice to the Supplier |
-| [Supplier](actor_definitions.html#supplier) | Receives the Receipt notice|
+| [Receiver](actors_and_transactions.html#receiver) | Sends Receipt notice to the Supplier |
+| [Supplier](actors_and_transactions.html#supplier) | Receives the Receipt notice|
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards

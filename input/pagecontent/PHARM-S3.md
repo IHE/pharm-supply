@@ -11,8 +11,8 @@ The shipment (and respective notice) can be related to a Supply Request, or can 
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supplier](actor_definitions.html#supplier) | Sends Shipment notice to the Receiver |
-| [Receiver](actor_definitions.html#receiver) | Receives the Shipment notice |
+| [Supplier](actors_and_transactions.html#supplier) | Sends Shipment notice to the Receiver |
+| [Receiver](actors_and_transactions.html#receiver) | Receives the Shipment notice |
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards
