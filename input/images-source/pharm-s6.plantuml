@@ -5,8 +5,8 @@ hide footbox
 '!include ./style.iuml
 
 
-Participant "[[actors_and_transactions.html#inventory-reporter Inventory\nReporter]]" as IR
-Participant "[[actors_and_transactions.html#inventory-manager Inventory\nManager]]" as IM
+participant "[[actors_and_transactions.html#inventory-reporter Inventory\nReporter]]" as IR
+participant "[[actors_and_transactions.html#inventory-manager Inventory\nManager]]" as IM
 
 activate IR
 activate IM
