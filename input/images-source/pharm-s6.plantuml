@@ -12,7 +12,7 @@ activate IR
 activate IM
 
 IR -[hidden]> IM
-IR -> IM: Report Inventory Status\n[[PHARM-S6.html{Inventory Status report} ~[PHARM-S6~]]]
+IR -> IM: Report Inventory Status \n[[PHARM-S6.html {Inventory Status report} ~[PHARM-S6~]]]
 IR <-- IM: \t(response)\t
 IR -[hidden]> IM :"  "
 
