@@ -23,7 +23,7 @@ The Inventory Status Report [PHARM-S6] transaction is used to inform about the c
 ### X:Y.Z.4 Messages
 
 <figure>
-{% include pharm-S6.svg %}
+{% include pharm-S5.svg %}
 </figure>
 
 
