@@ -22,10 +22,8 @@ The Inventory Status Report [PHARM-S6] transaction is used to inform about the c
 
 ### X:Y.Z.4 Messages
 
-<figure>
-{% include pharm-S5.svg %}
-</figure>
 
+(figure)
 
 
 **Figure X:Y.Z.4-1: Inventory Status Report Interactions**
