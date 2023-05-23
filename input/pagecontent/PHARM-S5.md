@@ -14,6 +14,7 @@ The Inventory Status Report [PHARM-S5] transaction is used to inform about the c
 | [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
 {:.table-bordered}
 
+
 ### X:Y.Z.3 Referenced Standards
 
 **FHIR-R5** [HL7 FHIR Release 5.0](http://www.hl7.org/FHIR/R5)
