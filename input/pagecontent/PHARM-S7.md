@@ -21,7 +21,7 @@ The xxxxxxxxx [PHARM-S3] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 ### X:Y.Z.4 Messages
 
 <figure>
-{% include pharm-s6.svg %}
+{% include pharm-s7.svg %}
 </figure>
 
 
