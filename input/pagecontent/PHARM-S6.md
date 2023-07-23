@@ -1,13 +1,24 @@
-This section corresponds to transaction [PHARM-S6] of the IHE Technical Framework - Inventory Status Report. Transaction [PHARM-S6] is used by the Inventory Reporter and the Inventory Manager actors to inform about status of an inventory position. 
+This section corresponds to transaction [PHARM-S6] of the IHE Technical Framework - Inventory Usage  Report. Transaction [PHARM-S6] is used by the Inventory Reporter and the Inventory Manager actors to inform updates of an inventory position - consumption, updates.
 
 ### X:Y.Z.1 Scope
 
-The Inventory Status Report [PHARM-S6] transaction is used to inform about the current status of an inventory position, where "inventory position" is a physical location, or a selected set of items for which the inventory status is reported - i.e. the items or products in that position are reported.
+The Inventory Status Report [PHARM-S6] transaction is used to inform about changes in the inventory in a physical location, or a selected set of items for which the inventory update is issued.
+
+#### Common cases covered 
+The following cases are covered with this transaction:
+
+This transaction allows the Inventory Reporter to send updates to an Inventory Manager about known changes in the inventory, so that the Inventory Manager can track the inventory count more accurately.  
+Common cases are:
+
+* When a medication is taken from inventory but is not administered (for example falling on the floor)
+* When a multidose or multiuse product is consumed - or example when a jar of cream is used up, or a new one is taken from stock to be used by a patient
+* When products are disposed of locally - but not handed over for disposal. If a product is handed over, this is a SupplyDelivery.
+
+Note that this transaction could also be used to report "negative consumption" e.g. return of items, or correction of wastage, but the transaction "Supply Delivery" should aways be preferred when possible. 
 
 ### X:Y.Z.2 Actors Roles
 
 **Table X:Y.Z.2-1: Actor Roles**
-
 
 |Actor | Role |  
 |------|------|

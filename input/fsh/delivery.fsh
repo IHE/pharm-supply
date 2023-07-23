@@ -50,7 +50,7 @@ Title: "Supply delivery stage code system"
 Description: "Supply delivery code system."
 * ^experimental = true
 * ^caseSensitive = true
-* ^url = http://profiles.ihe.net/PHARM/supply/CodeSystem/delivery-stage-cs
+* ^url = "http://profiles.ihe.net/PHARM/supply/CodeSystem/delivery-stage-cs"
 * #shipment
     "Shipment"
     "Information is about the shipment of the item."

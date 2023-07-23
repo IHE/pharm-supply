@@ -31,17 +31,13 @@ The Inventory Status Report [PHARM-S5] transaction is used to inform about the c
 
 #### X:Y.Z.4.1 Inventory Status Report Message
 
-<blockquote class="stu-note" id="not-yet-available">
-	<strong>This transaction is not implementable in FHIR versions below 5.0 so it is not further detailed in this current release of the profiles.</strong>
-	Readers are invited to provide feedback about the urgency, needs and current challenges that IHE should solve.
-</blockquote>
-</div>
 
-The Inventory Reporter submits an InventoryReport resource instance that conforms to the [InventoryStatusReport](#not-yet-available) profile using the POST method to the /InventoryReport endpoint.
+The Inventory Reporter submits an InventoryReport resource instance that conforms to the [InventoryStatusReport](#) profile using the POST method to the /InventoryReport endpoint.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 
-This method is invoked when the Inventory Reporter has updated information to report about the current inventory of one or several positions, e.g. after a monthly count, or daily after recalculating expected existences... 
+This method is invoked when the Inventory Reporter reports updated information about the current inventory of one or several positions, e.g. after a monthly count, or daily after recalculating expected existences.
+
 
 ##### X:Y.Z.4.1.2 Message Semantics
 
@@ -54,9 +50,6 @@ The Inventory Reporter shall assure the report is consistent before sending, i.e
 
 ##### X:Y.Z.4.1.3 Expected Actions
 Upon receiving the Inventory Status Report, the Inventory Manager can decide the actions like reporting, deciding on reordering, etc. 
-
-
-
 
 
 #### X:Y.Z.4.2 Supply Request Response
