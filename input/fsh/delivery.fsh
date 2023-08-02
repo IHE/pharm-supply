@@ -53,8 +53,8 @@ Description: "Supply delivery code system."
 * ^url = "http://profiles.ihe.net/PHARM/supply/CodeSystem/delivery-stage-cs"
 * #shipment
     "Shipment"
-    "Information is about the shipment of the item."
+    "The event is the shipment of the item."
 * #reception
     "Reception"
-    "Information is about the reception of the item."
+    "The event is the reception of the item."
 

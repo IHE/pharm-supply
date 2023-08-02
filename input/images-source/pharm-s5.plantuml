@@ -12,8 +12,8 @@ activate IR
 activate IM
 
 IR -[hidden]> IM
-IR <- IM: Query Inventory Status \n[[PHARM-S5.html {Inventory Query} ~[PHARM-S5~]]]
-IR --> IM: \t(response)\t
+IR <- IM: \tQuery Inventory Status \n\t[[PHARM-S5.html {Inventory Query} ~[StructureDefinition-ihe-supply-inventory-status.html~]]]
+IR --> IM: \tInventory Status\n\t ~[StructureDefinition-ihe-supply-inventory-status.html~]]]
 IR -[hidden]> IM :"  "
 
 deactivate IR

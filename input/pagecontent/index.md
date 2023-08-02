@@ -35,24 +35,24 @@ MHD is part of [IHE](http://profiles.ihe.net) -- [Pharmacy](http://profiles.ihe.
 This guide is organized into four main sections:
 
 1. Volume 1: Use-Case analysis
-   1. Introduction and other standards
-   2. Use Cases
-   3. Interoperability framework overview
-   4. Actors and transactions
-       1. Actor options
-       2. Actor required grouping
-   5. Security considerations
-   6. Cross-profile considerations
+   1. [Introduction and standards](introduction.html)
+   2. [Use Cases](usecases.html)
+   3. [Overview of data exchange for supply](overview.html)
+   4. [Actors and transactions](actors_and_transactions.html)
+       1. [Actor options](actor_options.html)
+       2. [Actor required grouping](actor_required_grouping.html)
+   5. [Security considerations](security_considerations.html)
+   6. [Cross-profile considerations](cross_profile_considerations.html)
 
 
-2. Volume 2: Transaction Detail
-    1. Supply Request [PHARM-11]
-    2. Supply Request Status [PHARM-12]
-    3. Shipment Notice [PHARM-13]
-    4. Delivery Receipt [PHARM-42]
-    5. Inventory Query [PHARM-15]
-    6. Inventory Report [PHARM-16]
-    7. Consumption Report [PHARM-17]
+2. Volume 2: Transaction definitions
+    1. [Supply Request [PHARM-S1]](PHARM-S1.html)
+    2. [Supply Request Status [PHARM-S2]](PHARM-S2.html)
+    3. [Shipment Notice [PHARM-S3]](PHARM-S3.html)
+    4. [Delivery Receipt [PHARM-S4]](PHARM-S4.html)
+    5. [Inventory Report [PHARM-S5]](PHARM-S5.html)
+    6. [Inventory Update [PHARM-S6]](PHARM-S6.html)
+    7. [Inventory Query [PHARM-S7]](PHARM-S7.html)
    
 3. Appendix
 	<!-- 1. [Test Plan](testplan.html) -->

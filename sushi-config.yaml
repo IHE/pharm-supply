@@ -136,11 +136,11 @@ pages:
       PHARM-S4.md:
         title: "Delivery Receipt [PHARM-S4]"
       PHARM-S5.md:
-        title: "Inventory Query [PHARM-S5]"
+        title: "Inventory Report [PHARM-S5]"
       PHARM-S6.md:
-        title: "Inventory Report [PHARM-S6]"
+        title: "Inventory Report Report [PHARM-S5]"
       PHARM-S7.md:
-        title: "Consumption Report [PHARM-S7]"
+        title: "Inventory Query [PHARM-S7]"
   issues.md:
     title: "Present issues" 
 

@@ -12,7 +12,7 @@ activate SR
 activate RF
 
 SR -[hidden]> RF
-SR -> RF: \tRequest supply \n\t[[PHARM-S1.html{Supply Request} ~[PHARM-S1~]]]
+SR -> RF: \tRequest supply \n\t[[StructureDefinition-ihe-supply-request.html Supply Request{Supply Request}]]
 SR <-- RF: \t(response)\t
 SR -[hidden]> RF
 

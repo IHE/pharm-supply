@@ -12,7 +12,7 @@ activate S
 activate R
 
 S -[hidden]> R
-S -> R: \tInform Reception \n\t [[PHARM-S3.html{Receipt Notice} ~[PHARM-S4~]]]
+S -> R: \tInform Reception \n\t [[PHARM-S3.html{Receipt Notice} ~[StructureDefinition-ihe-supply-delivery-receipt.html~]]]
 S <-- R: \t(response)\t
 S -[hidden]> R
 
