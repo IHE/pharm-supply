@@ -51,12 +51,38 @@ Table : Supply - Actors and Transactions
         <td align='center'>O</td>
     </tr>
     <tr>
-        <td rowspan="2"><a href="#receiver">Supply Request Receiver</a></td>
+        <td rowspan="2"><a href="#receiver">Supply Receiver</a></td>
         <td><a href='PHARM-S3.html'>Supply Notice [PHARM-S3]</a></td>
         <td align='center'>O</td>
     </tr>
     <tr>
         <td><a href='PHARM-S4.html'>Receipt Notice [PHARM-S4]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="#receiver">Inventory Reporter</a></td>
+        <td><a href='PHARM-S5.html'>Inventory Status [PHARM-S5]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S6.html'>Inventory Update [PHARM-S6]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S7.html'>Inventory Query [PHARM-S7]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="#receiver">Inventory Manager</a></td>
+        <td><a href='PHARM-S5.html'>Inventory Status [PHARM-S5]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S6.html'>Inventory Update [PHARM-S6]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S7.html'>Inventory Query [PHARM-S7]</a></td>
         <td align='center'>O</td>
     </tr>
 </tbody>

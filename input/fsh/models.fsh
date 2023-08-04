@@ -207,9 +207,9 @@ Target: "https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LI
 
 //////////////////////////////////////
 
-Logical: InventoryChangeModel
+Logical: InventoryUpdateModel
 Parent: Element
-Id: InventoryChangeModel
+Id: InventoryUpdateModel
 Description: "This is the logical model for the Inventory Change notification - an information about a change of items being added or removed from a given inventory position. This is to be typically used in differential inventory updates (e.g. \"Since last time, the following items have been consumed\") or to register items added or subtracted (e.g. \"The following 2 items were just discarded and should be deducted from inventory \")"
 * ^version = "0.3.0"
 * ^status = #draft

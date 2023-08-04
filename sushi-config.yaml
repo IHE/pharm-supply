@@ -63,15 +63,15 @@ resources:
   StructureDefinition/InventoryStatusModel:
     name: Logical Model - Inventory Status
     description: The logical data model for Inventory Status
-  StructureDefinition/InventoryChangeModel:
-    name: Logical Model - Inventory Change
-    description: The logical data model for Inventory Changes
+  StructureDefinition/InventoryUpdateModel:
+    name: Logical Model - Inventory Update
+    description: The logical data model for Inventory Updates
   StructureDefinition/ProductModel:
     name: Logical Model - Product
-    description: The logical data model for Products
+    description: An (informative) logical data model for Products
   StructureDefinition/ItemModel:
     name: Logical Model - Item
-    description: The logical data model for trade items
+    description: An (informative) logical data model for trade items
 #  SearchParameter/sp-requested-item:
 #    name: Search Parameter - item requested
 #    description: Additional search parameter to search requests of specific items
@@ -173,7 +173,7 @@ groups:
     description: Artifacts related to inventory - inventory status, consumption, inventory items.
     resources:
       - StructureDefinition/InventoryStatusModel
-      - StructureDefinition/InventoryChangeModel
+      - StructureDefinition/InventoryUpdateModel
       - StructureDefinition/ItemModel
       - StructureDefinition/ProductModel
       - ValueSet/vs-ihe-pharm-product-association-type
