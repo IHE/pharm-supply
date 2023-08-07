@@ -123,7 +123,7 @@ skinparam class<<TM>> {
     }
 
 
-    class "**[[StructureDefinition-InventoryChangeModel.html Inventory Change]]**" as IC<<MD>> {
+    class "**[[StructureDefinition-InventoryUpdateModel.html Inventory Change]]**" as IC<<MD>> {
         |_ identifier  0..1
         |_ countType  0..1
         |_ operationType  1..1

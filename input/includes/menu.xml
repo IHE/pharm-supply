@@ -27,8 +27,16 @@
 		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-			<li><a style="text-align: baseline" href="actors_and_transactions.html">Actors Definitions</a></li>
+			<!-- <li><a style="text-align: baseline" href="actors_and_transactions.html">Actors Definitions</a></li> -->
 			<li><a style="text-align: baseline" href="transactions.html">Transaction Definitions</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S1.html">Supply Request</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S2.html">Supply Request Status</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S3.html">Shipment Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S4.html">Delivery/Receipt Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S5.html">Inventory Report</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S6.html">Inventory Update</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S7.html">Inventory Query</a></li>
+
 		</ul>
 	</li>
 	

@@ -69,7 +69,7 @@ This data is normally used:
 
 ___
 
-### Delivery/Receipt notice
+### S4. Delivery/Receipt notice
 The delivery or receipt notice is used to inform the parties about the reception of items. This can be used to confer quantities, inform of delivery issues, and is commonly used to activate the billing, since the reception of items signals that the items are now in the custody of the receiver, so if all is ok, the order can be billed when it is finally received at its destination.
 
 The following data is commonly present in the delivery notice:
@@ -93,7 +93,7 @@ The following data is commonly present in the delivery notice:
 
 ___
 
-###  <a name="inventory-report"> Inventory Status report
+### <a name="inventory-report"> S4. Inventory Status report
 The inventory status report updates the parties about the status of inventory - quantities available etc.
 This can be divided in different dimensions: Snapshot vs Differential - the former is an information about the current product count in a position, while the latter informs about differences to a previous count (e.g. additions, subtractions). 
 
@@ -121,7 +121,19 @@ The data involved is usually this:
 |Notes | Other data needed about distribution – e.g., billing info, etc.|
 {:.table-bordered .table-sm}
 
-### Inventory Consumption
+### S5. Inventory Updates
+One of the key aspects of the materials handling is that sometimes products are consumed but not used or reported clinically. For example items that are dropped or damaged, and/or need to be wasted - will not be reported in the clinical information exchange, but are important to be notified for proper inventory control. Another case is when multiuse products are not consumed upon each administration, but when the product is consumed, this should be registered.
+This data exchange can contain data such as:
+* Stock Location
+* Reporter ID
+* Patient ID, if applicable
+* Consumed items
+  * Identification of the item
+  * Physical item characteristics e.g., lot number etc.
+  * Quantity
+* Other information that may be relevant for the adequate processing of the consumption information
+
+### S6. Inventory Updates
 One of the key aspects of the materials handling is that sometimes products are consumed but not used or reported clinically. For example items that are dropped or damaged, and/or need to be wasted - will not be reported in the clinical information exchange, but are important to be notified for proper inventory control. This consumption report can contain information such as:
 * Stock Location
 * Reporter ID
@@ -131,6 +143,10 @@ One of the key aspects of the materials handling is that sometimes products are 
   * Physical item characteristics e.g., lot number etc.
   * Quantity
 * Other information that may be relevant for the adequate processing of the consumption information
+
+
+### S7. Inventory Query
+It is normal to request inventory counts. The response can be immediate, if the inventory manager has that information, or it can actually trigger a request for a physical recount of the inventory.
 
 ___
 

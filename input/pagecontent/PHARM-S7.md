@@ -27,21 +27,15 @@ This transaction allows the Inventory Manager to ask an Inventory Reporter for c
 ### X:Y.Z.4 Messages
 
 <figure>
-{% include pharm-s6.svg %}
+{% include pharm-s7.svg %}
 </figure>
 
 
 **Figure X:Y.Z.4-1: Inventory Status Query Interactions**
 
-#### X:Y.Z.4.1 Inventory Status Report Message
+#### X:Y.Z.4.1 Inventory Status Query
 
-<blockquote class="stu-note" id="not-yet-available">
-	<strong>This transaction is not implementable in FHIR versions below 5.0 so it is not further detailed in this current release of the profiles.</strong>
-	Readers are invited to provide feedback about the urgency, needs and current challenges that IHE should solve.
-</blockquote>
-</div>
-
-The Inventory Reporter submits an InventoryReport resource instance that conforms to the [InventoryStatusReport](#not-yet-available) profile using the POST method to the /InventoryReport endpoint.
+The Inventory Manager submits an Inventory Query resource that conforms to the [InventoryReporter](StructureDefinition-InventoryReport.html) profile.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 
@@ -55,11 +49,8 @@ The Inventory Reporter shall assure the report is consistent before sending, i.e
 
 ###### X:Y.Z.4.1.2.1 Resource content
 
-
 ##### X:Y.Z.4.1.3 Expected Actions
 Upon receiving the Inventory Status Report, the Inventory Manager can decide the actions like reporting, deciding on reordering, etc. 
-
-
 
 
 

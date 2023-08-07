@@ -42,13 +42,7 @@ Note that this transaction could also be used to report "negative consumption" e
 
 #### X:Y.Z.4.1 Inventory Status Report Message
 
-<blockquote class="stu-note" id="not-yet-available">
-	<strong>This transaction is not implementable in FHIR versions below 5.0 so it is not further detailed in this current release of the profiles.</strong>
-	Readers are invited to provide feedback about the urgency, needs and current challenges that IHE should solve.
-</blockquote>
-</div>
-
-The Inventory Reporter submits an InventoryReport resource instance that conforms to the [InventoryStatusReport](#not-yet-available) profile using the POST method to the /InventoryReport endpoint.
+The Inventory Reporter submits an InventoryReport resource instance that conforms to the [InventoryReport](StructureDefinition-InventoryReport.html) profile using the POST method to the /InventoryReport endpoint.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 

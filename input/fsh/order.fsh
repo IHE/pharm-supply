@@ -25,7 +25,7 @@ Description: "Additional search parameter to search requests of specific items"
 * code = #item
 * base[+] = #SupplyRequest
 * type = #token
-* expression = "SupplyDelivery.suppliedItem.itemCodeableConcept"
+* expression = "SupplyRequest.item"
 * processingMode = #normal
 //* xpath = "f:SupplyDelivery/f:suppliedItem/f:itemCodeableConcept"
 //* xpathUsage = #normal
