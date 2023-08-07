@@ -4,7 +4,7 @@
 	"type" : "collection",
 	"entry" : [
 	  {
-		"fullUrl" : "http://ihe.net/fhir/ihe-pharm-supply/Provenance/history-1",
+		"fullUrl" : "http://profiles.ihe.net/ihe-pharm-supply/Provenance/history-1",
 		"resource" : {
 		  "resourceType" : "Provenance",
 		  "id" : "history-1",
@@ -24,19 +24,19 @@
 		  "agent" : [
 			{
 			  "type" : {
-				"coding" : {
+				"coding" : [{
 				  "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
 				  "code" : "author"
-				}
+				}]
 			  },
 			  "who" : { "display" : "Rob Hausam" }
 			},
 			{
 			  "type" : {
-				"coding" : {
+				"coding" : [{
 				  "system" : "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
 				  "code" : "verifier"
-				}
+				}]
 			  },
 			  "who" : { "display" : "Vocab" }
 			}

@@ -1,9 +1,11 @@
 
 ### Intro: why is this needed?
-
+IHE provides a set of standard mechanisms for handling the key aspects of supplying and delivering healthcare products.  
 ...
 
 ### Scope
+Supply chain topologies are business-driven and vary considerably. The IHE profiles do not intend to constrain that variability, rather support it by providing stackable components - actors and transactions - for interoperability across the key functions. This means that the scope is  
+The scope covers 
 
 ...
 
@@ -12,7 +14,7 @@
 ...
 
 ### Description of this Specification
-
+This IHE specification 
 ...
 
 ### Relationship with other profiles and standards

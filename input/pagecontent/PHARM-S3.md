@@ -11,13 +11,13 @@ The shipment (and respective notice) can be related to a Supply Request, or can 
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supplier](actor_definitions.html#supplier) | Sends Shipment notice to the Receiver |
-| [Receiver](actor_definitions.html#receiver) | Receives the Shipment notice |
+| [Supplier](actors_and_transactions.html#supplier) | Sends Shipment notice to the Receiver |
+| [Receiver](actors_and_transactions.html#receiver) | Receives the Shipment notice |
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards
 
-**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
+**FHIR-R5** [HL7 FHIR Release 5.0](http://www.hl7.org/FHIR/R5)
 
 ### X:Y.Z.4 Messages
 
@@ -67,7 +67,7 @@ The response shall immediately follow the Shipment Notice.
 
 The response to a shipment notice shall consist of:
 * In case the shipment notice is accepted, the response shall have the response code `201 (Created)`
-* In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R4B/http.html) for information on error handling)
+* In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R5/http.html) for information on error handling)
 
 
 ###### X:Y.Z.4.1.2.1 Resource content

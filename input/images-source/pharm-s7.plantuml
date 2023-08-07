@@ -10,10 +10,9 @@ Participant "[[actors_and_transactions.html#inventory-manager Inventory\nManager
 
 activate IR
 activate IM
-
 IR -[hidden]> IM
-IR <- IM: \tQuery Inventory Status \n\t[[PHARM-S5.html {Inventory Query} ~[StructureDefinition-ihe-supply-inventory-status.html~]]]
-IR --> IM: \tInventory Status\n\t ~[StructureDefinition-ihe-supply-inventory-status.html~]]]
+IR -> IM: Inventory Query\n[[PHARM-S7.html{Inventory query}  ~[StructureDefinition-ihe-supply-inventory-query.html~]]]
+IR <-- IM: \t(response)\t
 IR -[hidden]> IM :"  "
 
 deactivate IR

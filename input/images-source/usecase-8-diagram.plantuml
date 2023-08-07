@@ -1,7 +1,8 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Operating Theater - Catalog UDI lookup
-skin BlueModern
+'skin BlueModern
 hide footbox
 
 actor "OR Nurse" as DP
@@ -13,7 +14,7 @@ Participant "EHR" as EHR
 'end
 'group Tracking
 'end
-
+|||
 'activate PDS
 DP -> DP: Retrieve first item from inventory
 activate DP

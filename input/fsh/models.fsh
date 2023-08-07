@@ -1,11 +1,11 @@
 
 
 
-Logical: SupplyRequest
+Logical: SupplyRequestModel
 Parent: Element
-Id: model-supply-request
+Id: SupplyRequestModel
 Description: "This is the logical model for the SupplyRequest"
-* ^url = "https://www.ihe.net/fhir/StructureDefinition/model-supplyrequest"
+* ^url = "http://profiles.ihe.net/PHARM/supply/StructureDefinition/SupplyRequestModel"
 * ^version = "0.3.0"
 * ^status = #draft
 * ^date = "2022-12-27T13:18:13+01:00"
@@ -20,7 +20,7 @@ Description: "This is the logical model for the SupplyRequest"
 * ^jurisdiction.coding.system = "http://unstats.un.org/unsd/methods/m49/m49.htm"
 * ^jurisdiction.coding.code = #001
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
-* ^type = "SupplyRequest"
+//* ^type = "SupplyRequest"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "Identifier"
 * status 1..1 code "code"
@@ -42,9 +42,9 @@ Description: "This is the logical model for the SupplyRequest"
 
 //////////////////////////////////////
 
-Logical: SupplyRequestStatus
+Logical: SupplyRequestStatusModel
 Parent: Element
-Id: model-supply-request-status
+Id: SupplyRequestStatusModel
 Description: "This is the logical model for the Supply Request Status"
 * ^version = "0.3.0"
 * ^status = #draft
@@ -60,7 +60,7 @@ Description: "This is the logical model for the Supply Request Status"
 * ^jurisdiction.coding.system = "http://unstats.un.org/unsd/methods/m49/m49.htm"
 * ^jurisdiction.coding.code = #001
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
-* ^type = "SupplyRequestStatus"
+//* ^type = "SupplyRequestStatus"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "identifier"
 * status 1..1 code "code"
@@ -82,9 +82,9 @@ Description: "This is the logical model for the Supply Request Status"
 /////////////////////////////////////////////////
 
 
-Logical: ShipmentNotice
+Logical: ShipmentNoticeModel
 Parent: Element
-Id: model-shipment-notice
+Id: ShipmentNoticeModel
 Description: "This is the logical model for the ShipmentNotice"
 * ^version = "0.3.0"
 * ^status = #draft
@@ -100,7 +100,7 @@ Description: "This is the logical model for the ShipmentNotice"
 * ^jurisdiction.coding.system = "http://unstats.un.org/unsd/methods/m49/m49.htm"
 * ^jurisdiction.coding.code = #001
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
-* ^type = "ShipmentNotice"
+//* ^type = "ShipmentNotice"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "identifier"
 * status 1..1 code "status"
@@ -117,9 +117,9 @@ Description: "This is the logical model for the ShipmentNotice"
 
 
 
-Logical: ReceiptNotice
+Logical: ReceiptNoticeModel
 Parent: Element
-Id: model-receipt-notice
+Id: ReceiptNoticeModel
 Description: "This is the logical model for the ReceiptNotice"
 * ^version = "0.3.0"
 * ^status = #draft
@@ -135,7 +135,7 @@ Description: "This is the logical model for the ReceiptNotice"
 * ^jurisdiction.coding.system = "http://unstats.un.org/unsd/methods/m49/m49.htm"
 * ^jurisdiction.coding.code = #001
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
-* ^type = "ReceiptNotice"
+//* ^type = "ReceiptNotice"
 * . ^short = "A request for supply of one or more healthcare products"
 * identifier 0..1 Identifier "Shipment identifier"
 * status 1..1 code "status"
@@ -161,9 +161,9 @@ Description: "This is the logical model for the ReceiptNotice"
 
 
 
-Logical: InventoryStatus
+Logical: InventoryStatusModel
 Parent: Element
-Id: model-inventory-status
+Id: InventoryStatusModel
 Description: "This is the logical model for the Inventory Status report - an information about the current status of a given inventory position. This is to be typically used in inventory counts - physical counts or estimates. It supports a report per status, per location, or a combination of both (which is how typically items are counted and reported)."
 * ^version = "0.3.0"
 * ^status = #draft
@@ -179,7 +179,7 @@ Description: "This is the logical model for the Inventory Status report - an inf
 * ^jurisdiction.coding.system = "http://unstats.un.org/unsd/methods/m49/m49.htm"
 * ^jurisdiction.coding.code = #001
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
-* ^type = "InventoryStatus"
+//* ^type = "InventoryStatus"
 * . ^short = "Enables a party to provide information on inventory levels"
 * identifier 0..1 Identifier "Unique identification of the inventory report" "Unique identification of the inventory report"
 * countType 0..1 code "The type of counting - whether it is a manual counting, automated data capture, estimate.." "The type of counting - whether it is a manual counting, automated data capture, estimate.."
@@ -200,16 +200,16 @@ Mapping: InventoryStatusGS1
 Id: inventory-status-gs1
 Title: "GS1 XML EDI Logistics Inventory Report"
 Description: "Link to GS1 standard EDI message. Also see IHE Pharmacy Supply White paper"
-Source: InventoryStatus
+Source: InventoryStatusModel
 Target: "https://www.gs1.org/docs/EDI/ecom-xml/functional-user-guide/3_4/HTML/LIP/a1.htm"
 
 
 
 //////////////////////////////////////
 
-Logical: InventoryChange
+Logical: InventoryUpdateModel
 Parent: Element
-Id: model-inventory-change
+Id: InventoryUpdateModel
 Description: "This is the logical model for the Inventory Change notification - an information about a change of items being added or removed from a given inventory position. This is to be typically used in differential inventory updates (e.g. \"Since last time, the following items have been consumed\") or to register items added or subtracted (e.g. \"The following 2 items were just discarded and should be deducted from inventory \")"
 * ^version = "0.3.0"
 * ^status = #draft
@@ -225,7 +225,7 @@ Description: "This is the logical model for the Inventory Change notification - 
 * ^jurisdiction.coding.system = "http://unstats.un.org/unsd/methods/m49/m49.htm"
 * ^jurisdiction.coding.code = #001
 * ^copyright = "IHE http://www.ihe.net/Governance/#Intellectual_Property"
-* ^type = "InventoryChange"
+//* ^type = "InventoryChange"
 * . ^short = "Enables a party to provide information on inventory levels and inventory changes."
 * identifier 0..1 Identifier "Unique identification of the inventory report" "Unique identification of the inventory report"
 * countType 0..1 code "The type of counting - whether it is a manual counting, automated data capture, estimate.." "The type of counting - whether it is a manual counting, automated data capture, estimate.."

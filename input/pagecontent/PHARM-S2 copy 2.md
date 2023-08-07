@@ -10,13 +10,13 @@ The xxxxxxxxx [PHARM-S2] transaction passes a xxxxxx from a xxxxxx to a xxxxxxx.
 
 |Actor | Role |
 |-------------------+--------------------------|
-| [Supply Requester](actor_definitions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
-| [Supply Request Filler](actor_definitions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
+| [Supply Requester](actors_and_transactions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
+| [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
 {:.table-bordered}
 
 ### X:Y.Z.3 Referenced Standards
 
-**FHIR-R4** [HL7 FHIR Release 4.0](http://www.hl7.org/FHIR/R4)
+**FHIR-R5** [HL7 FHIR Release 5.0](http://www.hl7.org/FHIR/R5)
 
 ### X:Y.Z.4 Messages
 
@@ -70,7 +70,7 @@ In case any delayed validation of the .... is expected, such validation shall no
 
 The response to a Supply Request shall consist of:
 * In case the request is accepted, the response shall have the response code `201 (Created)`
-* In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R4B/http.html) for information on error handling)
+* In case of any error, the response shall have the adequate error code (see [FHIR RESTful API](https://hl7.org/fhir/R5/http.html) for information on error handling)
 
 
 ###### X:Y.Z.4.1.2.1 Resource content

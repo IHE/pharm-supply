@@ -1,18 +1,20 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Ward Supply Management - Pharmacy-managed inventory
-skin BlueModern
+'skin BlueModern
 hide footbox
 
-Participant "Drug\nVendor" as SUP
+Participant "Medication\nVendor" as SUP
 actor "Pharmacist" as PD
 Participant "Pharmacy System\n/ ERP" as ERP
 participant "Medication\nAdministration\nSystem" as AI
 actor "Nurse" as N
+|||
 
 group Resupply of Ward
-activate ERP
 ERP -> ERP: Recalculate stock\nsubtract consumption
+activate ERP
 ERP -> ERP: Prepare suggested order
 ERP -> PD: Propose resupply\nof ward (10 boxes)
 Activate PD

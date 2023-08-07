@@ -2,10 +2,10 @@
 # | documentation of this sushi-config.yaml file https://fshschool.org/docs/sushi/configuration/               |
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: ihe.pharm.supply
-canonical: https://profiles.ihe.net/PHARM/SUPPLY
+canonical: http://profiles.ihe.net/PHARM/supply
 name: IHE_PHARM_SUPPLY
 version: 0.3.0
-fhirVersion: 4.0.1
+fhirVersion: 5.0.0
 status: active
 title: "Supply of Products for Healthcare (SUPPLY)"
 description: ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)
@@ -48,30 +48,30 @@ parameters:  # see http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/i
 
 # additional examples that need descriptions
 resources:
-  StructureDefinition/model-supply-request:
+  StructureDefinition/SupplyRequestModel:
     name: Logical Model - Supply Request
     description: The logical data model for Supply Requests
-  StructureDefinition/model-supply-request-status:
+  StructureDefinition/SupplyRequestStatusModel:
     name: Logical Model - Supply Request Status
     description: The logical data model for Supply Request status
-  StructureDefinition/model-shipment-notice:
+  StructureDefinition/ShipmentNoticeModel:
     name: Logical Model - Shipment notice
     description: The logical data model for Shipment Notice
-  StructureDefinition/model-receipt-notice:
+  StructureDefinition/ReceiptNoticeModel:
     name: Logical Model - Receipt notice
     description: The logical data model for Receipt Notice
-  StructureDefinition/model-inventory-status:
+  StructureDefinition/InventoryStatusModel:
     name: Logical Model - Inventory Status
     description: The logical data model for Inventory Status
-  StructureDefinition/model-inventory-change:
-    name: Logical Model - Inventory Change
-    description: The logical data model for Inventory Changes
-  StructureDefinition/model-product:
+  StructureDefinition/InventoryUpdateModel:
+    name: Logical Model - Inventory Update
+    description: The logical data model for Inventory Updates
+  StructureDefinition/ProductModel:
     name: Logical Model - Product
-    description: The logical data model for Products
-  StructureDefinition/model-item:
+    description: An (informative) logical data model for Products
+  StructureDefinition/ItemModel:
     name: Logical Model - Item
-    description: The logical data model for trade items
+    description: An (informative) logical data model for trade items
 #  SearchParameter/sp-requested-item:
 #    name: Search Parameter - item requested
 #    description: Additional search parameter to search requests of specific items
@@ -135,12 +135,12 @@ pages:
         title: "Shipment Notice [PHARM-S3]"
       PHARM-S4.md:
         title: "Delivery Receipt [PHARM-S4]"
-      inventory_query.md:
-        title: "Inventory Query [PHARM-15]"
       PHARM-S5.md:
         title: "Inventory Report [PHARM-S5]"
       PHARM-S6.md:
-        title: "Consumption Report [PHARM-S6]"
+        title: "Inventory Report Report [PHARM-S5]"
+      PHARM-S7.md:
+        title: "Inventory Query [PHARM-S7]"
   issues.md:
     title: "Present issues" 
 
@@ -150,8 +150,8 @@ groups:
     name: Supply Requests
     description: Artifacts related to supply requests - ordering supplies and checking status of orders.
     resources:
-      - StructureDefinition/model-supply-request
-      - StructureDefinition/model-supply-request-status
+      - StructureDefinition/SupplyRequestModel
+      - StructureDefinition/SupplyRequestStatusModel
       - StructureDefinition/ihe-supply-request
 #      - StructureDefinition/ihe-supply-request-status
       - SearchParameter/sp-requested-item
@@ -160,8 +160,8 @@ groups:
     name: Supply Delivery
     description: Artifacts related to supply deliveries - shipment notices and receipt notices. 
     resources:
-      - StructureDefinition/model-shipment-notice
-      - StructureDefinition/model-receipt-notice
+      - StructureDefinition/ShipmentNoticeModel
+      - StructureDefinition/ReceiptNoticeModel
       - StructureDefinition/ihe-supply-shipment-notice
       - StructureDefinition/ihe-supply-receipt-notice
       - StructureDefinition/ihe-ext-delivery-stage
@@ -172,13 +172,12 @@ groups:
     name: Inventory
     description: Artifacts related to inventory - inventory status, consumption, inventory items.
     resources:
-      - StructureDefinition/model-inventory-status
-      - StructureDefinition/model-inventory-change
-      - StructureDefinition/model-item
-      - StructureDefinition/model-product
+      - StructureDefinition/InventoryStatusModel
+      - StructureDefinition/InventoryUpdateModel
+      - StructureDefinition/ItemModel
+      - StructureDefinition/ProductModel
       - ValueSet/vs-ihe-pharm-product-association-type
       - CodeSystem/cs-ihe-pharm-product-association-type
-
 
   # 1331_actors_and_transactions.md:
   #   title: "1:33.1 Actors and Transactions"

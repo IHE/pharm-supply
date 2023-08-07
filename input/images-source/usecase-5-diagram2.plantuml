@@ -1,7 +1,8 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Continued care institutions - Updates to dispense
-skin BlueModern
+'skin BlueModern
 hide footbox
 
 'actor Physician
@@ -12,7 +13,10 @@ participant "Automated\nDispenser" as AD
 participant "Remote\nPharmacy" as AI
 actor "Nurse" as N
 'Actor Patient as P
+|||
 
+Group Treatment (1 week)
+PP -[hidden]> N
 Group Retrieve medication
 N -> N: Retrieve medication\nParacetamol,\nAmoxicillin\nand Sertraline
 Activate N
@@ -20,8 +24,6 @@ N -> N: Drop amoxicillin
 N -> N: Retrieve amoxicillin
 end
 
-group Treatment (1 week)
-...
 end
 
 group Report medication use
@@ -50,6 +52,7 @@ end
 
 
 group Dispensing
+PP -[hidden]> N
 PD -> AD: Dispense request\nfor 6 Paracetamol
 Activate AD
 PD -> AI: Dispense request\nfor 7 sertraline

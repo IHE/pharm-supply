@@ -1,8 +1,9 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 skinparam svgDimensionStyle false
 title Operating Theater - Recall products with UDI
-skin BlueModern
+'skin BlueModern
 hide footbox
 
 Participant "Device\nVendor" as V

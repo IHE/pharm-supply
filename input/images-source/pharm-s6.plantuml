@@ -2,17 +2,19 @@
 
 hide footbox
 
-!include ./style.iuml
+'!include ./style.iuml
 
 
-Participant "[[actor_definitions.html#inventory-report Inventory\nReporter]]" as IR
-Participant "[[actor_definitions.html#inventory-manager Inventory\nManager]]" as IM
+participant "[[actors_and_transactions.html#inventory-reporter Inventory\nReporter]]" as IR
+participant "[[actors_and_transactions.html#inventory-manager Inventory\nManager]]" as IM
 
 activate IR
 activate IM
 
-IR -> IM: \tReport Inventory Consumption [[PHARM-S6.html{Consumption report}  ~[PHARM-S6~]]]
+IR -[hidden]> IM
+IR -> IM: Report Inventory Status \n[[PHARM-S6.html {Inventory Status report}  ~[StructureDefinition-ihe-supply-inventory-status.html~]]]
 IR <-- IM: \t(response)\t
+IR -[hidden]> IM :"  "
 
 deactivate IR
 deactivate IM

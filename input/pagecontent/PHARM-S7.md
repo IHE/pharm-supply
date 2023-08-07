@@ -1,15 +1,20 @@
-This section corresponds to transaction [PHARM-S5] of the IHE Technical Framework - Inventory Status Report. Transaction [PHARM-S5] is used by the Inventory Reporter and the Inventory Manager actors to inform about status of an inventory position. 
+This section corresponds to transaction [PHARM-S7] of the IHE Technical Framework - Inventory Query. Transaction [PHARM-S7] is used by the Inventory Reporter and the Inventory Manager actors to query for the current status of an inventory position.
 
 ### X:Y.Z.1 Scope
 
-The Inventory Status Report [PHARM-S5] transaction is used to inform about the current status of an inventory position, where "inventory position" is a physical location, or a selected set of items for which the inventory status is reported.
+The Inventory Query [PHARM-S7] transaction is used to query about the inventory in a physical location, or a selected set of items for which the inventory query is issued.
+
+#### Common cases covered 
+The following cases are covered with this transaction:
+
+This transaction allows the Inventory Manager to ask an Inventory Reporter for current levels of inventory, so that the Inventory Manager can track the inventory count more accurately.  
 
 ### X:Y.Z.2 Actors Roles
 
 **Table X:Y.Z.2-1: Actor Roles**
 
-|Actor | Role |
-|-------------------+--------------------------|
+|Actor | Role |  
+|------|------|
 | [Supply Requester](actors_and_transactions.html#supply-requester)    | Sends Supply Requests to the Supply Request Filler |
 | [Supply Request Filler](actors_and_transactions.html#supply-request-filler) | Accepts the request sent from the Supply Requester |
 {:.table-bordered}
@@ -22,22 +27,19 @@ The Inventory Status Report [PHARM-S5] transaction is used to inform about the c
 ### X:Y.Z.4 Messages
 
 <figure>
-{% include pharm-s5.svg %}
+{% include pharm-s7.svg %}
 </figure>
 
 
+**Figure X:Y.Z.4-1: Inventory Status Query Interactions**
 
-**Figure X:Y.Z.4-1: Inventory Status Report Interactions**
+#### X:Y.Z.4.1 Inventory Status Query
 
-#### X:Y.Z.4.1 Inventory Status Report Message
-
-
-The Inventory Reporter submits an InventoryReport resource instance that conforms to the [InventoryStatusReport](#) profile using the POST method to the /InventoryReport endpoint.
+The Inventory Manager submits an Inventory Query resource that conforms to the [InventoryReporter](StructureDefinition-InventoryReport.html) profile.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 
-This method is invoked when the Inventory Reporter reports updated information about the current inventory of one or several positions, e.g. after a monthly count, or daily after recalculating expected existences.
-
+This method is invoked when the Inventory Reporter has updated information to report about the current inventory of one or several positions, e.g. after a monthly count, or daily after recalculating expected existences... 
 
 ##### X:Y.Z.4.1.2 Message Semantics
 
@@ -47,9 +49,9 @@ The Inventory Reporter shall assure the report is consistent before sending, i.e
 
 ###### X:Y.Z.4.1.2.1 Resource content
 
-
 ##### X:Y.Z.4.1.3 Expected Actions
 Upon receiving the Inventory Status Report, the Inventory Manager can decide the actions like reporting, deciding on reordering, etc. 
+
 
 
 #### X:Y.Z.4.2 Supply Request Response

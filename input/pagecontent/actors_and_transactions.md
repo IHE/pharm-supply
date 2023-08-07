@@ -33,7 +33,7 @@ Table : Supply - Actors and Transactions
         <td align='center'>O</td>
     </tr>
     <tr>
-        <td rowspan="2"><a href="#supply-request-receiver">Supply Request Receiver</a></td>
+        <td rowspan="2"><a href="#supply-request-filler">Supply Request Filler</a></td>
         <td><a href='PHARM-S1.html'>Supply Request [PHARM-S1]</a></td>
         <td align='center'>O</td>
     </tr>
@@ -51,12 +51,38 @@ Table : Supply - Actors and Transactions
         <td align='center'>O</td>
     </tr>
     <tr>
-        <td rowspan="2"><a href="#receiver">Supply Request Receiver</a></td>
-        <td><a href='PHARM-S3'>Supply Notice [PHARM-S3]</a></td>
+        <td rowspan="2"><a href="#receiver">Supply Receiver</a></td>
+        <td><a href='PHARM-S3.html'>Supply Notice [PHARM-S3]</a></td>
         <td align='center'>O</td>
     </tr>
     <tr>
         <td><a href='PHARM-S4.html'>Receipt Notice [PHARM-S4]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="#receiver">Inventory Reporter</a></td>
+        <td><a href='PHARM-S5.html'>Inventory Status [PHARM-S5]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S6.html'>Inventory Update [PHARM-S6]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S7.html'>Inventory Query [PHARM-S7]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="#receiver">Inventory Manager</a></td>
+        <td><a href='PHARM-S5.html'>Inventory Status [PHARM-S5]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S6.html'>Inventory Update [PHARM-S6]</a></td>
+        <td align='center'>O</td>
+    </tr>
+    <tr>
+        <td><a href='PHARM-S7.html'>Inventory Query [PHARM-S7]</a></td>
         <td align='center'>O</td>
     </tr>
 </tbody>
@@ -131,22 +157,38 @@ Provides information about the inventory in a location <br/>This actor is typica
 #### <a name="inventory-manager"></a>__Inventory Manager__ 
 Receives inventory information (for the purpose of forwarding or taking further action e.g. deciding on reordering)
 
+* Sends inventory reports - transaction [PHARM-S5](PHARM-S5.html). 
+* Sends inventory updates - transaction [PHARM-S6](PHARM-S6.html). 
+* Receives inventory queries - transaction [PHARM-S7](PHARM-S7.html). 
+
 
 **These actors are expected to be combined, depending of the system configurations and inventory management policies**. 
 For example, an automated distribution system (like a *smart cart*) may keep track of the items it contain on, to decide about reordering; it may also send such information (acting as as an __Inventory Reporter__) to another system (__Inventory Manager__) so that the other system can decide whether / when to reorder.
 
 <br/>
 
-Consumption is a specialized case of inventory reporting, to inform of usage of inventory:
 
 
 #### <a name="inventory-reporter"></a>__Inventory Reporter__ <br/>(__Item Consumer__) 
-reports a consumption of an item (to an __Inventory Manager__).  
+reports a updates of inventory (to an __Inventory Manager__).  
+
+Since this is a differential update of inventory, it can also used report consumption (usage) or stock increases when necessary, e.g. returning products to inventory.
+
+Consumption: 
+Most times a consumption is not explicitly reported, but corresponds with a dispense or administration of a product (removing it from available inventory) or a disposal.  In this sense, the consumption report is just a differential update of inventory.
+Consumption informs of usage of inventory: When an item is taken from inventory but not necessarily associated with an administration, it is said to be consumed. These are the common cases:
+* A tablet is accidentally dropped on the floor. From an inventory perspective it is consumed.
+For multi-use products, two options are possible:
+* A bottle of disinfecting gel is put in the ward. When it is fully used, it is reported as consumed (and replaced).
+* A jar of cream is picked from the ward closet to be used for a patient. Since it can be used only for that patient, it is consumed from ward inventory as soon as it is picked.
 
 
-Most times a consumption is not explicitly reported, but corresponds with a dispense or administration of a product (removing it from available inventory) or a disposal. 
-In this sense, the consumption report is just a differential update of inventory.
+The inventory reporter:
+* Sends inventory reports - transaction [PHARM-S5](PHARM-S5.html). 
+* Sends inventory updates - transaction [PHARM-S6](PHARM-S6.html). 
+* Receives inventory queries - transaction [PHARM-S7](PHARM-S7.html). 
 
-Since the consumption is a differential update of inventory, the same actor (inventory status reporter) it can also report stock increases when necessary, e.g. returning products to inventory.
+
+
 
 <br/><br/>

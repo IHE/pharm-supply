@@ -17,7 +17,7 @@ The delivery follows a different path: From the supplier, it goes to the central
 The actors that exchange information are not the same in the ordering and delivering path, and this allows more flexibility in the supply and business processes.
 
 
-The actors and data exchange mechanisms considered in this specification are described in the [actor_definitions.html](Actor definitions) page.
+The actors and data exchange mechanisms considered in this specification are described in the [Actor definitions](actors_and_transactions.html) page.
 
 
 <br/>

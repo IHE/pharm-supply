@@ -1,13 +1,15 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 title Supply Management - Pharmacy-managed inventory,\nReplenish stock
-skin BlueModern
+'skin BlueModern
 hide footbox
 
 'box "Ward and satellite Pharmacy" #A9DCDF
 'actor "Local\nPharmacist" as P
 'Participant "Inventory App" as IA
 'end box
+|||
 
 actor "Central\nPharmacist" as P2
 Participant "Pharmacy System\n/ ERP" as PS

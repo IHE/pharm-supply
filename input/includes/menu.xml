@@ -12,14 +12,14 @@
 		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-			<li><a href="introduction.html">Introduction<style="text-align: baseline"/></a></li>
-			<li><a href="usecases.html">Use Cases<style="text-align: baseline"/></a></li>
-			<li><a href="overview.html">Overview<style="text-align: baseline"/></a></li>
-			<li><a href="actors_and_transactions.html">Actors and Transactions overview<style="text-align: baseline"/></a></li>
-			<li><a href="actor_options.html">Actor Options<style="text-align: baseline"/></a></li>
-			<li><a href="actor_required_grouping.html">Actor Required Grouping<style="text-align: baseline"/></a></li>
-			<li><a href="security_considerations.html">Security Considerations<style="text-align: baseline"/></a></li>
-			<li><a href="cross_profile_considerations.html">Cross Profile Considerations<style="text-align: baseline"/></a></li>
+			<li><a style="text-align: baseline" href="introduction.html">Introduction</a></li>
+			<li><a style="text-align: baseline" href="usecases.html">Use Cases</a></li>
+			<li><a style="text-align: baseline" href="overview.html">Overview</a></li>
+			<li><a style="text-align: baseline" href="actors_and_transactions.html">Actors and Transactions overview</a></li>
+			<li><a style="text-align: baseline" href="actor_options.html">Actor Options</a></li>
+			<li><a style="text-align: baseline" href="actor_required_grouping.html">Actor Required Grouping</a></li>
+			<li><a style="text-align: baseline" href="security_considerations.html">Security Considerations</a></li>
+			<li><a style="text-align: baseline" href="cross_profile_considerations.html">Cross Profile Considerations</a></li>
 		</ul>
 	</li>
 
@@ -27,17 +27,25 @@
 		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-			<li><a href="actors_and_transactions.html">Actors Definitions<style="text-align: baseline"/></a></li>
-			<li><a href="transactions.html">Transaction Definitions<style="text-align: baseline"/></a></li>
+			<!-- <li><a style="text-align: baseline" href="actors_and_transactions.html">Actors Definitions</a></li> -->
+			<li><a style="text-align: baseline" href="transactions.html">Transaction Definitions</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S1.html">Supply Request</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S2.html">Supply Request Status</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S3.html">Shipment Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S4.html">Delivery/Receipt Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S5.html">Inventory Report</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S6.html">Inventory Update</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S7.html">Inventory Query</a></li>
+
 		</ul>
 	</li>
 	
 	<li class="dropdown">
 		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
 		<ul class="dropdown-menu">
-			<li><a href="#">Test Data<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a style="text-align: baseline" href="#">Test Data<img src="external.png"/></a></li>
 			<li><a target="_blank" href="#">OpenAPI</a></li>
-			<li><a href="#">Testing (Gazelle)<img src="external.png" style="text-align: baseline"/></a></li>
+			<li><a style="text-align: baseline" href="#">Testing (Gazelle)<img src="external.png"/></a></li>
 			<li><a href="#">Downloads</a></li>
 			<li><a href="#">FHIR Specification</a></li>
 		</ul>

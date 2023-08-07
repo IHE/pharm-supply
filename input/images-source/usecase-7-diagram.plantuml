@@ -1,5 +1,6 @@
 @startuml
-!include style.iuml
+'!include style.iuml
+skinparam actorStyle awesome
 
 title Check Dispensed product according to Falsified Medicines Directive
 hide footbox
@@ -13,7 +14,7 @@ Participant "FMD Verifier" as HUB
 'end
 'group Tracking
 'end
-
+|||
 'activate PDS
 DP -> DP: Retrieve first item\nfrom inventory
 group Check First item

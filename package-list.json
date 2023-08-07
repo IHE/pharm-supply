@@ -1,7 +1,7 @@
 {
  "package-id" : "ihe_pharm_supply",
  "title" : "IHE - Supply of Products for Healthcare", 
- "canonical" : "http://ihe.net/fhir/PHARM/supply", 
+ "canonical" : "http://profiles.ihe.net/PHARM/supply", 
  "introduction" : "Cross-domain profiles and workflows for Supply of Products in Healthcare - orders and deliveries, inventory management, returns and recalls.",
  "list" : [{
   "version" : "current",
