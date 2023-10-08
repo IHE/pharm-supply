@@ -12,8 +12,8 @@ activate SR
 activate RF
 
 SR -[hidden]> RF 
-SR -> RF: \tRequest supply \n\t [[PHARM-S1.html{Supply Request Status} ]]
-SR <-- RF: \t(response)\n\t [[PHARM-S1.html{Supply Request Status} ~[StructureDefinition-ihe-supply-request.html~]]]
+SR --> RF: \t(Request status) 
+SR <-- RF: \t\n\t \n\t [[StructureDefinition-SupplyRequest.html{Supply Request Status} ~[Supply Request Status]]]
 SR -[hidden]> RF
 
 deactivate SR

@@ -1,6 +1,6 @@
-Profile: InventoryStatus
+Profile: IHEInventoryStatus
 Parent: InventoryReport
-Id: ihe-inventory-status
+Id: IHEInventoryStatus
 Title: "Inventory Report"
 Description: "Inventory Report (snapshot)"
 * ^version = "0.1.0"
@@ -8,11 +8,11 @@ Description: "Inventory Report (snapshot)"
 * status MS
 
 
-Profile: InventoryUsage
+Profile: IHEInventoryUpdate
 Parent: InventoryReport
-Id: ihe-inventory-usage
-Title: "Inventory Usage"
-Description: "Inventory Usage (consumption, updates)"
+Id: IHEInventoryUpdate
+Title: "Inventory Update"
+Description: "Inventory Update (consumption, usage)"
 * ^version = "0.1.0"
 * ^status = #active
 * status MS

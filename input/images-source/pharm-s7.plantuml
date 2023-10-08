@@ -11,7 +11,7 @@ Participant "[[actors_and_transactions.html#inventory-manager Inventory\nManager
 activate IR
 activate IM
 IR -[hidden]> IM
-IR -> IM: Inventory Query\n[[PHARM-S7.html{Inventory query}  ~[StructureDefinition-ihe-supply-inventory-query.html~]]]
+IR -> IM: [[StructureDefinition-ihe-supply-inventory-query.html{Inventory query} ~[Inventory query~]]]
 IR <-- IM: \t(response)\t
 IR -[hidden]> IM :"  "
 

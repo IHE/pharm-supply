@@ -30,7 +30,7 @@ The Receipt (and respective notice) can be related to a Shipment Notive and a Su
 **Figure X:Y.Z.4-1: Supply Request Interactions**
 
 #### X:Y.Z.4.1 Supply Request Request Message
-The Receiver sends a SupplyDelivery resource (conformant to the [Supply Receipt Profile](StructureDefinition-ihe-supply-receipt-notice.html)) using the POST method to the Supplier endpoint.
+The Receiver sends a SupplyDelivery resource (conformant to the [Supply Receipt Profile](StructureDefinition-ReceiptNotice.html)) using the POST method to the Supplier endpoint.
 
 ##### X:Y.Z.4.1.1 Trigger Events
 

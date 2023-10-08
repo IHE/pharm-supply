@@ -1,7 +1,7 @@
 
 Profile: IHESupplyRequest
 Parent: SupplyRequest
-Id: ihe-supply-request
+Id: IHESupplyRequest
 Title: "Supply Request profile"
 Description: "Profile for a Supply / Resupply Request"
 * ^version = "0.1.0"

@@ -1,10 +1,10 @@
 
-Profile: IHESupplyShipmentNotice
+Profile: IHESupplyDispatchNotice
 Parent: SupplyDelivery
-Id: ihe-supply-shipment-notice
+Id: IHESupplyDispatchNotice
 Title: "Profile - Supply Shipment Notice"
 Description: "A notification of shipment or beginning of transport of supply items."
-* ^url = "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-supply-shipment-notice"
+* ^url = "http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice"
 * ^version = "0.2.0"
 * ^status = #active
 * identifier MS
@@ -14,10 +14,10 @@ Description: "A notification of shipment or beginning of transport of supply ite
 
 Profile: IHESupplyReceiptNotice
 Parent: SupplyDelivery
-Id: ihe-supply-receipt-notice
+Id: IHESupplyReceiptNotice
 Title: "Profile - Supply Receipt Notice"
 Description: "A notification of reception of supply items."
-* ^url = "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-supply-receipt-notice"
+* ^url = "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice"
 * ^version = "0.2.0"
 * ^status = #active
 * identifier MS
@@ -26,7 +26,7 @@ Description: "A notification of reception of supply items."
 
 
 Extension: IHEDeliveryStage
-Id: ihe-ext-delivery-stage
+Id: IHEDeliveryStageExt
 Description: "Stage of delivery reported in a SupplyDelivery."
 * ^context[+].type = #element
 * ^context[=].expression = "SupplyDelivery"
@@ -35,7 +35,7 @@ Description: "Stage of delivery reported in a SupplyDelivery."
 
 
 ValueSet: IHEDeliveryStageVS
-Id: delivery-stage-vs
+Id: IHEDeliveryStageVS
 Title: "Supply delivery stage value set"
 Description: "Supply delivery stage value set."
 * ^copyright = "© 2022+ IHE International"
@@ -45,12 +45,12 @@ Description: "Supply delivery stage value set."
 
 
 CodeSystem: IHEDeliveryStageCS
-Id:         delivery-stage-cs
+Id:         IHEDeliveryStageCS
 Title: "Supply delivery stage code system"
 Description: "Supply delivery code system."
 * ^experimental = true
 * ^caseSensitive = true
-* ^url = "http://profiles.ihe.net/PHARM/supply/CodeSystem/delivery-stage-cs"
+* ^url = "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS"
 * #shipment
     "Shipment"
     "The event is the shipment of the item."
