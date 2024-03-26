@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "delivery-stage-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-delivery-stage-cs.html\"><code>http://profiles.ihe.net/PHARM/supply/CodeSystem/delivery-stage-cs</code></a></li></ul></div>"
+  },
+  "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/delivery-stage-vs",
+  "version" : "0.3.0",
+  "name" : "IHEDeliveryStageVS",
+  "title" : "Supply delivery stage value set",
+  "status" : "active",
+  "experimental" : true,
+  "date" : "2023-08-07T08:58:24+00:00",
+  "publisher" : "IHE Pharmacy Technical Committee",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ihe.net/ihe_domains/pharmacy/"
+    }]
+  },
+  {
+    "telecom" : [{
+      "system" : "email",
+      "value" : "pharmacy@ihe.net"
+    }]
+  },
+  {
+    "name" : "IHE Pharmacy Technical Committee",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "pharmacy@ihe.net"
+    }]
+  }],
+  "description" : "Supply delivery stage value set.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "copyright" : "© 2022+ IHE International",
+  "compose" : {
+    "include" : [{
+      "system" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/delivery-stage-cs"
+    }]
+  }
+}

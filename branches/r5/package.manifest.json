@@ -1,0 +1,6 @@
+{
+  "version" : "0.3.0",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20230807085607",
+  "name" : "ihe.pharm.supply"
+}

@@ -1,0 +1,3 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Uses,Used,Sources
+http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS,0.3.0,active,,IHEDeliveryStageVS,Supply delivery stage value set,"Supply delivery stage value set.",,"Internal"
+http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type,0.3.0,draft,,ProductAssociationType,Product association type Value Set,"Product association type Value Set",,"Internal"

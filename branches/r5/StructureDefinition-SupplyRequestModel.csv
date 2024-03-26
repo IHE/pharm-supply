@@ -1,0 +1,52 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"SupplyRequestModel","SupplyRequestModel","","","",0,*,"","","","null {[]} {[]}
+","A request for supply of one or more healthcare products","This is the logical model for the SupplyRequest","","","","","","","","","",,,,,"",,,,"Element",0,*,"","","n/a"
+"SupplyRequestModel.id","SupplyRequestModel.id","","","",0,1,"","","","string {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"SupplyRequestModel.extension","SupplyRequestModel.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"SupplyRequestModel.identifier","SupplyRequestModel.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","Identifier","Identifier","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.identifier",0,1,"",""
+"SupplyRequestModel.status","SupplyRequestModel.status","","","",1,1,"","","","code {[]} {[]}
+","code","code","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.status",1,1,"",""
+"SupplyRequestModel.type","SupplyRequestModel.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","type of request - e.g. type of distribution, priority, etc.","type of request - e.g. type of distribution, priority, etc.","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.type",0,1,"",""
+"SupplyRequestModel.dateTime","SupplyRequestModel.dateTime","","","",0,1,"","","","dateTime {[]} {[]}
+","date time","date time","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.dateTime",0,1,"",""
+"SupplyRequestModel.requester","SupplyRequestModel.requester","","","",0,1,"","","","Reference {[]} {[]}
+","requester","requester","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.requester",0,1,"",""
+"SupplyRequestModel.originalRequest","SupplyRequestModel.originalRequest","","","",0,1,"","","","Reference {[]} {[]}
+","Original request","Original request","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.originalRequest",0,1,"",""
+"SupplyRequestModel.filler","SupplyRequestModel.filler","","","",0,1,"","","","Reference {[]} {[]}
+","filler","filler","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.filler",0,1,"",""
+"SupplyRequestModel.item","SupplyRequestModel.item","","","",1,*,"","","","BackboneElement {[]} {[]}
+","item","item","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.item",1,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+"
+"SupplyRequestModel.item.id","SupplyRequestModel.item.id","","","",0,1,"","","","id {[]} {[]}
+","Unique id for inter-element referencing","Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.","","","","","","","","","",,,,,"",,,,"Element.id",0,1,"ele-1
+","","n/a"
+"SupplyRequestModel.item.extension","SupplyRequestModel.item.extension","","extensions
+user content","",0,*,"","","","Extension {[]} {[]}
+","Additional content defined by implementations","May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","","","","","","","","",,,,,"","value:url}
+","Extensions are always sliced by (at least) url",,"open","Element.extension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","n/a"
+"SupplyRequestModel.item.modifierExtension","SupplyRequestModel.item.modifierExtension","","extensions
+user contentmodifiers","",0,*,"","Y","Y","Extension {[]} {[]}
+","Extensions that cannot be ignored even if unrecognized","May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and managable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).","There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.","Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R5/extensibility.html#modifierExtension).","","","","","","","",,,,,"",,,,"BackboneElement.modifierExtension",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
+ext-1:Must have either extensions or value[x], not both {extension.exists() != value.exists()}","N/A"
+"SupplyRequestModel.item.itemreference[x]","SupplyRequestModel.item.itemreference[x]","","","",1,1,"","","","Reference {[]} {[]}
+CodeableConcept {[]} {[]}","item reference","item reference","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.item.itemreference[x]",1,1,"",""
+"SupplyRequestModel.item.quantity","SupplyRequestModel.item.quantity","","","",1,*,"","","","Quantity {[]} {[]}
+","quantity","quantity","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.item.quantity",1,*,"",""
+"SupplyRequestModel.item.originLocation","SupplyRequestModel.item.originLocation","","","",0,*,"","","","Reference {[]} {[]}
+","origin location","origin location","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.item.originLocation",0,*,"",""
+"SupplyRequestModel.destinationLocation","SupplyRequestModel.destinationLocation","","","",0,*,"","","","Reference {[]} {[]}
+","destination location","destination location","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.destinationLocation",0,*,"",""
+"SupplyRequestModel.additionalInfo[x]","SupplyRequestModel.additionalInfo[x]","","","",0,*,"","","","Reference {[]} {[]}
+Annotation {[]} {[]}","Additional information about the request","Additional information about the request - this can be relevant history, any remarks by the patient or professional, etc.","","","","","","","","","",,,,,"",,,,"SupplyRequestModel.additionalInfo[x]",0,*,"",""

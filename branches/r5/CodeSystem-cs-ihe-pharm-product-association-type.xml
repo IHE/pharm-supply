@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="cs-ihe-pharm-product-association-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type</code> defines the following code:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">contains<a name="cs-ihe-pharm-product-association-type-contains"> </a></td><td>the product contains the related product</td></tr></table></div>
+  </text>
+  <url value="http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"/>
+  <version value="0.3.0"/>
+  <name value="CSProductAssociationType"/>
+  <title value="Product association type code system"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <date value="2023-08-07T08:58:58+00:00"/>
+  <publisher value="IHE Pharmacy Technical Committee"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ihe.net/ihe_domains/pharmacy/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="IHE Pharmacy Technical Committee"/>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <description value="product association type code system."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <caseSensitive value="true"/>
+  <content value="complete"/>
+  <count value="1"/>
+  <concept>
+    <code value="contains"/>
+    <display value="contains"/>
+    <definition value="the product contains the related product"/>
+  </concept>
+</CodeSystem>

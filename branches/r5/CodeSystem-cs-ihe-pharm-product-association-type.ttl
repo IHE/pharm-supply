@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "cs-ihe-pharm-product-association-type"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">contains<a name=\"cs-ihe-pharm-product-association-type-contains\"> </a></td><td>the product contains the related product</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.3.0"] ; # 
+  fhir:name [ fhir:v "CSProductAssociationType"] ; # 
+  fhir:title [ fhir:v "Product association type code system"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2023-08-07T08:58:58+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "IHE Pharmacy Technical Committee"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ihe.net/ihe_domains/pharmacy/" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pharmacy@ihe.net" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "IHE Pharmacy Technical Committee" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pharmacy@ihe.net" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "product association type code system."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "IHE http://www.ihe.net/Governance/#Intellectual_Property"] ; # 
+  fhir:caseSensitive [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "1"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "contains" ] ;
+     fhir:display [ fhir:v "contains" ] ;
+     fhir:definition [ fhir:v "the product contains the related product" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

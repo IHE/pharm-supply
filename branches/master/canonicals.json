@@ -1,0 +1,142 @@
+[
+  {
+    "id" : "IHEDeliveryStageCS",
+    "type" : "CodeSystem",
+    "url" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS",
+    "version" : "0.3.0",
+    "name" : "IHEDeliveryStageCS"
+  },
+  {
+    "id" : "cs-ihe-pharm-product-association-type",
+    "type" : "CodeSystem",
+    "url" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type",
+    "version" : "0.3.0",
+    "name" : "CSProductAssociationType"
+  },
+  {
+    "id" : "ihe.pharm.supply",
+    "type" : "ImplementationGuide",
+    "url" : "http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply",
+    "version" : "0.3.0",
+    "name" : "IHE_PHARM_SUPPLY"
+  },
+  {
+    "id" : "sp-requested-item",
+    "type" : "SearchParameter",
+    "url" : "http://profiles.ihe.net/PHARM/supply/SearchParameter/sp-requested-item",
+    "version" : "0.3.0",
+    "name" : "RequestedItem"
+  },
+  {
+    "id" : "IHESupplyDispatchNotice",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice",
+    "version" : "0.3.0",
+    "name" : "IHESupplyDispatchNotice"
+  },
+  {
+    "id" : "IHEDeliveryStageExt",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEDeliveryStageExt",
+    "version" : "0.3.0",
+    "name" : "IHEDeliveryStage"
+  },
+  {
+    "id" : "IHEInventoryStatus",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEInventoryStatus",
+    "version" : "0.3.0",
+    "name" : "IHEInventoryStatus"
+  },
+  {
+    "id" : "IHEInventoryUpdate",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEInventoryUpdate",
+    "version" : "0.3.0",
+    "name" : "IHEInventoryUpdate"
+  },
+  {
+    "id" : "IHESupplyRequest",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyRequest",
+    "version" : "0.3.0",
+    "name" : "IHESupplyRequest"
+  },
+  {
+    "id" : "InventoryStatusModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/InventoryStatusModel",
+    "version" : "0.3.0",
+    "name" : "InventoryStatusModel"
+  },
+  {
+    "id" : "InventoryUpdateModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/InventoryUpdateModel",
+    "version" : "0.3.0",
+    "name" : "InventoryUpdateModel"
+  },
+  {
+    "id" : "ItemModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ItemModel",
+    "version" : "0.3.0",
+    "name" : "ItemModel"
+  },
+  {
+    "id" : "ProductModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ProductModel",
+    "version" : "0.3.0",
+    "name" : "ProductModel"
+  },
+  {
+    "id" : "IHESupplyReceiptNotice",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice",
+    "version" : "0.3.0",
+    "name" : "IHESupplyReceiptNotice"
+  },
+  {
+    "id" : "ReceiptNoticeModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNoticeModel",
+    "version" : "0.3.0",
+    "name" : "ReceiptNoticeModel"
+  },
+  {
+    "id" : "ShipmentNoticeModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/ShipmentNoticeModel",
+    "version" : "0.3.0",
+    "name" : "ShipmentNoticeModel"
+  },
+  {
+    "id" : "SupplyRequestModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/SupplyRequestModel",
+    "version" : "0.3.0",
+    "name" : "SupplyRequestModel"
+  },
+  {
+    "id" : "SupplyRequestStatusModel",
+    "type" : "StructureDefinition",
+    "url" : "http://profiles.ihe.net/PHARM/supply/StructureDefinition/SupplyRequestStatusModel",
+    "version" : "0.3.0",
+    "name" : "SupplyRequestStatusModel"
+  },
+  {
+    "id" : "IHEDeliveryStageVS",
+    "type" : "ValueSet",
+    "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS",
+    "version" : "0.3.0",
+    "name" : "IHEDeliveryStageVS"
+  },
+  {
+    "id" : "vs-ihe-pharm-product-association-type",
+    "type" : "ValueSet",
+    "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type",
+    "version" : "0.3.0",
+    "name" : "ProductAssociationType"
+  }
+]

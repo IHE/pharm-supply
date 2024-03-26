@@ -1,0 +1,36 @@
+﻿/github/workspace/fsh-generated/resources/CodeSystem-cs-ihe-pharm-product-association-type.json: line 1, col 1322, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/CodeSystem-delivery-stage-cs.json: line 1, col 1430, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/ImplementationGuide-ihe.pharm.supply.json: line 1, col 1160, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/SearchParameter-sp-requested-item.json: line 1, col 1280, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-InventoryStatusModel.json: line 1, col 31473, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-InventoryUpdateModel.json: line 1, col 36243, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ItemModel.json: line 1, col 95417, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ProductModel.json: line 1, col 35083, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ReceiptNoticeModel.json: line 1, col 31922, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ShipmentNoticeModel.json: line 1, col 31941, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-SupplyRequestModel.json: line 1, col 33718, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-SupplyRequestStatusModel.json: line 1, col 32405, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-ext-delivery-stage.json: line 1, col 11962, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-ext-delivery-stage.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this extension (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-inventory-status.json: line 1, col 8373, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-inventory-status.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-inventory-usage.json: line 1, col 8378, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-inventory-usage.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-receipt-notice.json: line 1, col 19903, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-receipt-notice.json: line 0, col 0, Warning - For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance (EXCEPTION)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-receipt-notice.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-request.json: line 1, col 8362, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-request.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-shipment-notice.json: line 1, col 19935, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-shipment-notice.json: line 0, col 0, Warning - For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance (EXCEPTION)
+/github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-shipment-notice.json: line 0, col 0, Warning - The Implementation Guide contains no examples for this profile (BUSINESSRULE)
+/github/workspace/fsh-generated/resources/ValueSet-delivery-stage-vs.json: line 1, col 1004, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/fsh-generated/resources/ValueSet-vs-ihe-pharm-product-association-type.json: line 1, col 1092, Warning - Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0 (CODEINVALID)
+/github/workspace/input/history/history.json: line 13, col 6, Error - Unrecognized property 'reason' (STRUCTURE)
+
+IHE_PHARM_SUPPLY : Validation Results
+=========================================
+
+err = 2, warn = 31, info = 0
+IG Publisher Version: 1.3.28
+Generated Mon Aug 07 09:00:14 UTC 2023. FHIR version 5.0.0 for ihe.pharm.supply#0.3.0 (canonical = http://profiles.ihe.net/PHARM/supply)

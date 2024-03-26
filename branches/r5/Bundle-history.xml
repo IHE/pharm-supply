@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="history"/>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://profiles.ihe.net/ihe-pharm-supply/Provenance/history-1"/>
+    <resource>
+      <Provenance>
+        <id value="history-1"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="history-1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance &quot;history-1&quot; </p></div><p><b>target</b>: <a href="StructureDefinition-ihe-supply-request.html">StructureDefinition/ihe-supply-request</a> &quot;IHESupplyRequest&quot;</p><p><b>occurred</b>: 2015-11-30</p><p><b>activity</b>: revise <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-v3-DataOperation.html">DataOperation</a>#UPDATE)</span></p><blockquote><p><b>agent</b></p><p><b>type</b>: Author <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#author)</span></p><p><b>who</b>: <span>: Rob Hausam</span></p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: Verifier <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-provenance-participant-type.html">Provenance participant type</a>#verifier)</span></p><p><b>who</b>: <span>: Vocab</span></p></blockquote></div>
+        </text>
+        <target>
+          <reference value="StructureDefinition/ihe-supply-request"/>
+        </target>
+        <occurredDateTime value="2015-11-30"/>
+        <activity>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-DataOperation"/>
+            <code value="UPDATE"/>
+          </coding>
+        </activity>
+        <agent>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+              <code value="author"/>
+            </coding>
+          </type>
+          <who>
+            <display value="Rob Hausam"/>
+          </who>
+        </agent>
+        <agent>
+          <type>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/provenance-participant-type"/>
+              <code value="verifier"/>
+            </coding>
+          </type>
+          <who>
+            <display value="Vocab"/>
+          </who>
+        </agent>
+      </Provenance>
+    </resource>
+  </entry>
+</Bundle>
