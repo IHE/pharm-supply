@@ -27,6 +27,7 @@ Description: "A notification of reception of supply items."
 
 Extension: IHEDeliveryStage
 Id: IHEDeliveryStageExt
+Title: "Supply delivery stage extension"
 Description: "Stage of delivery reported in a SupplyDelivery."
 * ^context[+].type = #element
 * ^context[=].expression = "SupplyDelivery"
