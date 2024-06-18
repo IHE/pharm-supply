@@ -34,6 +34,7 @@ skinparam class<<TM>> {
           |_ itemCharacteristics 0..*
           |_ quantity 1..1
           |_ origin 0..1
+          |_ status 0..1
         |_ additionalInfo 0..*  
           |_ reference 0..*  
           |_ notes 0..*  

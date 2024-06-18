@@ -34,7 +34,7 @@ Also see the [data model overview below](#overall-data-requirements)
 ___
 
 
-### S2. Supply Request Status
+###  <a name="supply-request-status"> ### S2. Supply Request Status
 
 The Supply Request is used to inform a party about the request of items and the status of such request and its handling. This can be in response to a request, or as an immediate response to the order, or unsolicited.
 
@@ -43,7 +43,7 @@ The data that is normally present is the same as the [supply request](#supply-re
 
 ___
 
-### S3. Shipment notice
+###  <a name="shipment-notice"> ### S3. Shipment notice
 The shipment notice informs other parties that the actual shipment is initiated. This typically means that the items are now in transport. 
 
 
@@ -51,25 +51,25 @@ This data is normally used:
 
 |Data element|Description|
 |----|----|
-| Shipment ID ||
+| Shipment ID | shipment identification|
 | Status | status of the shipment | 
 | DateTime | date/time of the shipment | 
 | Request | the request that this shipment is responding to | 
-| Requester ID | identification of the requester | 
-| Receiver ID | the intended receiver of the shipment|
-| Destination location| the intended location for the shipment|
+| Supplier ID | identification of the requester | 
+| Supplier Location | location of the requester | 
+| Receiver Location | the intended receiver of the shipment|
+| Receiver ID | the intended location for the shipment|
 | Sent items| the actual items being shipped| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Characteristics |Any descriptive or traceability information as needed – for example size, or lot number.| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example a specific lot.| 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin | Location where the item should be delivered or placed|
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Origin location | Location or source of the item|
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item status | information of the status - arrived, missing, defective..| 
 |Notes | Other data needed about distribution – e.g., billing info, etc.|
 {:.table-bordered .table-sm}
 
 ___
 
-### S4. Delivery/Receipt notice
+###  <a name="delivery-receipt"> ### S4. Delivery Receipt
 The delivery or receipt notice is used to inform the parties about the reception of items. This can be used to confer quantities, inform of delivery issues, and is commonly used to activate the billing, since the reception of items signals that the items are now in the custody of the receiver, so if all is ok, the order can be billed when it is finally received at its destination.
 
 The following data is commonly present in the delivery notice:
@@ -77,23 +77,25 @@ The following data is commonly present in the delivery notice:
 |Data element|Description|
 |----|----|
 | Receipt ID | identification of the receipt | 
-| Shipment ID |identification of the shipment |
-| Receiver ID | the receiver of the items|
 | Status | status of the receipt notive | 
 | DateTime | date/time of the receipt | 
+| Shipment ID |identification of the shipment |
 | Request | the request that this receipt is related to | 
-| Location| the location of reception of the shipment|
+| Supplier ID | the supplier of the items|
+| Supplier Location | location of the requester | 
+| Receiver ID | the receiver of the items|
+| Receiver Location | the intended receiver of the shipment|
 | Received items| the actual items received| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Identification| the identifier(s) of the requested item | 
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Characteristics |Any descriptive or traceability information as needed – for example size, or lot number.| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantity| Amount of items | 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item Info |Any traceability information if needed – for example a specific lot.| 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Item status | information of the status - arrived, missing, defective..| 
 |Notes | Other data needed about distribution – e.g., billing info, etc.|
 {:.table-bordered .table-sm}
 
 ___
 
-### <a name="inventory-report"> S4. Inventory Status report
+### <a name="inventory-status"> S4. Inventory Status report
 The inventory status report updates the parties about the status of inventory - quantities available etc.
 This can be divided in different dimensions: Snapshot vs Differential - the former is an information about the current product count in a position, while the latter informs about differences to a previous count (e.g. additions, subtractions). 
 
@@ -121,17 +123,6 @@ The data involved is usually this:
 |Notes | Other data needed about distribution – e.g., billing info, etc.|
 {:.table-bordered .table-sm}
 
-### S5. Inventory Updates
-One of the key aspects of the materials handling is that sometimes products are consumed but not used or reported clinically. For example items that are dropped or damaged, and/or need to be wasted - will not be reported in the clinical information exchange, but are important to be notified for proper inventory control. Another case is when multiuse products are not consumed upon each administration, but when the product is consumed, this should be registered.
-This data exchange can contain data such as:
-* Stock Location
-* Reporter ID
-* Patient ID, if applicable
-* Consumed items
-  * Identification of the item
-  * Physical item characteristics e.g., lot number etc.
-  * Quantity
-* Other information that may be relevant for the adequate processing of the consumption information
 
 ### S6. Inventory Updates
 One of the key aspects of the materials handling is that sometimes products are consumed but not used or reported clinically. For example items that are dropped or damaged, and/or need to be wasted - will not be reported in the clinical information exchange, but are important to be notified for proper inventory control. This consumption report can contain information such as:

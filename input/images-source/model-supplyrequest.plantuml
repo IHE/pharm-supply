@@ -22,6 +22,7 @@ skinparam class<<TM>> {
     class "**Supply Request**"<<MD>> {
         |_ identifier 0..1
         |_ status 1..1
+        |_ requestType 0..1
         |_ dateTime 0..1
         |_ requester 0..1
         |_ originalRequest 0..1
