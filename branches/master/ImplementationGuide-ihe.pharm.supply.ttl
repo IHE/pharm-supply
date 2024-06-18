@@ -1,0 +1,813 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ihe.pharm.supply"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>IHE_PHARM_SUPPLY</h2><p>The official URL for this implementation guide is: </p><pre>http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply</pre><div><p>ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)</p>\n</div></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.3.0"] ; # 
+  fhir:name [ fhir:v "IHE_PHARM_SUPPLY"] ; # 
+  fhir:title [ fhir:v "Supply of Products for Healthcare (SUPPLY)"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-06-18T21:01:23+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "IHE Pharmacy Technical Committee"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ihe.net/ihe_domains/pharmacy/" ]
+     ] )
+  ] [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pharmacy@ihe.net" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "IHE Pharmacy Technical Committee" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "pharmacy@ihe.net" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "IHE http://www.ihe.net/Governance/#Intellectual_Property"] ; # 
+  fhir:packageId [ fhir:v "ihe.pharm.supply"] ; # 
+  fhir:license [ fhir:v "CC-BY-4.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "5.0.0"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r5" ] ;
+     fhir:version [ fhir:v "5.5.0" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r5" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+     ] ) ;
+     fhir:grouping ( [
+       fhir:id [ fhir:v "SupplyRequest" ] ;
+       fhir:name [ fhir:v "Supply Requests" ] ;
+       fhir:description [ fhir:v "Artifacts related to supply requests - ordering supplies and checking status of orders." ]
+     ] [
+       fhir:id [ fhir:v "SupplyDelivery" ] ;
+       fhir:name [ fhir:v "Supply Delivery" ] ;
+       fhir:description [ fhir:v "Artifacts related to supply deliveries - shipment notices and receipt notices." ]
+     ] [
+       fhir:id [ fhir:v "Inventory" ] ;
+       fhir:name [ fhir:v "Inventory" ] ;
+       fhir:description [ fhir:v "Artifacts related to inventory - inventory status, consumption, inventory items." ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "InventoryItem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/InventoryItem/123> ;
+         fhir:reference [ fhir:v "InventoryItem/123" ]
+       ] ;
+       fhir:name [ fhir:v "123" ] ;
+       fhir:isExample [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/Bundle/history> ;
+         fhir:reference [ fhir:v "Bundle/history" ]
+       ] ;
+       fhir:name [ fhir:v "history" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "InventoryItem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/InventoryItem/i1231> ;
+         fhir:reference [ fhir:v "InventoryItem/i1231" ]
+       ] ;
+       fhir:name [ fhir:v "i1231" ] ;
+       fhir:isExample [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "InventoryItem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/InventoryItem/i1234> ;
+         fhir:reference [ fhir:v "InventoryItem/i1234" ]
+       ] ;
+       fhir:name [ fhir:v "i1234" ] ;
+       fhir:isExample [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "InventoryItem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/InventoryItem/i12341> ;
+         fhir:reference [ fhir:v "InventoryItem/i12341" ]
+       ] ;
+       fhir:name [ fhir:v "i12341" ] ;
+       fhir:isExample [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEInventoryStatus> ;
+         fhir:reference [ fhir:v "StructureDefinition/IHEInventoryStatus" ]
+       ] ;
+       fhir:name [ fhir:v "Inventory Report" ] ;
+       fhir:description [ fhir:v "Inventory Report (snapshot)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEInventoryUpdate> ;
+         fhir:reference [ fhir:v "StructureDefinition/IHEInventoryUpdate" ]
+       ] ;
+       fhir:name [ fhir:v "Inventory Update" ] ;
+       fhir:description [ fhir:v "Inventory Update (consumption, usage)" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/InventoryStatusModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/InventoryStatusModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Inventory Status" ] ;
+       fhir:description [ fhir:v "The logical data model for Inventory Status" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/InventoryUpdateModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/InventoryUpdateModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Inventory Update" ] ;
+       fhir:description [ fhir:v "The logical data model for Inventory Updates" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/ItemModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/ItemModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Item" ] ;
+       fhir:description [ fhir:v "An (informative) logical data model for trade items" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/ProductModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/ProductModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Product" ] ;
+       fhir:description [ fhir:v "An (informative) logical data model for Products" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNoticeModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/ReceiptNoticeModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Receipt notice" ] ;
+       fhir:description [ fhir:v "The logical data model for Receipt Notice" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/ShipmentNoticeModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/ShipmentNoticeModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Shipment notice" ] ;
+       fhir:description [ fhir:v "The logical data model for Shipment Notice" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/SupplyRequestModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/SupplyRequestModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Supply Request" ] ;
+       fhir:description [ fhir:v "The logical data model for Supply Requests" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyRequest" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:logical" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/SupplyRequestStatusModel> ;
+         fhir:reference [ fhir:v "StructureDefinition/SupplyRequestStatusModel" ]
+       ] ;
+       fhir:name [ fhir:v "Logical Model - Supply Request Status" ] ;
+       fhir:description [ fhir:v "The logical data model for Supply Request status" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyRequest" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type> ;
+         fhir:reference [ fhir:v "CodeSystem/cs-ihe-pharm-product-association-type" ]
+       ] ;
+       fhir:name [ fhir:v "Product association type code system" ] ;
+       fhir:description [ fhir:v "product association type code system." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type> ;
+         fhir:reference [ fhir:v "ValueSet/vs-ihe-pharm-product-association-type" ]
+       ] ;
+       fhir:name [ fhir:v "Product association type Value Set" ] ;
+       fhir:description [ fhir:v "Product association type Value Set" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "Inventory" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyReceiptNotice> ;
+         fhir:reference [ fhir:v "StructureDefinition/IHESupplyReceiptNotice" ]
+       ] ;
+       fhir:name [ fhir:v "Profile - Supply Receipt Notice" ] ;
+       fhir:description [ fhir:v "A notification of reception of supply items." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyDispatchNotice> ;
+         fhir:reference [ fhir:v "StructureDefinition/IHESupplyDispatchNotice" ]
+       ] ;
+       fhir:name [ fhir:v "Profile - Supply Shipment Notice" ] ;
+       fhir:description [ fhir:v "A notification of shipment or beginning of transport of supply items." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "SearchParameter" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/SearchParameter/sp-requested-item> ;
+         fhir:reference [ fhir:v "SearchParameter/sp-requested-item" ]
+       ] ;
+       fhir:name [ fhir:v "Search Parameter - item requested" ] ;
+       fhir:description [ fhir:v "Additional search parameter to search requests of specific items" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyRequest" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CodeSystem" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/CodeSystem/IHEDeliveryStageCS> ;
+         fhir:reference [ fhir:v "CodeSystem/IHEDeliveryStageCS" ]
+       ] ;
+       fhir:name [ fhir:v "Supply delivery stage code system" ] ;
+       fhir:description [ fhir:v "Supply delivery code system." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:extension" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEDeliveryStageExt> ;
+         fhir:reference [ fhir:v "StructureDefinition/IHEDeliveryStageExt" ]
+       ] ;
+       fhir:name [ fhir:v "Supply delivery stage extension" ] ;
+       fhir:description [ fhir:v "Stage of delivery reported in a SupplyDelivery." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS> ;
+         fhir:reference [ fhir:v "ValueSet/IHEDeliveryStageVS" ]
+       ] ;
+       fhir:name [ fhir:v "Supply delivery stage value set" ] ;
+       fhir:description [ fhir:v "Supply delivery stage value set." ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyDelivery" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyRequest> ;
+         fhir:reference [ fhir:v "StructureDefinition/IHESupplyRequest" ]
+       ] ;
+       fhir:name [ fhir:v "Supply Request profile" ] ;
+       fhir:description [ fhir:v "Profile for a Supply / Resupply Request" ] ;
+       fhir:isExample [ fhir:v "false"^^xsd:boolean ] ;
+       fhir:groupingId [ fhir:v "SupplyRequest" ]
+     ] ) ;
+     fhir:page [
+       fhir:source [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:source [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Supply Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:source [ fhir:v "volume1.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "volume1.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Volume 1: Use cases" ] ;
+         fhir:generation [ fhir:v "markdown" ] ;
+         fhir:page ( [
+           fhir:source [ fhir:v "introduction.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "introduction.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Introduction" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "howtoread.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "howtoread.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "How to read this publication" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "usecases.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "usecases.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Use Case overview" ] ;
+           fhir:generation [ fhir:v "html" ] ;
+           fhir:page ( [
+             fhir:source [ fhir:v "usecase1.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase1.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 1 - Medication order, global distribution and administration (floor stock)" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase2.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase2.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase3.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase3.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 3 - Inventory Count and Resupply, Product Distribution" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase4.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase4.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 4 - Community Pharmacy, Stock and Consignment Items" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase5.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase5.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase6.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase6.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 6 - Cold-stored medication, resupply and return" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase7.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase7.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 7 - Falsified Medication Check" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase8.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase8.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 8 - Operating Theater - UDI lookup" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "usecase9.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "usecase9.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Use Case 9 - Recall of UDI Devices" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] )
+         ] [
+           fhir:source [ fhir:v "overview.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "overview.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Overview: data exchange for supply" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "actors_and_transactions.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "actors_and_transactions.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Actors and Transactions overview" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "actor_options.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "actor_options.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Actor Options" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "actor_required_grouping.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "actor_required_grouping.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Actor Required Grouping" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "security_considerations.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "security_considerations.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Security Considerations" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] [
+           fhir:source [ fhir:v "cross_profile_considerations.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "cross_profile_considerations.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Cross Profile Considerations" ] ;
+           fhir:generation [ fhir:v "markdown" ]
+         ] )
+       ] [
+         fhir:source [ fhir:v "volume2.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "volume2.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Volume 2" ] ;
+         fhir:generation [ fhir:v "markdown" ] ;
+         fhir:page ( [
+           fhir:source [ fhir:v "transactions.html"^^xsd:anyURI ] ;
+           fhir:name [ fhir:v "transactions.html"^^xsd:anyURI ] ;
+           fhir:title [ fhir:v "Transaction Definitions" ] ;
+           fhir:generation [ fhir:v "markdown" ] ;
+           fhir:page ( [
+             fhir:source [ fhir:v "PHARM-S1.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S1.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Supply Request [PHARM-S1]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "PHARM-S2.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S2.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Supply Request Status [PHARM-S2]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "PHARM-S3.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S3.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Shipment Notice [PHARM-S3]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "PHARM-S4.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S4.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Delivery Receipt [PHARM-S4]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "PHARM-S5.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S5.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Inventory Status Report [PHARM-S5]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "PHARM-S6.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S6.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Inventory Update Report [PHARM-S6]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] [
+             fhir:source [ fhir:v "PHARM-S7.html"^^xsd:anyURI ] ;
+             fhir:name [ fhir:v "PHARM-S7.html"^^xsd:anyURI ] ;
+             fhir:title [ fhir:v "Inventory Query [PHARM-S7]" ] ;
+             fhir:generation [ fhir:v "markdown" ]
+           ] )
+         ] )
+       ] [
+         fhir:source [ fhir:v "issues.html"^^xsd:anyURI ] ;
+         fhir:name [ fhir:v "issues.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Present issues" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "copyrightyear" ]
+       ] ;
+       fhir:value [ fhir:v "2020+" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "releaselabel" ]
+       ] ;
+       fhir:value [ fhir:v "ci-build" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "active-tables" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-contact" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-jurisdiction" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-publisher" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-version" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "show-inherited-invariants" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "usage-stats-opt-out" ]
+       ] ;
+       fhir:value [ fhir:v "false" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "autoload-resources" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "shownav" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-resource" ]
+       ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-pages" ]
+       ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "template/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-liquid" ]
+       ] ;
+       fhir:value [ fhir:v "input/liquid" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-qa" ]
+       ] ;
+       fhir:value [ fhir:v "temp/qa" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-temp" ]
+       ] ;
+       fhir:value [ fhir:v "temp/pages" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-output" ]
+       ] ;
+       fhir:value [ fhir:v "output" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/guide-parameter-code"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-tx-cache" ]
+       ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-suppressed-warnings" ]
+       ] ;
+       fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "path-history" ]
+       ] ;
+       fhir:value [ fhir:v "http://profiles.ihe.net/PHARM/supply/history.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-html" ]
+       ] ;
+       fhir:value [ fhir:v "template-page.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "template-md" ]
+       ] ;
+       fhir:value [ fhir:v "template-page-md.html" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-context" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-copyright" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-license" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "apply-wg" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "fmm-definition" ]
+       ] ;
+       fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "propagate-status" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "excludelogbinaryformat" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] [
+       fhir:code [
+         fhir:system [ fhir:v "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "tabbed-snapshots" ]
+       ] ;
+       fhir:value [ fhir:v "true" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

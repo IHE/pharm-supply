@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="sp-requested-item"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>RequestedItem</h2><p>Parameter <code>item</code>:<code>token</code></p><div><p>Search requests by product</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R5/supplyrequest.html">SupplyRequest</a></td></tr><tr><td>Expression</td><td><code>SupplyRequest.item</code></td></tr><tr><td>Processing Mode</td><td>Normal</td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr></table></div>
+  </text>
+  <url value="http://profiles.ihe.net/PHARM/supply/SearchParameter/sp-requested-item"/>
+  <version value="0.3.0"/>
+  <name value="RequestedItem"/>
+  <title value="Search Parameter - item requested"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2022-12-05"/>
+  <publisher value="IHE Pharmacy Technical Committee"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ihe.net/ihe_domains/pharmacy/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="IHE Pharmacy Technical Committee"/>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <description value="Search requests by product"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <purpose value="Search requests by Product"/>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <code value="item"/>
+  <base value="SupplyRequest"/>
+  <type value="token"/>
+  <expression value="SupplyRequest.item"/>
+  <processingMode value="normal"/>
+</SearchParameter>

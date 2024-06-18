@@ -1,0 +1,7 @@
+{
+  "version" : "0.3.0",
+  "fhirVersion" : ["5.0.0"],
+  "date" : "20240618210053",
+  "name" : "ihe.pharm.supply",
+  "jurisdiction" : "http://unstats.un.org/unsd/methods/m49/m49.htm#001"
+}

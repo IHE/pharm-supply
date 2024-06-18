@@ -1,0 +1,44 @@
+{
+  "resourceType" : "InventoryItem",
+  "id" : "i12341",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: InventoryItem </b><a name=\"i12341\"> </a><a name=\"hci12341\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">ResourceInventoryItem &quot;i12341&quot; </p></div><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/5.5.0/NamingSystem-gtin.html\" title=\"The GS1 GTIN is a globally unique identifier of trade items. A trade item is any item (product or service) upon which there is a need to retrieve pre-defined information and that may be priced, or ordered, or invoiced at any point in any supply chain. Note: GTINs may be used in both Codes (http://build.fhir.org/datatypes.html#Coding) and Identifiers (http://build.fhir.org/datatypes.html#Identifier).\">GTIN Global Trade Item Number</a>/012345678</p><p><b>status</b>: active</p><blockquote><p><b>name</b></p><p><b>nameType</b>: Preferred (Details: InventoryItem Name Type code preferred  = ' Preferred ', stated as ' null ')</p><p><b>language</b>: en</p><p><b>name</b>: Respirator Mask, N95/FFP2, Medium</p></blockquote><blockquote><p><b>name</b></p><p><b>nameType</b>: tradename (Details: InventoryItem Name Type code tradename  = ' tradename ', stated as ' null ')</p><p><b>language</b>: en</p><p><b>name</b>: ACME Co N95, size Medium</p></blockquote><h3>Associations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>AssociationType</b></td><td><b>RelatedItem</b></td><td><b>Quantity</b></td></tr><tr><td style=\"display: none\">*</td><td>parent <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#parent)</span></td><td><a href=\"InventoryItem-123.html\">InventoryItem/123</a></td><td>1/</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "https://www.gs1.org/gtin",
+    "value" : "012345678"
+  }],
+  "status" : "active",
+  "name" : [{
+    "nameType" : {
+      "system" : "http://hl7.org/fhir/inventoryitem-nametype",
+      "code" : "preferred"
+    },
+    "language" : "en",
+    "name" : "Respirator Mask, N95/FFP2, Medium"
+  },
+  {
+    "nameType" : {
+      "system" : "http://hl7.org/fhir/inventoryitem-nametype",
+      "code" : "tradename"
+    },
+    "language" : "en",
+    "name" : "ACME Co N95, size Medium"
+  }],
+  "association" : [{
+    "associationType" : {
+      "coding" : [{
+        "code" : "parent"
+      }]
+    },
+    "relatedItem" : {
+      "reference" : "InventoryItem/123"
+    },
+    "quantity" : {
+      "numerator" : {
+        "value" : 1
+      }
+    }
+  }]
+}

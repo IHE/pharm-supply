@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vs-ihe-pharm-product-association-type"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-cs-ihe-pharm-product-association-type.html"><code>http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type</code></a></li></ul></div>
+  </text>
+  <url value="http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type"/>
+  <version value="0.3.0"/>
+  <name value="ProductAssociationType"/>
+  <title value="Product association type Value Set"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <date value="2024-06-18T21:01:23+00:00"/>
+  <publisher value="IHE Pharmacy Technical Committee"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ihe.net/ihe_domains/pharmacy/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="IHE Pharmacy Technical Committee"/>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <description value="Product association type Value Set"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <compose>
+    <include>
+      <system value="http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"/>
+    </include>
+  </compose>
+</ValueSet>

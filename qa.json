@@ -1,0 +1,19 @@
+{
+  "url" : "http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply",
+  "name" : "IHE_PHARM_SUPPLY",
+  "title" : "Supply of Products for Healthcare (SUPPLY)",
+  "description" : "ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)",
+  "status" : "active",
+  "package-id" : "ihe.pharm.supply",
+  "ig-ver" : "0.3.0",
+  "date" : "Tue, 18 Jun, 2024 21:01:23 +0000",
+  "dateISO8601" : "2024-06-18T21:01:23+00:00",
+  "errs" : 14,
+  "warnings" : 21,
+  "hints" : 27,
+  "suppressed-hints" : 0,
+  "suppressed-warnings" : 0,
+  "version" : "5.0.0",
+  "tool" : "5.0.0 (3)",
+  "maxMemory" : 1461267416
+}

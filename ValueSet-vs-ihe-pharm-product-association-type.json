@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "vs-ihe-pharm-product-association-type",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <a href=\"CodeSystem-cs-ihe-pharm-product-association-type.html\"><code>http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type</code></a></li></ul></div>"
+  },
+  "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type",
+  "version" : "0.3.0",
+  "name" : "ProductAssociationType",
+  "title" : "Product association type Value Set",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2024-06-18T21:01:23+00:00",
+  "publisher" : "IHE Pharmacy Technical Committee",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ihe.net/ihe_domains/pharmacy/"
+    }]
+  },
+  {
+    "telecom" : [{
+      "system" : "email",
+      "value" : "pharmacy@ihe.net"
+    }]
+  },
+  {
+    "name" : "IHE Pharmacy Technical Committee",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "pharmacy@ihe.net"
+    }]
+  }],
+  "description" : "Product association type Value Set",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "copyright" : "IHE http://www.ihe.net/Governance/#Intellectual_Property",
+  "compose" : {
+    "include" : [{
+      "system" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"
+    }]
+  }
+}

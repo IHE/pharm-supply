@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="60ce476a-fb92-4178-95f6-d8e04173cc14"/>
+  <meta>
+    <lastUpdated value="2024-06-18T21:01:23.335+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-IHEDeliveryStageCS.html">codesystem Supply delivery stage code system v0.3.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 2 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---profiles.ihe.net-PHARM-supply-CodeSystem-DeliveryStageCS-shipment"> </a>  
+                  <a href="CodeSystem-IHEDeliveryStageCS.html#IHEDeliveryStageCS-shipment">shipment</a>
+                </td>
+                <td>http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS</td>
+                <td>Shipment</td>
+                <td>
+                  <div>
+                    <p>The event is the shipment of the item.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---profiles.ihe.net-PHARM-supply-CodeSystem-DeliveryStageCS-reception"> </a>  
+                  <a href="CodeSystem-IHEDeliveryStageCS.html#IHEDeliveryStageCS-reception">reception</a>
+                </td>
+                <td>http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS</td>
+                <td>Reception</td>
+                <td>
+                  <div>
+                    <p>The event is the reception of the item.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS"/>
+        <version value="0.3.0"/>
+        <name value="IHEDeliveryStageVS"/>
+        <title value="Supply delivery stage value set"/>
+        <status value="active"/>
+        <experimental value="true"/>
+        <date value="2024-06-18T21:01:23+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:d1801f26-c7a2-4465-bacd-d82052329520"/>
+          <timestamp value="2024-06-18T21:01:43+00:00"/>
+          <total value="2"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS|0.3.0"/>
+          </parameter>
+          <contains>
+            <system value="http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS"/>
+            <code value="shipment"/>
+            <display value="Shipment"/>
+          </contains>
+          <contains>
+            <system value="http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS"/>
+            <code value="reception"/>
+            <display value="Reception"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type"/>
+    <resource>
+      <ValueSet>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-cs-ihe-pharm-product-association-type.html">codesystem Product association type code system v0.3.0 (CodeSystem)</a>
+            </p>
+            <p>This value set contains 1 concepts</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---profiles.ihe.net-PHARM-supply-CodeSystem-cs-ihe-pharm-product-association-type-contains"> </a>  
+                  <a href="CodeSystem-cs-ihe-pharm-product-association-type.html#cs-ihe-pharm-product-association-type-contains">contains</a>
+                </td>
+                <td>http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type</td>
+                <td>contains</td>
+                <td>
+                  <div>
+                    <p>the product contains the related product</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type"/>
+        <version value="0.3.0"/>
+        <name value="ProductAssociationType"/>
+        <title value="Product association type Value Set"/>
+        <status value="draft"/>
+        <experimental value="true"/>
+        <date value="2024-06-18T21:01:23+00:00"/>
+        <jurisdiction>
+          <coding>
+            <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+            <code value="001"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:0751474a-074d-4387-baa0-abe80c565966"/>
+          <timestamp value="2024-06-18T21:01:43+00:00"/>
+          <total value="1"/>
+          <offset value="0"/>
+          <parameter>
+            <name value="count"/>
+            <valueInteger value="1000"/>
+          </parameter>
+          <parameter>
+            <name value="offset"/>
+            <valueInteger value="0"/>
+          </parameter>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="used-codesystem"/>
+            <valueUri value="http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type|0.3.0"/>
+          </parameter>
+          <contains>
+            <system value="http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"/>
+            <code value="contains"/>
+            <display value="contains"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

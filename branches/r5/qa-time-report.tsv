@@ -1,0 +1,22 @@
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/fsh-generated/resources/ImplementationGuide-ihe.pharm.supply.json	16927	-	0	0	0	0	0	0	12	268	0	0	0	0	0	0	0	3	0	0	126	248	0	0	0	3	0	1
+input/history/history.json	1210	17	0	0	0	0	0	0	0	147	0	0	0	0	0	0	0	0	0	5	10	26	0	0	0	0	0	0
+fsh-generated/resources/ValueSet-delivery-stage-vs.json	505	11	0	0	0	0	0	0	0	162	0	0	0	0	0	0	0	0	0	0	5	8781	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-InventoryStatusModel.json	8431	204	0	0	0	0	0	522	0	600	0	0	1	0	0	0	0	0	0	0	141	1946	0	0	0	3	0	0
+fsh-generated/resources/StructureDefinition-SupplyRequestStatusModel.json	6009	241	0	0	0	0	0	487	0	434	0	0	0	0	0	0	0	0	0	0	114	353	0	0	0	3	1	0
+fsh-generated/resources/StructureDefinition-ihe-inventory-usage.json	1279	28	1	0	0	0	0	634	0	583	0	0	0	0	0	0	0	1	0	0	128	669	0	0	0	3	0	1
+fsh-generated/resources/StructureDefinition-ihe-supply-receipt-notice.json	2329	69	0	0	0	0	0	551	0	568	0	0	0	0	0	0	0	0	0	0	152	698	0	0	0	4	0	0
+fsh-generated/resources/StructureDefinition-ihe-supply-shipment-notice.json	2357	71	0	0	0	0	0	508	0	519	0	0	1	0	0	0	0	1	0	0	149	526	0	0	0	4	0	1
+fsh-generated/resources/StructureDefinition-ReceiptNoticeModel.json	6083	255	0	0	0	0	0	462	0	433	0	0	0	0	0	0	0	0	0	0	109	293	0	0	0	3	0	0
+fsh-generated/resources/SearchParameter-sp-requested-item.json	707	17	0	0	0	0	0	0	0	5	0	0	0	0	0	0	0	0	0	0	6	13	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-ProductModel.json	7462	166	0	0	0	0	0	434	0	465	0	0	0	0	0	0	0	0	0	0	134	329	0	0	0	4	0	0
+fsh-generated/resources/StructureDefinition-ShipmentNoticeModel.json	5764	204	0	0	0	0	0	512	0	431	0	0	3	0	0	0	0	0	0	0	107	369	0	0	0	2	0	0
+fsh-generated/resources/CodeSystem-delivery-stage-cs.json	661	3	0	0	0	0	0	0	0	6	0	0	1	0	0	0	0	0	0	0	7	94	0	0	0	1	0	0
+fsh-generated/resources/CodeSystem-cs-ihe-pharm-product-association-type.json	589	2	0	0	0	0	0	0	0	4	0	0	0	0	0	0	0	0	0	0	6	73	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-InventoryUpdateModel.json	8612	211	0	0	0	0	0	618	0	656	0	0	0	0	0	0	0	1	0	0	138	476	0	0	0	3	0	1
+fsh-generated/resources/StructureDefinition-ihe-supply-request.json	1167	16	0	0	0	0	0	484	0	495	0	0	0	0	0	0	0	0	0	0	127	803	0	0	0	4	0	1
+fsh-generated/resources/StructureDefinition-SupplyRequestModel.json	6131	184	1	0	0	0	0	500	0	462	0	0	0	0	0	0	0	0	0	0	111	594	0	0	0	3	0	0
+fsh-generated/resources/StructureDefinition-ihe-ext-delivery-stage.json	1685	52	0	0	0	0	0	133	0	128	0	0	0	0	0	0	0	0	0	0	42	182	0	0	0	1	0	0
+fsh-generated/resources/ValueSet-vs-ihe-pharm-product-association-type.json	550	3	0	0	0	0	0	0	0	3	0	0	0	0	0	0	0	0	0	0	5	152	0	0	0	0	0	0
+fsh-generated/resources/StructureDefinition-ItemModel.json	19719	666	0	0	0	0	0	1607	0	1668	0	0	0	0	0	0	0	1	0	0	383	1055	0	0	0	10	0	3
+fsh-generated/resources/StructureDefinition-ihe-inventory-status.json	1272	17	0	0	0	0	0	523	0	516	0	0	0	0	0	0	0	0	0	0	164	410	0	0	0	3	0	0

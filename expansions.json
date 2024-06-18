@@ -1,0 +1,113 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "60ce476a-fb92-4178-95f6-d8e04173cc14",
+  "meta" : {
+    "lastUpdated" : "2024-06-18T21:01:23.335+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-IHEDeliveryStageCS.html\">codesystem Supply delivery stage code system v0.3.0 (CodeSystem)</a></p><p>This value set contains 2 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---profiles.ihe.net-PHARM-supply-CodeSystem-DeliveryStageCS-shipment\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IHEDeliveryStageCS.html#IHEDeliveryStageCS-shipment\">shipment</a></td><td>http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS</td><td>Shipment</td><td><div><p>The event is the shipment of the item.</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---profiles.ihe.net-PHARM-supply-CodeSystem-DeliveryStageCS-reception\"> </a>\u00a0\u00a0<a href=\"CodeSystem-IHEDeliveryStageCS.html#IHEDeliveryStageCS-reception\">reception</a></td><td>http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS</td><td>Reception</td><td><div><p>The event is the reception of the item.</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS",
+      "version" : "0.3.0",
+      "name" : "IHEDeliveryStageVS",
+      "title" : "Supply delivery stage value set",
+      "status" : "active",
+      "experimental" : true,
+      "date" : "2024-06-18T21:01:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:d1801f26-c7a2-4465-bacd-d82052329520",
+        "timestamp" : "2024-06-18T21:01:43+00:00",
+        "total" : 2,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS",
+          "code" : "shipment",
+          "display" : "Shipment"
+        },
+        {
+          "system" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS",
+          "code" : "reception",
+          "display" : "Reception"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-cs-ihe-pharm-product-association-type.html\">codesystem Product association type code system v0.3.0 (CodeSystem)</a></p><p>This value set contains 1 concepts</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---profiles.ihe.net-PHARM-supply-CodeSystem-cs-ihe-pharm-product-association-type-contains\"> </a>\u00a0\u00a0<a href=\"CodeSystem-cs-ihe-pharm-product-association-type.html#cs-ihe-pharm-product-association-type-contains\">contains</a></td><td>http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type</td><td>contains</td><td><div><p>the product contains the related product</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type",
+      "version" : "0.3.0",
+      "name" : "ProductAssociationType",
+      "title" : "Product association type Value Set",
+      "status" : "draft",
+      "experimental" : true,
+      "date" : "2024-06-18T21:01:23+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "001"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:0751474a-074d-4387-baa0-abe80c565966",
+        "timestamp" : "2024-06-18T21:01:43+00:00",
+        "total" : 1,
+        "offset" : 0,
+        "parameter" : [{
+          "name" : "count",
+          "valueInteger" : 1000
+        },
+        {
+          "name" : "offset",
+          "valueInteger" : 0
+        },
+        {
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "used-codesystem",
+          "valueUri" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type|0.3.0"
+        }],
+        "contains" : [{
+          "system" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type",
+          "code" : "contains",
+          "display" : "contains"
+        }]
+      }
+    }
+  }]
+}

@@ -1,0 +1,143 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/inventoryreport-counttype",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "InventoryCountType",
+      "title" : "Inventory Count Type",
+      "description" : "The type of count.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1926"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-inventoryreport-counttype.html" : "Inventory Count Type"
+    },
+    {
+      "url" : "http://hl7.org/fhir/inventoryreport-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "InventoryReportStatus",
+      "title" : "Inventory Report Status",
+      "description" : "The status of the InventoryReport.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1927"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-inventoryreport-status.html" : "Inventory Report Status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/request-priority",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "oids" : ["2.16.840.1.113883.4.642.4.116"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-request-priority.html" : "RequestPriority"
+    },
+    {
+      "url" : "http://hl7.org/fhir/supplydelivery-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "SupplyDeliveryStatus",
+      "title" : "Supply Delivery Status",
+      "description" : "Status of the supply delivery.",
+      "oids" : [
+        "2.16.840.1.113883.4.642.1.687",
+        "2.16.840.1.113883.4.642.2.355",
+        "2.16.840.1.113883.4.642.4.701"
+      ],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-supplydelivery-status.html" : "Supply Delivery Status"
+    },
+    {
+      "url" : "http://hl7.org/fhir/supplydelivery-supplyitemtype",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "SupplyDeliverySupplyItemType",
+      "title" : "Supply Delivery Supply Item Type",
+      "description" : "Status of the supply delivery.",
+      "oids" : ["2.16.840.1.113883.4.642.4.1905"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-supplydelivery-supplyitemtype.html" : "Supply Delivery Supply Item Type"
+    },
+    {
+      "url" : "http://hl7.org/fhir/supplyrequest-status",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "SupplyRequestStatus",
+      "title" : "Supply Request Status",
+      "description" : "Status of the supply request.",
+      "oids" : [
+        "2.16.840.1.113883.4.642.4.696",
+        "2.16.840.1.113883.4.642.2.354",
+        "2.16.840.1.113883.4.642.1.682"
+      ],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-supplyrequest-status.html" : "Supply Request Status"
+    },
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "IHEDeliveryStageCS",
+      "title" : "Supply delivery stage code system",
+      "description" : "Supply delivery code system.",
+      "uses" : {
+      },
+      "ValueSet-IHEDeliveryStageVS.html" : "Supply delivery stage value set"
+    },
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "CSProductAssociationType",
+      "title" : "Product association type code system",
+      "description" : "product association type code system.",
+      "uses" : {
+      },
+      "ValueSet-vs-ihe-pharm-product-association-type.html" : "Product association type Value Set"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/supply-kind",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "SupplyType",
+      "title" : "Supply Type",
+      "description" : "This value sets refers to a Category of supply.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1192"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-supplyrequest-kind.html" : "Supply Type"
+    },
+    {
+      "url" : "http://terminology.hl7.org/CodeSystem/supplyrequest-reason",
+      "version" : "1.0.0",
+      "status" : "draft",
+      "name" : "SupplyRequestReason",
+      "title" : "SupplyRequestReason",
+      "description" : "The reason why the supply item was requested.",
+      "oids" : ["2.16.840.1.113883.4.642.1.1193"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-supplyrequest-reason.html" : "Supply Request Reason"
+    },
+    {
+      "url" : "urn:ietf:bcp:47",
+      "version" : "2.0.1",
+      "status" : "active",
+      "name" : "Ietf3066",
+      "title" : "Tags for the Identification of Languages",
+      "description" : "Older value from OID registry.  Superceded; see recommendations in BCP-47.",
+      "oids" : ["2.16.840.1.113883.6.121"],
+      "uses" : {
+      },
+      "http://hl7.org/fhir/R5/valueset-all-languages.html" : "All Languages",
+      "http://hl7.org/fhir/R5/valueset-languages.html" : "Common Languages"
+    }
+  ]
+}

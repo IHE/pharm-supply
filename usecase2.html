@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory - Supply of Products for Healthcare (SUPPLY) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/ihe.css" rel="stylesheet"/>
+<link href="assets/css/nonum.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async> </script> 
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.3.2"}
+    h3,h4,h5,h6{--heading-prefix:"2.3.2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="ihe-logo" no-external="true" href="http://profiles.ihe.net">
+    <img height="71" alt="Visit the IHE website" src="assets/images/ihe-international.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo.png"/> </a>
+</div>
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+-->
+<div id="project-nav">
+  
+  
+    <a id="project-logo" no-external="true" href="http://profiles.ihe.net/PHARM/index.html"><img height="70" alt="Visit the PHARM website" src="assets/images/PHARM.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Supply of Products for Healthcare (SUPPLY)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">SUPPLY Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a style="text-align: baseline" href="introduction.html">Introduction</a></li>
+			<li><a style="text-align: baseline" href="usecases.html">Use Cases</a></li>
+			<li><a style="text-align: baseline" href="overview.html">Overview</a></li>
+			<li><a style="text-align: baseline" href="actors_and_transactions.html">Actors and Transactions overview</a></li>
+			<li><a style="text-align: baseline" href="actor_options.html">Actor Options</a></li>
+			<li><a style="text-align: baseline" href="actor_required_grouping.html">Actor Required Grouping</a></li>
+			<li><a style="text-align: baseline" href="security_considerations.html">Security Considerations</a></li>
+			<li><a style="text-align: baseline" href="cross_profile_considerations.html">Cross Profile Considerations</a></li>
+		</ul>
+	</li>
+
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li><a style="text-align: baseline" href="actors_and_transactions.html">Actors Definitions</a></li> -->
+			<li><a style="text-align: baseline" href="transactions.html">Transaction Definitions</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S1.html">Supply Request</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S2.html">Supply Request Status</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S3.html">Shipment Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S4.html">Delivery/Receipt Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S5.html">Inventory Report</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S6.html">Inventory Update</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S7.html">Inventory Query</a></li>
+
+		</ul>
+	</li>
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a style="text-align: baseline" href="#">Test Data<img src="external.png"/></a></li>
+			<li><a target="_blank" href="#">OpenAPI</a></li>
+			<li><a style="text-align: baseline" href="#">Testing (Gazelle)<img src="external.png"/></a></li>
+			<li><a href="#">Downloads</a></li>
+			<li><a href="#">FHIR Specification</a></li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='volume1.html'><b>Volume 1: Use cases</b></a></li><li><a href='usecases.html'><b>Use Case overview</b></a></li><li><b>Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory</b></li>
+
+          <span style="float:right;">
+
+            <a href="usecase1.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="usecase3.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Supply of Products for Healthcare (SUPPLY), published by IHE Pharmacy Technical Committee. This guide is not an authorized publication; it is the continuous build for version 0.3.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/IHE/pharm-supply">https://github.com/IHE/pharm-supply</a> and changes regularly. See the <a href="http://profiles.ihe.net/PHARM/supply/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#preconditions" id="markdown-toc-preconditions">Preconditions</a></li>
+  <li><a href="#internal-resupply---request-and-transfer" id="markdown-toc-internal-resupply---request-and-transfer">Internal Resupply - Request and Transfer</a></li>
+  <li><a href="#resupply-request" id="markdown-toc-resupply-request">Resupply Request</a></li>
+  <li><a href="#supplier-order-processing" id="markdown-toc-supplier-order-processing">Supplier Order Processing</a></li>
+  <li><a href="#item-reception" id="markdown-toc-item-reception">Item Reception</a></li>
+  <li><a href="#sequence-diagram" id="markdown-toc-sequence-diagram">Sequence Diagram</a></li>
+</ul>
+
+</div>
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+</style>
+
+<div style="  border: 1px solid; padding: 5px; margin: 5px;">
+<i>This simple use case articulates with the previous to describe the
+resupply of medication from the vendor to the ward.</i>
+<br />
+<i>It describes the situation of supplier-managed inventory: the
+consumption of items is registered in a system that is not responsible
+for maintaining its own stock: it reports to the supplier (Pharmacy)
+each consumption, and the supplier uses this information to keep track
+of the inventory, and decide to order any resupplies to the ward.</i>
+</div>
+
+<h3 id="preconditions">Preconditions</h3>
+
+<p>In the beginning of the year, the hospital made a contract with a
+supplier for BUSCOPAN IBS RELIEF, where the conditions (e.g., prices and quantities) are defined for the whole year.</p>
+
+<p>As described in Section 7.1., for inventory of the ward, only the full
+boxes are taken into account. In this use case, a box that contains 19
+tablets instead of 20 is considered “in use” and just for this use case,
+it is already considered “consumed” even if there are still 19 tablets.
+This is the case when a box of tablets is “reserved” for a patient whom
+this product had been prescribed.</p>
+
+<h3 id="internal-resupply---request-and-transfer">Internal Resupply - Request and Transfer</h3>
+
+<p>When the nurse confirms the usage of the medication and the Nursing
+system issues a Dispense report, the Pharmacy becomes aware that one
+unit has been consumed and that the stock of BUSCOPAN IBS RELIEF at the
+ward is reduced: While before there were 5 full boxes, there are now 4
+full boxes plus one box with 19 tablets left.</p>
+
+<p>The WMS at the pharmacy detects that the stock of BUSCOPAN IBS RELIEF at
+the ward is now below the reorder level<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, and proposes to the
+responsible pharmacist to refill the ward stock from the pharmacy stock,
+with the default order quantity (10 boxes) (note that there are cases
+where the ward pharmacy disposes of a stock management system, which
+sends a request to the central pharmacy when stock level requires).</p>
+
+<p>After approval of the pharmacist, the 10 boxes are transported to the
+ward.</p>
+
+<p>When the items arrive at the ward, the responsible for the reception
+scans the barcodes of the medication boxes. By scanning the 10 barcodes,
+it is confirmed to the WMS that the ward stock is now accrued by 10
+boxes of BUSCOPAN IBS RELIEF; this accrual includes the lot and expiry
+information about the products that have been received.</p>
+
+<p>The WMS system at the pharmacy considers that transfer of inventory, by
+reassigning those 10 units from the central pharmacy to ward G1. As a
+consequence, the inventory levels are as follows:</p>
+
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Pharmacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>5012917021912</strong></td>
+      <td rowspan="2">BUSCOPAN IBS RELIEF <br /> bx 20 tablets</td>
+      <td>ABC0001</td>
+      <td>12-2016</td>
+      <td style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>18</strong> (was:28)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>14</strong></td>
+      <td>20</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Ward G1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>5012917021912</strong></td>
+      <td rowspan="2">BUSCOPAN IBS RELIEF <br /> bx 20 tablets</td>
+      <td>ABC0001</td>
+      <td>12-2016</td>
+      <td style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>14</strong> (was:4)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>14</strong></td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="resupply-request">Resupply Request</h3>
+
+<p>With this transfer, the stock at the pharmacy is now below the reorder
+level. Due to this, the WMS proposes to the pharmacist a reorder from
+the supplier, with the default order quantities (50 boxes). The
+pharmacist approves the order.</p>
+
+<p>This resupply request is sent to the hospital’s purchasing department
+through the ERP system. The ERP system also determines the preferred
+vendor (wholesaler). The ERP user issues an order for 50 boxes of item
+BUSCOPAN IBS RELIEF, code 5012917021912 to refill the hospital stock.
+This order has an internal ID MD00015 in the ERP. Given the existence of
+a contract, the resupply order does not need any specific approval
+workflows: Once it is validated in the ERP, the order is sent to the
+vendor. Only a notification is also sent for the financial management
+system, to prepare the billing processor to receive an invoice.</p>
+
+<h3 id="supplier-order-processing">Supplier Order Processing</h3>
+
+<p>The supplier receives the order, checks product availability and informs
+the hospital that the order has been accepted. When shipping the 50
+items to the hospital pharmacy, an electronic dispatch advice is issued,
+which includes all traceability information (item identification,
+lot/batch number, expiry date) as well the identification of the
+shipment. The information about the shipment is as follows:</p>
+
+<table class="table-bordered table-striped">
+  <thead>
+    <tr>
+      <th colspan="3">Shipment ID: 773500538500000018</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">Item</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Customer Order Number:</td>
+      <td>MD00015</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">GTIN:</td>
+      <td>5012917021912</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">National Code:</td>
+      <td>xyz123</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Name:</td>
+      <td>BUSCOPAN IBS RELIEF</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Lot number:</td>
+      <td>XYZ0009</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Expiry date:</td>
+      <td>03-2017</td>
+    </tr>
+    <tr>
+      <td style="text-align:right;">Quantity:</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="item-reception">Item Reception</h3>
+
+<p>Upon the arrival of the items to the hospital pharmacy, the
+identification of the shipment is scanned and linked to the electronic
+dispatch advice. Since the shipment notice has been received, the
+shipment ID can be matched with the received items and with the order
+for BUSCOPAN IBS RELIEF.</p>
+
+<p>Upon scanning the shipment ID, the WMS system looks up the content of
+the shipment notice and since there is a match, the ERP gets updated
+with the received items, including their traceability data (Lot number
+and expiry date).</p>
+
+<blockquote>
+  <p><strong>Note</strong>: In some cases, it may be decided to scan each trade item
+received. This can be advised in some cases. Some examples:</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>When some items are suspected to be damaged, then only the ones that
+ are in proper condition are acknowledged as received. (see Use Case
+ 6 Cold-stored medication, resupply and return for return of products
+ to supplier)</p>
+  </li>
+  <li>
+    <p>When the shipment identifier cannot be read or matched.</p>
+  </li>
+  <li>
+    <p>When any directive from each partner advises the scan - e.g., for
+ expensive or controlled items</p>
+  </li>
+</ul>
+
+<p>In short, the scanning of each item may be advised when, for any reason,
+it is considered that the received items may not match the inventory
+description</p>
+
+<p>As the received items match the order issued by the pharmacy, the
+pharmacy inventory is updated from the shipment notice - the items
+described in the shipment notice are added to the stock. Use Case 6
+Cold-stored medication, resupply and return describes a case of arrival
+of items that do not precisely match one order.</p>
+
+<p>The items are then placed on the shelf in the Pharmacy, and the
+Warehouse Management System gets updated for the new inventory items in
+the reception area.</p>
+
+<p>The detailed inventory status at the pharmacy is finally as follows:</p>
+
+<table class="table-bordered table-usecase">
+  <thead>
+    <tr>
+      <th colspan="7">Pharmacy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item Code</td>
+      <td>Item name</td>
+      <td>Lot</td>
+      <td>Expiry Date</td>
+      <td>Available qty</td>
+      <td>Reorder level</td>
+      <td>Default order qty</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+    <tr>
+      <td rowspan="3"><strong>5012917021912</strong></td>
+      <td rowspan="3">BUSCOPAN IBS RELIEF <br /> bx 20 tablets</td>
+      <td>ABC0001</td>
+      <td>12-2016</td>
+      <td>18</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td class="cell-shaded"><strong>XYZ0009</strong></td>
+      <td class="cell-shaded"><strong>03-2017</strong></td>
+      <td class="cell-shaded" style="border-bottom-width: 3px;
+    border-bottom-color: #cccccc;"><strong>50</strong></td>
+      <td class="cell-shaded">&nbsp;</td>
+      <td class="cell-shaded">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:right;"><strong>Total:</strong></td>
+      <td><strong>68</strong></td>
+      <td>20</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td colspan="7"><strong>. . .</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sequence-diagram">Sequence Diagram</h3>
+
+<figure>
+    <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1232px" preserveAspectRatio="none" style="width:792px;height:1232px;background:#FFFFFF;" version="1.1" viewBox="0 0 792 1232" width="792px" zoomAndPan="magnify"><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="456" x="169.5" y="27.9951">Ward Supply Management - Pharmacy-managed inventory</text><rect fill="#FFFFFF" height="44.1328" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="59.5" y="839.25" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="59.5" y1="839.25" y2="883.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="69.5" y1="839.25" y2="883.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="69.5" y1="839.25" y2="839.25" /><rect fill="#FFFFFF" height="158.6641" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="59.5" y="911.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="59.5" y1="911.3828" y2="1070.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="69.5" y1="911.3828" y2="1070.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="69.5" y1="1070.0469" y2="1070.0469" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="197.5" y="316.3906" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="197.5" y="780.9844" /><rect fill="#FFFFFF" height="229.0625" style="stroke:#181818;stroke-width:1.0;" width="10" x="388.5" y="224.9922" /><rect fill="#FFFFFF" height="87.1328" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="578.4531" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="578.4531" y2="665.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="578.4531" y2="665.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="578.4531" y2="578.4531" /><rect fill="#FFFFFF" height="174.7969" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="693.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="693.5859" y2="868.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="693.5859" y2="868.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="868.3828" y2="868.3828" /><rect fill="#FFFFFF" height="44.1328" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="1040.9141" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="1040.9141" y2="1085.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="1040.9141" y2="1085.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="1040.9141" y2="1040.9141" /><rect fill="#FFFFFF" height="80.3984" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="1113.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="1113.0469" y2="1193.4453" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="1113.0469" y2="1193.4453" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="1193.4453" y2="1193.4453" /><rect fill="#FFFFFF" height="79.3984" style="stroke:#181818;stroke-width:1.0;" width="10" x="612.5" y="374.6563" /><rect fill="#FFFFFF" height="59.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="612.5" y="549.3203" /><rect fill="none" height="305.4609" style="stroke:#000000;stroke-width:1.5;" width="532" x="151.5" y="163.5938" /><rect fill="none" height="147.5313" style="stroke:#000000;stroke-width:1.5;" width="470.5" x="315.5" y="511.0547" /><rect fill="none" height="175.7969" style="stroke:#000000;stroke-width:1.5;" width="566.5" x="10" y="700.5859" /><rect fill="none" height="159.6641" style="stroke:#000000;stroke-width:1.5;" width="461.5" x="10" y="918.3828" /><rect fill="none" height="88.3984" style="stroke:#000000;stroke-width:1.5;" width="461" x="151.5" y="1120.0469" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="121.5938" y2="476.0547" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="64" x2="64" y1="476.0547" y2="504.0547" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="504.0547" y2="665.5859" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="64" x2="64" y1="665.5859" y2="693.5859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="693.5859" y2="883.3828" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="64" x2="64" y1="883.3828" y2="911.3828" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="911.3828" y2="1085.0469" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="64" x2="64" y1="1085.0469" y2="1113.0469" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="1113.0469" y2="1225.4453" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="202.5" x2="202.5" y1="121.5938" y2="476.0547" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="202.5" x2="202.5" y1="476.0547" y2="504.0547" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="202.5" x2="202.5" y1="504.0547" y2="665.5859" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="202.5" x2="202.5" y1="665.5859" y2="693.5859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="202.5" x2="202.5" y1="693.5859" y2="883.3828" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="202.5" x2="202.5" y1="883.3828" y2="911.3828" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="202.5" x2="202.5" y1="911.3828" y2="1085.0469" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="202.5" x2="202.5" y1="1085.0469" y2="1113.0469" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="202.5" x2="202.5" y1="1113.0469" y2="1225.4453" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="393.5" x2="393.5" y1="121.5938" y2="476.0547" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="393.5" x2="393.5" y1="476.0547" y2="504.0547" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="393.5" x2="393.5" y1="504.0547" y2="665.5859" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="393.5" x2="393.5" y1="665.5859" y2="693.5859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="393.5" x2="393.5" y1="693.5859" y2="883.3828" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="393.5" x2="393.5" y1="883.3828" y2="911.3828" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="393.5" x2="393.5" y1="911.3828" y2="1085.0469" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="393.5" x2="393.5" y1="1085.0469" y2="1113.0469" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="393.5" x2="393.5" y1="1113.0469" y2="1225.4453" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="617.5" x2="617.5" y1="121.5938" y2="476.0547" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="617.5" x2="617.5" y1="476.0547" y2="504.0547" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="617.5" x2="617.5" y1="504.0547" y2="665.5859" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="617.5" x2="617.5" y1="665.5859" y2="693.5859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="617.5" x2="617.5" y1="693.5859" y2="883.3828" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="617.5" x2="617.5" y1="883.3828" y2="911.3828" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="617.5" x2="617.5" y1="911.3828" y2="1085.0469" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="617.5" x2="617.5" y1="1085.0469" y2="1113.0469" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="617.5" x2="617.5" y1="1113.0469" y2="1225.4453" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="747" x2="747" y1="121.5938" y2="476.0547" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="747" x2="747" y1="476.0547" y2="504.0547" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="747" x2="747" y1="504.0547" y2="665.5859" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="747" x2="747" y1="665.5859" y2="693.5859" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="747" x2="747" y1="693.5859" y2="883.3828" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="747" x2="747" y1="883.3828" y2="911.3828" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="747" x2="747" y1="911.3828" y2="1085.0469" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="747" x2="747" y1="1085.0469" y2="1113.0469" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="747" x2="747" y1="1113.0469" y2="1225.4453" /><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="20" y="74" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="27" y="93.9951">Medication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="39.5" y="110.292">Vendor</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="161.5" y="118.292">Pharmacist</text><ellipse cx="202.5" cy="59.7969" fill="#E2E2F0" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;" /><path d="M202.5,79.7969 C206.5,79.7969 209.5,79.7969 213.5,75.7969 C221.5,75.7969 229.5,83.7969 229.5,91.7969 L229.5,95.7969 C229.5,99.7969 225.5,103.7969 221.5,103.7969 L183.5,103.7969 C179.5,103.7969 175.5,99.7969 175.5,95.7969 L175.5,91.7969 C175.5,83.7969 183.5,75.7969 191.5,75.7969 C195.5,79.7969 198.5,79.7969 202.5,79.7969 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="325.5" y="74" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="332.5" y="93.9951">Pharmacy System</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="375" y="110.292">/ ERP</text><rect fill="#E2E2F0" height="62.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="561.5" y="57.7031" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="580" y="77.6982">Medication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="568.5" y="93.9951">Administration</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="592" y="110.292">System</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="724" y="118.292">Nurse</text><ellipse cx="747.5" cy="59.7969" fill="#E2E2F0" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;" /><path d="M747.5,79.7969 C751.5,79.7969 754.5,79.7969 758.5,75.7969 C766.5,75.7969 774.5,83.7969 774.5,91.7969 L774.5,95.7969 C774.5,99.7969 770.5,103.7969 766.5,103.7969 L728.5,103.7969 C724.5,103.7969 720.5,99.7969 720.5,95.7969 L720.5,91.7969 C720.5,83.7969 728.5,75.7969 736.5,75.7969 C740.5,79.7969 743.5,79.7969 747.5,79.7969 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><rect fill="#FFFFFF" height="44.1328" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="59.5" y="839.25" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="59.5" y1="839.25" y2="883.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="69.5" y1="839.25" y2="883.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="69.5" y1="839.25" y2="839.25" /><rect fill="#FFFFFF" height="158.6641" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="59.5" y="911.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="59.5" y1="911.3828" y2="1070.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="69.5" y1="911.3828" y2="1070.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="59.5" x2="69.5" y1="1070.0469" y2="1070.0469" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="197.5" y="316.3906" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="197.5" y="780.9844" /><rect fill="#FFFFFF" height="229.0625" style="stroke:#181818;stroke-width:1.0;" width="10" x="388.5" y="224.9922" /><rect fill="#FFFFFF" height="87.1328" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="578.4531" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="578.4531" y2="665.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="578.4531" y2="665.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="578.4531" y2="578.4531" /><rect fill="#FFFFFF" height="174.7969" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="693.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="693.5859" y2="868.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="693.5859" y2="868.3828" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="868.3828" y2="868.3828" /><rect fill="#FFFFFF" height="44.1328" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="1040.9141" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="1040.9141" y2="1085.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="1040.9141" y2="1085.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="1040.9141" y2="1040.9141" /><rect fill="#FFFFFF" height="80.3984" style="stroke:#FFFFFF;stroke-width:1.0;" width="10" x="388.5" y="1113.0469" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="388.5" y1="1113.0469" y2="1193.4453" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="398.5" y1="1113.0469" y2="1193.4453" /><line style="stroke:#181818;stroke-width:1.0;" x1="388.5" x2="398.5" y1="1193.4453" y2="1193.4453" /><rect fill="#FFFFFF" height="79.3984" style="stroke:#181818;stroke-width:1.0;" width="10" x="612.5" y="374.6563" /><rect fill="#FFFFFF" height="59.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="612.5" y="549.3203" /><path d="M151.5,163.5938 L328.5,163.5938 L328.5,170.7266 L318.5,180.7266 L151.5,180.7266 L151.5,163.5938 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="305.4609" style="stroke:#000000;stroke-width:1.5;" width="532" x="151.5" y="163.5938" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="132" x="166.5" y="176.6606">Resupply of Ward</text><line style="stroke:#181818;stroke-width:1.0;" x1="393.5" x2="440.5" y1="211.9922" y2="211.9922" /><line style="stroke:#181818;stroke-width:1.0;" x1="440.5" x2="440.5" y1="211.9922" y2="224.9922" /><line style="stroke:#181818;stroke-width:1.0;" x1="399.5" x2="440.5" y1="224.9922" y2="224.9922" /><polygon fill="#181818" points="409.5,220.9922,399.5,224.9922,409.5,228.9922,405.5,224.9922" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111" x="405.5" y="191.7935">Recalculate stock</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="140" x="405.5" y="206.9263">subtract consumption</text><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="440.5" y1="259.125" y2="259.125" /><line style="stroke:#181818;stroke-width:1.0;" x1="440.5" x2="440.5" y1="259.125" y2="272.125" /><line style="stroke:#181818;stroke-width:1.0;" x1="399.5" x2="440.5" y1="272.125" y2="272.125" /><polygon fill="#181818" points="409.5,268.125,399.5,272.125,409.5,276.125,405.5,272.125" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="405.5" y="254.0591">Prepare suggested order</text><polygon fill="#181818" points="218.5,312.3906,208.5,316.3906,218.5,320.3906,214.5,316.3906" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="212.5" x2="387.5" y1="316.3906" y2="316.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="224.5" y="296.1919">Propose resupply</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="224.5" y="311.3247">of ward (10 boxes)</text><polygon fill="#181818" points="376.5,341.5234,386.5,345.5234,376.5,349.5234,380.5,345.5234" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="202.5" x2="382.5" y1="345.5234" y2="345.5234" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111" x="209.5" y="340.4575">Approve resupply</text><polygon fill="#181818" points="600.5,370.6563,610.5,374.6563,600.5,378.6563,604.5,374.6563" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="606.5" y1="374.6563" y2="374.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="405.5" y="369.5903">Inform ward of resupply</text><polygon fill="#181818" points="600.5,399.7891,610.5,403.7891,600.5,407.7891,604.5,403.7891" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="398.5" x2="606.5" y1="403.7891" y2="403.7891" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="405.5" y="398.7231">Send medication to ward</text><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="440.5" y1="453.0547" y2="453.0547" /><line style="stroke:#181818;stroke-width:1.0;" x1="440.5" x2="440.5" y1="453.0547" y2="466.0547" /><line style="stroke:#181818;stroke-width:1.0;" x1="393.5" x2="440.5" y1="466.0547" y2="466.0547" /><polygon fill="#181818" points="403.5,462.0547,393.5,466.0547,403.5,470.0547,399.5,466.0547" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="117" x="405.5" y="432.856">Subtract 10 boxes</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="136" x="405.5" y="447.9888">from pharmacy stock</text><path d="M315.5,511.0547 L498.5,511.0547 L498.5,518.1875 L488.5,528.1875 L315.5,528.1875 L315.5,511.0547 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="147.5313" style="stroke:#000000;stroke-width:1.5;" width="470.5" x="315.5" y="511.0547" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="138" x="330.5" y="524.1216">Reception at Ward</text><polygon fill="#181818" points="633.5,545.3203,623.5,549.3203,633.5,553.3203,629.5,549.3203" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="627.5" x2="746.5" y1="549.3203" y2="549.3203" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="639.5" y="544.2544">Confer reception</text><polygon fill="#181818" points="409.5,574.4531,399.5,578.4531,409.5,582.4531,405.5,578.4531" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="403.5" x2="611.5" y1="578.4531" y2="578.4531" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="415.5" y="573.3872">Inform ERP of reception</text><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="440.5" y1="637.5859" y2="637.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="440.5" x2="440.5" y1="637.5859" y2="650.5859" /><line style="stroke:#181818;stroke-width:1.0;" x1="399.5" x2="440.5" y1="650.5859" y2="650.5859" /><polygon fill="#181818" points="409.5,646.5859,399.5,650.5859,409.5,654.5859,405.5,650.5859" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="405.5" y="632.52">Update Ward Stock information</text><path d="M10,700.5859 L221,700.5859 L221,707.7188 L211,717.7188 L10,717.7188 L10,700.5859 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="175.7969" style="stroke:#000000;stroke-width:1.5;" width="566.5" x="10" y="700.5859" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="166" x="25" y="713.6528">Resupply of Pharmacy</text><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="440.5" y1="738.8516" y2="738.8516" /><line style="stroke:#181818;stroke-width:1.0;" x1="440.5" x2="440.5" y1="738.8516" y2="751.8516" /><line style="stroke:#181818;stroke-width:1.0;" x1="399.5" x2="440.5" y1="751.8516" y2="751.8516" /><polygon fill="#181818" points="409.5,747.8516,399.5,751.8516,409.5,755.8516,405.5,751.8516" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="405.5" y="733.7856">Prepare suggested order</text><polygon fill="#181818" points="218.5,776.9844,208.5,780.9844,218.5,784.9844,214.5,780.9844" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="212.5" x2="387.5" y1="780.9844" y2="780.9844" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162" x="224.5" y="775.9185">Propose order (50 boxes)</text><polygon fill="#181818" points="376.5,806.1172,386.5,810.1172,376.5,814.1172,380.5,810.1172" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="202.5" x2="382.5" y1="810.1172" y2="810.1172" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="91" x="209.5" y="805.0513">Approve order</text><polygon fill="#181818" points="80.5,835.25,70.5,839.25,80.5,843.25,76.5,839.25" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="74.5" x2="387.5" y1="839.25" y2="839.25" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="71" x="86.5" y="834.1841">Send order</text><polygon fill="#181818" points="381.5,864.3828,391.5,868.3828,381.5,872.3828,385.5,868.3828" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="387.5" y1="868.3828" y2="868.3828" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="152" x="76.5" y="863.3169">Confirm order reception</text><path d="M10,918.3828 L247,918.3828 L247,925.5156 L237,935.5156 L10,935.5156 L10,918.3828 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="159.6641" style="stroke:#000000;stroke-width:1.5;" width="461.5" x="10" y="918.3828" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="192" x="25" y="931.4497">Supplier order processing</text><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="111.5" y1="956.6484" y2="956.6484" /><line style="stroke:#181818;stroke-width:1.0;" x1="111.5" x2="111.5" y1="956.6484" y2="969.6484" /><line style="stroke:#181818;stroke-width:1.0;" x1="70.5" x2="111.5" y1="969.6484" y2="969.6484" /><polygon fill="#181818" points="80.5,965.6484,70.5,969.6484,80.5,973.6484,76.5,969.6484" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="76.5" y="951.5825">Check order</text><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="111.5" y1="998.7813" y2="998.7813" /><line style="stroke:#181818;stroke-width:1.0;" x1="111.5" x2="111.5" y1="998.7813" y2="1011.7813" /><line style="stroke:#181818;stroke-width:1.0;" x1="70.5" x2="111.5" y1="1011.7813" y2="1011.7813" /><polygon fill="#181818" points="80.5,1007.7813,70.5,1011.7813,80.5,1015.7813,76.5,1011.7813" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="76.5" y="993.7153">Prepare shipment</text><polygon fill="#181818" points="376.5,1036.9141,386.5,1040.9141,376.5,1044.9141,380.5,1040.9141" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="382.5" y1="1040.9141" y2="1040.9141" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="76.5" y="1035.8481">Send Shipment notice</text><polygon fill="#181818" points="376.5,1066.0469,386.5,1070.0469,376.5,1074.0469,380.5,1070.0469" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64.5" x2="382.5" y1="1070.0469" y2="1070.0469" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="71.5" y="1064.981">Send Medication</text><path d="M151.5,1120.0469 L368.5,1120.0469 L368.5,1127.1797 L358.5,1137.1797 L151.5,1137.1797 L151.5,1120.0469 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="88.3984" style="stroke:#000000;stroke-width:1.5;" width="461" x="151.5" y="1120.0469" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="172" x="166.5" y="1133.1138">Reception at Pharmacy</text><polygon fill="#181818" points="376.5,1154.3125,386.5,1158.3125,376.5,1162.3125,380.5,1158.3125" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="202.5" x2="382.5" y1="1158.3125" y2="1158.3125" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="209.5" y="1153.2466">Confer reception</text><line style="stroke:#181818;stroke-width:1.0;" x1="398.5" x2="440.5" y1="1192.4453" y2="1192.4453" /><line style="stroke:#181818;stroke-width:1.0;" x1="440.5" x2="440.5" y1="1192.4453" y2="1205.4453" /><line style="stroke:#181818;stroke-width:1.0;" x1="393.5" x2="440.5" y1="1205.4453" y2="1205.4453" /><polygon fill="#181818" points="403.5,1201.4453,393.5,1205.4453,403.5,1209.4453,399.5,1205.4453" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="405.5" y="1187.3794">Update Pharmacy Stock levels</text></g></svg>
+    <!-- <figcaption>Use Case 1</figcaption> -->
+  </figure>
+
+<figure>
+    <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="598px" preserveAspectRatio="none" style="width:670px;height:598px;background:#FFFFFF;" version="1.1" viewBox="0 0 670 598" width="670px" zoomAndPan="magnify"><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="456" x="106.25" y="27.9951">Ward Supply Management - Pharmacy-managed inventory</text><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="317.5" y="317.2578" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="317.5" y="406.6563" /><rect fill="#FFFFFF" height="35.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="317.5" y="524.0547" /><rect fill="none" height="101.3984" style="stroke:#000000;stroke-width:1.5;" width="242" x="10" y="163.5938" /><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:1.5;" width="390.5" x="10" y="278.9922" /><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:1.5;" width="390.5" x="10" y="368.3906" /><rect fill="none" height="88.3984" style="stroke:#000000;stroke-width:1.5;" width="400" x="141.5" y="485.7891" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="121.5938" y2="450.7891" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="64" x2="64" y1="450.7891" y2="478.7891" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="64" x2="64" y1="478.7891" y2="591.1875" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="192.5" x2="192.5" y1="121.5938" y2="450.7891" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="192.5" x2="192.5" y1="450.7891" y2="478.7891" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="192.5" x2="192.5" y1="478.7891" y2="591.1875" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="322.5" x2="322.5" y1="121.5938" y2="450.7891" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="322.5" x2="322.5" y1="450.7891" y2="478.7891" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="322.5" x2="322.5" y1="478.7891" y2="591.1875" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="541.5" x2="541.5" y1="121.5938" y2="450.7891" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="541.5" x2="541.5" y1="450.7891" y2="478.7891" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="541.5" x2="541.5" y1="478.7891" y2="591.1875" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="635.5" x2="635.5" y1="121.5938" y2="450.7891" /><line style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:1.0,4.0;" x1="635.5" x2="635.5" y1="450.7891" y2="478.7891" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="635.5" x2="635.5" y1="478.7891" y2="591.1875" /><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89" x="20" y="74" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="27" y="93.9951">Medication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="39.5" y="110.292">Vendor</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="151.5" y="118.292">Pharmacist</text><ellipse cx="192.5" cy="59.7969" fill="#E2E2F0" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;" /><path d="M192.5,79.7969 C196.5,79.7969 199.5,79.7969 203.5,75.7969 C211.5,75.7969 219.5,83.7969 219.5,91.7969 L219.5,95.7969 C219.5,99.7969 215.5,103.7969 211.5,103.7969 L173.5,103.7969 C169.5,103.7969 165.5,99.7969 165.5,95.7969 L165.5,91.7969 C165.5,83.7969 173.5,75.7969 181.5,75.7969 C185.5,79.7969 188.5,79.7969 192.5,79.7969 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><rect fill="#E2E2F0" height="46.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="136" x="254.5" y="74" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="261.5" y="93.9951">Pharmacy System</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="304" y="110.292">/ ERP</text><rect fill="#E2E2F0" height="62.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="112" x="485.5" y="57.7031" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="504" y="77.6982">Medication</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="492.5" y="93.9951">Administration</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="516" y="110.292">System</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="41" x="612.5" y="118.292">Nurse</text><ellipse cx="636" cy="59.7969" fill="#E2E2F0" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;" /><path d="M636,79.7969 C640,79.7969 643,79.7969 647,75.7969 C655,75.7969 663,83.7969 663,91.7969 L663,95.7969 C663,99.7969 659,103.7969 655,103.7969 L617,103.7969 C613,103.7969 609,99.7969 609,95.7969 L609,91.7969 C609,83.7969 617,75.7969 625,75.7969 C629,79.7969 632,79.7969 636,79.7969 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="317.5" y="317.2578" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="317.5" y="406.6563" /><rect fill="#FFFFFF" height="35.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="317.5" y="524.0547" /><path d="M10,163.5938 L247,163.5938 L247,170.7266 L237,180.7266 L10,180.7266 L10,163.5938 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="101.3984" style="stroke:#000000;stroke-width:1.5;" width="242" x="10" y="163.5938" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="192" x="25" y="176.6606">Supplier order processing</text><line style="stroke:#181818;stroke-width:1.0;" x1="64.5" x2="106.5" y1="201.8594" y2="201.8594" /><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="106.5" y1="201.8594" y2="214.8594" /><line style="stroke:#181818;stroke-width:1.0;" x1="65.5" x2="106.5" y1="214.8594" y2="214.8594" /><polygon fill="#181818" points="75.5,210.8594,65.5,214.8594,75.5,218.8594,71.5,214.8594" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="71.5" y="196.7935">Check order</text><line style="stroke:#181818;stroke-width:1.0;" x1="64.5" x2="106.5" y1="243.9922" y2="243.9922" /><line style="stroke:#181818;stroke-width:1.0;" x1="106.5" x2="106.5" y1="243.9922" y2="256.9922" /><line style="stroke:#181818;stroke-width:1.0;" x1="65.5" x2="106.5" y1="256.9922" y2="256.9922" /><polygon fill="#181818" points="75.5,252.9922,65.5,256.9922,75.5,260.9922,71.5,256.9922" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="114" x="71.5" y="238.9263">Prepare shipment</text><path d="M10,278.9922 L195,278.9922 L195,286.125 L185,296.125 L10,296.125 L10,278.9922 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:1.5;" width="390.5" x="10" y="278.9922" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="140" x="25" y="292.0591">Order status query</text><polygon fill="#181818" points="75.5,313.2578,65.5,317.2578,75.5,321.2578,71.5,317.2578" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="316.5" y1="317.2578" y2="317.2578" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="125" x="81.5" y="312.1919">Inquire order status</text><polygon fill="#181818" points="310.5,342.3906,320.5,346.3906,310.5,350.3906,314.5,346.3906" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="64.5" x2="316.5" y1="346.3906" y2="346.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="123" x="71.5" y="341.3247">Inform order status</text><path d="M10,368.3906 L172,368.3906 L172,375.5234 L162,385.5234 L10,385.5234 L10,368.3906 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="75.3984" style="stroke:#000000;stroke-width:1.5;" width="390.5" x="10" y="368.3906" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="117" x="25" y="381.4575">Order Shipment</text><polygon fill="#181818" points="305.5,402.6563,315.5,406.6563,305.5,410.6563,309.5,406.6563" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="64.5" x2="311.5" y1="406.6563" y2="406.6563" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="142" x="71.5" y="401.5903">Send Shipment notice</text><polygon fill="#181818" points="310.5,431.7891,320.5,435.7891,310.5,439.7891,314.5,435.7891" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="64.5" x2="316.5" y1="435.7891" y2="435.7891" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="71.5" y="430.7231">Send Medication</text><path d="M141.5,485.7891 L358.5,485.7891 L358.5,492.9219 L348.5,502.9219 L141.5,502.9219 L141.5,485.7891 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="88.3984" style="stroke:#000000;stroke-width:1.5;" width="400" x="141.5" y="485.7891" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="172" x="156.5" y="498.856">Reception at Pharmacy</text><polygon fill="#181818" points="305.5,520.0547,315.5,524.0547,305.5,528.0547,309.5,524.0547" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="192.5" x2="311.5" y1="524.0547" y2="524.0547" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106" x="199.5" y="518.9888">Confer reception</text><line style="stroke:#181818;stroke-width:1.0;" x1="327.5" x2="369.5" y1="558.1875" y2="558.1875" /><line style="stroke:#181818;stroke-width:1.0;" x1="369.5" x2="369.5" y1="558.1875" y2="571.1875" /><line style="stroke:#181818;stroke-width:1.0;" x1="322.5" x2="369.5" y1="571.1875" y2="571.1875" /><polygon fill="#181818" points="332.5,567.1875,322.5,571.1875,332.5,575.1875,328.5,571.1875" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="195" x="334.5" y="553.1216">Update Pharmacy Stock levels</text></g></svg>
+    <!-- <figcaption>Use Case 1</figcaption> -->
+  </figure>
+
+<!-- <div style="text-align:center">
+<img src="image_UC2_SequenceDiagram1.png" style="width:5.89233in;height:8.11774in"/>
+</div>
+
+<div style="text-align:center">
+<img src="image_UC2_SequenceDiagram2.png" style="width:6.26875in;height:5.4742in"/>
+</div> -->
+<p><br /></p>
+<p>
+</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>The reorder level may be calculated automatically by the WMS as a function of several factors including the expected use. For example, the minimum level can be calculated as the number of tablets needed for 2 days and the maximum for 7 days of average usage in that specific ward. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="usecase1.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="usecase3.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ihe.net/ihe_domains/pharmacy/">IHE Pharmacy Technical Committee</a>.  Package ihe.pharm.supply#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Tue, Jun 18, 2024 21:01+0000">2024-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/pharm-supply/issues/new/choose">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/pharm-supply/issues">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://profiles.ihe.net/PHARM/supply/history.html">Version History</a></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img style="border-style: none;" alt="CC0" src="assets/images/cc-by.png" height="17"/></a> |
+                <!-- <a style="color: var(--footer-hyperlink-text-color)" href="searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.ihe.net/resources/public_comment/">Propose a change<img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+                 <script type="text/javascript" src=".assets/js/google-analytics.js"> </script>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

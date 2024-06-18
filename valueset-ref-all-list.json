@@ -1,0 +1,245 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/all-languages",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "AllLanguages",
+      "title" : "All Languages",
+      "description" : "This value set includes all possible codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.21"],
+      "sources" : ["2.16.840.1.113883.4.642.3.21"],
+      "uses" : {
+      },
+      "StructureDefinition-IHEInventoryUpdate.html" : "Inventory Update",
+      "StructureDefinition-IHEInventoryStatus.html" : "Inventory Report",
+      "StructureDefinition-IHESupplyReceiptNotice.html" : "Profile - Supply Receipt Notice",
+      "StructureDefinition-IHESupplyDispatchNotice.html" : "Profile - Supply Shipment Notice",
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/inventoryreport-counttype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "InventoryCountType",
+      "title" : "Inventory Count Type",
+      "description" : "The type of count.",
+      "systems" : ["http://hl7.org/fhir/inventoryreport-counttype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3032"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3032"],
+      "uses" : {
+      },
+      "StructureDefinition-IHEInventoryUpdate.html" : "Inventory Update",
+      "StructureDefinition-IHEInventoryStatus.html" : "Inventory Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/inventoryreport-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "InventoryReportStatus",
+      "title" : "Inventory Report Status",
+      "description" : "The status of the InventoryReport.",
+      "systems" : ["http://hl7.org/fhir/inventoryreport-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.3031"],
+      "sources" : ["2.16.840.1.113883.4.642.3.3031"],
+      "uses" : {
+      },
+      "StructureDefinition-IHEInventoryUpdate.html" : "Inventory Update",
+      "StructureDefinition-IHEInventoryStatus.html" : "Inventory Report"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "5.0.0",
+      "status" : "active",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (see http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.891",
+        "2.16.840.1.113883.4.642.3.20"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.891",
+        "2.16.840.1.113883.4.642.3.20"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHEInventoryUpdate.html" : "Inventory Update",
+      "StructureDefinition-IHEInventoryStatus.html" : "Inventory Report",
+      "StructureDefinition-IHESupplyReceiptNotice.html" : "Profile - Supply Receipt Notice",
+      "StructureDefinition-IHESupplyDispatchNotice.html" : "Profile - Supply Shipment Notice",
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/request-priority",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "RequestPriority",
+      "title" : "RequestPriority",
+      "description" : "Identifies the level of importance to be assigned to actioning the request.",
+      "systems" : ["http://hl7.org/fhir/request-priority"],
+      "oids" : ["2.16.840.1.113883.4.642.3.115"],
+      "sources" : ["2.16.840.1.113883.4.642.3.115"],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/supply-item",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SNOMEDCTSupplyItem",
+      "title" : "SNOMED CT Supply Item",
+      "description" : "This value set includes [SNOMED CT](http://snomed.info/sct) where concept is-a 105590001 (Substance (substance)) or  concept is-a 260787004 (Physical object)  and provided as an example value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.685",
+        "2.16.840.1.113883.4.642.3.699"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.685",
+        "2.16.840.1.113883.4.642.3.699"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/supplydelivery-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SupplyDeliveryStatus",
+      "title" : "Supply Delivery Status",
+      "description" : "Status of the supply delivery.",
+      "systems" : ["http://hl7.org/fhir/supplydelivery-status"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.686",
+        "2.16.840.1.113883.4.642.3.700",
+        "2.16.840.1.113883.4.642.2.355"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.686",
+        "2.16.840.1.113883.4.642.3.700",
+        "2.16.840.1.113883.4.642.2.355"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyReceiptNotice.html" : "Profile - Supply Receipt Notice",
+      "StructureDefinition-IHESupplyDispatchNotice.html" : "Profile - Supply Shipment Notice"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/supplydelivery-supplyitemtype",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SupplyDeliverySupplyItemType",
+      "title" : "Supply Delivery Supply Item Type",
+      "description" : "This value sets refers to a specific supply item.",
+      "systems" : ["http://hl7.org/fhir/supplydelivery-supplyitemtype"],
+      "oids" : ["2.16.840.1.113883.4.642.3.2988"],
+      "sources" : ["2.16.840.1.113883.4.642.3.2988"],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyReceiptNotice.html" : "Profile - Supply Receipt Notice",
+      "StructureDefinition-IHESupplyDispatchNotice.html" : "Profile - Supply Shipment Notice"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/supplyrequest-kind",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SupplyType",
+      "title" : "Supply Type",
+      "description" : "This value sets refers to a Category of supply.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/supply-kind"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.679",
+        "2.16.840.1.113883.4.642.2.353",
+        "2.16.840.1.113883.4.642.3.693"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.679",
+        "2.16.840.1.113883.4.642.2.353",
+        "2.16.840.1.113883.4.642.3.693"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/supplyrequest-reason",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SupplyRequestReason",
+      "title" : "Supply Request Reason",
+      "description" : "The reason why the supply item was requested.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/supplyrequest-reason"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.697",
+        "2.16.840.1.113883.4.642.3.683",
+        "2.16.840.1.113883.4.642.2.464"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.697",
+        "2.16.840.1.113883.4.642.3.683",
+        "2.16.840.1.113883.4.642.2.464"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/supplyrequest-status",
+      "version" : "5.0.0",
+      "status" : "draft",
+      "name" : "SupplyRequestStatus",
+      "title" : "Supply Request Status",
+      "description" : "Status of the supply request.",
+      "systems" : ["http://hl7.org/fhir/supplyrequest-status"],
+      "oids" : [
+        "2.16.840.1.113883.4.642.3.695",
+        "2.16.840.1.113883.4.642.2.354",
+        "2.16.840.1.113883.4.642.3.681"
+      ],
+      "sources" : [
+        "2.16.840.1.113883.4.642.3.695",
+        "2.16.840.1.113883.4.642.2.354",
+        "2.16.840.1.113883.4.642.3.681"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyRequest.html" : "Supply Request profile"
+    },
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "IHEDeliveryStageVS",
+      "title" : "Supply delivery stage value set",
+      "description" : "Supply delivery stage value set.",
+      "systems" : [
+        "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHESupplyReceiptNotice.html" : "Profile - Supply Receipt Notice",
+      "StructureDefinition-IHESupplyDispatchNotice.html" : "Profile - Supply Shipment Notice",
+      "StructureDefinition-IHEDeliveryStageExt.html" : "Supply delivery stage extension"
+    },
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type",
+      "version" : "0.3.0",
+      "status" : "draft",
+      "name" : "ProductAssociationType",
+      "title" : "Product association type Value Set",
+      "description" : "Product association type Value Set",
+      "systems" : [
+        "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ProductModel.html" : "ProductModel",
+      "StructureDefinition-ItemModel.html" : "ItemModel"
+    }
+  ]
+}

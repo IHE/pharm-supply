@@ -1,0 +1,868 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "ihe.pharm.supply",
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>IHE_PHARM_SUPPLY</h2><p>The official URL for this implementation guide is: </p><pre>http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply</pre><div><p>ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)</p>\n</div></div>"
+  },
+  "url" : "http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply",
+  "version" : "0.3.0",
+  "name" : "IHE_PHARM_SUPPLY",
+  "title" : "Supply of Products for Healthcare (SUPPLY)",
+  "status" : "active",
+  "date" : "2024-06-18T21:01:23+00:00",
+  "publisher" : "IHE Pharmacy Technical Committee",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ihe.net/ihe_domains/pharmacy/"
+    }]
+  },
+  {
+    "telecom" : [{
+      "system" : "email",
+      "value" : "pharmacy@ihe.net"
+    }]
+  },
+  {
+    "name" : "IHE Pharmacy Technical Committee",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "pharmacy@ihe.net"
+    }]
+  }],
+  "description" : "ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001"
+    }]
+  }],
+  "copyright" : "IHE http://www.ihe.net/Governance/#Intellectual_Property",
+  "packageId" : "ihe.pharm.supply",
+  "license" : "CC-BY-4.0",
+  "fhirVersion" : ["5.0.0"],
+  "dependsOn" : [{
+    "id" : "hl7tx",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on HL7 Terminology"
+    }],
+    "uri" : "http://terminology.hl7.org/ImplementationGuide/hl7.terminology",
+    "packageId" : "hl7.terminology.r5",
+    "version" : "5.5.0"
+  },
+  {
+    "id" : "hl7ext",
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment",
+      "valueMarkdown" : "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"
+    }],
+    "uri" : "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions",
+    "packageId" : "hl7.fhir.uv.extensions.r5",
+    "version" : "5.1.0"
+  }],
+  "definition" : {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency",
+      "valueCode" : "hl7.fhir.uv.tools#0.1.0"
+    }],
+    "grouping" : [{
+      "id" : "SupplyRequest",
+      "name" : "Supply Requests",
+      "description" : "Artifacts related to supply requests - ordering supplies and checking status of orders."
+    },
+    {
+      "id" : "SupplyDelivery",
+      "name" : "Supply Delivery",
+      "description" : "Artifacts related to supply deliveries - shipment notices and receipt notices."
+    },
+    {
+      "id" : "Inventory",
+      "name" : "Inventory",
+      "description" : "Artifacts related to inventory - inventory status, consumption, inventory items."
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "InventoryItem"
+      }],
+      "reference" : {
+        "reference" : "InventoryItem/123"
+      },
+      "name" : "123",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Bundle"
+      }],
+      "reference" : {
+        "reference" : "Bundle/history"
+      },
+      "name" : "history",
+      "isExample" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "InventoryItem"
+      }],
+      "reference" : {
+        "reference" : "InventoryItem/i1231"
+      },
+      "name" : "i1231",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "InventoryItem"
+      }],
+      "reference" : {
+        "reference" : "InventoryItem/i1234"
+      },
+      "name" : "i1234",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "InventoryItem"
+      }],
+      "reference" : {
+        "reference" : "InventoryItem/i12341"
+      },
+      "name" : "i12341",
+      "isExample" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IHEInventoryStatus"
+      },
+      "name" : "Inventory Report",
+      "description" : "Inventory Report (snapshot)",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IHEInventoryUpdate"
+      },
+      "name" : "Inventory Update",
+      "description" : "Inventory Update (consumption, usage)",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/InventoryStatusModel"
+      },
+      "name" : "Logical Model - Inventory Status",
+      "description" : "The logical data model for Inventory Status",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/InventoryUpdateModel"
+      },
+      "name" : "Logical Model - Inventory Update",
+      "description" : "The logical data model for Inventory Updates",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ItemModel"
+      },
+      "name" : "Logical Model - Item",
+      "description" : "An (informative) logical data model for trade items",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ProductModel"
+      },
+      "name" : "Logical Model - Product",
+      "description" : "An (informative) logical data model for Products",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ReceiptNoticeModel"
+      },
+      "name" : "Logical Model - Receipt notice",
+      "description" : "The logical data model for Receipt Notice",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/ShipmentNoticeModel"
+      },
+      "name" : "Logical Model - Shipment notice",
+      "description" : "The logical data model for Shipment Notice",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/SupplyRequestModel"
+      },
+      "name" : "Logical Model - Supply Request",
+      "description" : "The logical data model for Supply Requests",
+      "isExample" : false,
+      "groupingId" : "SupplyRequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:logical"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/SupplyRequestStatusModel"
+      },
+      "name" : "Logical Model - Supply Request Status",
+      "description" : "The logical data model for Supply Request status",
+      "isExample" : false,
+      "groupingId" : "SupplyRequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/cs-ihe-pharm-product-association-type"
+      },
+      "name" : "Product association type code system",
+      "description" : "product association type code system.",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/vs-ihe-pharm-product-association-type"
+      },
+      "name" : "Product association type Value Set",
+      "description" : "Product association type Value Set",
+      "isExample" : false,
+      "groupingId" : "Inventory"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IHESupplyReceiptNotice"
+      },
+      "name" : "Profile - Supply Receipt Notice",
+      "description" : "A notification of reception of supply items.",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IHESupplyDispatchNotice"
+      },
+      "name" : "Profile - Supply Shipment Notice",
+      "description" : "A notification of shipment or beginning of transport of supply items.",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "SearchParameter"
+      }],
+      "reference" : {
+        "reference" : "SearchParameter/sp-requested-item"
+      },
+      "name" : "Search Parameter - item requested",
+      "description" : "Additional search parameter to search requests of specific items",
+      "isExample" : false,
+      "groupingId" : "SupplyRequest"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "CodeSystem"
+      }],
+      "reference" : {
+        "reference" : "CodeSystem/IHEDeliveryStageCS"
+      },
+      "name" : "Supply delivery stage code system",
+      "description" : "Supply delivery code system.",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:extension"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IHEDeliveryStageExt"
+      },
+      "name" : "Supply delivery stage extension",
+      "description" : "Stage of delivery reported in a SupplyDelivery.",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "ValueSet"
+      }],
+      "reference" : {
+        "reference" : "ValueSet/IHEDeliveryStageVS"
+      },
+      "name" : "Supply delivery stage value set",
+      "description" : "Supply delivery stage value set.",
+      "isExample" : false,
+      "groupingId" : "SupplyDelivery"
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "StructureDefinition:resource"
+      }],
+      "reference" : {
+        "reference" : "StructureDefinition/IHESupplyRequest"
+      },
+      "name" : "Supply Request profile",
+      "description" : "Profile for a Supply / Resupply Request",
+      "isExample" : false,
+      "groupingId" : "SupplyRequest"
+    }],
+    "page" : {
+      "sourceUrl" : "toc.html",
+      "name" : "toc.html",
+      "title" : "Table of Contents",
+      "generation" : "html",
+      "page" : [{
+        "sourceUrl" : "index.html",
+        "name" : "index.html",
+        "title" : "Supply Home",
+        "generation" : "markdown"
+      },
+      {
+        "sourceUrl" : "volume1.html",
+        "name" : "volume1.html",
+        "title" : "Volume 1: Use cases",
+        "generation" : "markdown",
+        "page" : [{
+          "sourceUrl" : "introduction.html",
+          "name" : "introduction.html",
+          "title" : "Introduction",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "howtoread.html",
+          "name" : "howtoread.html",
+          "title" : "How to read this publication",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "usecases.html",
+          "name" : "usecases.html",
+          "title" : "Use Case overview",
+          "generation" : "html",
+          "page" : [{
+            "sourceUrl" : "usecase1.html",
+            "name" : "usecase1.html",
+            "title" : "Use Case 1 - Medication order, global distribution and administration (floor stock)",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase2.html",
+            "name" : "usecase2.html",
+            "title" : "Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase3.html",
+            "name" : "usecase3.html",
+            "title" : "Use Case 3 - Inventory Count and Resupply, Product Distribution",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase4.html",
+            "name" : "usecase4.html",
+            "title" : "Use Case 4 - Community Pharmacy, Stock and Consignment Items",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase5.html",
+            "name" : "usecase5.html",
+            "title" : "Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase6.html",
+            "name" : "usecase6.html",
+            "title" : "Use Case 6 - Cold-stored medication, resupply and return",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase7.html",
+            "name" : "usecase7.html",
+            "title" : "Use Case 7 - Falsified Medication Check",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase8.html",
+            "name" : "usecase8.html",
+            "title" : "Use Case 8 - Operating Theater - UDI lookup",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "usecase9.html",
+            "name" : "usecase9.html",
+            "title" : "Use Case 9 - Recall of UDI Devices",
+            "generation" : "markdown"
+          }]
+        },
+        {
+          "sourceUrl" : "overview.html",
+          "name" : "overview.html",
+          "title" : "Overview: data exchange for supply",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "actors_and_transactions.html",
+          "name" : "actors_and_transactions.html",
+          "title" : "Actors and Transactions overview",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "actor_options.html",
+          "name" : "actor_options.html",
+          "title" : "Actor Options",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "actor_required_grouping.html",
+          "name" : "actor_required_grouping.html",
+          "title" : "Actor Required Grouping",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "security_considerations.html",
+          "name" : "security_considerations.html",
+          "title" : "Security Considerations",
+          "generation" : "markdown"
+        },
+        {
+          "sourceUrl" : "cross_profile_considerations.html",
+          "name" : "cross_profile_considerations.html",
+          "title" : "Cross Profile Considerations",
+          "generation" : "markdown"
+        }]
+      },
+      {
+        "sourceUrl" : "volume2.html",
+        "name" : "volume2.html",
+        "title" : "Volume 2",
+        "generation" : "markdown",
+        "page" : [{
+          "sourceUrl" : "transactions.html",
+          "name" : "transactions.html",
+          "title" : "Transaction Definitions",
+          "generation" : "markdown",
+          "page" : [{
+            "sourceUrl" : "PHARM-S1.html",
+            "name" : "PHARM-S1.html",
+            "title" : "Supply Request [PHARM-S1]",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "PHARM-S2.html",
+            "name" : "PHARM-S2.html",
+            "title" : "Supply Request Status [PHARM-S2]",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "PHARM-S3.html",
+            "name" : "PHARM-S3.html",
+            "title" : "Shipment Notice [PHARM-S3]",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "PHARM-S4.html",
+            "name" : "PHARM-S4.html",
+            "title" : "Delivery Receipt [PHARM-S4]",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "PHARM-S5.html",
+            "name" : "PHARM-S5.html",
+            "title" : "Inventory Status Report [PHARM-S5]",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "PHARM-S6.html",
+            "name" : "PHARM-S6.html",
+            "title" : "Inventory Update Report [PHARM-S6]",
+            "generation" : "markdown"
+          },
+          {
+            "sourceUrl" : "PHARM-S7.html",
+            "name" : "PHARM-S7.html",
+            "title" : "Inventory Query [PHARM-S7]",
+            "generation" : "markdown"
+          }]
+        }]
+      },
+      {
+        "sourceUrl" : "issues.html",
+        "name" : "issues.html",
+        "title" : "Present issues",
+        "generation" : "markdown"
+      }]
+    },
+    "parameter" : [{
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "copyrightyear"
+      },
+      "value" : "2020+"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "releaselabel"
+      },
+      "value" : "ci-build"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/history"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "active-tables"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-contact"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-jurisdiction"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-publisher"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-version"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "show-inherited-invariants"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "usage-stats-opt-out"
+      },
+      "value" : "false"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "autoload-resources"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "shownav"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/capabilities"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/examples"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/extensions"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/models"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/operations"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/profiles"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/vocabulary"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "input/testing"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-resource"
+      },
+      "value" : "fsh-generated/resources"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "template/config"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-pages"
+      },
+      "value" : "input/images"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "template/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-liquid"
+      },
+      "value" : "input/liquid"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-qa"
+      },
+      "value" : "temp/qa"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-temp"
+      },
+      "value" : "temp/pages"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-output"
+      },
+      "value" : "output"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/guide-parameter-code",
+        "code" : "path-tx-cache"
+      },
+      "value" : "input-cache/txcache"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-suppressed-warnings"
+      },
+      "value" : "input/ignoreWarnings.txt"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "path-history"
+      },
+      "value" : "http://profiles.ihe.net/PHARM/supply/history.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-html"
+      },
+      "value" : "template-page.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "template-md"
+      },
+      "value" : "template-page-md.html"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-context"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-copyright"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-license"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "apply-wg"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "fmm-definition"
+      },
+      "value" : "http://hl7.org/fhir/versions.html#maturity"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "propagate-status"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "excludelogbinaryformat"
+      },
+      "value" : "true"
+    },
+    {
+      "code" : {
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/ig-parameters",
+        "code" : "tabbed-snapshots"
+      },
+      "value" : "true"
+    }]
+  }
+}

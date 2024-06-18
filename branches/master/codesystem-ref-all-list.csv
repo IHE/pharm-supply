@@ -1,0 +1,12 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://hl7.org/fhir/inventoryreport-counttype,5.0.0,active,"2.16.840.1.113883.4.642.4.1926",InventoryCountType,Inventory Count Type,"The type of count.","ValueSet/inventoryreport-counttype"
+http://hl7.org/fhir/inventoryreport-status,5.0.0,active,"2.16.840.1.113883.4.642.4.1927",InventoryReportStatus,Inventory Report Status,"The status of the InventoryReport.","ValueSet/inventoryreport-status"
+http://hl7.org/fhir/request-priority,5.0.0,draft,"2.16.840.1.113883.4.642.4.116",RequestPriority,RequestPriority,"Identifies the level of importance to be assigned to actioning the request.","ValueSet/request-priority"
+http://hl7.org/fhir/supplydelivery-status,5.0.0,active,"2.16.840.1.113883.4.642.1.687,2.16.840.1.113883.4.642.2.355,2.16.840.1.113883.4.642.4.701",SupplyDeliveryStatus,Supply Delivery Status,"Status of the supply delivery.","ValueSet/supplydelivery-status"
+http://hl7.org/fhir/supplydelivery-supplyitemtype,5.0.0,active,"2.16.840.1.113883.4.642.4.1905",SupplyDeliverySupplyItemType,Supply Delivery Supply Item Type,"Status of the supply delivery.","ValueSet/supplydelivery-supplyitemtype"
+http://hl7.org/fhir/supplyrequest-status,5.0.0,active,"2.16.840.1.113883.4.642.4.696,2.16.840.1.113883.4.642.2.354,2.16.840.1.113883.4.642.1.682",SupplyRequestStatus,Supply Request Status,"Status of the supply request.","ValueSet/supplyrequest-status"
+http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS,0.3.0,active,,IHEDeliveryStageCS,Supply delivery stage code system,"Supply delivery code system.","ValueSet/IHEDeliveryStageVS"
+http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type,0.3.0,active,,CSProductAssociationType,Product association type code system,"product association type code system.","ValueSet/vs-ihe-pharm-product-association-type"
+http://terminology.hl7.org/CodeSystem/supply-kind,1.0.0,draft,"2.16.840.1.113883.4.642.1.1192",SupplyType,Supply Type,"This value sets refers to a Category of supply.","ValueSet/supplyrequest-kind"
+http://terminology.hl7.org/CodeSystem/supplyrequest-reason,1.0.0,draft,"2.16.840.1.113883.4.642.1.1193",SupplyRequestReason,SupplyRequestReason,"The reason why the supply item was requested.","ValueSet/supplyrequest-reason"
+urn:ietf:bcp:47,2.0.1,active,"2.16.840.1.113883.6.121",Ietf3066,Tags for the Identification of Languages,"Older value from OID registry.  Superceded; see recommendations in BCP-47.","ValueSet/languages,ValueSet/all-languages"

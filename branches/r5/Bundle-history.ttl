@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://profiles.ihe.net/PHARM/supply/Bundle/history> a fhir:Bundle ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "history"] ; # 
+  fhir:type [ fhir:v "collection"] ; # 
+  fhir:entry ( [
+     fhir:fullUrl [ fhir:v "http://profiles.ihe.net/ihe-pharm-supply/Provenance/history-1"^^xsd:anyURI ] ;
+     fhir:resource ( <http://profiles.ihe.net/ihe-pharm-supply/Provenance/history-1> )
+  ] ) . # 
+
+<http://profiles.ihe.net/ihe-pharm-supply/Provenance/history-1> a fhir:Provenance ;
+  fhir:id [ fhir:v "history-1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"history-1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance &quot;history-1&quot; </p></div><p><b>target</b>: <a href=\"StructureDefinition-ihe-supply-request.html\">StructureDefinition/ihe-supply-request</a> &quot;IHESupplyRequest&quot;</p><p><b>occurred</b>: 2015-11-30</p><p><b>activity</b>: revise <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-DataOperation.html\">DataOperation</a>#UPDATE)</span></p><blockquote><p><b>agent</b></p><p><b>type</b>: Author <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-provenance-participant-type.html\">Provenance participant type</a>#author)</span></p><p><b>who</b>: <span>: Rob Hausam</span></p></blockquote><blockquote><p><b>agent</b></p><p><b>type</b>: Verifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-provenance-participant-type.html\">Provenance participant type</a>#verifier)</span></p><p><b>who</b>: <span>: Vocab</span></p></blockquote></div>"
+  ] ; # 
+  fhir:target ( [
+     fhir:link <http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-supply-request> ;
+     fhir:reference [ fhir:v "StructureDefinition/ihe-supply-request" ]
+  ] ) ; # 
+  fhir:occurred [ fhir:v "2015-11-30"^^xsd:date] ; # 
+  fhir:activity [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-DataOperation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "UPDATE" ]
+     ] )
+  ] ; # 
+  fhir:agent ( [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/provenance-participant-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "author" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:display [ fhir:v "Rob Hausam" ]
+     ]
+  ] [
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/provenance-participant-type"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "verifier" ]
+       ] )
+     ] ;
+     fhir:who [
+       fhir:display [ fhir:v "Vocab" ]
+     ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

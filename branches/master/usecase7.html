@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Use Case 7 - Falsified Medication Check - Supply of Products for Healthcare (SUPPLY) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/ihe.css" rel="stylesheet"/>
+<link href="assets/css/nonum.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async> </script> 
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.3.7"}
+    h3,h4,h5,h6{--heading-prefix:"2.3.7"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="ihe-logo" no-external="true" href="http://profiles.ihe.net">
+    <img height="71" alt="Visit the IHE website" src="assets/images/ihe-international.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo.png"/> </a>
+</div>
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+-->
+<div id="project-nav">
+  
+  
+    <a id="project-logo" no-external="true" href="http://profiles.ihe.net/PHARM/index.html"><img height="70" alt="Visit the PHARM website" src="assets/images/PHARM.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Supply of Products for Healthcare (SUPPLY)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">SUPPLY Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a style="text-align: baseline" href="introduction.html">Introduction</a></li>
+			<li><a style="text-align: baseline" href="usecases.html">Use Cases</a></li>
+			<li><a style="text-align: baseline" href="overview.html">Overview</a></li>
+			<li><a style="text-align: baseline" href="actors_and_transactions.html">Actors and Transactions overview</a></li>
+			<li><a style="text-align: baseline" href="actor_options.html">Actor Options</a></li>
+			<li><a style="text-align: baseline" href="actor_required_grouping.html">Actor Required Grouping</a></li>
+			<li><a style="text-align: baseline" href="security_considerations.html">Security Considerations</a></li>
+			<li><a style="text-align: baseline" href="cross_profile_considerations.html">Cross Profile Considerations</a></li>
+		</ul>
+	</li>
+
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li><a style="text-align: baseline" href="actors_and_transactions.html">Actors Definitions</a></li> -->
+			<li><a style="text-align: baseline" href="transactions.html">Transaction Definitions</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S1.html">Supply Request</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S2.html">Supply Request Status</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S3.html">Shipment Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S4.html">Delivery/Receipt Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S5.html">Inventory Report</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S6.html">Inventory Update</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S7.html">Inventory Query</a></li>
+
+		</ul>
+	</li>
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a style="text-align: baseline" href="#">Test Data<img src="external.png"/></a></li>
+			<li><a target="_blank" href="#">OpenAPI</a></li>
+			<li><a style="text-align: baseline" href="#">Testing (Gazelle)<img src="external.png"/></a></li>
+			<li><a href="#">Downloads</a></li>
+			<li><a href="#">FHIR Specification</a></li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='volume1.html'><b>Volume 1: Use cases</b></a></li><li><a href='usecases.html'><b>Use Case overview</b></a></li><li><b>Use Case 7 - Falsified Medication Check</b></li>
+
+          <span style="float:right;">
+
+            <a href="usecase6.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="usecase8.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Supply of Products for Healthcare (SUPPLY), published by IHE Pharmacy Technical Committee. This guide is not an authorized publication; it is the continuous build for version 0.3.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/IHE/pharm-supply">https://github.com/IHE/pharm-supply</a> and changes regularly. See the <a href="http://profiles.ihe.net/PHARM/supply/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Use Case 7 - Falsified Medication Check</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#preconditions" id="markdown-toc-preconditions">Preconditions</a></li>
+  <li><a href="#retrieval-and-online-checking" id="markdown-toc-retrieval-and-online-checking">Retrieval and Online Checking</a></li>
+  <li><a href="#sequence-diagram" id="markdown-toc-sequence-diagram">Sequence Diagram</a></li>
+  <li><a href="#requirements" id="markdown-toc-requirements">Requirements</a></li>
+</ul>
+
+</div>
+<style>
+  .table-usecase {
+    width: 100%;
+  }
+
+  .table-usecase > thead > tr > th,
+  .table-usecase > tbody > tr > th,
+  .table-usecase > tfoot > tr > th,
+  .table-usecase > thead > tr > td,
+  .table-usecase > tbody > tr > td,
+  .table-usecase > tfoot > tr > td {
+    text-align: center;
+  }
+
+  .table-usecase .cell-shaded {
+    background-color: #e6e6ff;
+  }
+  
+  .table-usecase .cell-fat-bottom {
+    border-bottom-width: 3px;
+    border-bottom-color: #cccccc;
+  }
+</style>
+
+<div style="  border: 1px solid; padding: 5px; margin: 5px;">
+<i>This use case describes how a physical item (product package) can be
+checked at dispense time, according to the Falsified Medicines
+Directive. The dispenser retrieves the item, and when scanning it, the
+system performs a lookup of the item’s serial and lot numbers, returning
+information whether the product is considered OK or not.</i>
+</div>
+
+<h3 id="preconditions">Preconditions</h3>
+
+<p>The pharmacy system adopts FMD compatibility and IHE transactions.</p>
+
+<p>The pharmacist has still some items from his trusted supplier, and has
+received a new shipment from a new supplier.</p>
+
+<p>The products delivered by the trusted supplier have been registered in
+the FMD Hub, as described in the IHE educational material for FMD:
+<a href="https://www.ihe.net/wp-content/uploads/uploadedFiles/Documents/Pharmacy/IHE-Pharmacy-FMD-
+Guide_Rev1.0_2017-02-08.pdf"><u>https://www.ihe.net/wp-content/uploads/uploadedFiles/Documents/Pharmacy/IHE-Pharmacy-FMD-
+Guide_Rev1.0_2017-02-08.pdf</u></a></p>
+
+<p>The products delivered by the new supplier are not registered.</p>
+
+<p>Both products have a label with a barcode that contains the GTIN, the
+lot number, serial number, and expiry date. The GTIN is the same since
+it is the same product, but the lot numbers, and expiry dates are
+different between the two products. The serial number is of course
+unique for each item.</p>
+
+<h3 id="retrieval-and-online-checking">Retrieval and Online Checking</h3>
+
+<p>The pharmacist is dispensing medication for a patient. This can be in
+hospital and community pharmacy<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
+
+<p>The pharmacist first gets a product from the new supplier. When
+retrieving the product, the barcode is scanned. The system immediately
+triggers a product info lookup as mandated by the FMD. Since this
+product has not been registered in the FMD hub, that system responds
+that the item is not OK.</p>
+
+<p>The pharmacist quarantines or discards the suspect item, and retrieves
+another item from his previous supplier. The second barcode is submitted
+and the response is that the item is OK.</p>
+
+<p>The dispenser dispenses the second item and registers it as assigned to
+that patient. For inventory purposes, two items have been consumed. But
+only one dispensed.</p>
+
+<h3 id="sequence-diagram">Sequence Diagram</h3>
+
+<figure>
+  <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="759px" preserveAspectRatio="none" style="width:598px;height:759px;background:#FFFFFF;" version="1.1" viewBox="0 0 598 759" width="598px" zoomAndPan="magnify"><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="537" x="32" y="27.9951">Check Dispensed product according to Falsified Medicines Directive</text><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="275.4219" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="333.6875" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="480.3516" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="538.6172" /><rect fill="#FFFFFF" height="73.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="670.1484" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="529" y="304.5547" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="529" y="509.4844" /><rect fill="none" height="133.6641" style="stroke:#000000;stroke-width:1.5;" width="517" x="75" y="237.1563" /><rect fill="none" height="133.6641" style="stroke:#000000;stroke-width:1.5;" width="517" x="75" y="442.0859" /><rect fill="none" height="145.6641" style="stroke:#000000;stroke-width:1.5;" width="419" x="75" y="589.75" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="40" x2="40" y1="137.8906" y2="752.4141" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="128" x2="128" y1="137.8906" y2="752.4141" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="327" x2="327" y1="137.8906" y2="752.4141" /><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="534" x2="534" y1="137.8906" y2="752.4141" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="5" y="134.5889">Physician</text><ellipse cx="40" cy="76.0938" fill="#E2E2F0" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;" /><path d="M40,96.0938 C44,96.0938 47,96.0938 51,92.0938 C59,92.0938 67,100.0938 67,108.0938 L67,112.0938 C67,116.0938 63,120.0938 59,120.0938 L21,120.0938 C17,120.0938 13,116.0938 13,112.0938 L13,108.0938 C13,100.0938 21,92.0938 29,92.0938 C33,96.0938 36,96.0938 40,96.0938 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="86" y="118.292">Dispensing</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="76" x="85" y="134.5889">Pharmacist</text><ellipse cx="128" cy="59.7969" fill="#E2E2F0" rx="16" ry="16" style="stroke:#181818;stroke-width:1.5;" /><path d="M128,79.7969 C132,79.7969 135,79.7969 139,75.7969 C147,75.7969 155,83.7969 155,91.7969 L155,95.7969 C155,99.7969 151,103.7969 147,103.7969 L109,103.7969 C105,103.7969 101,99.7969 101,95.7969 L101,91.7969 C101,83.7969 109,75.7969 117,75.7969 C121,79.7969 124,79.7969 128,79.7969 " fill="#E2E2F0" style="stroke:#181818;stroke-width:1.5;" /><rect fill="#E2E2F0" height="62.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92" x="281" y="74" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="293.5" y="93.9951">Pharmacy</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="288" y="110.292">Dispensing</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="301.5" y="126.5889">System</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="96" x="486" y="106.5938" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="82" x="493" y="126.5889">FMD Verifier</text><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="275.4219" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="333.6875" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="480.3516" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="538.6172" /><rect fill="#FFFFFF" height="73.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="322" y="670.1484" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="529" y="304.5547" /><rect fill="#FFFFFF" height="29.1328" style="stroke:#181818;stroke-width:1.0;" width="10" x="529" y="509.4844" /><line style="stroke:#181818;stroke-width:1.0;" x1="128" x2="170" y1="209.1563" y2="209.1563" /><line style="stroke:#181818;stroke-width:1.0;" x1="170" x2="170" y1="209.1563" y2="222.1563" /><line style="stroke:#181818;stroke-width:1.0;" x1="129" x2="170" y1="222.1563" y2="222.1563" /><polygon fill="#181818" points="139,218.1563,129,222.1563,139,226.1563,135,222.1563" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="113" x="135" y="188.9575">Retrieve first item</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="135" y="204.0903">from inventory</text><path d="M75,237.1563 L241,237.1563 L241,244.2891 L231,254.2891 L75,254.2891 L75,237.1563 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="133.6641" style="stroke:#000000;stroke-width:1.5;" width="517" x="75" y="237.1563" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="121" x="90" y="250.2231">Check First item</text><polygon fill="#181818" points="310,271.4219,320,275.4219,310,279.4219,314,275.4219" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="128" x2="316" y1="275.4219" y2="275.4219" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="135" y="270.356">Scan barcode of first item</text><polygon fill="#181818" points="517,300.5547,527,304.5547,517,308.5547,521,304.5547" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="327" x2="523" y1="304.5547" y2="304.5547" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135" x="334" y="299.4888">Query product status</text><polygon fill="#181818" points="343,329.6875,333,333.6875,343,337.6875,339,333.6875" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="337" x2="533" y1="333.6875" y2="333.6875" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="178" x="349" y="328.6216">Response: "Product Not OK"</text><polygon fill="#181818" points="139,358.8203,129,362.8203,139,366.8203,135,362.8203" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="133" x2="326" y1="362.8203" y2="362.8203" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="81" x="145" y="357.7544">Display error</text><line style="stroke:#181818;stroke-width:1.0;" x1="128" x2="170" y1="414.0859" y2="414.0859" /><line style="stroke:#181818;stroke-width:1.0;" x1="170" x2="170" y1="414.0859" y2="427.0859" /><line style="stroke:#181818;stroke-width:1.0;" x1="129" x2="170" y1="427.0859" y2="427.0859" /><polygon fill="#181818" points="139,423.0859,129,427.0859,139,431.0859,135,427.0859" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135" x="135" y="393.8872">Retrieve second item</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="93" x="135" y="409.02">from inventory</text><path d="M75,442.0859 L262,442.0859 L262,449.2188 L252,459.2188 L75,459.2188 L75,442.0859 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="133.6641" style="stroke:#000000;stroke-width:1.5;" width="517" x="75" y="442.0859" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="142" x="90" y="455.1528">Check Second item</text><polygon fill="#181818" points="310,476.3516,320,480.3516,310,484.3516,314,480.3516" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="128" x2="316" y1="480.3516" y2="480.3516" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="135" y="475.2856">Scan barcode of first item</text><polygon fill="#181818" points="517,505.4844,527,509.4844,517,513.4844,521,509.4844" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="327" x2="523" y1="509.4844" y2="509.4844" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135" x="334" y="504.4185">Query product status</text><polygon fill="#181818" points="343,534.6172,333,538.6172,343,542.6172,339,538.6172" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="337" x2="533" y1="538.6172" y2="538.6172" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="349" y="533.5513">Response: "Product OK"</text><polygon fill="#181818" points="139,563.75,129,567.75,139,571.75,135,567.75" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="133" x2="326" y1="567.75" y2="567.75" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="109" x="145" y="562.6841">Display message</text><path d="M75,589.75 L188,589.75 L188,596.8828 L178,606.8828 L75,606.8828 L75,589.75 " fill="#EEEEEE" style="stroke:#000000;stroke-width:1.5;" /><rect fill="none" height="145.6641" style="stroke:#000000;stroke-width:1.5;" width="419" x="75" y="589.75" /><text fill="#000000" font-family="sans-serif" font-size="13" font-weight="bold" lengthAdjust="spacing" textLength="68" x="90" y="602.8169">Dispense</text><line style="stroke:#181818;stroke-width:1.0;" x1="128" x2="170" y1="628.0156" y2="628.0156" /><line style="stroke:#181818;stroke-width:1.0;" x1="170" x2="170" y1="628.0156" y2="641.0156" /><line style="stroke:#181818;stroke-width:1.0;" x1="129" x2="170" y1="641.0156" y2="641.0156" /><polygon fill="#181818" points="139,637.0156,129,641.0156,139,645.0156,135,641.0156" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="185" x="135" y="622.9497">Deliver medication to patient</text><polygon fill="#181818" points="310,666.1484,320,670.1484,310,674.1484,314,670.1484" style="stroke:#181818;stroke-width:1.0;" /><line style="stroke:#181818;stroke-width:1.0;" x1="128" x2="316" y1="670.1484" y2="670.1484" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="111" x="135" y="665.0825">Confirm dispense</text><line style="stroke:#181818;stroke-width:1.0;" x1="332" x2="374" y1="714.4141" y2="714.4141" /><line style="stroke:#181818;stroke-width:1.0;" x1="374" x2="374" y1="714.4141" y2="727.4141" /><line style="stroke:#181818;stroke-width:1.0;" x1="333" x2="374" y1="727.4141" y2="727.4141" /><polygon fill="#181818" points="343,723.4141,333,727.4141,343,731.4141,339,727.4141" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="110" x="339" y="694.2153">Update inventory</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="339" y="709.3481">(two items consumed)</text></g></svg>
+  <figcaption>Example with styles and other features</figcaption>
+</figure>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>This use case introduces the following requirements:</p>
+
+<h4 id="inventory-item-lookup-request">Inventory Item Lookup Request</h4>
+
+<p>There is a need to look up a specific product from another provider.
+This is a request which identifies the complete product information –
+this includes not only the product type, but also the physical product
+attributes – lot, expiry, serial, etc.</p>
+
+<h4 id="physical-item-lookup-response">Physical Item Lookup Response</h4>
+
+<p>The product lookup should provide the adequate information. In this use
+case, the information expected can be a simple “OK”/”Not OK”. In some
+cases, a more complex payload could be expected, such as a traceability
+report. A wide variety of such cases can be expected, so it is important
+not to limit the possibilities.
+<br /></p>
+<p>
+</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>This can happen either in hospital pharmacy central distribution, when the pharmacist prepares the dispenses for distribution to the wards, OR in a community pharmacy). <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="usecase6.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="usecase8.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ihe.net/ihe_domains/pharmacy/">IHE Pharmacy Technical Committee</a>.  Package ihe.pharm.supply#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Tue, Jun 18, 2024 21:01+0000">2024-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/pharm-supply/issues/new/choose">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/pharm-supply/issues">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://profiles.ihe.net/PHARM/supply/history.html">Version History</a></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img style="border-style: none;" alt="CC0" src="assets/images/cc-by.png" height="17"/></a> |
+                <!-- <a style="color: var(--footer-hyperlink-text-color)" href="searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.ihe.net/resources/public_comment/">Propose a change<img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+                 <script type="text/javascript" src=".assets/js/google-analytics.js"> </script>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

@@ -1,0 +1,87 @@
+﻿IHE_PHARM_SUPPLY : Validation Results
+=========================================
+
+err = 2, warn = 31, info = 0
+IG Publisher Version: 1.3.28
+Generated Mon Aug 07 09:00:14 UTC 2023. FHIR version 5.0.0 for ihe.pharm.supply#0.3.0 (canonical = http://profiles.ihe.net/PHARM/supply)
+ Build Errors : 4 / 3 / 0
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-ihe-pharm-product-association-type : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/CodeSystem-delivery-stage-cs : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ImplementationGuide-ihe.pharm.supply : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/SearchParameter-sp-requested-item : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-InventoryStatusModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-InventoryUpdateModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ItemModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ProductModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ReceiptNoticeModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ShipmentNoticeModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SupplyRequestModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-SupplyRequestStatusModel : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ihe-ext-delivery-stage : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ihe-inventory-status : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ihe-inventory-usage : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-receipt-notice : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-request : 0 / 2 / 1
+ /github/workspace/fsh-generated/resources/StructureDefinition-ihe-supply-shipment-notice : 0 / 3 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-delivery-stage-vs : 0 / 1 / 1
+ /github/workspace/fsh-generated/resources/ValueSet-vs-ihe-pharm-product-association-type : 0 / 1 / 1
+ /github/workspace/input/history/history : 1 / 0 / 2
+</table>
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[30].value: Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters)
+ERROR: /github/workspace/output/PHARM-S6.html#/html/body/div/div/div/div/div/p/a at Line 278, column 94: The link 'StructureDefinition-InventoryReport.html' for "InventoryReport" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S7.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 262, column 4130: The link 'PHARM-S7.html{Inventory' for "query} [StructureDefinition-ihe-supply-inventory-query.html]" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S7.html#/html/body/div/div/div/div/div/p/a at Line 269, column 84: The link 'StructureDefinition-InventoryReport.html' for "InventoryReporter" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-cs-ihe-pharm-product-association-type.json ==
+WARNING: CodeSystem/cs-ihe-pharm-product-association-type: CodeSystem.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/CodeSystem-delivery-stage-cs.json ==
+WARNING: CodeSystem/delivery-stage-cs: CodeSystem.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/ImplementationGuide-ihe.pharm.supply.json ==
+WARNING: ImplementationGuide/ihe.pharm.supply: ImplementationGuide.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/SearchParameter-sp-requested-item.json ==
+WARNING: SearchParameter/sp-requested-item: SearchParameter.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-InventoryStatusModel.json ==
+WARNING: StructureDefinition/InventoryStatusModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-InventoryUpdateModel.json ==
+WARNING: StructureDefinition/InventoryUpdateModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ItemModel.json ==
+WARNING: StructureDefinition/ItemModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ProductModel.json ==
+WARNING: StructureDefinition/ProductModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ReceiptNoticeModel.json ==
+WARNING: StructureDefinition/ReceiptNoticeModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ShipmentNoticeModel.json ==
+WARNING: StructureDefinition/ShipmentNoticeModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-SupplyRequestModel.json ==
+WARNING: StructureDefinition/SupplyRequestModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-SupplyRequestStatusModel.json ==
+WARNING: StructureDefinition/SupplyRequestStatusModel: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ihe-ext-delivery-stage.json ==
+WARNING: StructureDefinition/ihe-ext-delivery-stage: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-ext-delivery-stage'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-ihe-inventory-status.json ==
+WARNING: StructureDefinition/ihe-inventory-status: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-inventory-status'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ihe-inventory-usage.json ==
+WARNING: StructureDefinition/ihe-inventory-usage: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-inventory-usage'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ihe-supply-receipt-notice.json ==
+WARNING: StructureDefinition/ihe-supply-receipt-notice: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition/ihe-supply-receipt-notice: StructureDefinition.snapshot.element[12].fixed.ofType(CodeableConcept): For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-supply-receipt-notice'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ihe-supply-request.json ==
+WARNING: StructureDefinition/ihe-supply-request: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-supply-request'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-ihe-supply-shipment-notice.json ==
+WARNING: StructureDefinition/ihe-supply-shipment-notice: StructureDefinition.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition/ihe-supply-shipment-notice: StructureDefinition.snapshot.element[12].fixed.ofType(CodeableConcept): For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ihe-supply-shipment-notice'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/ValueSet-delivery-stage-vs.json ==
+WARNING: ValueSet/delivery-stage-vs: ValueSet.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/ValueSet-vs-ihe-pharm-product-association-type.json ==
+WARNING: ValueSet/vs-ihe-pharm-product-association-type: ValueSet.jurisdiction[0]: Reference to deprecated item http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== input/history/history.json ==
+ERROR: Bundle.entry[0].resource: Unrecognized property 'reason'

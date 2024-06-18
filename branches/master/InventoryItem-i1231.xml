@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<InventoryItem xmlns="http://hl7.org/fhir">
+  <id value="i1231"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: InventoryItem </b><a name="i1231"> </a><a name="hci1231"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">ResourceInventoryItem &quot;i1231&quot; </p></div><p><b>status</b>: active</p><h3>Names</h3><table class="grid"><tr><td style="display: none">-</td><td><b>NameType</b></td><td><b>Language</b></td><td><b>Name</b></td></tr><tr><td style="display: none">*</td><td>Preferred (Details: InventoryItem Name Type code preferred  = ' Preferred ', stated as ' null ')</td><td>en</td><td>Respirator Mask, N95/FFP2, Medium</td></tr></table></div>
+  </text>
+  <status value="active"/>
+  <name>
+    <nameType>
+      <system value="http://hl7.org/fhir/inventoryitem-nametype"/>
+      <code value="preferred"/>
+    </nameType>
+    <language value="en"/>
+    <name value="Respirator Mask, N95/FFP2, Medium"/>
+  </name>
+</InventoryItem>

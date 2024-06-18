@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ihe.pharm.supply"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>IHE_PHARM_SUPPLY</h2><p>The official URL for this implementation guide is: </p><pre>http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply</pre><div><p>ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)</p>
+</div></div>
+  </text>
+  <url value="http://profiles.ihe.net/PHARM/supply/ImplementationGuide/ihe.pharm.supply"/>
+  <version value="0.3.0"/>
+  <name value="IHE_PHARM_SUPPLY"/>
+  <title value="Supply of Products for Healthcare (SUPPLY)"/>
+  <status value="active"/>
+  <date value="2024-06-18T21:01:23+00:00"/>
+  <publisher value="IHE Pharmacy Technical Committee"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ihe.net/ihe_domains/pharmacy/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="IHE Pharmacy Technical Committee"/>
+    <telecom>
+      <system value="email"/>
+      <value value="pharmacy@ihe.net"/>
+    </telecom>
+  </contact>
+  <description value="ImplementationGuide for IHE Pharmacy Technical Framework Supplement Supply (SUPPLY)"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="IHE http://www.ihe.net/Governance/#Intellectual_Property"/>
+  <packageId value="ihe.pharm.supply"/>
+  <license value="CC-BY-4.0"/>
+  <fhirVersion value="5.0.0"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r5"/>
+    <version value="5.5.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r5"/>
+    <version value="5.1.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+    </extension>
+    <grouping id="SupplyRequest">
+      <name value="Supply Requests"/>
+      <description value="Artifacts related to supply requests - ordering supplies and checking status of orders."/>
+    </grouping>
+    <grouping id="SupplyDelivery">
+      <name value="Supply Delivery"/>
+      <description value="Artifacts related to supply deliveries - shipment notices and receipt notices."/>
+    </grouping>
+    <grouping id="Inventory">
+      <name value="Inventory"/>
+      <description value="Artifacts related to inventory - inventory status, consumption, inventory items."/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="InventoryItem"/>
+      </extension>
+      <reference>
+        <reference value="InventoryItem/123"/>
+      </reference>
+      <name value="123"/>
+      <isExample value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/history"/>
+      </reference>
+      <name value="history"/>
+      <isExample value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="InventoryItem"/>
+      </extension>
+      <reference>
+        <reference value="InventoryItem/i1231"/>
+      </reference>
+      <name value="i1231"/>
+      <isExample value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="InventoryItem"/>
+      </extension>
+      <reference>
+        <reference value="InventoryItem/i1234"/>
+      </reference>
+      <name value="i1234"/>
+      <isExample value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="InventoryItem"/>
+      </extension>
+      <reference>
+        <reference value="InventoryItem/i12341"/>
+      </reference>
+      <name value="i12341"/>
+      <isExample value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/IHEInventoryStatus"/>
+      </reference>
+      <name value="Inventory Report"/>
+      <description value="Inventory Report (snapshot)"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/IHEInventoryUpdate"/>
+      </reference>
+      <name value="Inventory Update"/>
+      <description value="Inventory Update (consumption, usage)"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/InventoryStatusModel"/>
+      </reference>
+      <name value="Logical Model - Inventory Status"/>
+      <description value="The logical data model for Inventory Status"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/InventoryUpdateModel"/>
+      </reference>
+      <name value="Logical Model - Inventory Update"/>
+      <description value="The logical data model for Inventory Updates"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ItemModel"/>
+      </reference>
+      <name value="Logical Model - Item"/>
+      <description value="An (informative) logical data model for trade items"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ProductModel"/>
+      </reference>
+      <name value="Logical Model - Product"/>
+      <description value="An (informative) logical data model for Products"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ReceiptNoticeModel"/>
+      </reference>
+      <name value="Logical Model - Receipt notice"/>
+      <description value="The logical data model for Receipt Notice"/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ShipmentNoticeModel"/>
+      </reference>
+      <name value="Logical Model - Shipment notice"/>
+      <description value="The logical data model for Shipment Notice"/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/SupplyRequestModel"/>
+      </reference>
+      <name value="Logical Model - Supply Request"/>
+      <description value="The logical data model for Supply Requests"/>
+      <isExample value="false"/>
+      <groupingId value="SupplyRequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/SupplyRequestStatusModel"/>
+      </reference>
+      <name value="Logical Model - Supply Request Status"/>
+      <description value="The logical data model for Supply Request status"/>
+      <isExample value="false"/>
+      <groupingId value="SupplyRequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/cs-ihe-pharm-product-association-type"/>
+      </reference>
+      <name value="Product association type code system"/>
+      <description value="product association type code system."/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vs-ihe-pharm-product-association-type"/>
+      </reference>
+      <name value="Product association type Value Set"/>
+      <description value="Product association type Value Set"/>
+      <isExample value="false"/>
+      <groupingId value="Inventory"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/IHESupplyReceiptNotice"/>
+      </reference>
+      <name value="Profile - Supply Receipt Notice"/>
+      <description value="A notification of reception of supply items."/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/IHESupplyDispatchNotice"/>
+      </reference>
+      <name value="Profile - Supply Shipment Notice"/>
+      <description value="A notification of shipment or beginning of transport of supply items."/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="SearchParameter"/>
+      </extension>
+      <reference>
+        <reference value="SearchParameter/sp-requested-item"/>
+      </reference>
+      <name value="Search Parameter - item requested"/>
+      <description value="Additional search parameter to search requests of specific items"/>
+      <isExample value="false"/>
+      <groupingId value="SupplyRequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/IHEDeliveryStageCS"/>
+      </reference>
+      <name value="Supply delivery stage code system"/>
+      <description value="Supply delivery code system."/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/IHEDeliveryStageExt"/>
+      </reference>
+      <name value="Supply delivery stage extension"/>
+      <description value="Stage of delivery reported in a SupplyDelivery."/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/IHEDeliveryStageVS"/>
+      </reference>
+      <name value="Supply delivery stage value set"/>
+      <description value="Supply delivery stage value set."/>
+      <isExample value="false"/>
+      <groupingId value="SupplyDelivery"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/IHESupplyRequest"/>
+      </reference>
+      <name value="Supply Request profile"/>
+      <description value="Profile for a Supply / Resupply Request"/>
+      <isExample value="false"/>
+      <groupingId value="SupplyRequest"/>
+    </resource>
+    <page>
+      <sourceUrl value="toc.html"/>
+      <name value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <sourceUrl value="index.html"/>
+        <name value="index.html"/>
+        <title value="Supply Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <sourceUrl value="volume1.html"/>
+        <name value="volume1.html"/>
+        <title value="Volume 1: Use cases"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="introduction.html"/>
+          <name value="introduction.html"/>
+          <title value="Introduction"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="howtoread.html"/>
+          <name value="howtoread.html"/>
+          <title value="How to read this publication"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="usecases.html"/>
+          <name value="usecases.html"/>
+          <title value="Use Case overview"/>
+          <generation value="html"/>
+          <page>
+            <sourceUrl value="usecase1.html"/>
+            <name value="usecase1.html"/>
+            <title value="Use Case 1 - Medication order, global distribution and administration (floor stock)"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase2.html"/>
+            <name value="usecase2.html"/>
+            <title value="Use Case 2 - Ward Supply Management - Pharmacy-Managed Inventory"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase3.html"/>
+            <name value="usecase3.html"/>
+            <title value="Use Case 3 - Inventory Count and Resupply, Product Distribution"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase4.html"/>
+            <name value="usecase4.html"/>
+            <title value="Use Case 4 - Community Pharmacy, Stock and Consignment Items"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase5.html"/>
+            <name value="usecase5.html"/>
+            <title value="Use Case 5 - Continued Care Institutions - Preparation, Dispense and Pick Up of Patient Stock"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase6.html"/>
+            <name value="usecase6.html"/>
+            <title value="Use Case 6 - Cold-stored medication, resupply and return"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase7.html"/>
+            <name value="usecase7.html"/>
+            <title value="Use Case 7 - Falsified Medication Check"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase8.html"/>
+            <name value="usecase8.html"/>
+            <title value="Use Case 8 - Operating Theater - UDI lookup"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="usecase9.html"/>
+            <name value="usecase9.html"/>
+            <title value="Use Case 9 - Recall of UDI Devices"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <sourceUrl value="overview.html"/>
+          <name value="overview.html"/>
+          <title value="Overview: data exchange for supply"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="actors_and_transactions.html"/>
+          <name value="actors_and_transactions.html"/>
+          <title value="Actors and Transactions overview"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="actor_options.html"/>
+          <name value="actor_options.html"/>
+          <title value="Actor Options"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="actor_required_grouping.html"/>
+          <name value="actor_required_grouping.html"/>
+          <title value="Actor Required Grouping"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="security_considerations.html"/>
+          <name value="security_considerations.html"/>
+          <title value="Security Considerations"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <sourceUrl value="cross_profile_considerations.html"/>
+          <name value="cross_profile_considerations.html"/>
+          <title value="Cross Profile Considerations"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="volume2.html"/>
+        <name value="volume2.html"/>
+        <title value="Volume 2"/>
+        <generation value="markdown"/>
+        <page>
+          <sourceUrl value="transactions.html"/>
+          <name value="transactions.html"/>
+          <title value="Transaction Definitions"/>
+          <generation value="markdown"/>
+          <page>
+            <sourceUrl value="PHARM-S1.html"/>
+            <name value="PHARM-S1.html"/>
+            <title value="Supply Request [PHARM-S1]"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="PHARM-S2.html"/>
+            <name value="PHARM-S2.html"/>
+            <title value="Supply Request Status [PHARM-S2]"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="PHARM-S3.html"/>
+            <name value="PHARM-S3.html"/>
+            <title value="Shipment Notice [PHARM-S3]"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="PHARM-S4.html"/>
+            <name value="PHARM-S4.html"/>
+            <title value="Delivery Receipt [PHARM-S4]"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="PHARM-S5.html"/>
+            <name value="PHARM-S5.html"/>
+            <title value="Inventory Status Report [PHARM-S5]"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="PHARM-S6.html"/>
+            <name value="PHARM-S6.html"/>
+            <title value="Inventory Update Report [PHARM-S6]"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <sourceUrl value="PHARM-S7.html"/>
+            <name value="PHARM-S7.html"/>
+            <title value="Inventory Query [PHARM-S7]"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+      </page>
+      <page>
+        <sourceUrl value="issues.html"/>
+        <name value="issues.html"/>
+        <title value="Present issues"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="copyrightyear"/>
+      </code>
+      <value value="2020+"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="releaselabel"/>
+      </code>
+      <value value="ci-build"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="active-tables"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-contact"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-jurisdiction"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-publisher"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-version"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="show-inherited-invariants"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="usage-stats-opt-out"/>
+      </code>
+      <value value="false"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="autoload-resources"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="shownav"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-resource"/>
+      </code>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-pages"/>
+      </code>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="template/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-liquid"/>
+      </code>
+      <value value="input/liquid"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-qa"/>
+      </code>
+      <value value="temp/qa"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-temp"/>
+      </code>
+      <value value="temp/pages"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-output"/>
+      </code>
+      <value value="output"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/guide-parameter-code"/>
+        <code value="path-tx-cache"/>
+      </code>
+      <value value="input-cache/txcache"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-suppressed-warnings"/>
+      </code>
+      <value value="input/ignoreWarnings.txt"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="path-history"/>
+      </code>
+      <value value="http://profiles.ihe.net/PHARM/supply/history.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-html"/>
+      </code>
+      <value value="template-page.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="template-md"/>
+      </code>
+      <value value="template-page-md.html"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-context"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-copyright"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-license"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="apply-wg"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="fmm-definition"/>
+      </code>
+      <value value="http://hl7.org/fhir/versions.html#maturity"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="propagate-status"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="excludelogbinaryformat"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code>
+        <system value="http://hl7.org/fhir/tools/CodeSystem/ig-parameters"/>
+        <code value="tabbed-snapshots"/>
+      </code>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

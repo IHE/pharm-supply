@@ -1,0 +1,132 @@
+IHE_PHARM_SUPPLY : Validation Results
+=========================================
+
+err = 14, warn = 21, info = 27
+$--
+Generated $--. FHIR version $-- for ihe.pharm.supply#$-- (canonical = http://profiles.ihe.net/PHARM/supply)
+ Build Errors : 12 / 8 / 0
+ /github/workspace/fsh-generated/resources/CodeSystem-IHEDeliveryStageCS : 3 / 0 / 2
+ /github/workspace/fsh-generated/resources/CodeSystem-cs-ihe-pharm-product-association-type : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/ImplementationGuide-ihe.pharm.supply : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/InventoryItem-123 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/InventoryItem-i1231 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/InventoryItem-i1234 : 0 / 0 / 1
+ /github/workspace/fsh-generated/resources/InventoryItem-i12341 : 2 / 1 / 2
+ /github/workspace/fsh-generated/resources/SearchParameter-sp-requested-item : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-IHEDeliveryStageExt : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-IHEInventoryStatus : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-IHEInventoryUpdate : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyDispatchNotice : 3 / 4 / 4
+ /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyReceiptNotice : 3 / 4 / 4
+ /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyRequest : 0 / 1 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-InventoryStatusModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-InventoryUpdateModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-ItemModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-ProductModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-ReceiptNoticeModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-ShipmentNoticeModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-SupplyRequestModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/StructureDefinition-SupplyRequestStatusModel : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-IHEDeliveryStageVS : 0 / 0 / 2
+ /github/workspace/fsh-generated/resources/ValueSet-vs-ihe-pharm-product-association-type : 0 / 0 / 2
+ /github/workspace/input/history/history : 2 / 0 / 4
+</table>
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[30].value: Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters)
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource InventoryItem/123.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource InventoryItem/i1231.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource InventoryItem/i1234.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource InventoryItem/i12341.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/history.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /github/workspace/output/PHARM-S1.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 257, column 3601: The link 'StructureDefinition-SupplyRequest.html' for "Supply Request" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S1.html#/html/body/div/div/div/div/div/ul/li/a at Line 279, column 190: The link 'StructureDefinition-SupplyRequest.html' for "Supply Request" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S2.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 257, column 4145: The link 'StructureDefinition-SupplyRequest.html' for "[Supply Request Status" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S3.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 258, column 2372: The link 'StructureDefinition-DispatchNotice.html' for "[Dispatch notice]" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S4.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 258, column 2647: The link 'StructureDefinition-ihe-supply-delivery-receipt.html' for "[Receipt Notice]" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S4.html#/html/body/div/div/div/div/div/p/a at Line 264, column 69: The link 'StructureDefinition-ReceiptNotice.html' for "Supply Receipt Profile" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S5.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 257, column 3967: The link 'StructureDefinition-ihe-inventory-status.html' for "[Inventory Status]" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S6.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 271, column 3425: The link 'StructureDefinition-ihe-supply-inventory-update.html' for "[Inventory Update]" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S6.html#/html/body/div/div/div/div/div/p/a at Line 278, column 94: The link 'StructureDefinition-InventoryReport.html' for "InventoryReport" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S7.html#/html/body/div/div/div/div/div/figure/svg/g/a at Line 262, column 3425: The link 'StructureDefinition-ihe-supply-inventory-query.html' for "[Inventory query]" cannot be resolved
+ERROR: /github/workspace/output/PHARM-S7.html#/html/body/div/div/div/div/div/p/a at Line 269, column 84: The link 'StructureDefinition-InventoryReport.html' for "InventoryReporter" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-IHEDeliveryStageCS.json ==
+ERROR: CodeSystem.where(url = 'http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-IHEDeliveryStageCS.json - the canonical URL (http://profiles.ihe.net/PHARM/supply/CodeSystem/IHEDeliveryStageCS) does not match the URL (http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS)
+ERROR: CodeSystem.url: Resource id/url mismatch: IHEDeliveryStageCS/http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS
+INFORMATION: CodeSystem/IHEDeliveryStageCS: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+ERROR: /github/workspace/fsh-generated/resources/CodeSystem-IHEDeliveryStageCS: URL Mismatch http://profiles.ihe.net/PHARM/supply/CodeSystem/IHEDeliveryStageCS vs http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS
+== fsh-generated/resources/CodeSystem-cs-ihe-pharm-product-association-type.json ==
+INFORMATION: CodeSystem/cs-ihe-pharm-product-association-type: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/ImplementationGuide-ihe.pharm.supply.json ==
+INFORMATION: ImplementationGuide/ihe.pharm.supply: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/InventoryItem-123.json ==
+== fsh-generated/resources/InventoryItem-i1231.json ==
+== fsh-generated/resources/InventoryItem-i1234.json ==
+== fsh-generated/resources/InventoryItem-i12341.json ==
+ERROR: InventoryItem/i12341: InventoryItem.name[1].nameType.code: Unknown code 'tradename' in the CodeSystem 'http://hl7.org/fhir/inventoryitem-nametype' version '5.0.0'
+INFORMATION: InventoryItem/i12341: InventoryItem.name[1].nameType: The Coding provided (http://hl7.org/fhir/inventoryitem-nametype#tradename) was not found in the value set 'InventoryItem Name Typess' (http://hl7.org/fhir/ValueSet/inventoryitem-nametype|5.0.0), and a code is recommended to come from this value set.  (error message = The provided code 'http://hl7.org/fhir/inventoryitem-nametype#tradename' was not found in the value set 'http://hl7.org/fhir/ValueSet/inventoryitem-nametype|5.0.0'; Unknown code 'tradename' in the CodeSystem 'http://hl7.org/fhir/inventoryitem-nametype' version '5.0.0')
+WARNING: InventoryItem/i12341: InventoryItem.association[0].associationType.coding[0]: Coding has no system. A code with no system has no defined meaning, and it cannot be validated. A system should be provided
+ERROR: InventoryItem/i12341: InventoryItem.association[0].quantity: Constraint failed: rat-1: 'Numerator and denominator SHALL both be present, or both are absent. If both are absent, there SHALL be some extension present' (defined in http://hl7.org/fhir/StructureDefinition/Ratio)
+== fsh-generated/resources/SearchParameter-sp-requested-item.json ==
+INFORMATION: SearchParameter/sp-requested-item: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-IHEDeliveryStageExt.json ==
+INFORMATION: StructureDefinition/IHEDeliveryStageExt: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEDeliveryStageExt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-IHEInventoryStatus.json ==
+INFORMATION: StructureDefinition/IHEInventoryStatus: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEInventoryStatus'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-IHEInventoryUpdate.json ==
+INFORMATION: StructureDefinition/IHEInventoryUpdate: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHEInventoryUpdate'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-IHESupplyDispatchNotice.json ==
+ERROR: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyDispatchNotice.json - the canonical URL (http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyDispatchNotice) does not match the URL (http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice)
+ERROR: StructureDefinition.url: Resource id/url mismatch: IHESupplyDispatchNotice/http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice
+INFORMATION: StructureDefinition/IHESupplyDispatchNotice: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/IHESupplyDispatchNotice: StructureDefinition.snapshot.element[12].fixed.ofType(CodeableConcept): Reference to experimental CodeSystem http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS|0.3.0
+WARNING: StructureDefinition/IHESupplyDispatchNotice: StructureDefinition.snapshot.element[12]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/IHESupplyDispatchNotice: StructureDefinition.differential.element[3].fixed.ofType(CodeableConcept): Reference to experimental CodeSystem http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS|0.3.0
+WARNING: StructureDefinition/IHESupplyDispatchNotice: StructureDefinition.differential.element[3]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+WARNING: StructureDefinition/IHESupplyDispatchNotice: StructureDefinition.snapshot.element[12].fixed.ofType(CodeableConcept): For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice'): The Implementation Guide contains no examples for this profile
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyDispatchNotice: URL Mismatch http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyDispatchNotice vs http://profiles.ihe.net/PHARM/supply/StructureDefinition/DispatchNotice
+== fsh-generated/resources/StructureDefinition-IHESupplyReceiptNotice.json ==
+ERROR: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice'): Conformance resource /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyReceiptNotice.json - the canonical URL (http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyReceiptNotice) does not match the URL (http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice)
+ERROR: StructureDefinition.url: Resource id/url mismatch: IHESupplyReceiptNotice/http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice
+INFORMATION: StructureDefinition/IHESupplyReceiptNotice: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+INFORMATION: StructureDefinition/IHESupplyReceiptNotice: StructureDefinition.snapshot.element[12].fixed.ofType(CodeableConcept): Reference to experimental CodeSystem http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS|0.3.0
+WARNING: StructureDefinition/IHESupplyReceiptNotice: StructureDefinition.snapshot.element[12]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+INFORMATION: StructureDefinition/IHESupplyReceiptNotice: StructureDefinition.differential.element[3].fixed.ofType(CodeableConcept): Reference to experimental CodeSystem http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS|0.3.0
+WARNING: StructureDefinition/IHESupplyReceiptNotice: StructureDefinition.differential.element[3]: Constraint failed: eld-24: 'pattern[x] should be used rather than fixed[x]' (defined in http://hl7.org/fhir/StructureDefinition/ElementDefinition) (Best Practice Recommendation)
+WARNING: StructureDefinition/IHESupplyReceiptNotice: StructureDefinition.snapshot.element[12].fixed.ofType(CodeableConcept): For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice'): The Implementation Guide contains no examples for this profile
+ERROR: /github/workspace/fsh-generated/resources/StructureDefinition-IHESupplyReceiptNotice: URL Mismatch http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyReceiptNotice vs http://profiles.ihe.net/PHARM/supply/StructureDefinition/ReceiptNotice
+== fsh-generated/resources/StructureDefinition-IHESupplyRequest.json ==
+INFORMATION: StructureDefinition/IHESupplyRequest: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+WARNING: StructureDefinition.where(url = 'http://profiles.ihe.net/PHARM/supply/StructureDefinition/IHESupplyRequest'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-InventoryStatusModel.json ==
+INFORMATION: StructureDefinition/InventoryStatusModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-InventoryUpdateModel.json ==
+INFORMATION: StructureDefinition/InventoryUpdateModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ItemModel.json ==
+INFORMATION: StructureDefinition/ItemModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ProductModel.json ==
+INFORMATION: StructureDefinition/ProductModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ReceiptNoticeModel.json ==
+INFORMATION: StructureDefinition/ReceiptNoticeModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-ShipmentNoticeModel.json ==
+INFORMATION: StructureDefinition/ShipmentNoticeModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-SupplyRequestModel.json ==
+INFORMATION: StructureDefinition/SupplyRequestModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/StructureDefinition-SupplyRequestStatusModel.json ==
+INFORMATION: StructureDefinition/SupplyRequestStatusModel: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/ValueSet-IHEDeliveryStageVS.json ==
+INFORMATION: ValueSet/IHEDeliveryStageVS: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== fsh-generated/resources/ValueSet-vs-ihe-pharm-product-association-type.json ==
+INFORMATION: ValueSet/vs-ihe-pharm-product-association-type: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|5.0.0
+== input/history/history.json ==
+ERROR: Bundle.entry[0].resource: Unrecognized property 'reason'
+ERROR: Bundle/history: Bundle.entry[0].resource/*Provenance/history-1*/.target[0]: Unable to resolve resource with reference 'StructureDefinition/SupplyRequest'
+INFORMATION: Bundle/history: Bundle.entry[0].resource/*Provenance/history-1*/.agent[0].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0
+INFORMATION: Bundle/history: Bundle.entry[0].resource/*Provenance/history-1*/.agent[1].type: Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/provenance-participant-type|1.0.0

@@ -1,0 +1,33 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/IHEDeliveryStageVS",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "IHEDeliveryStageVS",
+      "title" : "Supply delivery stage value set",
+      "description" : "Supply delivery stage value set.",
+      "systems" : [
+        "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-IHEDeliveryStageExt.html" : "Supply delivery stage extension"
+    },
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/ValueSet/vs-ihe-pharm-product-association-type",
+      "version" : "0.3.0",
+      "status" : "draft",
+      "name" : "ProductAssociationType",
+      "title" : "Product association type Value Set",
+      "description" : "Product association type Value Set",
+      "systems" : [
+        "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-ProductModel.html" : "ProductModel",
+      "StructureDefinition-ItemModel.html" : "ItemModel"
+    }
+  ]
+}

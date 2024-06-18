@@ -1,0 +1,26 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "IHEDeliveryStageCS",
+      "title" : "Supply delivery stage code system",
+      "description" : "Supply delivery code system.",
+      "uses" : {
+      },
+      "ValueSet-IHEDeliveryStageVS.html" : "Supply delivery stage value set"
+    },
+    {
+      "url" : "http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type",
+      "version" : "0.3.0",
+      "status" : "active",
+      "name" : "CSProductAssociationType",
+      "title" : "Product association type code system",
+      "description" : "product association type code system.",
+      "uses" : {
+      },
+      "ValueSet-vs-ihe-pharm-product-association-type.html" : "Product association type Value Set"
+    }
+  ]
+}

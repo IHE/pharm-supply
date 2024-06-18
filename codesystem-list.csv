@@ -1,0 +1,3 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+http://profiles.ihe.net/PHARM/supply/CodeSystem/DeliveryStageCS,0.3.0,active,,IHEDeliveryStageCS,Supply delivery stage code system,"Supply delivery code system.",
+http://profiles.ihe.net/PHARM/supply/CodeSystem/cs-ihe-pharm-product-association-type,0.3.0,active,,CSProductAssociationType,Product association type code system,"product association type code system.",

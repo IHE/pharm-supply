@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Actors and Transactions overview - Supply of Products for Healthcare (SUPPLY) v0.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/ihe.css" rel="stylesheet"/>
+<link href="assets/css/nonum.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-HLBNC861DJ" async> </script> 
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2.5"}
+    h3,h4,h5,h6{--heading-prefix:"2.5"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<div id="project-nav">
+  <a id="ihe-logo" no-external="true" href="http://profiles.ihe.net">
+    <img height="71" alt="Visit the IHE website" src="assets/images/ihe-international.png"/>
+  </a>
+</div>
+<div id="family-nav">
+  <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="30" alt="Visit the FHIR website" src="assets/images/fhir-logo.png"/> </a>
+</div>
+<!--
+<div id="hl7-search">
+  <a id="hl7-search-lnk" no-external="true" href="searchform.html"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+</div>
+-->
+<div id="project-nav">
+  
+  
+    <a id="project-logo" no-external="true" href="http://profiles.ihe.net/PHARM/index.html"><img height="70" alt="Visit the PHARM website" src="assets/images/PHARM.png"/> </a>
+</div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">Supply of Products for Healthcare (SUPPLY)</span>
+            <br/>
+            <span style="display:inline-block;">0.3.0 - ci-build
+
+
+
+  <img alt="International flag" src="assets/images/001.svg" height="16" title="International"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R5/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">SUPPLY Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 1<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li><a style="text-align: baseline" href="introduction.html">Introduction</a></li>
+			<li><a style="text-align: baseline" href="usecases.html">Use Cases</a></li>
+			<li><a style="text-align: baseline" href="overview.html">Overview</a></li>
+			<li><a style="text-align: baseline" href="actors_and_transactions.html">Actors and Transactions overview</a></li>
+			<li><a style="text-align: baseline" href="actor_options.html">Actor Options</a></li>
+			<li><a style="text-align: baseline" href="actor_required_grouping.html">Actor Required Grouping</a></li>
+			<li><a style="text-align: baseline" href="security_considerations.html">Security Considerations</a></li>
+			<li><a style="text-align: baseline" href="cross_profile_considerations.html">Cross Profile Considerations</a></li>
+		</ul>
+	</li>
+
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Volume 2<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<!-- <li><a style="text-align: baseline" href="actors_and_transactions.html">Actors Definitions</a></li> -->
+			<li><a style="text-align: baseline" href="transactions.html">Transaction Definitions</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S1.html">Supply Request</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S2.html">Supply Request Status</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S3.html">Shipment Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S4.html">Delivery/Receipt Notice</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S5.html">Inventory Report</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S6.html">Inventory Update</a></li>
+			<li><a style="text-align: baseline" href="PHARM-S7.html">Inventory Query</a></li>
+
+		</ul>
+	</li>
+	
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+			<li><a style="text-align: baseline" href="#">Test Data<img src="external.png"/></a></li>
+			<li><a target="_blank" href="#">OpenAPI</a></li>
+			<li><a style="text-align: baseline" href="#">Testing (Gazelle)<img src="external.png"/></a></li>
+			<li><a href="#">Downloads</a></li>
+			<li><a href="#">FHIR Specification</a></li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='volume1.html'><b>Volume 1: Use cases</b></a></li><li><b>Actors and Transactions overview</b></li>
+
+          <span style="float:right;">
+
+            <a href="overview.html">&lt;prev</a> | 
+
+            <a href="#bottom">bottom</a>
+
+          | <a href="actor_options.html">next&gt;</a>
+
+          </span>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Supply of Products for Healthcare (SUPPLY), published by IHE Pharmacy Technical Committee. This guide is not an authorized publication; it is the continuous build for version 0.3.0 built by the FHIR (HL7® FHIR® Standard) CI Build. This version is based on the current content of <a href="https://github.com/IHE/pharm-supply">https://github.com/IHE/pharm-supply</a> and changes regularly. See the <a href="http://profiles.ihe.net/PHARM/supply/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Actors and Transactions overview</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#ordering" id="markdown-toc-ordering">Ordering</a></li>
+  <li><a href="#delivery" id="markdown-toc-delivery">Delivery</a></li>
+  <li><a href="#inventory" id="markdown-toc-inventory">Inventory</a></li>
+</ul>
+
+</div>
+<p>This section defines the actors and transactions in this implementation guide.</p>
+
+<p>The figure below shows the actors directly involved in the MHD Profile and the relevant transactions between them.</p>
+
+<figure>
+    <?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="261px" preserveAspectRatio="none" style="width:1008px;height:261px;background:#FFFFFF;" version="1.1" viewBox="0 0 1008 261" width="1008px" zoomAndPan="magnify"><defs /><g><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="170" x="412" y="22.9951">Supply Actor Diagram</text><!--entity supplyrequester--><g id="elem_supplyrequester"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="155" x="15.5" y="45.8628" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="25.5" y="68.8579">&#160;&#160;</text><a href="actors_and_transactions.html#supply-requester" target="_top" title="actors_and_transactions.html#supply-requester" xlink:actuate="onRequest" xlink:href="actors_and_transactions.html#supply-requester" xlink:show="new" xlink:title="actors_and_transactions.html#supply-requester" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="123" x="33.5" y="68.8579">Supply Requester</text></a></g><!--entity supplyrequestfiller--><g id="elem_supplyrequestfiller"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="172" x="7" y="218.8628" /><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="17" y="241.8579">&#160;</text><a href="actors_and_transactions.html#supply-request-filler" target="_top" title="actors_and_transactions.html#supply-request-filler" xlink:actuate="onRequest" xlink:href="actors_and_transactions.html#supply-request-filler" xlink:show="new" xlink:title="actors_and_transactions.html#supply-request-filler" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="144" x="21" y="241.8579">Supply Request Filler</text></a></g><!--entity supplier--><g id="elem_supplier"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="371" y="45.8628" /><a href="actors_and_transactions.html#supplier" target="_top" title="actors_and_transactions.html#supplier" xlink:actuate="onRequest" xlink:href="actors_and_transactions.html#supplier" xlink:show="new" xlink:title="actors_and_transactions.html#supplier" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="56" x="381" y="68.8579">Supplier</text></a></g><!--entity receiver--><g id="elem_receiver"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="80" x="369" y="218.8628" /><a href="actors_and_transactions.html#receiver" target="_top" title="actors_and_transactions.html#receiver" xlink:actuate="onRequest" xlink:href="actors_and_transactions.html#receiver" xlink:show="new" xlink:title="actors_and_transactions.html#receiver" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="60" x="379" y="241.8579">Receiver</text></a></g><!--entity invreporter--><g id="elem_invreporter"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="148" x="648" y="45.8628" /><a href="actors_and_transactions.html#supplier" target="_top" title="actors_and_transactions.html#supplier" xlink:actuate="onRequest" xlink:href="actors_and_transactions.html#supplier" xlink:show="new" xlink:title="actors_and_transactions.html#supplier" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="128" x="658" y="68.8579">Inventory Reporter</text></a></g><!--entity invmanager--><g id="elem_invmanager"><rect fill="#F1F1F1" height="36.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="147" x="648.5" y="218.8628" /><a href="actors_and_transactions.html#receiver" target="_top" title="actors_and_transactions.html#receiver" xlink:actuate="onRequest" xlink:href="actors_and_transactions.html#receiver" xlink:show="new" xlink:title="actors_and_transactions.html#receiver" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" text-decoration="underline" textLength="127" x="658.5" y="241.8579">Inventory Manager</text></a></g><!--link supplyrequester to supplyrequestfiller--><g id="link_supplyrequester_supplyrequestfiller"><path d="M93,81.8828 C93,114.5728 93,185.8228 93,218.6528 " fill="none" id="supplyrequester-supplyrequestfiller" style="stroke:#181818;stroke-width:1.0;" /><a href="PHARM-S1.html" target="_top" title="PHARM-S1.html" xlink:actuate="onRequest" xlink:href="PHARM-S1.html" xlink:show="new" xlink:title="PHARM-S1.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="171" x="107" y="139.9297">PHARM-S1 Supply Request</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="282" y="139.9297">&#8595;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="218" y="155.0625">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="12" x="94" y="170.1953">&#160;&#160;&#160;</text><a href="PHARM-S2.html" target="_top" title="PHARM-S2.html" xlink:actuate="onRequest" xlink:href="PHARM-S2.html" xlink:show="new" xlink:title="PHARM-S2.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="225" x="106" y="170.1953">PHARM-S2 Supply Response/status</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="335" y="170.1953">&#8593;</text></g><!--link supplyrequester to supplier--><!--link supplier to receiver--><g id="link_supplier_receiver"><path d="M409,81.8828 C409,114.5728 409,185.8228 409,218.6528 " fill="none" id="supplier-receiver" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="12" x="410" y="139.9297">&#160;&#160;&#160;</text><a href="PHARM-S3.html" target="_top" title="PHARM-S3.html" xlink:actuate="onRequest" xlink:href="PHARM-S3.html" xlink:show="new" xlink:title="PHARM-S3.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="177" x="422" y="139.9297">PHARM-S3 Shipment notice</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="603" y="139.9297">&#8595;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="510" y="155.0625">&#160;</text><a href="PHARM-S4.html" target="_top" title="PHARM-S4.html" xlink:actuate="onRequest" xlink:href="PHARM-S4.html" xlink:show="new" xlink:title="PHARM-S4.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="162" x="423.5" y="170.1953">PHARM-S4 Receipt notice</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="589.5" y="170.1953">&#8593;</text></g><!--link supplier to invreporter--><!--link invreporter to invmanager--><g id="link_invreporter_invmanager"><path d="M722,81.8828 C722,114.5728 722,185.8228 722,218.6528 " fill="none" id="invreporter-invmanager" style="stroke:#181818;stroke-width:1.0;" /><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="12" x="723.5" y="124.9297">&#160;&#160;&#160;</text><a href="PHARM-S5.html" target="_top" title="PHARM-S5.html" xlink:actuate="onRequest" xlink:href="PHARM-S5.html" xlink:show="new" xlink:title="PHARM-S5.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="177" x="735.5" y="124.9297">PHARM-S5 Inventory Status</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="916.5" y="124.9297">&#8593;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="859.5" y="140.0625">&#160;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="12" x="723" y="155.1953">&#160;&#160;&#160;</text><a href="PHARM-S6.html" target="_top" title="PHARM-S6.html" xlink:actuate="onRequest" xlink:href="PHARM-S6.html" xlink:show="new" xlink:title="PHARM-S6.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="182" x="735" y="155.1953">PHARM-S6 Inventory Update</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="921" y="155.1953">&#8595;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="859.5" y="170.3281">&#160;</text><a href="PHARM-S7.html" target="_top" title="PHARM-S7.html" xlink:actuate="onRequest" xlink:href="PHARM-S7.html" xlink:show="new" xlink:title="PHARM-S7.html" xlink:type="simple"><text fill="#0000FF" font-family="sans-serif" font-size="13" lengthAdjust="spacing" text-decoration="underline" textLength="173" x="739" y="185.4609">PHARM-S7 Inventory Query</text></a><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="916" y="185.4609">&#8595;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="8" x="976" y="185.4609">&#160;&#160;</text></g></g></svg>
+  </figure>
+
+<p><br />
+<br /></p>
+
+<table border="1" borderspacing="0" style="border: 1px solid black; border-collapse: collapse">
+<caption>
+<b>
+Table : Supply - Actors and Transactions
+</b>
+</caption>
+<thead>
+<tr style="background: gray;">
+<th>Actors</th>
+<th>Transactions</th>
+<th>Optionality</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td rowspan="2"><a href="#supply-requester">Supply Requester</a></td>
+        <td><a href="PHARM-S1.html">Supply Request [PHARM-S1]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S2.html">Supply Request [PHARM-S2]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td rowspan="2"><a href="#supply-request-filler">Supply Request Filler</a></td>
+        <td><a href="PHARM-S1.html">Supply Request [PHARM-S1]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S2.html">Supply Request [PHARM-S2]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td rowspan="2"><a href="#supplier">Supplier</a></td>
+        <td><a href="PHARM-S3.html">Supply Notice [PHARM-S3]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S4.html">Receipt Notice [PHARM-S4]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td rowspan="2"><a href="#receiver">Supply Receiver</a></td>
+        <td><a href="PHARM-S3.html">Supply Notice [PHARM-S3]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S4.html">Receipt Notice [PHARM-S4]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="#receiver">Inventory Reporter</a></td>
+        <td><a href="PHARM-S5.html">Inventory Status [PHARM-S5]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S6.html">Inventory Update [PHARM-S6]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S7.html">Inventory Query [PHARM-S7]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td rowspan="3"><a href="#receiver">Inventory Manager</a></td>
+        <td><a href="PHARM-S5.html">Inventory Status [PHARM-S5]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S6.html">Inventory Update [PHARM-S6]</a></td>
+        <td align="center">O</td>
+    </tr>
+    <tr>
+        <td><a href="PHARM-S7.html">Inventory Query [PHARM-S7]</a></td>
+        <td align="center">O</td>
+    </tr>
+</tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="ordering">Ordering</h3>
+<p>For the ordering aspects of supply request, two actors are considered:</p>
+
+<p><img src="actors_ordering.png" width="60%" />
+<br clear="all" /></p>
+
+<h4 id="supply-requester"><a name="supply-requester"></a><strong>Supply Requester</strong></h4>
+<p>Issues requests for supply. The request can be triggered by any of several events - periodic reordering, minimum reached, etc.</p>
+<ul>
+  <li>Sends supply request - transaction <a href="PHARM-S1.html">PHARM-S1</a>.</li>
+  <li>Receives updates on supply request status - transaction <a href="PHARM-S2.html">PHARM-S2</a>.</li>
+</ul>
+
+<h4 id="supply-request-filler"><a name="supply-request-filler"></a><strong>Supply Request filler</strong></h4>
+<p>Receives and handles the supply request. The handling can be to respond (e.g. with approval) and/or to forward the request (e.g. to the actual supplier).</p>
+<ul>
+  <li>Sends updates on supply request status - transaction <a href="PHARM-S2.html">PHARM-S2</a>.</li>
+  <li>Receives supply request - transaction <a href="PHARM-S1.html">PHARM-S1</a>.</li>
+</ul>
+
+<p><br /></p>
+
+<p><strong>These actors can be chained - in a specific implementation, a system can be both a Requester and a Request Filler.</strong> For example a local pharmacy requesting products from a local pharmacy who then contacts the local supplier who then contacts the national distributor. In this case the central pharmacy receives requests from wards or remote pharmacies, and sends approved/updated requests to the supplier or distributor (thus acting as a Request Filler and Requester in the same process).
+This chaining is the reason why the transactions are optional - for example an actor that is only forwarding the request after approval may implement only the Supply Request transaction, but not support receiving the status.</p>
+
+<h3 id="delivery">Delivery</h3>
+
+<p>The delivery considers two actors:</p>
+
+<p><img src="actors_delivery.png" width="60%" />
+<br clear="all" /></p>
+
+<h4 id="supplier"><a name="supplier"></a><strong>Supplier</strong></h4>
+<p>The supplier sends or forwards the items to a receiver and updates the information about such sending:</p>
+<ul>
+  <li>Sends shipment notices - transaction <a href="PHARM-S3.html">PHARM-S3</a>.</li>
+  <li>Receives delivery notices - transaction <a href="PHARM-S4.html">PHARM-S4</a>.</li>
+</ul>
+
+<h4 id="receiver"><a name="receiver"></a><strong>Receiver</strong></h4>
+<p>This actor represents the intended or actual receiver of the products.</p>
+<ul>
+  <li>Sends delivery notices - transaction <a href="PHARM-S4.html">PHARM-S4</a>.</li>
+  <li>Receives shipment notices - transaction <a href="PHARM-S3.html">PHARM-S3</a>.</li>
+</ul>
+
+<p><br /></p>
+
+<p><strong>These actors can also be chained in any implementation</strong>. For example, a warehouse (as a <strong>Supplier</strong>) sends items to a retailer (<strong>Receiver</strong>) who then send them (now as a <strong>Supplier</strong>) to the Central Pharmacy (which takes the role of <strong>Receiver</strong>).</p>
+
+<p><br /></p>
+
+<h3 id="inventory">Inventory</h3>
+<p>The inventory management module supports the tracking and counting of inventory items and status (i.e. inventory counts). It is consists of two essential mechanisms: Inventory status updates, and inventory consumption.</p>
+
+<p><img src="actors_inventory.png" width="60%" />
+<br clear="all" /></p>
+
+<p>Inventory status updates concerns the monitoring and reporting of inventory locations - i.e. the availability (or not) of inventory items. The actors are:</p>
+
+<h4 id="inventory-reporter"><a name="inventory-reporter"></a><strong>Inventory reporter</strong></h4>
+<p>Provides information about the inventory in a location <br />This actor is typically implemented by systems associated with one or several inventory location - e.g a storage area, or an automated distribution system…  <br /> An <strong>Inventory reporter</strong> can inform the present item count (snapshot mode, used for reporting stock counts), or may inform about differential updates (differential mode, used for reporting stock increase or decrease).</p>
+<h4 id="inventory-manager"><a name="inventory-manager"></a><strong>Inventory Manager</strong></h4>
+<p>Receives inventory information (for the purpose of forwarding or taking further action e.g. deciding on reordering)</p>
+
+<ul>
+  <li>Sends inventory reports - transaction <a href="PHARM-S5.html">PHARM-S5</a>.</li>
+  <li>Sends inventory updates - transaction <a href="PHARM-S6.html">PHARM-S6</a>.</li>
+  <li>Receives inventory queries - transaction <a href="PHARM-S7.html">PHARM-S7</a>.</li>
+</ul>
+
+<p><strong>These actors are expected to be combined, depending of the system configurations and inventory management policies</strong>. 
+For example, an automated distribution system (like a <em>smart cart</em>) may keep track of the items it contain on, to decide about reordering; it may also send such information (acting as as an <strong>Inventory Reporter</strong>) to another system (<strong>Inventory Manager</strong>) so that the other system can decide whether / when to reorder.</p>
+
+<p><br /></p>
+
+<h4 id="inventory-reporter-item-consumer"><a name="inventory-reporter"></a><strong>Inventory Reporter</strong> <br />(<strong>Item Consumer</strong>)</h4>
+<p>reports a updates of inventory (to an <strong>Inventory Manager</strong>).</p>
+
+<p>Since this is a differential update of inventory, it can also used report consumption (usage) or stock increases when necessary, e.g. returning products to inventory.</p>
+
+<p>Consumption: 
+Most times a consumption is not explicitly reported, but corresponds with a dispense or administration of a product (removing it from available inventory) or a disposal.  In this sense, the consumption report is just a differential update of inventory.
+Consumption informs of usage of inventory: When an item is taken from inventory but not necessarily associated with an administration, it is said to be consumed. These are the common cases:</p>
+<ul>
+  <li>A tablet is accidentally dropped on the floor. From an inventory perspective it is consumed.
+For multi-use products, two options are possible:</li>
+  <li>A bottle of disinfecting gel is put in the ward. When it is fully used, it is reported as consumed (and replaced).</li>
+  <li>A jar of cream is picked from the ward closet to be used for a patient. Since it can be used only for that patient, it is consumed from ward inventory as soon as it is picked.</li>
+</ul>
+
+<p>The inventory reporter:</p>
+<ul>
+  <li>Sends inventory reports - transaction <a href="PHARM-S5.html">PHARM-S5</a>.</li>
+  <li>Sends inventory updates - transaction <a href="PHARM-S6.html">PHARM-S6</a>.</li>
+  <li>Receives inventory queries - transaction <a href="PHARM-S7.html">PHARM-S7</a>.</li>
+</ul>
+
+<p><br /><br /></p>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div style="background-color:var(--footer-nav-bg-color)">
+        <table style="width:100%">
+          <tbody>
+            <tr>
+              <td style="text-align:left">&#xA0;
+
+                <a href="overview.html">&lt;prev</a>
+
+              </td>
+              <td style="text-align:center">
+                <a href="#top">top</a>
+              </td>
+              <td style="text-align:right">&#xA0;
+
+                <a href="actor_options.html">next&gt;</a>
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ihe.net/ihe_domains/pharmacy/">IHE Pharmacy Technical Committee</a>.  Package ihe.pharm.supply#0.3.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/">FHIR 5.0.0</a>. Generated <span title="Tue, Jun 18, 2024 21:01+0000">2024-06-18</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                  | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/pharm-supply/issues/new/choose">New Issue</a> | <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://github.com/IHE/pharm-supply/issues">Issues</a>
+                
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="http://profiles.ihe.net/PHARM/supply/history.html">Version History</a></a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="https://profiles.ihe.net/GeneralIntro/ch-9.html"><img style="border-style: none;" alt="CC0" src="assets/images/cc-by.png" height="17"/></a> |
+                <!-- <a style="color: var(--footer-hyperlink-text-color)" href="searchform.html">Search</a> | -->
+                 <a style="color: var(--footer-hyperlink-text-color)" target="_blank" href="https://www.ihe.net/resources/public_comment/">Propose a change<img alt="external" style="vertical-align: baseline" src="external.png"/></a>
+                 <script type="text/javascript" src=".assets/js/google-analytics.js"> </script>
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+
